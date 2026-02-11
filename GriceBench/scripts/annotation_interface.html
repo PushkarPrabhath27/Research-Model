@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>GriceBench Annotator</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui;
+            background: #1a1a2e;
+            color: #fff;
+            padding: 10px;
+            font-size: 14px;
+        }
+
+        .top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .progress {
+            color: #4ecca3;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .btns {
+            display: flex;
+            gap: 5px;
+        }
+
+        .btn {
+            padding: 8px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        .btn-green {
+            background: #4ecca3;
+            color: #000;
+        }
+
+        .btn-gray {
+            background: #444;
+            color: #fff;
+        }
+
+        .context {
+            background: #252545;
+            padding: 10px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            border-left: 3px solid #4ecca3;
+            font-size: 13px;
+        }
+
+        .context-title {
+            color: #4ecca3;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .responses {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-bottom: 10px;
+        }
+
+        .resp {
+            background: #252545;
+            padding: 12px;
+            border-radius: 8px;
+            border: 2px solid transparent;
+            cursor: pointer;
+        }
+
+        .resp:hover {
+            border-color: #4ecca3;
+        }
+
+        .resp.sel-a {
+            border-color: #4ecca3;
+            background: #2a3a40;
+        }
+
+        .resp.sel-b {
+            border-color: #e74c3c;
+            background: #3a2a30;
+        }
+
+        .resp-label {
+            display: inline-block;
+            padding: 3px 10px;
+            border-radius: 15px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            font-size: 12px;
+        }
+
+        .label-a {
+            background: #4ecca3;
+            color: #000;
+        }
+
+        .label-b {
+            background: #e74c3c;
+            color: #fff;
+        }
+
+        .resp-text {
+            line-height: 1.5;
+            font-size: 13px;
+        }
+
+        .prefs {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 10px;
+        }
+
+        .pref {
+            padding: 10px 18px;
+            border: 2px solid #444;
+            background: transparent;
+            color: #fff;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 13px;
+        }
+
+        .pref:hover {
+            border-color: #4ecca3;
+        }
+
+        .pref.active {
+            background: #4ecca3;
+            color: #000;
+            border-color: #4ecca3;
+        }
+
+        .pref kbd {
+            background: #333;
+            padding: 2px 5px;
+            border-radius: 3px;
+            margin-left: 5px;
+            font-size: 11px;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .shortcuts {
+            text-align: center;
+            margin-top: 10px;
+            color: #888;
+            font-size: 12px;
+        }
+
+        #fileInput {
+            display: none;
+        }
+
+        .stats {
+            display: flex;
+            gap: 15px;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-val {
+            color: #4ecca3;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="top">
+        <div class="progress"><span id="idx">0</span>/<span id="total">0</span></div>
+        <div class="stats">
+            <div class="stat"><span class="stat-val" id="aCount">0</span> A</div>
+            <div class="stat"><span class="stat-val" id="bCount">0</span> B</div>
+            <div class="stat"><span class="stat-val" id="eCount">0</span> =</div>
+        </div>
+        <div class="btns">
+            <input type="file" id="fileInput" accept=".json">
+            <button class="btn btn-green" onclick="document.getElementById('fileInput').click()">📂 Load</button>
+            <button class="btn btn-gray" onclick="save()">💾 Save</button>
+            <button class="btn btn-gray" onclick="download()">⬇️ Download</button>
+        </div>
+    </div>
+
+    <div class="context">
+        <div class="context-title">📝 Context</div>
+        <div id="ctx"></div>
+    </div>
+
+    <div class="responses">
+        <div class="resp" id="respA" onclick="pick('A_much')">
+            <span class="resp-label label-a">A</span>
+            <div class="resp-text" id="txtA"></div>
+        </div>
+        <div class="resp" id="respB" onclick="pick('B_much')">
+            <span class="resp-label label-b">B</span>
+            <div class="resp-text" id="txtB"></div>
+        </div>
+    </div>
+
+    <div class="prefs">
+        <button class="pref" data-p="A_much" onclick="pick('A_much')">A Much <kbd>1</kbd></button>
+        <button class="pref" data-p="A_slight" onclick="pick('A_slight')">A Slight <kbd>2</kbd></button>
+        <button class="pref" data-p="equal" onclick="pick('equal')">Equal <kbd>3</kbd></button>
+        <button class="pref" data-p="B_slight" onclick="pick('B_slight')">B Slight <kbd>4</kbd></button>
+        <button class="pref" data-p="B_much" onclick="pick('B_much')">B Much <kbd>5</kbd></button>
+    </div>
+
+    <div class="nav">
+        <button class="btn btn-gray" onclick="go(-1)">← Prev</button>
+        <button class="btn btn-green" onclick="go(1)">Next →</button>
+    </div>
+
+    <div class="shortcuts">Press 1-5 to select | ← → to navigate | S to save</div>
+
+    <script>
+        let data = [], i = 0;
+
+        document.getElementById('fileInput').onchange = e => {
+            const f = e.target.files[0];
+            if (!f) return;
+            const r = new FileReader();
+            r.onload = e => {
+                data = JSON.parse(e.target.result);
+                i = data.findIndex(p => !p.preference) || 0;
+                if (i < 0) i = 0;
+                show();
+            };
+            r.readAsText(f);
+        };
+
+        function show() {
+            if (!data.length) return;
+            const p = data[i];
+            document.getElementById('ctx').textContent = p.context || '';
+            document.getElementById('txtA').textContent = p.response_A || '';
+            document.getElementById('txtB').textContent = p.response_B || '';
+            document.getElementById('idx').textContent = i + 1;
+            document.getElementById('total').textContent = data.length;
+
+            document.querySelectorAll('.pref').forEach(b => b.classList.toggle('active', b.dataset.p === p.preference));
+            document.getElementById('respA').classList.toggle('sel-a', p.preference?.includes('A'));
+            document.getElementById('respB').classList.toggle('sel-b', p.preference?.includes('B'));
+
+            let a = 0, b = 0, e = 0;
+            data.forEach(x => {
+                if (x.preference?.includes('A')) a++;
+                else if (x.preference?.includes('B')) b++;
+                else if (x.preference === 'equal') e++;
+            });
+            document.getElementById('aCount').textContent = a;
+            document.getElementById('bCount').textContent = b;
+            document.getElementById('eCount').textContent = e;
+        }
+
+        function pick(pref) {
+            if (!data.length) return;
+            data[i].preference = pref;
+            data[i].annotated = true;
+            show();
+            setTimeout(() => go(1), 150);
+        }
+
+        function go(d) { i = Math.max(0, Math.min(data.length - 1, i + d)); show(); }
+        function save() { localStorage.setItem('grice', JSON.stringify(data)); alert('Saved!'); }
+        function download() {
+            const b = new Blob([JSON.stringify(data.filter(x => x.preference), null, 2)], { type: 'application/json' });
+            const a = document.createElement('a');
+            a.href = URL.createObjectURL(b);
+            a.download = 'annotated.json';
+            a.click();
+        }
+
+        document.onkeydown = e => {
+            if (e.target.tagName === 'INPUT') return;
+            if (e.key === '1') pick('A_much');
+            if (e.key === '2') pick('A_slight');
+            if (e.key === '3') pick('equal');
+            if (e.key === '4') pick('B_slight');
+            if (e.key === '5') pick('B_much');
+            if (e.key === 'ArrowLeft') go(-1);
+            if (e.key === 'ArrowRight') go(1);
+            if (e.key.toLowerCase() === 's') save();
+        };
+
+        const saved = localStorage.getItem('grice');
+        if (saved) { data = JSON.parse(saved); show(); }
+    </script>
+</body>
+
+</html>

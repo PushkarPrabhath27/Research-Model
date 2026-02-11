@@ -1,0 +1,119 @@
+﻿
+======================================================================
+GRICEBENCH DATA EXPLORATION
+======================================================================
+
+This script explores the datasets to understand structure and
+determine appropriate thresholds for violation detection.
+(As described in Implementation Guide, Chapter 3, Section 3.4)
+======================================================================
+TOPICAL-CHAT DATASET EXPLORATION
+======================================================================
+
+Loading train.json...
+
+==================================================
+DATASET STRUCTURE
+==================================================
+Number of conversations: 8628
+
+Sample conversation ID: t_bde29ce2-4153-4056-9eb7-f4ad710505fe
+Conversation keys: ['article_url', 'config', 'content', 'conversation_rating']
+
+==================================================
+BASIC STATISTICS
+==================================================
+
+** Response Length Statistics (words per message) **
+  Total messages: 188378
+  Mean length: 19.6 words
+  Median length: 18.0 words
+  Std deviation: 10.3 words
+  Min length: 1 words
+  Max length: 127 words
+
+  Percentiles:
+    10th percentile: 8 words
+    25th percentile: 12 words
+    50th percentile: 18 words
+    75th percentile: 25 words
+    90th percentile: 33 words
+    95th percentile: 38 words
+    99th percentile: 51 words
+
+** Turns Per Conversation **
+  Mean turns: 21.8
+  Median turns: 21.0
+  Min turns: 20
+  Max turns: 53
+
+** Vocabulary Statistics **
+  Unique words: 86108
+  Total word tokens: 3687360
+  Top 20 most common words:
+    'i': 144022
+    'the': 139661
+    'a': 95155
+    'that': 80072
+    'to': 79348
+    'of': 63003
+    'is': 58782
+    'you': 57678
+    'it': 51254
+    'in': 50844
+    'and': 47783
+    'have': 35918
+    'they': 35325
+    'was': 34948
+    'do': 30734
+    'like': 29202
+    'for': 29142
+    'know': 29029
+    'he': 26053
+    'are': 24137
+
+** Knowledge/Evidence Usage **
+  Messages with knowledge field: 188378
+  Messages using knowledge: 188378
+  Knowledge usage rate: 100.0%
+
+==================================================
+READING SETS (KNOWLEDGE/EVIDENCE) STRUCTURE
+==================================================
+
+==================================================
+SAMPLE (CONTEXT, EVIDENCE, RESPONSE) EXTRACTION
+==================================================
+
+  Conversation: t_bde29ce2-4153-4056-9eb7-f4ad710505fe
+  Turn index: 1
+  Context (last 3 turns): Are you a fan of Google or Microsoft?...
+  Evidence: ['FS1']...
+  Response: Both are excellent technology they are helpful in many ways. For the security purpose both are super....
+
+==================================================
+RECOMMENDED THRESHOLDS FOR VIOLATION DETECTION
+==================================================
+
+** Quantity Violation Thresholds **
+  Too short (< mean - 1.5*std): < 4 words
+  Too long (> mean + 2*std): > 40 words
+  Or use percentiles:
+    Too short: < 10th percentile = 8 words
+    Too long: > 95th percentile = 38 words
+
+======================================================================
+FINAL SUMMARY
+======================================================================
+
+Topical-Chat Statistics:
+  - Conversations: 8,628
+  - Total turns: 188,378
+  - Mean response length: 19.6 words
+  - Vocabulary size: 86,108 unique words
+  - Mean turns/conversation: 21.8
+  - Knowledge usage rate: 100.0%
+
+======================================================================
+Exploration complete! Ready for violation injection pipeline.
+======================================================================

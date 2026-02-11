@@ -1,0 +1,146 @@
+{
+  "model_info": {
+    "device": "cpu",
+    "model_path": "models/repair/repair_model"
+  },
+  "examples": [
+    {
+      "example_id": 1,
+      "violation_types": [
+        "quantity"
+      ],
+      "input_preview": "[REPAIR] [VIOLATION=QUANTITY] [CONTEXT] [agent_1]: Ha, that or have a heart attack, no seriously, you burn 180 calories watching a horror movie, wonder what other types of cinema burn? [agent_2]: I me",
+      "generated_repair": "well sure, it's just hundreds of pictures with sound in the background ? ;)",
+      "reference_repair": "well sure, it's just hundreds of pictures with sound in the background ;)",
+      "exact_match": false,
+      "close_match": false,
+      "word_overlap": 1.0,
+      "similarity_pct": "100.0%"
+    },
+    {
+      "example_id": 2,
+      "violation_types": [
+        "manner"
+      ],
+      "input_preview": "[REPAIR] [VIOLATION=MANNER] [CONTEXT] [agent_1]: No, I didn't.  There is a breed of jellyfish that is immortal [agent_2]: Seriously?  I thought they just evaporated in the sun? [agent_1]: Absolutely, ",
+      "generated_repair": "And who knows how many that are undiscovered. Animals are truly fascinating!",
+      "reference_repair": "And who knows how many that are undiscovered.  Animals are truly fascinating!",
+      "exact_match": false,
+      "close_match": false,
+      "word_overlap": 1.0,
+      "similarity_pct": "100.0%"
+    },
+    {
+      "example_id": 3,
+      "violation_types": [
+        "relation"
+      ],
+      "input_preview": "[REPAIR] [VIOLATION=RELATION] [CONTEXT] [agent_2]: Really? I thought so too! Did you know Nevada is the only state to have a \"none of these candidates\" voting option for Presidential elections? [agent",
+      "generated_repair": "I didn't know that either. That's pretty interesting. Did you know that the taller candidate has won the US presidential election 75% of the time?",
+      "reference_repair": "That's an amazing statistic.  Wow.  Since 1900 the taller candidate has won the US presidential election 75 percent of the time.",
+      "exact_match": false,
+      "close_match": false,
+      "word_overlap": 0.5263157894736842,
+      "similarity_pct": "52.6%"
+    },
+    {
+      "example_id": 4,
+      "violation_types": [
+        "manner"
+      ],
+      "input_preview": "[REPAIR] [VIOLATION=MANNER] [CONTEXT] [agent_1]: Nice!  Did you see the first movie when it came out in 1977?  I remember going to the theater to see it. [agent_2]: No, I did not.  My son went with hi",
+      "generated_repair": "20th Century Fox did not think that Star Wars was going to succeed. Do you know what happened to Star Wars' licensing and merchandising rights?",
+      "reference_repair": "20th Century Fox did not think that Star Wars was going to succeed.  Do you know what happened to Star Wars' licensing and merchandising rights?",
+      "exact_match": false,
+      "close_match": false,
+      "word_overlap": 1.0,
+      "similarity_pct": "100.0%"
+    },
+    {
+      "example_id": 5,
+      "violation_types": [
+        "quality"
+      ],
+      "input_preview": "[REPAIR] [VIOLATION=QUALITY] [CONTEXT] [agent_1]: Hello,  how are you doing? Soccer makes more money than football, basketball, baseball, golf, tennis and hockey combined. [agent_2]: Hello, I'm doing ",
+      "generated_repair": "I do not follow soccer, I do remember reading about the German player who donated his bonus so 23 kids could have surgery.",
+      "reference_repair": "I do not follow soccer, I do remember reading about the German player who donated his bonus so 23 kids could have surgery.",
+      "exact_match": true,
+      "close_match": true,
+      "word_overlap": 1.0,
+      "similarity_pct": "100.0%"
+    },
+    {
+      "example_id": 6,
+      "violation_types": [
+        "quantity"
+      ],
+      "input_preview": "[REPAIR] [VIOLATION=QUANTITY] [CONTEXT] [agent_1]: I like their relationshop in the movies. Chewy is a very loyal friend [agent_2]: In the canon Chewy has a family a wife and 2 sons.  [agent_1]: Thats",
+      "generated_repair": "I heard that too, it was on the cover of one of his small stories. It is a peculiar creature when you think about it.",
+      "reference_repair": "I heard that too, it was on the cover of one of his small stories. It is a peculiar creature when you think about it. ",
+      "exact_match": false,
+      "close_match": true,
+      "word_overlap": 1.0,
+      "similarity_pct": "100.0%"
+    },
+    {
+      "example_id": 7,
+      "violation_types": [
+        "manner"
+      ],
+      "input_preview": "[REPAIR] [VIOLATION=MANNER] [CONTEXT]  [EVIDENCE] FS1 [RESPONSE] Did you know that Jazz music originated in novel Orleans?",
+      "generated_repair": "Did you know that Jazz music originated in New Orleans?",
+      "reference_repair": "Did you know that Jazz music originated in New Orleans?",
+      "exact_match": true,
+      "close_match": true,
+      "word_overlap": 1.0,
+      "similarity_pct": "100.0%"
+    },
+    {
+      "example_id": 8,
+      "violation_types": [
+        "quantity"
+      ],
+      "input_preview": "[REPAIR] [VIOLATION=QUANTITY] [CONTEXT] [agent_2]: It could be. At the same time it would be easy to define popularity of such art. For example, it could be a reason why the rating system was involved",
+      "generated_repair": "I only play have you heard of any of these players like, Davey Johnson?",
+      "reference_repair": "I only play have you heard of any of these players like, Davey Johnson?",
+      "exact_match": true,
+      "close_match": true,
+      "word_overlap": 1.0,
+      "similarity_pct": "100.0%"
+    },
+    {
+      "example_id": 9,
+      "violation_types": [
+        "quantity"
+      ],
+      "input_preview": "[REPAIR] [VIOLATION=QUANTITY] [CONTEXT] [agent_1]: Do you like wearing hats? It has so many functions! [EVIDENCE] FS1 [RESPONSE] It's quite complex.",
+      "generated_repair": "I don't like them on myself but I know a lot of people that can pull them off.",
+      "reference_repair": "I don't like them on myself but I know a lot of people that can pull them off. ",
+      "exact_match": false,
+      "close_match": true,
+      "word_overlap": 1.0,
+      "similarity_pct": "100.0%"
+    },
+    {
+      "example_id": 10,
+      "violation_types": [
+        "quantity"
+      ],
+      "input_preview": "[REPAIR] [VIOLATION=QUANTITY] [CONTEXT] [agent_2]: I have heard of it. Do you? [agent_1]: I like, the sport but there is not MLB team in my city, so I don't watch it. But I find it really interesting,",
+      "generated_repair": "Yes, I wonder if it could be even dangerous for some of them, like some could have an heart attack.",
+      "reference_repair": "Yes, I wonder if it could be even dangerous for some of them, like some could have an heart attack.  ",
+      "exact_match": false,
+      "close_match": true,
+      "word_overlap": 1.0,
+      "similarity_pct": "100.0%"
+    }
+  ],
+  "summary": {
+    "total_examples": 10,
+    "exact_matches": 3,
+    "close_matches": 6,
+    "exact_match_rate": "30.0%",
+    "close_match_rate": "60.0%",
+    "avg_word_overlap": "95.3%"
+  }
+}

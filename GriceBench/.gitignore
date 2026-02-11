@@ -1,0 +1,82 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+grice_env/
+venv/
+ENV/
+env/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb_checkpoints/
+
+# PyCharm
+.idea/
+
+# VSCode
+.vscode/
+
+# Data files (keep structure, ignore large files)
+data_raw/wizard_of_wikipedia/dialogs/
+data_raw/topicalchat/conversations/
+data_raw/light/dialogues/
+*.json.gz
+*.tar.gz
+*.zip
+
+# Model checkpoints (too large for git)
+models/detector/best_model.pt
+models/repair/pytorch_model.bin
+models/dpo/adapter_model.bin
+best_model_v2.pt
+
+# FAISS indices
+*.faiss
+*.bin
+
+# Logs
+*.log
+logs/
+wandb/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.bak
+*.swp
+*~
+
+# Output files
+results/*/
+*.png
+*.pdf
+*.csv
+
+# Exclude large Kaggle notebooks
+*_output/
+
+# Keep directory structure
+!.gitkeep

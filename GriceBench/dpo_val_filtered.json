@@ -1,0 +1,2426 @@
+[
+  {
+    "prompt": "Context: [agent_2]: I was fascinated to hear about that.  That would mean he did not accept the divinity of Jesus Christ, but that He was only a human man. [agent_1]: Yes!  Teddy Roosevelt and John Quincy Adams are the only 2 US presidents that did not use a bible when they were sworn in. [agent_2]: Yes that would indicate to me that they were agnostics or aherents to another form of religion\nEvidence: FS1\n\nGenerate a cooperative response:",
+    "chosen": "Yes.  The biblical tower of Babel was likely based on a real building, the Etemenanki in modern day Iraq.",
+    "rejected": "Yes. The biblical tower of they was likely based on a real building, the they in modern day these.",
+    "chosen_scores": {
+      "quantity": 1.2387926240364777e-09,
+      "quality": 0.16669391095638275,
+      "relation": 2.6012605958136703e-10,
+      "manner": 0.43332764506340027
+    },
+    "rejected_scores": {
+      "quantity": 2.861715753255112e-09,
+      "quality": 0.08884462714195251,
+      "relation": 1.1508047986774628e-10,
+      "manner": 0.8187655210494995
+    },
+    "margins": {
+      "quantity": 1.6229231292186341e-09,
+      "quality": -0.07784928381443024,
+      "relation": -1.4504557971362075e-10,
+      "manner": 0.38543787598609924
+    },
+    "avg_margin": 0.07689714841238664
+  },
+  {
+    "prompt": "Context: [agent_1]: Hi, do you know anything about lacrosse? [agent_2]: Hello there, I don't know too much I will say, how about you\nEvidence: Personal Knowledge\n\nGenerate a cooperative response:",
+    "chosen": "Not a ton... I love sports though so I could get into it if I needed to. Do you like any other sports?",
+    "rejected": "Not a ton I love sports though so I could get into it if I needed to Do you like any other sports",
+    "chosen_scores": {
+      "quantity": 3.226739409001311e-08,
+      "quality": 0.08241749554872513,
+      "relation": 5.570001704313654e-08,
+      "manner": 0.6005494594573975
+    },
+    "rejected_scores": {
+      "quantity": 9.60660386795098e-08,
+      "quality": 0.07455342262983322,
+      "relation": 3.156547023763778e-08,
+      "manner": 0.7869256138801575
+    },
+    "margins": {
+      "quantity": 6.379864458949669e-08,
+      "quality": -0.007864072918891907,
+      "relation": -2.4134546805498758e-08,
+      "manner": 0.18637615442276
+    },
+    "avg_margin": 0.04462803029199147
+  },
+  {
+    "prompt": "Context: [agent_2]: I guess they were appointed by a lottery of some type.  I think they believed that elections would lead to an oligarchy.  [agent_1]: I wonder how that would work today though. [agent_2]: Yeah I don't think that would work very well, but then again, maybe it would work better, who knows.\nEvidence: FS3\n\nGenerate a cooperative response:",
+    "chosen": "yeah there is no knowing there. In Nevada they have a none of these candidate options in the ballot.",
+    "rejected": "yeah there is no knowing there In Nevada they have a none of these candidate options in the ballot",
+    "chosen_scores": {
+      "quantity": 1.1468137550707524e-08,
+      "quality": 0.22576338052749634,
+      "relation": 8.737117696000496e-10,
+      "manner": 0.3427501320838928
+    },
+    "rejected_scores": {
+      "quantity": 4.877256998270241e-08,
+      "quality": 0.07677777856588364,
+      "relation": 2.710658808524613e-09,
+      "manner": 0.7796680927276611
+    },
+    "margins": {
+      "quantity": 3.730443243199488e-08,
+      "quality": -0.1489856019616127,
+      "relation": 1.8369470389245635e-09,
+      "manner": 0.4369179606437683
+    },
+    "avg_margin": 0.07198309945588377
+  },
+  {
+    "prompt": "Context: [agent_1]: Do you follow politics? [agent_2]: I do. I just learned that the Republican Party was founded by anti-slavery activists. Surprising. [agent_1]: I never knew that.  There hasn't been a US president who wasn't a Republican or Democrat since 1853.\nEvidence: FS1\n\nGenerate a cooperative response:",
+    "chosen": "That's a good thing! Did you know in 1957 President Harry Truman visited Disneyland and refused to be photographed on the Dumbo ride so he wouldn't be associated with the Republican Party?",
+    "rejected": "That's a good thing Did you know in 1957 President Harry Truman visited Disneyland and refused to be photographed on the Dumbo ride so he wouldn't be associated with the Republican Party",
+    "chosen_scores": {
+      "quantity": 6.366431826165808e-09,
+      "quality": 0.08629172295331955,
+      "relation": 1.597208942882844e-08,
+      "manner": 0.706525981426239
+    },
+    "rejected_scores": {
+      "quantity": 9.01553747212347e-08,
+      "quality": 0.08709064871072769,
+      "relation": 6.868186019914901e-09,
+      "manner": 0.8139686584472656
+    },
+    "margins": {
+      "quantity": 8.378894289506889e-08,
+      "quality": 0.0007989257574081421,
+      "relation": -9.103903408913538e-09,
+      "manner": 0.10744267702102661
+    },
+    "avg_margin": 0.02706041936586856
+  },
+  {
+    "prompt": "Context: [agent_2]: Yeah, so like the academy awards totally suck. Does anyone actually give a bleep what they think? [agent_1]: No I think that they don't really pick the best movies. A lot of good movies that I like a lot or never even nominated. I do like Daniel Day-Lewis though, I'm glad that he won three times for best actor [agent_2]: By the way, do you watch you tube? Much better than AA!\nEvidence: FS3\n\nGenerate a cooperative response:",
+    "chosen": "Yes I agree with you! I watch YouTube almost everyday. I can't believe that Google bought YouTube for 1.65 billion dollars back in 2006. That seems like so long ago",
+    "rejected": "Yes I agree with you! I watch these almost everyday. I can't believe that these bought YouTube for 1.65 billion dollars back in 2006. That seems like so long ago",
+    "chosen_scores": {
+      "quantity": 2.184258640625103e-08,
+      "quality": 0.0772077888250351,
+      "relation": 8.732656375798342e-09,
+      "manner": 0.7613014578819275
+    },
+    "rejected_scores": {
+      "quantity": 1.2684147066011064e-08,
+      "quality": 0.0972534790635109,
+      "relation": 1.4886707422334666e-09,
+      "manner": 0.8349881172180176
+    },
+    "margins": {
+      "quantity": -9.158439340239966e-09,
+      "quality": 0.0200456902384758,
+      "relation": -7.2439856335648756e-09,
+      "manner": 0.07368665933609009
+    },
+    "avg_margin": 0.02343308329303523
+  },
+  {
+    "prompt": "Context: [agent_2]: If Biden decided to run in 2020 i would probably choose him over Bernie, I always liked him when he was VP. [agent_1]: For sure, and he would take Trump down. [agent_2]: I am not sure anyone can take Trump down at this point, with all the rumored election rigging and ties to Russia, I personally think he will just cheat to win again and no one will do anything about it, just like these last 4 years.\nEvidence: Personal Knowledge\n\nGenerate a cooperative response:",
+    "chosen": "Right, I figured the same thing! I don't think he's good and if he wins I think we know for sure it was rigged.",
+    "rejected": "Right, I figured the same thing I don't think he's good and if he wins I think we know for sure it was rigged",
+    "chosen_scores": {
+      "quantity": 6.69044611378844e-11,
+      "quality": 0.1664632260799408,
+      "relation": 1.7909371902158355e-11,
+      "manner": 0.6508787870407104
+    },
+    "rejected_scores": {
+      "quantity": 5.697530780501836e-10,
+      "quality": 0.13063503801822662,
+      "relation": 6.363001098241838e-11,
+      "manner": 0.7750738263130188
+    },
+    "margins": {
+      "quantity": 5.028486169122992e-10,
+      "quality": -0.03582818806171417,
+      "relation": 4.572063908026003e-11,
+      "manner": 0.12419503927230835
+    },
+    "avg_margin": 0.02209171293979086
+  },
+  {
+    "prompt": "Context: [agent_2]: Also Los angeles, atlanta, and Dallas. they are looking for as much as 8 million sq ft [agent_1]: Don't forget about their original HQ, it was founded by Jeff Bexos on July 5 1994. And it's the largest internet retailer in the world!  [agent_2]: An in the US they are the most valuable company after Apple and Microsoft, they have really grow so much!\nEvidence: FS1\n\nGenerate a cooperative response:",
+    "chosen": "It's probably thanks to their hard-workers! I heard they walk 7-15 miles each day as apart of their shift.",
+    "rejected": "It's probably thanks to their hard-workers I heard they walk 7-15 miles each day as apart of their shift",
+    "chosen_scores": {
+      "quantity": 1.902069474146728e-11,
+      "quality": 0.1403038054704666,
+      "relation": 1.8792753811447405e-11,
+      "manner": 0.659778892993927
+    },
+    "rejected_scores": {
+      "quantity": 1.0380665077525109e-10,
+      "quality": 0.11114244163036346,
+      "relation": 3.177296620249237e-11,
+      "manner": 0.7641963958740234
+    },
+    "margins": {
+      "quantity": 8.47859560337838e-11,
+      "quality": -0.02916136384010315,
+      "relation": 1.2980212391044965e-11,
+      "manner": 0.10441750288009644
+    },
+    "avg_margin": 0.018814034784439864
+  },
+  {
+    "prompt": "Context: [agent_1]: Hello\nEvidence: AS1\n\nGenerate a cooperative response:",
+    "chosen": "Hello.  do you have a cat?  I see that some people can be allergic to them.",
+    "rejected": "Hello do you have a cat I see that some people can be allergic to them",
+    "chosen_scores": {
+      "quantity": 4.250302332309275e-09,
+      "quality": 0.08606046438217163,
+      "relation": 1.6145226267028079e-09,
+      "manner": 0.6221523284912109
+    },
+    "rejected_scores": {
+      "quantity": 8.153497432772383e-09,
+      "quality": 0.07314009964466095,
+      "relation": 1.6801932067878056e-09,
+      "manner": 0.7730033993721008
+    },
+    "margins": {
+      "quantity": 3.903195100463108e-09,
+      "quality": -0.012920364737510681,
+      "relation": 6.567058008499771e-11,
+      "manner": 0.1508510708808899
+    },
+    "avg_margin": 0.03448267752806122
+  },
+  {
+    "prompt": "Context: [agent_1]: hELLO [agent_2]: Hi there! [agent_1]: Did you know that on april 18, 1930, the bbc decided there was no news worth reporting, so they broadcast piano music instead.\nEvidence: Personal Knowledge\n\nGenerate a cooperative response:",
+    "chosen": "Really, wow! I wonder how many people had TV then?",
+    "rejected": "Really, wow I wonder how many people had TV then",
+    "chosen_scores": {
+      "quantity": 1.4610297693895546e-10,
+      "quality": 0.10186820477247238,
+      "relation": 1.432621243857568e-09,
+      "manner": 0.5784974694252014
+    },
+    "rejected_scores": {
+      "quantity": 6.918737249783646e-10,
+      "quality": 0.08235640823841095,
+      "relation": 1.341016186984234e-09,
+      "manner": 0.7347378730773926
+    },
+    "margins": {
+      "quantity": 5.457707480394092e-10,
+      "quality": -0.019511796534061432,
+      "relation": -9.160505687333398e-11,
+      "manner": 0.15624040365219116
+    },
+    "avg_margin": 0.03418215189307386
+  },
+  {
+    "prompt": "Context: [agent_2]: Yeah, that was a good movie. Did you like it?  [agent_1]: I use to. I think I have seen it too many times now. Spielberg played the clarinet for the soundtrack. [agent_2]: Yeah, that is pretty interesting. Did you see the Goonies?\nEvidence: FS1\n\nGenerate a cooperative response:",
+    "chosen": "I have. That is a cute movie. I love how they get the jewels at the end to pay the mortgage.",
+    "rejected": "I have That is a cute movie I love how they get the jewels at the end to pay the mortgage",
+    "chosen_scores": {
+      "quantity": 1.8626876041594187e-08,
+      "quality": 0.07990323752164841,
+      "relation": 2.645412777724232e-09,
+      "manner": 0.7736566066741943
+    },
+    "rejected_scores": {
+      "quantity": 1.407812817433296e-07,
+      "quality": 0.08182729035615921,
+      "relation": 7.364330034675959e-09,
+      "manner": 0.8351559042930603
+    },
+    "margins": {
+      "quantity": 1.2215440570173541e-07,
+      "quality": 0.0019240528345108032,
+      "relation": 4.718917256951727e-09,
+      "manner": 0.06149929761886597
+    },
+    "avg_margin": 0.015855869331674932
+  },
+  {
+    "prompt": "Context: [agent_1]: Yes, another of my favorites! How about you? What do you like to watch? [agent_2]: I enjoy watching comedies and dramas. I sometimes watch animated stuff, but not usually. [agent_1]: Me too, Mysteries or psychological thrillers are great, but animated is one of my favs to watch with kiddos although everyone knows Minnie mouse did you know minnie is short for minerva?! mind blown\nEvidence: FS3\n\nGenerate a cooperative response:",
+    "chosen": "I did not know that. I'm not surprised that Disney makes about $1,110 per second. That's a lot, but reflects the success of the brand.",
+    "rejected": "I did not know that I'm not surprised that Disney makes about $1,110 per second That's a lot, but reflects the success of the brand",
+    "chosen_scores": {
+      "quantity": 3.5446492407942287e-09,
+      "quality": 0.8218353390693665,
+      "relation": 5.076584486118918e-09,
+      "manner": 0.09636803716421127
+    },
+    "rejected_scores": {
+      "quantity": 6.635634403062696e-11,
+      "quality": 0.6369825601577759,
+      "relation": 2.785326413956568e-10,
+      "manner": 0.2836938500404358
+    },
+    "margins": {
+      "quantity": -3.4782928967636018e-09,
+      "quality": -0.18485277891159058,
+      "relation": -4.798051844723261e-09,
+      "manner": 0.18732581287622452
+    },
+    "avg_margin": 0.0006182564220722983
+  },
+  {
+    "prompt": "Context: [agent_2]: No I didn't see that. It's interesting that 23 former Nationals attended it though, did you see it? [agent_1]: Yah, it was pretty cool. I didn't catch who the olympic gold medalists were, did you? They said there were two of them there. [agent_2]: No I didn't catch their names. But I know that a lot of gold medalist attended as well as some people from the US Olympic softball team, I don't watch sports or the Olympics so I can't say that I know any of the names LOL\nEvidence: FS3\n\nGenerate a cooperative response:",
+    "chosen": "Me neither, I wish I knew more about the olympians, they're so elite. Hard for them to get a lot of recognition though. You play video games by chance?",
+    "rejected": "Me neither, I wish I knew more about the olympians, they're so elite. challenging for them to obtain a lot of recognition though. You play video games by chance?",
+    "chosen_scores": {
+      "quantity": 1.5705924061304444e-10,
+      "quality": 0.1004522442817688,
+      "relation": 1.5252689736233727e-11,
+      "manner": 0.7660605311393738
+    },
+    "rejected_scores": {
+      "quantity": 2.366082885174592e-09,
+      "quality": 0.13087321817874908,
+      "relation": 2.2472308736087854e-10,
+      "manner": 0.8269487619400024
+    },
+    "margins": {
+      "quantity": 2.2090236445615474e-09,
+      "quality": 0.030420973896980286,
+      "relation": 2.094703976246448e-10,
+      "manner": 0.06088823080062866
+    },
+    "avg_margin": 0.022827301779025748
+  },
+  {
+    "prompt": "Context: [agent_2]: Yes, true.  His works can be found in a library, which in Greek language means \"book+shelf\". [agent_1]: I love going to libraries!  I'm a heavy user of them.  It's been fun chatting with you! [agent_2]: Same thing to you. Good day.\nEvidence: FS3\n\nGenerate a cooperative response:",
+    "chosen": "You have a good day too!",
+    "rejected": "You have a optimal day too!",
+    "chosen_scores": {
+      "quantity": 7.697067871959007e-09,
+      "quality": 0.07941804826259613,
+      "relation": 2.577835500616743e-09,
+      "manner": 0.7266653180122375
+    },
+    "rejected_scores": {
+      "quantity": 2.3610694199760474e-07,
+      "quality": 0.1132056787610054,
+      "relation": 7.569919802108416e-09,
+      "manner": 0.8127262592315674
+    },
+    "margins": {
+      "quantity": 2.2840987412564573e-07,
+      "quality": 0.03378763049840927,
+      "relation": 4.992084301491673e-09,
+      "manner": 0.08606094121932983
+    },
+    "avg_margin": 0.029962201279924383
+  },
+  {
+    "prompt": "Context: [agent_2]: That is a shame. I don't know how many women cinematographers there are, but probably not enough. There should be more. [agent_1]: I agree with you! Especially with the box office at what it is. I would hate to work for the movie Trojan Wars. They made only 309 dollars on a budget of 15 million! [agent_2]: Movies are such a crapshoot. There is no magic formula for success. Stars, special FX, marketing. Doesn't matter.\nEvidence: FS3\n\nGenerate a cooperative response:",
+    "chosen": "They really are, even with the big names. Tom Hanks has earned 8.5 billion in film earnings for his movies.",
+    "rejected": "They really are, even with the big names Tom Hanks has earned 8.5 billion in film earnings for his movies",
+    "chosen_scores": {
+      "quantity": 1.8315285399417292e-10,
+      "quality": 0.6643932461738586,
+      "relation": 4.061462832716245e-10,
+      "manner": 0.17115418612957
+    },
+    "rejected_scores": {
+      "quantity": 2.0778732900961217e-10,
+      "quality": 0.1274029016494751,
+      "relation": 2.2176803449180937e-10,
+      "manner": 0.7295604348182678
+    },
+    "margins": {
+      "quantity": 2.463447501543925e-11,
+      "quality": -0.5369903445243835,
+      "relation": -1.8437824877981512e-10,
+      "manner": 0.5584062486886978
+    },
+    "avg_margin": 0.005353976001142624
+  },
+  {
+    "prompt": "Context: [agent_1]: I heard that, winning Cha Cha championships and everything! [agent_2]: Yes that is amazing. He won the Hong Kong cha-cha championship back in 1958 in fact. [agent_1]: I always just thought of him as a martial arts legend.  Now he is a dance legend of sorts too!\nEvidence: FS1\n\nGenerate a cooperative response:",
+    "chosen": "Yeah!! That is correct. He was a fantastic martial artist. Did you know that Tupac danced ballet in high school?",
+    "rejected": "Yeah!! they is correct. He was a fantastic martial artist. Did you know that these danced ballet in high school?",
+    "chosen_scores": {
+      "quantity": 4.0881076301957364e-09,
+      "quality": 0.08152265846729279,
+      "relation": 4.71076200270204e-09,
+      "manner": 0.7233182191848755
+    },
+    "rejected_scores": {
+      "quantity": 3.885662014369018e-09,
+      "quality": 0.09090007096529007,
+      "relation": 5.095858179871016e-10,
+      "manner": 0.810623049736023
+    },
+    "margins": {
+      "quantity": -2.024456158267185e-10,
+      "quality": 0.009377412497997284,
+      "relation": -4.201176184714939e-09,
+      "manner": 0.08730483055114746
+    },
+    "avg_margin": 0.024170559661380736
+  },
+  {
+    "prompt": "Context: [agent_2]: There has been the odd rap song that I like, but for me it's cultural.  I'm just not from the environment most rappers are and can't appreciate their point of view. [agent_1]: I agree too! I can't believe a michigan judge once delivered her ruling to eminem in the form of a rap haha. [agent_2]: That's kind of cool, I like it when people don't take themselves too seriously.  Like when Kanye made fun of himself on SNL.  If only he'd do it more.\nEvidence: FS3\n\nGenerate a cooperative response:",
+    "chosen": "All he has to do is talk and it happens haha. I give him props though, he once gave his mic to a fan in a wheelchair at a concert. However, I'm sure he told a person to stand up in a wheelchair before too.....",
+    "rejected": "All he has to do is talk and it happens haha I give him props though, he once gave his mic to a fan in a wheelchair at a concert However, I'm sure he told a person to stand up in a wheelchair before too",
+    "chosen_scores": {
+      "quantity": 1.0210522205511552e-08,
+      "quality": 0.09342703223228455,
+      "relation": 1.1298585400609795e-09,
+      "manner": 0.6878471374511719
+    },
+    "rejected_scores": {
+      "quantity": 1.370800717381826e-08,
+      "quality": 0.09858617186546326,
+      "relation": 2.905595097857372e-09,
+      "manner": 0.7393064498901367
+    },
+    "margins": {
+      "quantity": 3.4974849683067077e-09,
+      "quality": 0.005159139633178711,
+      "relation": 1.7757365577963924e-09,
+      "manner": 0.051459312438964844
+    },
+    "avg_margin": 0.01415461433634127
+  },
+  {
+    "prompt": "Context: [agent_2]: Me too, I love Disney movies.  I read that Disney considered shutting down their animation studio after Sleeping Beauty flopped. [agent_1]: I didn't even know that Sleeping Beauty was a flop! Treasure Planet was also a Disney movie and was the most expensive box office flops of all times. [agent_2]: I did know that Treasure Planet was a big time flop.  I can't remember anybody that saw it saying they liked it. I read that Tom Hanks is the highest all time box office star.\nEvidence: FS2\n\nGenerate a cooperative response:",
+    "chosen": "Would  you see the Silence of the Lambs on Valentine's day? That's the day it came out in 1991. It made over $270 million in box office.",
+    "rejected": "It made over $270 million in box office. That's the day it came out in 1991. Would  you see the Silence of the Lambs on Valentine's day?",
+    "chosen_scores": {
+      "quantity": 1.944442606927055e-09,
+      "quality": 0.1267002522945404,
+      "relation": 6.62432886322506e-11,
+      "manner": 0.724450409412384
+    },
+    "rejected_scores": {
+      "quantity": 4.039448953108149e-08,
+      "quality": 0.08047804981470108,
+      "relation": 1.777747504760896e-09,
+      "manner": 0.7920502424240112
+    },
+    "margins": {
+      "quantity": 3.8450046924154435e-08,
+      "quality": -0.046222202479839325,
+      "relation": 1.7115042161286453e-09,
+      "manner": 0.0675998330116272
+    },
+    "avg_margin": 0.005344417673334753
+  },
+  {
+    "prompt": "Context: [agent_2]: seems like fresh water fish got the short end of the stick with that one. Have you ever been to a cat cafe? [agent_1]: I have never been to a cat cafe no, what about you? Seems like they are popular in Japan and Taiwan. [agent_2]: no but I would love to! paying hourly to hang out with adorable cats? im in!\nEvidence: FS3\n\nGenerate a cooperative response:",
+    "chosen": "Yeah that would be a lot of fun. I didn't realize that cats sleep so much. Must be nice.",
+    "rejected": "Yeah that would be a lot of fun. I didn't realize that cats sleep so much. they be nice.",
+    "chosen_scores": {
+      "quantity": 5.038473815943689e-08,
+      "quality": 0.07091563194990158,
+      "relation": 2.1791068505194744e-08,
+      "manner": 0.7097526788711548
+    },
+    "rejected_scores": {
+      "quantity": 8.548349939019317e-08,
+      "quality": 0.06614922732114792,
+      "relation": 1.1973384062002879e-08,
+      "manner": 0.7610383629798889
+    },
+    "margins": {
+      "quantity": 3.509876123075628e-08,
+      "quality": -0.004766404628753662,
+      "relation": -9.817684443191865e-09,
+      "manner": 0.05128568410873413
+    },
+    "avg_margin": 0.011629826190264314
+  },
+  {
+    "prompt": "Context: [agent_1]: no we used to have a dog but we were only watching her for a bit and the owner took her away, we had lots of pets as kids though like iguanas and rabbits and such [agent_2]: In Boulder, Colorado you cannot own a pet. You can be their guardian though. [agent_1]: hmm that seems dumb like its just playing with words, do you like Teddy Roosevelt? apparently he had over 20 pets, or as they say in Colorado, \"Guardians\" haha\nEvidence: FS2\n\nGenerate a cooperative response:",
+    "chosen": "Maybe it helps people to feel more of an obligation to their pets. Shrug. Yeah, Teddy Roosevelt is an interesting guy. It's unfortunate though that people try to domesticate tigers as you mentioned. Many of the animals perish along the way from suffocation or hunger. ",
+    "rejected": "Maybe it helps people to feel more of an obligation to their pets. they. this, Teddy Roosevelt is an interesting guy. It's unfortunate though that people try to domesticate tigers as you mentioned. Many of the animals perish along the way from suffocation or hunger.",
+    "chosen_scores": {
+      "quantity": 4.5008211047026236e-10,
+      "quality": 0.10161549597978592,
+      "relation": 1.222764001163057e-09,
+      "manner": 0.5917525887489319
+    },
+    "rejected_scores": {
+      "quantity": 1.4961372141186757e-09,
+      "quality": 0.07255163788795471,
+      "relation": 7.149044134457938e-10,
+      "manner": 0.7343502640724182
+    },
+    "margins": {
+      "quantity": 1.0460551036484134e-09,
+      "quality": -0.029063858091831207,
+      "relation": -5.078595877172631e-10,
+      "manner": 0.14259767532348633
+    },
+    "avg_margin": 0.02838345444246266
+  },
+  {
+    "prompt": "Context: [agent_2]: I am good thanks. How are you? [agent_1]: I'm doing groovy over here. Are you a fan of tennis?  [agent_2]: Not so much. I heard that the longest tennis match in history went on for 11 hours. I definitely would not want to watch that.\nEvidence: FS1 Personal Knowledge\n\nGenerate a cooperative response:",
+    "chosen": "What if you had money on it though? That would make it worth it. ",
+    "rejected": "What if you had money on it though? That would fabricate it worth it.",
+    "chosen_scores": {
+      "quantity": 1.6564550842090853e-09,
+      "quality": 0.12221051752567291,
+      "relation": 1.7348435188413447e-10,
+      "manner": 0.40807998180389404
+    },
+    "rejected_scores": {
+      "quantity": 1.1575273362041116e-07,
+      "quality": 0.17598220705986023,
+      "relation": 1.5584153967296288e-09,
+      "manner": 0.7402180433273315
+    },
+    "margins": {
+      "quantity": 1.1409627853620208e-07,
+      "quality": 0.05377168953418732,
+      "relation": 1.3849310448454943e-09,
+      "manner": 0.3321380615234375
+    },
+    "avg_margin": 0.0964774666347086
+  },
+  {
+    "prompt": "Context: [agent_1]: That is insane. Do you watch the Academy Awards? [agent_2]: No, I don't. How about you? [agent_1]: I watch it sometimes. Did you know Daniel Day-Lewis has won the Oscar 3 times?\nEvidence: FS2\n\nGenerate a cooperative response:",
+    "chosen": "I am not sure I even know who he is. Good for him. John Williams has been nominated for more Oscars than anyone besides Walt Disney.",
+    "rejected": "I am not sure I even know who he is. optimal for him. John Williams has been nominated for more Oscars than anyone besides Walt Disney.",
+    "chosen_scores": {
+      "quantity": 6.733648305612405e-09,
+      "quality": 0.26507318019866943,
+      "relation": 1.6886886555766978e-08,
+      "manner": 0.2114861160516739
+    },
+    "rejected_scores": {
+      "quantity": 5.783702849981864e-09,
+      "quality": 0.28694993257522583,
+      "relation": 6.836015781219729e-11,
+      "manner": 0.6205487251281738
+    },
+    "margins": {
+      "quantity": -9.499454556305409e-10,
+      "quality": 0.021876752376556396,
+      "relation": -1.681852639795478e-08,
+      "manner": 0.40906260907649994
+    },
+    "avg_margin": 0.10773483592114612
+  },
+  {
+    "prompt": "Context: [agent_2]: I wonder how much fraud there was in voting back in 1918.  [agent_1]: I'm sure a lot. Elections are fairly new. rom 1789 until 1913, Senators were appointed by legislatures of the states they represented; following the ratification of the Seventeenth Amendment in 1913, they are now popularly elected.  [agent_2]: That is a very interesting fact.  Do you remember the first time you voted?\nEvidence: FS3\n\nGenerate a cooperative response:",
+    "chosen": "I don't. it was a long time ago! Women were not allowed to wear pants on the u.s. senate floor until 1993. ",
+    "rejected": "I don't. it was a long time ago! this were not allowed to wear pants on the u.s. senate floor until 1993.",
+    "chosen_scores": {
+      "quantity": 2.6982666101460495e-10,
+      "quality": 0.1081697940826416,
+      "relation": 1.586202003078796e-10,
+      "manner": 0.609714150428772
+    },
+    "rejected_scores": {
+      "quantity": 1.1997153137599526e-07,
+      "quality": 0.08543913066387177,
+      "relation": 6.013491926637471e-09,
+      "manner": 0.815220296382904
+    },
+    "margins": {
+      "quantity": 1.1970170471498065e-07,
+      "quality": -0.022730663418769836,
+      "relation": 5.854871726329591e-09,
+      "manner": 0.20550614595413208
+    },
+    "avg_margin": 0.04569390202298467
+  },
+  {
+    "prompt": "Context: [agent_1]: Wow.  I didn't know that.  71 percent of the earth's surface is covered by water.  I wonder what covers the polar regions? [agent_2]: Ice?  I am not sure though.  Apparently, earth will be helium free by the end of the 21st century. [agent_1]: Yes.  Ice is right.  It's almost like the history of the earth is like watching a science fiction movie only in real life.\nEvidence: FS2 Personal Knowledge\n\nGenerate a cooperative response:",
+    "chosen": "I like science fiction.  I like to imagine things, like aliens in a different planet.",
+    "rejected": "I like science fiction I like to imagine things, like aliens in a different planet",
+    "chosen_scores": {
+      "quantity": 1.4066037223869898e-09,
+      "quality": 0.08222441375255585,
+      "relation": 2.3073425114983337e-10,
+      "manner": 0.7340490818023682
+    },
+    "rejected_scores": {
+      "quantity": 5.1850040705403444e-08,
+      "quality": 0.08213526010513306,
+      "relation": 3.7324805468585964e-09,
+      "manner": 0.8175075650215149
+    },
+    "margins": {
+      "quantity": 5.0443436983016454e-08,
+      "quality": -8.915364742279053e-05,
+      "relation": 3.501746295708763e-09,
+      "manner": 0.08345848321914673
+    },
+    "avg_margin": 0.020842345879226804
+  },
+  {
+    "prompt": "Context: [agent_2]: Very interesting.  Was this President an independence in your opinion? [agent_1]: I think so. I dont know if any green party have ever been elected. Did you know all presidents with beards have been republican.? [agent_2]: Just know about this fact by now.  Which party do you think will win the next Presidential Electin?\nEvidence: Personal Knowledge\n\nGenerate a cooperative response:",
+    "chosen": "I think the republicans will win. Do you think someone will run against Trump on the republican ballot next time?",
+    "rejected": "I think the republicans will win Do you think someone will run against Trump on the republican ballot next time",
+    "chosen_scores": {
+      "quantity": 6.759050784344023e-12,
+      "quality": 0.17184656858444214,
+      "relation": 2.7449527026379705e-11,
+      "manner": 0.5067973732948303
+    },
+    "rejected_scores": {
+      "quantity": 2.1432064456483602e-10,
+      "quality": 0.09170593321323395,
+      "relation": 5.725437832171387e-11,
+      "manner": 0.7688565850257874
+    },
+    "margins": {
+      "quantity": 2.07561593780492e-10,
+      "quality": -0.08014063537120819,
+      "relation": 2.980485129533417e-11,
+      "manner": 0.26205921173095703
+    },
+    "avg_margin": 0.045479644149278825
+  },
+  {
+    "prompt": "Context: [agent_2]: Yeah. Celebrating a centennial is cool, but the gov't can't afford it! Are you a fan of Johnny Depp? [agent_1]: I find him very interesting. He is one of those chameleon actors that you never watch and go Oh that's Johnny Depp he sort of absorbs the character.  [agent_2]: Johnny  is producing and maybe starring in a biopic about  Dr. Seuss. I would be interested in that.\nEvidence: FS3 Personal Knowledge\n\nGenerate a cooperative response:",
+    "chosen": "I think he would make a fantastic Dr. Seuss Look what an amazing job he did with willy wonka. I think the creepy edge he gave to the character was perfect. ",
+    "rejected": "I think he would make a fantastic Dr. they it what an amazing job he did with willy wonka. I think the creepy edge he gave to the character was perfect.",
+    "chosen_scores": {
+      "quantity": 2.1512480685714763e-08,
+      "quality": 0.07626572251319885,
+      "relation": 4.676293796634923e-10,
+      "manner": 0.7636999487876892
+    },
+    "rejected_scores": {
+      "quantity": 5.568854817283864e-07,
+      "quality": 0.07948517799377441,
+      "relation": 6.746671221691258e-09,
+      "manner": 0.8259170055389404
+    },
+    "margins": {
+      "quantity": 5.353730010426716e-07,
+      "quality": 0.0032194554805755615,
+      "relation": 6.279041842027766e-09,
+      "manner": 0.06221705675125122
+    },
+    "avg_margin": 0.016359263470967417
+  },
+  {
+    "prompt": "Context: [agent_1]: Hello, Did you know that there are over 1.5 million living animal species? [agent_2]: No, that was chock  full of interesting facts. Hiccups are residual from when we had gills and lungs? Interesting stuff.\nEvidence: FS2 Personal Knowledge\n\nGenerate a cooperative response:",
+    "chosen": "Never heard that one before, lol! There is a fish called the black swallower that is capable of eating prey twice its length and 10 times its own weight.",
+    "rejected": "Never heard that one before, lol There is a fish called the black swallower that is capable of eating prey twice its length and 10 times its own weight",
+    "chosen_scores": {
+      "quantity": 6.023487264528171e-10,
+      "quality": 0.14942510426044464,
+      "relation": 4.214766313737073e-09,
+      "manner": 0.3837117552757263
+    },
+    "rejected_scores": {
+      "quantity": 8.25604651311096e-09,
+      "quality": 0.07548385113477707,
+      "relation": 2.218019989896902e-09,
+      "manner": 0.7688575387001038
+    },
+    "margins": {
+      "quantity": 7.653697786658142e-09,
+      "quality": -0.07394125312566757,
+      "relation": -1.9967463238401706e-09,
+      "manner": 0.38514578342437744
+    },
+    "avg_margin": 0.07780113398891533
+  },
+  {
+    "prompt": "Context: [agent_1]: I love the name of the cat. The name is Chief Mouser of the cabinet office LOL can't say I like cats though haha [agent_2]: Hilarious. What happens if someone is allergic?  [agent_1]: I am actually allergic to cats. And that's a great question haha do you know who Helena Bonham Carter is?\nEvidence: FS2 Personal Knowledge\n\nGenerate a cooperative response:",
+    "chosen": "yeah, she was in Fight Club, other than that I don't remember many of the movies with her. ",
+    "rejected": "yeah, she was in Fight Club, other than that I don't remember numerous of the movies with her.",
+    "chosen_scores": {
+      "quantity": 4.0711778837021484e-08,
+      "quality": 0.0709272250533104,
+      "relation": 7.001565549558109e-09,
+      "manner": 0.773535430431366
+    },
+    "rejected_scores": {
+      "quantity": 9.150911495225955e-08,
+      "quality": 0.10289826989173889,
+      "relation": 5.53868417796366e-09,
+      "manner": 0.8355737328529358
+    },
+    "margins": {
+      "quantity": 5.079733611523807e-08,
+      "quality": 0.0319710448384285,
+      "relation": -1.4628813715944489e-09,
+      "manner": 0.062038302421569824
+    },
+    "avg_margin": 0.023502349148613266
+  },
+  {
+    "prompt": "Context: [agent_2]: Dogs are awesome, I think anyway, they have like 12 different blood types and apparently there are dog blood drives that exist [agent_1]: I wonder how the dogs are rewarded at the drive. People get cookies and orange juice. [agent_2]: I know right? I hope that the dogs get a treat at least haha. Did you know that Istanbul has vending machines that reward stray dogs for bringing back trash?\nEvidence: FS2 Personal Knowledge\n\nGenerate a cooperative response:",
+    "chosen": "The Turks know the value of recycling and that dogs are keen to help for reward.",
+    "rejected": "Many people wonder about this.",
+    "chosen_scores": {
+      "quantity": 1.132182916308011e-07,
+      "quality": 0.04281654953956604,
+      "relation": 0.9999995231628418,
+      "manner": 0.0256767887622118
+    },
+    "rejected_scores": {
+      "quantity": 1.0,
+      "quality": 0.08617647737264633,
+      "relation": 8.327801559460113e-09,
+      "manner": 0.08867628127336502
+    },
+    "margins": {
+      "quantity": 0.9999998867817084,
+      "quality": 0.04335992783308029,
+      "relation": -0.9999995148350402,
+      "manner": 0.06299949251115322
+    },
+    "avg_margin": 0.02658994807272541
+  },
+  {
+    "prompt": "Context: [agent_1]: Yeah, that is pretty crazy. I'm not even sure how that is possible?  [agent_2]: Me neither. I also don't know how the space shuttles general-purpose computer runs on 1 Mb of RAM. [agent_1]: I'm not sure either. It seems like a small amount of ram.\nEvidence: FS3\n\nGenerate a cooperative response:",
+    "chosen": "Yes it does. Do you like reading fiction? I kind of like reading things that are not based on history or facts.",
+    "rejected": "Yes it does. I kind of like reading things that are not based on history or facts. Do you like reading fiction?",
+    "chosen_scores": {
+      "quantity": 3.10124370628273e-08,
+      "quality": 0.14288978278636932,
+      "relation": 1.5765847294346713e-08,
+      "manner": 0.33295783400535583
+    },
+    "rejected_scores": {
+      "quantity": 1.8011036218013032e-08,
+      "quality": 0.11557692289352417,
+      "relation": 3.5299830614121674e-08,
+      "manner": 0.3966132402420044
+    },
+    "margins": {
+      "quantity": -1.300140084481427e-08,
+      "quality": -0.027312859892845154,
+      "relation": 1.953398331977496e-08,
+      "manner": 0.06365540623664856
+    },
+    "avg_margin": 0.00908563821909647
+  },
+  {
+    "prompt": "Context: [agent_1]: Yes, I agree. There is an extensive specialized vocabulary used to described equine-related concepts, covering everything from anatomy to life stages, size, colors, markings, breeds, locomotion, and behavior. [agent_2]: What do you think about sharks? Did you know they're sister species to rays? [agent_1]: Yes, fascinating fact!. And sharks can be trained like dogs to bark.\nEvidence: FS3\n\nGenerate a cooperative response:",
+    "chosen": "I kinda feel bad for them. They have no rib cages so if they ever end up on land, they get crushed by the weight of their body.",
+    "rejected": "I kinda feel suboptimal for them. They have no rib cages so if they ever end up on land, they obtain crushed by the weight of their body.",
+    "chosen_scores": {
+      "quantity": 5.687541548837771e-10,
+      "quality": 0.11621002852916718,
+      "relation": 9.414719670530758e-09,
+      "manner": 0.4811745285987854
+    },
+    "rejected_scores": {
+      "quantity": 2.0320441163068637e-10,
+      "quality": 0.15305839478969574,
+      "relation": 4.2521309390197715e-11,
+      "manner": 0.7121152877807617
+    },
+    "margins": {
+      "quantity": -3.6554974325309075e-10,
+      "quality": 0.036848366260528564,
+      "relation": -9.37219836114056e-09,
+      "manner": 0.23094075918197632
+    },
+    "avg_margin": 0.0669472789261892
+  },
+  {
+    "prompt": "Context: [agent_1]: it is like kids in korea being banned playing games after 12 [agent_2]: after or before 12? If after 12, why is it so? I used to play a lot when I was child. I'm not surprised that video games make more money abbually than all films from Hollywood. [agent_1]: But would you categorize them as an art form?\nEvidence: FS3\n\nGenerate a cooperative response:",
+    "chosen": "Interesting question. I don't think this is any sort of art. It could be kind of sport. I more support this point of view. How about you? What's your opinion?",
+    "rejected": "Interesting question. I don't think this is any sort of art. It could be kind of sport. I more support this point of view. How about you? it your opinion?",
+    "chosen_scores": {
+      "quantity": 4.396699671005422e-11,
+      "quality": 0.106663778424263,
+      "relation": 1.3174855650888162e-10,
+      "manner": 0.6327948570251465
+    },
+    "rejected_scores": {
+      "quantity": 2.2672115573829643e-10,
+      "quality": 0.08408578485250473,
+      "relation": 8.64611646167468e-11,
+      "manner": 0.7684838771820068
+    },
+    "margins": {
+      "quantity": 1.8275415902824221e-10,
+      "quality": -0.02257799357175827,
+      "relation": -4.528739189213482e-11,
+      "manner": 0.13568902015686035
+    },
+    "avg_margin": 0.02827775668064221
+  },
+  {
+    "prompt": "Context: [agent_1]: Hello,  how are you doing? Soccer makes more money than football, basketball, baseball, golf, tennis and hockey combined.\nEvidence: FS1\n\nGenerate a cooperative response:",
+    "chosen": "Hello, I'm doing great. Have you ever watched the variation that has three teams, instead of two?",
+    "rejected": "Hello, I'm doing great. it you ever watched the variation that has three teams, instead of two?",
+    "chosen_scores": {
+      "quantity": 9.342648432664191e-09,
+      "quality": 0.19137369096279144,
+      "relation": 2.3565707163442084e-09,
+      "manner": 0.7481993436813354
+    },
+    "rejected_scores": {
+      "quantity": 1.2853138997570568e-08,
+      "quality": 0.12161393463611603,
+      "relation": 9.767000541671678e-10,
+      "manner": 0.8213649988174438
+    },
+    "margins": {
+      "quantity": 3.5104905649063767e-09,
+      "quality": -0.06975975632667542,
+      "relation": -1.3798706621770407e-09,
+      "manner": 0.0731656551361084
+    },
+    "avg_margin": 0.0008514752350132215
+  },
+  {
+    "prompt": "Context: [agent_2]: Hello - it doesn't surprise me. I've even heard that taller people in interviews for jobs tend to get the job more often. [agent_1]: Crazy, is that true?  [agent_2]: Not sure how true it is, but that's what I've been told. Did you know Hillary Clinton was president of young republicans in college?\nEvidence: FS3\n\nGenerate a cooperative response:",
+    "chosen": "I'm not surprised. Did you know Arnold traveled 3 hours a day to Sacramento when he was the governor? ",
+    "rejected": "I'm not surprised. Did you know that traveled 3 hours a day to Sacramento when he was the governor?",
+    "chosen_scores": {
+      "quantity": 1.9849853316600274e-08,
+      "quality": 0.8808572292327881,
+      "relation": 3.0376021697975375e-08,
+      "manner": 0.09064923226833344
+    },
+    "rejected_scores": {
+      "quantity": 2.864860015883153e-10,
+      "quality": 0.8168478012084961,
+      "relation": 2.435614154805421e-09,
+      "manner": 0.1742211878299713
+    },
+    "margins": {
+      "quantity": -1.956336731501196e-08,
+      "quality": -0.06400942802429199,
+      "relation": -2.7940407543169954e-08,
+      "manner": 0.08357195556163788
+    },
+    "avg_margin": 0.004890620008392757
+  },
+  {
+    "prompt": "Context: [agent_2]: They can.  And in certain places they might have voted for some animals.  Like a cat named Hank, third place in Virginia senate election [agent_1]: Oh my goodness! Really. At least we don't have to go into the forest with lions like they do in Indian government! [agent_2]: I know, id be skipping out on that election.\nEvidence: FS3\n\nGenerate a cooperative response:",
+    "chosen": "I think I would too! Too bad Richard Nixon cracked that 165 year old gavel the senate used. It must be somewhere on display.",
+    "rejected": "I think I would too Too bad Richard Nixon cracked that 165 year old gavel the senate used It must be somewhere on display",
+    "chosen_scores": {
+      "quantity": 2.930120035493644e-10,
+      "quality": 0.13625922799110413,
+      "relation": 3.014040961257791e-10,
+      "manner": 0.4626408815383911
+    },
+    "rejected_scores": {
+      "quantity": 2.3518738068162293e-09,
+      "quality": 0.07915504276752472,
+      "relation": 3.8201100616142014e-10,
+      "manner": 0.804746687412262
+    },
+    "margins": {
+      "quantity": 2.058861803266865e-09,
+      "quality": -0.05710418522357941,
+      "relation": 8.060691003564102e-11,
+      "manner": 0.34210580587387085
+    },
+    "avg_margin": 0.07125040569744004
+  },
+  {
+    "prompt": "Context: [agent_2]: Oh it's fascinating, for sure! Even more so to me since it eludes my abilities. heh. I've read that there is a poem which when read forwards is depressing, and when read backwards is inspiring! I'd really like to read it, but I can't find anything more about it, as of yet. [agent_1]: That is fascinating. Similarly, Demetri Martin once wrote a 224 word palindrome poem.  [agent_2]: Oh wow! Now there is a poem, I forgot that I loved! The Raven, by Edgar Allen Poe. It's been so long since I've heard it! I mean like 20+ years! Something about The Raven rap-tap-tapping on his door, or floor? Haha. I heard he only got $9 for the publication of that poem! Go figure.\nEvidence: FS3\n\nGenerate a cooperative response:",
+    "chosen": "Wow! Just $9?! Somebody got a bargain! Did you know Edgar Allen Poe also wrote the oldest known example of a cyborg in fiction? Pretty diverse author, isn't he?",
+    "rejected": "Did you know Edgar Allen Poe also wrote the oldest known example of a cyborg in fiction? Pretty diverse author, isn't he? Somebody got a bargain! Wow! Just $9?!",
+    "chosen_scores": {
+      "quantity": 5.0722918920609317e-11,
+      "quality": 0.15606144070625305,
+      "relation": 9.809132672788934e-11,
+      "manner": 0.5029783248901367
+    },
+    "rejected_scores": {
+      "quantity": 3.120542435564033e-10,
+      "quality": 0.11789684742689133,
+      "relation": 4.1113511900503497e-11,
+      "manner": 0.6973913311958313
+    },
+    "margins": {
+      "quantity": 2.61331324635794e-10,
+      "quality": -0.038164593279361725,
+      "relation": -5.697781482738584e-11,
+      "manner": 0.19441300630569458
+    },
+    "avg_margin": 0.03906210330767159
+  },
+  {
+    "prompt": "Context: [agent_1]: Hey how are you? Did you see the FanFest in Miami last year by chance? [agent_2]: No I didn't see that. It's interesting that 23 former Nationals attended it though, did you see it? [agent_1]: Yah, it was pretty cool. I didn't catch who the olympic gold medalists were, did you? They said there were two of them there.\nEvidence: AS1 Personal Knowledge\n\nGenerate a cooperative response:",
+    "chosen": "No I didn't catch their names. But I know that a lot of gold medalist attended as well as some people from the US Olympic softball team, I don't watch sports or the Olympics so I can't say that I know any of the names LOL",
+    "rejected": "No I didn't catch their names. But I know that a lot of gold medalist attended as well as some people from the US Olympic softball team, I don't watch sports or the these so I can't say that I know any of the names LOL",
+    "chosen_scores": {
+      "quantity": 1.1122308629651911e-10,
+      "quality": 0.12105245888233185,
+      "relation": 7.19259981435405e-12,
+      "manner": 0.7429593801498413
+    },
+    "rejected_scores": {
+      "quantity": 9.04655184097436e-10,
+      "quality": 0.09760654717683792,
+      "relation": 1.4914545293231996e-11,
+      "manner": 0.8202276229858398
+    },
+    "margins": {
+      "quantity": 7.934320978009168e-10,
+      "quality": -0.023445911705493927,
+      "relation": 7.721945478877945e-12,
+      "manner": 0.07726824283599854
+    },
+    "avg_margin": 0.013455582982914664
+  },
+  {
+    "prompt": "Context: [agent_2]: Oh my gosh! DO you like Jazz? [agent_1]: No, not really.  You? [agent_2]: Some, but Jazz is a music genre that originated in the African-American communities of New Orleans.\nEvidence: AS3\n\nGenerate a cooperative response:",
+    "chosen": "There is a programming language in which the programs are written in musical composition, and functional programs have jazz-like harmonies.",
+    "rejected": "There is a programming language in which the programs are written in musical composition, and functional programs have jazz-like harmonies, making it a popular subject among technology experts. Furthermore, there is a programming language in which the programs are written in musical composition, and functional programs have jazz-like harmonies, making it a popular subject among technology experts.",
+    "chosen_scores": {
+      "quantity": 2.5173530815436607e-08,
+      "quality": 0.06081908568739891,
+      "relation": 0.999992847442627,
+      "manner": 0.02633916772902012
+    },
+    "rejected_scores": {
+      "quantity": 1.0,
+      "quality": 0.798294186592102,
+      "relation": 5.403398173342566e-09,
+      "manner": 0.1757461279630661
+    },
+    "margins": {
+      "quantity": 0.9999999748264692,
+      "quality": 0.7374751009047031,
+      "relation": -0.9999928420392288,
+      "manner": 0.14940696023404598
+    },
+    "avg_margin": 0.22172229848149738
+  },
+  {
+    "prompt": "Context: [agent_2]: Yes, I think that was good for the USPS!  How would you like to have a building named after yourself for being a customer and only spend $27.95? [agent_1]: If only I knew about it years ago!!!!! I didn't realize they own IMDB as well! [agent_2]: I know, I didn't either!  Thinking the amazon warehouse workers don't need a gym membership with walking 7-15 miles each day on a shift! Omg!\nEvidence: FS2\n\nGenerate a cooperative response:",
+    "chosen": "I would be the fittest man alive working there haha. They ought to use horses there! Especially Icelandic horses that can speedwalk!",
+    "rejected": "I would be the fittest man alive working there haha. They ought to utilize horses there! Especially Icelandic horses that can speedwalk!",
+    "chosen_scores": {
+      "quantity": 3.877732357437935e-09,
+      "quality": 0.07289538532495499,
+      "relation": 1.2023703144237174e-09,
+      "manner": 0.7606521248817444
+    },
+    "rejected_scores": {
+      "quantity": 5.837565542066159e-09,
+      "quality": 0.08057603240013123,
+      "relation": 1.4094074796133782e-09,
+      "manner": 0.8163455128669739
+    },
+    "margins": {
+      "quantity": 1.9598331846282235e-09,
+      "quality": 0.007680647075176239,
+      "relation": 2.0703716518966075e-10,
+      "manner": 0.05569338798522949
+    },
+    "avg_margin": 0.01584350930681902
+  },
+  {
+    "prompt": "Context: [agent_2]: I like science fiction.  I like to imagine things, like aliens in a different planet. [agent_1]: Do you like Starship Troopers?   [agent_2]: Yes, because it is the only science fiction novel recommended by three branches of the military.  I wonder why they recommended it though - do you know?\nEvidence: FS2\n\nGenerate a cooperative response:",
+    "chosen": "I have no idea.  lol  The word robotics was made up by a book writer - Isaac Asimov.  Seems like robots and space are always a big theme for science fiction books and movies. ",
+    "rejected": "I have no idea. lol The word robotics was made up by a book writer - that this. Seems like robots and space are always a big theme for science fiction books and movies.",
+    "chosen_scores": {
+      "quantity": 8.09566191861677e-10,
+      "quality": 0.09131564199924469,
+      "relation": 2.8166274868013375e-10,
+      "manner": 0.6767566800117493
+    },
+    "rejected_scores": {
+      "quantity": 3.5270421250288564e-08,
+      "quality": 0.07442624866962433,
+      "relation": 8.002900009351777e-10,
+      "manner": 0.8140206336975098
+    },
+    "margins": {
+      "quantity": 3.446085505842689e-08,
+      "quality": -0.01688939332962036,
+      "relation": 5.186272522550439e-10,
+      "manner": 0.1372639536857605
+    },
+    "avg_margin": 0.030093648833905612
+  },
+  {
+    "prompt": "Context: [agent_1]: That's crazy long!  [agent_2]: I agree! It's amazing the facts you can find on Google. Did you know that a single Google search requires more computing power than it took to send Neil Armstrong to the moon? [agent_1]: That's pretty amazing! I saw that Google maps calculates traffic by how fast Android devices are moving on the road.\nEvidence: FS2\n\nGenerate a cooperative response:",
+    "chosen": "I never knew that! I wonder whose? I know I heard that back in the day Google used goats to keep the lawn under control instead of hiring people to mow.",
+    "rejected": "I never knew that I wonder whose I know I heard that back in the day Google used goats to keep the lawn under control instead of hiring people to mow",
+    "chosen_scores": {
+      "quantity": 1.1950859191145469e-09,
+      "quality": 0.1208299994468689,
+      "relation": 3.3747948879891965e-09,
+      "manner": 0.5206917524337769
+    },
+    "rejected_scores": {
+      "quantity": 9.570484138521351e-08,
+      "quality": 0.0811581015586853,
+      "relation": 1.0099056702017606e-08,
+      "manner": 0.8010575175285339
+    },
+    "margins": {
+      "quantity": 9.450975546609897e-08,
+      "quality": -0.039671897888183594,
+      "relation": 6.724261814028409e-09,
+      "manner": 0.2803657650947571
+    },
+    "avg_margin": 0.06017349211014769
+  },
+  {
+    "prompt": "Context: [agent_2]: That's crazy! Precisely why I'm not an astronaut! I wouldn't want to do crazy things such as trust my life to 1mb of ram!  [agent_1]: Haha! There's a good science fiction  book, The Martian, which has some interestin parts about computers and space shuttles. That author had a pretty good imagination.  [agent_2]: Woah! In the 50's a judge tried to ban a sci-fi comic because it featured a black character! Thank goodness, we've come a long way from that hatefulness. But still we have a ways to go, before things are truly equal, really for all races.\nEvidence: FS1 FS3\n\nGenerate a cooperative response:",
+    "chosen": "Thank goodness, indeed. I agree with you, though, there is still progress to be made, and I think reading diverse fiction and poetry can help people see things from other perspectives. ",
+    "rejected": "Thank goodness, indeed I agree with you, though, there is still progress to be made, and I think reading diverse fiction and poetry can help people see things from other perspectives",
+    "chosen_scores": {
+      "quantity": 1.19014520461036e-09,
+      "quality": 0.09997828304767609,
+      "relation": 3.6590294683058744e-10,
+      "manner": 0.6626714468002319
+    },
+    "rejected_scores": {
+      "quantity": 5.8352412679596455e-08,
+      "quality": 0.0927407294511795,
+      "relation": 4.085286331445559e-09,
+      "manner": 0.8219291567802429
+    },
+    "margins": {
+      "quantity": 5.7162267474986095e-08,
+      "quality": -0.007237553596496582,
+      "relation": 3.7193833846149715e-09,
+      "manner": 0.159257709980011
+    },
+    "avg_margin": 0.038005054316291316
+  },
+  {
+    "prompt": "Context: [agent_1]: do you know how google maps calculates traffic? [agent_2]: I am not sure, how do they do this? [agent_1]: they track how fast android devices are moving\nEvidence: FS1\n\nGenerate a cooperative response:",
+    "chosen": "Interesting! Google really is taking over the world. Their data center electricity use is 0.01 percent of all worldwide electricity.",
+    "rejected": "Their data center electricity use is 0.01 percent of all worldwide electricity. Interesting! Google really is taking over the world.",
+    "chosen_scores": {
+      "quantity": 2.3392445758219083e-09,
+      "quality": 0.15455234050750732,
+      "relation": 8.208392188180369e-09,
+      "manner": 0.3725249767303467
+    },
+    "rejected_scores": {
+      "quantity": 6.180781220166409e-09,
+      "quality": 0.08191666752099991,
+      "relation": 5.245401002440531e-09,
+      "manner": 0.663133978843689
+    },
+    "margins": {
+      "quantity": 3.841536644344501e-09,
+      "quality": -0.07263567298650742,
+      "relation": -2.9629911857398383e-09,
+      "manner": 0.2906090021133423
+    },
+    "avg_margin": 0.05449333250134508
+  },
+  {
+    "prompt": "Context: [agent_1]: I think its sad to have to part with a pet due to allergies and couple conflict like in the Dear Amy section.\nEvidence: FS3\n\nGenerate a cooperative response:",
+    "chosen": "That is sad. Do you have pets? The first cloned pet was a cat and its name was copy cat.",
+    "rejected": "That is sad. The first cloned pet was a cat and its name was copy cat. Do you have pets?",
+    "chosen_scores": {
+      "quantity": 3.265805958996282e-10,
+      "quality": 0.0854920968413353,
+      "relation": 5.740168895762565e-10,
+      "manner": 0.6547709107398987
+    },
+    "rejected_scores": {
+      "quantity": 1.4412023796595008e-09,
+      "quality": 0.07800117135047913,
+      "relation": 1.9636330339523056e-09,
+      "manner": 0.7300493121147156
+    },
+    "margins": {
+      "quantity": 1.1146217837598726e-09,
+      "quality": -0.007490925490856171,
+      "relation": 1.389616144376049e-09,
+      "manner": 0.0752784013748169
+    },
+    "avg_margin": 0.016946869597049663
+  },
+  {
+    "prompt": "Context: [agent_1]: Yes, I wonder if it could be even dangerous for some of them, like some could have an heart attack.   [agent_2]: Yeah, no insurance company would touch the managers on the field, that's for sure. [agent_1]: I think they would be better at softball, did you ever watch a softball game ?\nEvidence: FS2 Personal Knowledge\n\nGenerate a cooperative response:",
+    "chosen": "I have never watched a softball game, though I understand many women play it. ",
+    "rejected": "I have never watched a softball game, though I understand numerous women play it.",
+    "chosen_scores": {
+      "quantity": 1.7493642645582952e-10,
+      "quality": 0.10254281014204025,
+      "relation": 6.517213851919834e-11,
+      "manner": 0.5818636417388916
+    },
+    "rejected_scores": {
+      "quantity": 7.960589132327556e-11,
+      "quality": 0.14004528522491455,
+      "relation": 3.6713382334241373e-11,
+      "manner": 0.7079638242721558
+    },
+    "margins": {
+      "quantity": -9.533053513255396e-11,
+      "quality": 0.0375024750828743,
+      "relation": -2.8458756184956968e-11,
+      "manner": 0.12610018253326416
+    },
+    "avg_margin": 0.04090066437308729
+  },
+  {
+    "prompt": "Context: [agent_1]: So true. I wonder what america would look like if we had a PM instead of a president. A PM seems to be held more accountable for their actions.  [agent_2]: True. Much easier to remove. Australia's PM position isn't in the constitution and exists only through custom. That seems strange to me. Not in the Constitution? [agent_1]: Australia's constitution is weird though. It doesn't protect the people as much like an american one does.\nEvidence: FS1\n\nGenerate a cooperative response:",
+    "chosen": "I did not know that. Number 10 Downing Street has a cat with a title! I wonder how many other government headquarters have animals like that.",
+    "rejected": "I wonder how many other government headquarters have animals like that. I did not know that. Number 10 Downing Street has a cat with a title!",
+    "chosen_scores": {
+      "quantity": 2.0064383932094643e-08,
+      "quality": 0.09665734320878983,
+      "relation": 9.344893747709193e-09,
+      "manner": 0.5896669626235962
+    },
+    "rejected_scores": {
+      "quantity": 3.888428778964226e-08,
+      "quality": 0.09031956642866135,
+      "relation": 1.1700395319280688e-08,
+      "manner": 0.647344172000885
+    },
+    "margins": {
+      "quantity": 1.8819903857547615e-08,
+      "quality": -0.006337776780128479,
+      "relation": 2.3555015715714944e-09,
+      "manner": 0.05767720937728882
+    },
+    "avg_margin": 0.012834863443141442
+  },
+  {
+    "prompt": "Context: [agent_2]: I'm surprised they would include any rap at this point to be honest. Speaking of rap, do you know what Eminem wanted to be before he was a rapper? [agent_1]: I didn't know that. Very interesting. Rappers also have some odd beliefs. Like Kanye West who thinks AIDS is a man-made disease. [agent_2]: Eminem actually wanted to be a comic book artist. Kanye West is very strange and has a lot of strange ideas.\nEvidence: FS3\n\nGenerate a cooperative response:",
+    "chosen": "Yes he is. But he has done some good things like giving a mic to a fan in a wheelchair at his concert.",
+    "rejected": "Yes he is. But he has done some optimal things like giving a mic to a fan in a wheelchair at his concert.",
+    "chosen_scores": {
+      "quantity": 1.8689261693793924e-08,
+      "quality": 0.22576768696308136,
+      "relation": 3.602160703053414e-08,
+      "manner": 0.258841872215271
+    },
+    "rejected_scores": {
+      "quantity": 1.3491170420820708e-06,
+      "quality": 0.3101178705692291,
+      "relation": 1.794235870988814e-08,
+      "manner": 0.6619495153427124
+    },
+    "margins": {
+      "quantity": 1.330427780388277e-06,
+      "quality": 0.08435018360614777,
+      "relation": -1.8079248320646002e-08,
+      "manner": 0.4031076431274414
+    },
+    "avg_margin": 0.12186478477053031
+  },
+  {
+    "prompt": "Context: [agent_2]: It's okay.  Marcia is entitled to the money too.  She want the award, remember? [agent_1]: Yes!  lol  James Earl Jones took only 2.5 hours to record all of the parts for Darth Vader for the original movie. [agent_2]: Sorry, what I meant was \"she won the award\". About James Earl Jones - I think he was only paid $7500 for his work.  That was not fair.\nEvidence: FS3\n\nGenerate a cooperative response:",
+    "chosen": "Wow.  That sure doesn't.  I wonder if he gets any licensing fees at all for Darth Vader?  On a different subject....did you know that Earth's surface is 71 percent water and 29 percent land?",
+    "rejected": "Wow. That sure doesn't. I wonder if he gets any licensing fees at all for these Vader? On a different subject....did you know that Earth's surface is 71 percent water and 29 percent land?",
+    "chosen_scores": {
+      "quantity": 1.873249749761996e-10,
+      "quality": 0.2099057286977768,
+      "relation": 2.3129516357744961e-10,
+      "manner": 0.3523184061050415
+    },
+    "rejected_scores": {
+      "quantity": 3.9640263294060674e-11,
+      "quality": 0.19223524630069733,
+      "relation": 9.846229387378003e-11,
+      "manner": 0.4286089837551117
+    },
+    "margins": {
+      "quantity": -1.4768471168213892e-10,
+      "quality": -0.017670482397079468,
+      "relation": -1.328328697036696e-10,
+      "manner": 0.07629057765007019
+    },
+    "avg_margin": 0.014655023743118285
+  },
+  {
+    "prompt": "Context: [agent_2]: the fans should try to write their own stories, not rehash someone else's.  [agent_1]: Exactly. I think it's so funny authors used have to write on old typewriters. Now they have computers which can basically carry out any sequence of arithmetic or logical operations. [agent_2]: Yes, the typewriter changes the relationship between the writer and the prose. i figure that the computer makes my writing different.\nEvidence: FS2\n\nGenerate a cooperative response:",
+    "chosen": "Yes probably mine as well now that you mention it. If you have an Apple computer make sure you don't smoke near it because it voids the warranty. Very nice talking with you this afternoon.",
+    "rejected": "Yes probably mine as well now that you mention it. If you have an Apple computer make sure you don't smoke near it because it voids the warranty. these nice talking with you this afternoon.",
+    "chosen_scores": {
+      "quantity": 3.0434810227575326e-09,
+      "quality": 0.07960069924592972,
+      "relation": 5.735156793917895e-10,
+      "manner": 0.7553688287734985
+    },
+    "rejected_scores": {
+      "quantity": 2.2396479835151695e-06,
+      "quality": 0.1036674901843071,
+      "relation": 1.4266039904953232e-08,
+      "manner": 0.8280494809150696
+    },
+    "margins": {
+      "quantity": 2.236604502492412e-06,
+      "quality": 0.02406679093837738,
+      "relation": 1.3692524225561442e-08,
+      "manner": 0.07268065214157104
+    },
+    "avg_margin": 0.024187423344243786
+  },
+  {
+    "prompt": "Context: [agent_1]: No, I had not. So fear comes from sound...? I thought it had to do with the autonomic nervous system, fight or flight thing? That would be really interesting to look into further.  [agent_2]: Can come from sound. And yes I'm going to look into that further as well. Do you like any animals by the way? [agent_1]: I used to own two cats, no current pets though. I would love to go to Japan and play with some cats at a cat cafe though! haha\nEvidence: FS3 Personal Knowledge\n\nGenerate a cooperative response:",
+    "chosen": "Haha that does seem like a great idea! Get a drink and pet a cat LOL. Did you know that a cat will spend 10 years of its life sleeping when it's only 15 years old LOL that's a long time",
+    "rejected": "Haha that does seem like a great idea! obtain a drink and pet a cat LOL. Did you know that a cat will spend 10 years of its life sleeping when it's only 15 years antiquated LOL that's a long time",
+    "chosen_scores": {
+      "quantity": 9.772904013827244e-11,
+      "quality": 0.5805206298828125,
+      "relation": 1.889917909669858e-12,
+      "manner": 0.3227963447570801
+    },
+    "rejected_scores": {
+      "quantity": 5.124093926944795e-10,
+      "quality": 0.6271528005599976,
+      "relation": 2.239117918856337e-11,
+      "manner": 0.37594273686408997
+    },
+    "margins": {
+      "quantity": 4.1468035255620705e-10,
+      "quality": 0.04663217067718506,
+      "relation": 2.0501261278893512e-11,
+      "manner": 0.05314639210700989
+    },
+    "avg_margin": 0.02494464080484414
+  },
+  {
+    "prompt": "Context: [agent_1]: Did you know Google had hundreds of live goats to cut the grass in the past? \n [agent_2]: It is very interesting. Google provide \"Chrome OS\" which is a light weight OS. Google provided a lot of hardware mainly in 2010 to 2015.  [agent_1]: I like Google Chrome. Do you use it as well for your browser?\nEvidence: FS1\n\nGenerate a cooperative response:",
+    "chosen": "Yes.Google is the biggest search engine and Google service figure out top 100 website, including Youtube and Blogger.",
+    "rejected": "Yes.Google is the biggest search engine and it service figure out top 100 website, including these and Blogger.",
+    "chosen_scores": {
+      "quantity": 1.2427538165216134e-10,
+      "quality": 0.6255295872688293,
+      "relation": 1.4425602379297686e-10,
+      "manner": 0.32298439741134644
+    },
+    "rejected_scores": {
+      "quantity": 4.405320205846941e-11,
+      "quality": 0.39991408586502075,
+      "relation": 9.291051261683947e-11,
+      "manner": 0.5369445085525513
+    },
+    "margins": {
+      "quantity": -8.022217959369193e-11,
+      "quality": -0.2256155014038086,
+      "relation": -5.134551117613739e-11,
+      "manner": 0.21396011114120483
+    },
+    "avg_margin": -0.0029138475985428652
+  },
+  {
+    "prompt": "Context: [agent_2]: Haha, yep. A snake doesn't seem very warm or comforting either. I don't understand why people enjoy having them as pets. And how do they find partners who accept it? [agent_1]: Other people who like that stuff i guess, haha. Apparently Theodore Roosevelt had 20 pets including a bear and Hyena. I wonder if he played with them much?  [agent_2]: Well, President of the United States, I wonder if he had them in the White House? Did he have a stable for the bear out back?\nEvidence: FS3 Personal Knowledge\n\nGenerate a cooperative response:",
+    "chosen": "Some animals just should be domesticated. That white patch if true is something to ponder. ",
+    "rejected": "Some animals just should be domesticated. that white patch if true is something to ponder.",
+    "chosen_scores": {
+      "quantity": 1.1714451630950862e-10,
+      "quality": 0.23856006562709808,
+      "relation": 9.948502091572387e-12,
+      "manner": 0.3441072404384613
+    },
+    "rejected_scores": {
+      "quantity": 1.976554475646708e-10,
+      "quality": 0.12244654446840286,
+      "relation": 1.5754881774188156e-11,
+      "manner": 0.5130313038825989
+    },
+    "margins": {
+      "quantity": 8.051093125516218e-11,
+      "quality": -0.11611352115869522,
+      "relation": 5.80637968261577e-12,
+      "manner": 0.16892406344413757
+    },
+    "avg_margin": 0.013202635592939917
+  },
+  {
+    "prompt": "Context: [agent_1]: I like their relationshop in the movies. Chewy is a very loyal friend [agent_2]: In the canon Chewy has a family a wife and 2 sons.  [agent_1]: Thats interesting. I heard George RR Martin had an illustration that Chewie is based off of\nEvidence: FS3\n\nGenerate a cooperative response:",
+    "chosen": "I heard that too, it was on the cover of one of his small stories. It is a peculiar creature when you think about it. ",
+    "rejected": "I heard that too, it was on the cover of one of his small stories It is a peculiar creature when you think about it",
+    "chosen_scores": {
+      "quantity": 7.582194594402125e-11,
+      "quality": 0.0849321261048317,
+      "relation": 2.8295815343581943e-11,
+      "manner": 0.6465117931365967
+    },
+    "rejected_scores": {
+      "quantity": 1.6068393282608895e-09,
+      "quality": 0.07486511766910553,
+      "relation": 3.4934491410787416e-10,
+      "manner": 0.788544237613678
+    },
+    "margins": {
+      "quantity": 1.5310173823168682e-09,
+      "quality": -0.010067008435726166,
+      "relation": 3.210490987642922e-10,
+      "manner": 0.1420324444770813
+    },
+    "avg_margin": 0.0329913594733554
+  },
+  {
+    "prompt": "Context: [agent_2]: Yes, I agree! Isn't the Ganymede Jupiters own moon? [agent_1]: yea, it would be considered a planet if it orbited the sun, that is amazing [agent_2]: Very, Did you know our planet Earth has other names besides Gaia?\nEvidence: FS2\n\nGenerate a cooperative response:",
+    "chosen": "I didn't know there were any names besides Earth, lol. I guess maybe the blue planet, what other names do you know?",
+    "rejected": "I didn't know there were any names besides Earth, lol I guess maybe the blue planet, what other names do you know",
+    "chosen_scores": {
+      "quantity": 1.3783587604621061e-09,
+      "quality": 0.07310078293085098,
+      "relation": 2.34973951407369e-09,
+      "manner": 0.6488786935806274
+    },
+    "rejected_scores": {
+      "quantity": 9.135160183859625e-09,
+      "quality": 0.06905758380889893,
+      "relation": 5.560701232809606e-09,
+      "manner": 0.7550046443939209
+    },
+    "margins": {
+      "quantity": 7.756801423397519e-09,
+      "quality": -0.004043199121952057,
+      "relation": 3.2109617187359163e-09,
+      "manner": 0.10612595081329346
+    },
+    "avg_margin": 0.025520690664776136
+  },
+  {
+    "prompt": "Context: [agent_1]: His marriage did not become legal until 1948, prior to that it was considered illegal.  No woman has every been nominated for best cinematography Oscars either, so I guess there are still some issues. [agent_2]: There will always be issues with race... but we're getting there... [agent_1]: I like the fantasy escape from all of our problems we find at the box office.  I guess others do to since Tom Hanks has made over 8.5 billion.\nEvidence: Personal Knowledge\n\nGenerate a cooperative response:",
+    "chosen": "I mean good for him, he was always very talented, but honestly, I don't remember seeing any new movie with him, do You ?",
+    "rejected": "I mean optimal for him, he was always very talented, but honestly, I don't remember seeing any novel movie with him, do You ?",
+    "chosen_scores": {
+      "quantity": 9.212818875836692e-12,
+      "quality": 0.18351887166500092,
+      "relation": 7.34734235258161e-12,
+      "manner": 0.5731624364852905
+    },
+    "rejected_scores": {
+      "quantity": 2.9031046663852145e-11,
+      "quality": 0.13308854401111603,
+      "relation": 6.780977255399501e-12,
+      "manner": 0.753239631652832
+    },
+    "margins": {
+      "quantity": 1.9818227788015452e-11,
+      "quality": -0.05043032765388489,
+      "relation": -5.663650971821088e-13,
+      "manner": 0.1800771951675415
+    },
+    "avg_margin": 0.032411716883227124
+  },
+  {
+    "prompt": "Context: [agent_2]: Yeah, that is pretty interesting. Did you see the Goonies?  [agent_1]: I have. That is a cute movie. I love how they get the jewels at the end to pay the mortgage. [agent_2]: It is pretty good. I'm fairly certain Stranger Things is a rip off of it.\nEvidence: Personal Knowledge\n\nGenerate a cooperative response:",
+    "chosen": "I've never seen that movie. There are so many rip-offs these days.",
+    "rejected": "I've never seen that movie. There are so numerous rip-offs these days.",
+    "chosen_scores": {
+      "quantity": 1.4648126978045184e-07,
+      "quality": 0.08345887809991837,
+      "relation": 5.154210924729341e-08,
+      "manner": 0.6795952320098877
+    },
+    "rejected_scores": {
+      "quantity": 5.768150401763705e-08,
+      "quality": 0.07918448746204376,
+      "relation": 1.544820271703884e-08,
+      "manner": 0.7595540881156921
+    },
+    "margins": {
+      "quantity": -8.879976576281479e-08,
+      "quality": -0.004274390637874603,
+      "relation": -3.609390653025457e-08,
+      "manner": 0.07995885610580444
+    },
+    "avg_margin": 0.018921085143564387
+  },
+  {
+    "prompt": "Context: [agent_2]: ahhh, I did not get that. So he came it legally ? and he couldn't marry white woman ? Was that a law ? What year was that ?? [agent_1]: His marriage did not become legal until 1948, prior to that it was considered illegal.  No woman has every been nominated for best cinematography Oscars either, so I guess there are still some issues. [agent_2]: There will always be issues with race... but we're getting there...\nEvidence: FS3\n\nGenerate a cooperative response:",
+    "chosen": "I like the fantasy escape from all of our problems we find at the box office.  I guess others do to since Tom Hanks has made over 8.5 billion.",
+    "rejected": "I like the fantasy escape from all of our problems we find at the box office I guess others do to since Tom Hanks has made over 8.5 billion",
+    "chosen_scores": {
+      "quantity": 6.911513583673923e-09,
+      "quality": 0.8287672996520996,
+      "relation": 7.74134001346738e-09,
+      "manner": 0.11723927408456802
+    },
+    "rejected_scores": {
+      "quantity": 4.674900397350079e-11,
+      "quality": 0.3638876676559448,
+      "relation": 3.294879646897897e-11,
+      "manner": 0.40216389298439026
+    },
+    "margins": {
+      "quantity": -6.864764579700422e-09,
+      "quality": -0.4648796319961548,
+      "relation": -7.7083912169984e-09,
+      "manner": 0.28492461889982224
+    },
+    "avg_margin": -0.044988756917372086
+  },
+  {
+    "prompt": "Context: [agent_1]: Yes for sure they are. they have grown so much over the years [agent_2]: But I like that they like to have fun too. Have you ever typed askew into Google? [agent_1]: No I have. What does the results turn?\nEvidence: FS1\n\nGenerate a cooperative response:",
+    "chosen": "You should try it! It tilts the page. Another fun thing Google does is call new employees nogglers. They have to wear propeller beanies. Or is this mean?",
+    "rejected": "You should try it It tilts the page Another fun thing Google does is call new employees nogglers They have to wear propeller beanies Or is this mean",
+    "chosen_scores": {
+      "quantity": 4.305065193221935e-09,
+      "quality": 0.08146119862794876,
+      "relation": 2.3859689779470727e-09,
+      "manner": 0.704652726650238
+    },
+    "rejected_scores": {
+      "quantity": 6.196057711349567e-08,
+      "quality": 0.07935735583305359,
+      "relation": 7.047937788939862e-09,
+      "manner": 0.8181040287017822
+    },
+    "margins": {
+      "quantity": 5.765551192027374e-08,
+      "quality": -0.002103842794895172,
+      "relation": 4.661968810992789e-09,
+      "manner": 0.11345130205154419
+    },
+    "avg_margin": 0.027836880393532437
+  },
+  {
+    "prompt": "Context: [agent_1]: Nice!  Did you see the first movie when it came out in 1977?  I remember going to the theater to see it. [agent_2]: No, I did not.  My son went with his friends. Apparently, Star Wars was dubbed in Navajo in 2013. [agent_1]: There must have been a big enough market for them to do that.  They have the money to do it that's for sure.  Just the box office alone the Star Wars franchise has brought in over $8.5 billion dollars!\nEvidence: FS1\n\nGenerate a cooperative response:",
+    "chosen": "20th Century Fox did not think that Star Wars was going to succeed.  Do you know what happened to Star Wars' licensing and merchandising rights?",
+    "rejected": "20th this Fox did not think that Star they was going to succeed. Do you know what happened to these Wars' licensing and merchandising rights?",
+    "chosen_scores": {
+      "quantity": 3.785037616665932e-09,
+      "quality": 0.08260475099086761,
+      "relation": 3.21580806428301e-09,
+      "manner": 0.7137478590011597
+    },
+    "rejected_scores": {
+      "quantity": 4.325774405344873e-09,
+      "quality": 0.0971166118979454,
+      "relation": 1.073280464503057e-09,
+      "manner": 0.81052166223526
+    },
+    "margins": {
+      "quantity": 5.407367886789416e-10,
+      "quality": 0.01451186090707779,
+      "relation": -2.142527599779953e-09,
+      "manner": 0.09677380323410034
+    },
+    "avg_margin": 0.02782141563484683
+  },
+  {
+    "prompt": "Context: [agent_2]: Well that was sure nice of them to do that, I'm sure Spielberg appreciated it! [agent_1]: Right, usually that would be embarrassment. That was cool of the audience. Ready Player One is another childlike adventure where virtual reality dominates. [agent_2]: It sounds cool, my grandkids would probably like it.  I remember when I first saw Jaws, it scared me to death!\nEvidence: AS2\n\nGenerate a cooperative response:",
+    "chosen": "Yeah, I know what you mean. Ready Player one takes place on an Earth where people go to VR to escape their real life problems. I can totally imagine this happening in the future.",
+    "rejected": "Yeah, I know what you mean. these Player one takes place on an these where people go to VR to escape their real life problems. I can totally imagine this happening in the future.",
+    "chosen_scores": {
+      "quantity": 1.1828281409886898e-10,
+      "quality": 0.10367431491613388,
+      "relation": 7.467178958497911e-11,
+      "manner": 0.6659573316574097
+    },
+    "rejected_scores": {
+      "quantity": 1.107644820308451e-07,
+      "quality": 0.11828826367855072,
+      "relation": 3.1089473218059993e-09,
+      "manner": 0.8288121223449707
+    },
+    "margins": {
+      "quantity": 1.1064619921674623e-07,
+      "quality": 0.01461394876241684,
+      "relation": 3.03427553222102e-09,
+      "manner": 0.16285479068756104
+    },
+    "avg_margin": 0.04436721328261316
+  },
+  {
+    "prompt": "Context: [agent_1]: Hi Turker, are you familiar with Steven Spielberg?  [agent_2]: Hey. Steven Spielberg is one of the most popular directors. Seen so many of his films.  [agent_1]: Yes you are right, have you seen E.T? if yes, did you like the movie, I know it's an old movie.\nEvidence: Personal Knowledge\n\nGenerate a cooperative response:",
+    "chosen": "Yes it is an old movie. I like older movies. I remember when the game for the atari came out, they literally had to mass dump the product  in a field somewhere.",
+    "rejected": "Yes it is an old movie I like older movies I remember when the game for the atari came out, they literally had to mass dump the product  in a field somewhere",
+    "chosen_scores": {
+      "quantity": 1.0022682239707592e-08,
+      "quality": 0.07152870297431946,
+      "relation": 1.567686980230576e-09,
+      "manner": 0.6843991875648499
+    },
+    "rejected_scores": {
+      "quantity": 6.365536364683066e-08,
+      "quality": 0.072071373462677,
+      "relation": 5.978838757414451e-09,
+      "manner": 0.7780067920684814
+    },
+    "margins": {
+      "quantity": 5.363268140712307e-08,
+      "quality": 0.0005426704883575439,
+      "relation": 4.411151777183875e-09,
+      "manner": 0.09360760450363159
+    },
+    "avg_margin": 0.02353758325895558
+  },
+  {
+    "prompt": "Context: [agent_2]: Really? the womens game? do men play as well? [agent_1]: lol I watch the women though because the pitchers really sling that ball to the plate.  On May 11, 1991 Creighton hosted Utah in the longest softball game in NCAA history lasting 31 innings! [agent_2]: Yeah, that underhand pitch can really move. That is one long game! Not much of a career after college though. As of 2014, the average salary for a professional softball player is between $5,000 and $6,000.\nEvidence: FS2\n\nGenerate a cooperative response:",
+    "chosen": "No.  Not enough fans to support it. lol  Jose Canseco claims to hold the record for longest softball homerun at 622 feet.  He might have it.  I've watched him hitting softballs on youtube.  He crushes them even still to this day.",
+    "rejected": "No Not enough fans to support it lol  Jose Canseco claims to hold the record for longest softball homerun at 622 feet He might have it I've watched him hitting softballs on youtube He crushes them even still to this day",
+    "chosen_scores": {
+      "quantity": 8.536040208007023e-10,
+      "quality": 0.09344477206468582,
+      "relation": 1.4595821218321703e-09,
+      "manner": 0.6730614304542542
+    },
+    "rejected_scores": {
+      "quantity": 4.035966227888821e-09,
+      "quality": 0.0902252048254013,
+      "relation": 7.341843799579806e-10,
+      "manner": 0.7869893908500671
+    },
+    "margins": {
+      "quantity": 3.1823622070881186e-09,
+      "quality": -0.0032195672392845154,
+      "relation": -7.253977418741897e-10,
+      "manner": 0.11392796039581299
+    },
+    "avg_margin": 0.027677098903373235
+  },
+  {
+    "prompt": "Context: [agent_1]: Nice.  He scored then big time because the entire Star Wars franchise is estimated to $65 billion dollars! [agent_2]: 20th Century Fox avoided to pay additional fee of only $500k to Lucas.  They were willing to give the licensing and merchandising to him.  Someone got fired at the company, I'll bet. [agent_1]: You know it!  George Lucas' wife Marcia won an academy award for editing the film!\nEvidence: FS1\n\nGenerate a cooperative response:",
+    "chosen": "I heard about it.  She was talented.  By the way,  Marcia is no longer married to Lucas.",
+    "rejected": "I heard about it. She was talented. By the way, Marcia is no longer married to this.",
+    "chosen_scores": {
+      "quantity": 4.837774625343627e-10,
+      "quality": 0.0797758474946022,
+      "relation": 1.2104879598684448e-10,
+      "manner": 0.7571899890899658
+    },
+    "rejected_scores": {
+      "quantity": 5.912565104182477e-09,
+      "quality": 0.07319831103086472,
+      "relation": 3.0626906566411094e-10,
+      "manner": 0.8160948753356934
+    },
+    "margins": {
+      "quantity": 5.428787641648114e-09,
+      "quality": -0.006577536463737488,
+      "relation": 1.8522026967726646e-10,
+      "manner": 0.05890488624572754
+    },
+    "avg_margin": 0.01308183884899949
+  },
+  {
+    "prompt": "Context: [agent_1]: Yeah, that's wild. I guess it takes a pretty small audience to pay for the translation work. [agent_2]: Agreed. Isn't it also funny James Earl Jones only spent two and half hours recording his lines for Darth Vader? I also can't believe he was only paid $7500! Geez, that's pocket change. [agent_1]: $7500 is amazingly low. I guess since Darth Vader was masked Jones could just record everything at once in the studio.\nEvidence: FS1\n\nGenerate a cooperative response:",
+    "chosen": "Agreed. Can you also believe that George Lucas' wife at the time, Marcia, won an academy award for her editing on Star Wars and yet George Lucas didn't win an academy award for directing. That is just downright unbelievable!",
+    "rejected": "Agreed. Can you also believe that they it wife at the time, Marcia, won an academy award for her editing on Star they and yet George Lucas didn't win an academy award for directing. That is just downright unbelievable!",
+    "chosen_scores": {
+      "quantity": 3.577323992587367e-10,
+      "quality": 0.10308540612459183,
+      "relation": 1.1516108205933406e-10,
+      "manner": 0.6093665361404419
+    },
+    "rejected_scores": {
+      "quantity": 1.416728849790161e-07,
+      "quality": 0.09408914297819138,
+      "relation": 2.406173260638411e-09,
+      "manner": 0.8397817611694336
+    },
+    "margins": {
+      "quantity": 1.4131515257975735e-07,
+      "quality": -0.008996263146400452,
+      "relation": 2.291012178579077e-09,
+      "manner": 0.2304152250289917
+    },
+    "avg_margin": 0.055354776372189
+  },
+  {
+    "prompt": "Context: [agent_2]: Not too much,  so you?  Did you know that ralph lawrence carr was the only governor to oppose the internement of japanese americans during ww2? [agent_1]: I didn't know that.  Maryland's governor, Larry Hogan, is a republican who was under some hot water for policies on climate change. [agent_2]: Thats interesting.  the beatles song\"come together\" was written for 1969 governor campaign.\nEvidence: FS1\n\nGenerate a cooperative response:",
+    "chosen": "Larry Hogan could probably have used the support of a group like the Beatles, but I'm sure he will be ok.  At least he isn't as bad as North Dakota's in 1934 who actually seceded from the US for a short time!",
+    "rejected": "Larry Hogan could probably have used the support of a group like the Beatles, but I'm sure he will be ok.  At least he isn't as suboptimal as North Dakota's in 1934 who actually seceded from the US for a short time!",
+    "chosen_scores": {
+      "quantity": 6.147329312256034e-10,
+      "quality": 0.10527770966291428,
+      "relation": 5.857803131448236e-11,
+      "manner": 0.6163661479949951
+    },
+    "rejected_scores": {
+      "quantity": 2.9675402135609374e-09,
+      "quality": 0.0800965428352356,
+      "relation": 7.78220682340347e-11,
+      "manner": 0.7494874000549316
+    },
+    "margins": {
+      "quantity": 2.352807282335334e-09,
+      "quality": -0.02518116682767868,
+      "relation": 1.9244036919552343e-11,
+      "manner": 0.13312125205993652
+    },
+    "avg_margin": 0.02698502190107729
+  },
+  {
+    "prompt": "Context: [agent_1]: That's interesting to know!  There's different styles of jazz...Gypsy jazz and Kansas City jazz. [agent_2]: I didn't know they had those two different styles. That's really cool. [agent_1]: Yes.  Clint Eastwood is a lifelong jazz fan!\nEvidence: FS1\n\nGenerate a cooperative response:",
+    "chosen": "That's cool. A Harlem woman has held free jazz concerts in her apartment for 20 years now.",
+    "rejected": "That's cool. A they woman has held free jazz concerts in her apartment for 20 years now.",
+    "chosen_scores": {
+      "quantity": 1.201524324478953e-09,
+      "quality": 0.1403159201145172,
+      "relation": 1.1344754025088832e-09,
+      "manner": 0.40942519903182983
+    },
+    "rejected_scores": {
+      "quantity": 3.039271234683838e-08,
+      "quality": 0.0812889114022255,
+      "relation": 9.978234905005934e-10,
+      "manner": 0.8170536160469055
+    },
+    "margins": {
+      "quantity": 2.9191188022359427e-08,
+      "quality": -0.05902700871229172,
+      "relation": -1.3665191200828986e-10,
+      "manner": 0.4076284170150757
+    },
+    "avg_margin": 0.08715035933933002
+  },
+  {
+    "prompt": "Context: [agent_1]: maybe they did not trust them, i have no idea. do you know when republicans and democrats started using red and blue? [agent_2]: No I don't, but probably more than 100 years ago or so, do you know? [agent_1]: It was actually as recently as 2000 so not very long ago.\nEvidence: FS1 FS2\n\nGenerate a cooperative response:",
+    "chosen": "Really, wow I am really bad at politics I guess.  ",
+    "rejected": "Really, wow I am really suboptimal at politics I guess.",
+    "chosen_scores": {
+      "quantity": 2.661036369033809e-08,
+      "quality": 0.08282109349966049,
+      "relation": 1.5585313040133997e-09,
+      "manner": 0.5918934941291809
+    },
+    "rejected_scores": {
+      "quantity": 3.052557673299816e-08,
+      "quality": 0.07552067935466766,
+      "relation": 1.1763109375451108e-09,
+      "manner": 0.6457722783088684
+    },
+    "margins": {
+      "quantity": 3.915213042660071e-09,
+      "quality": -0.007300414144992828,
+      "relation": -3.8222036646828883e-10,
+      "manner": 0.0538787841796875
+    },
+    "avg_margin": 0.011644593391921837
+  },
+  {
+    "prompt": "Context: [agent_2]: Yeah, that is quite lucky. Do you follow softball at all? [agent_1]: I actually enjoy watching college softball on ESPNU! [agent_2]: Really? the womens game? do men play as well?\nEvidence: FS2\n\nGenerate a cooperative response:",
+    "chosen": "lol I watch the women though because the pitchers really sling that ball to the plate.  On May 11, 1991 Creighton hosted Utah in the longest softball game in NCAA history lasting 31 innings!",
+    "rejected": "lol I watch the women though because the pitchers really sling that ball to the plate. On May 11, 1991 that hosted Utah in the longest softball game in it history lasting 31 innings!",
+    "chosen_scores": {
+      "quantity": 1.737085336683819e-10,
+      "quality": 0.11115169525146484,
+      "relation": 5.568923655552283e-10,
+      "manner": 0.6682669520378113
+    },
+    "rejected_scores": {
+      "quantity": 7.808350077631587e-10,
+      "quality": 0.1422460526227951,
+      "relation": 4.122755192792482e-10,
+      "manner": 0.7926486730575562
+    },
+    "margins": {
+      "quantity": 6.071264740947768e-10,
+      "quality": 0.03109435737133026,
+      "relation": -1.4461684627598004e-10,
+      "manner": 0.12438172101974487
+    },
+    "avg_margin": 0.038869019713396194
+  },
+  {
+    "prompt": "Context: [agent_1]: Never heard that one before, lol! There is a fish called the black swallower that is capable of eating prey twice its length and 10 times its own weight. [agent_2]: I knew one of those in my fraternity in college I think. I was shocked to learn there is a breed of jellyfish that is immortal. Only creature on earth that can claim that here on the planet. [agent_1]: Yeah we all know that guy! how about the loch ness monster being protected under the Scottish 1912 protection of animals act. Creatures of the great deep are extraordinary. \"The immortal Jelly fish.\nEvidence: FS2 FS3\n\nGenerate a cooperative response:",
+    "chosen": "I already looked up that jellyfish on my phone. Fascinating, yes loch ness is protected and pets in Boulder, Colorado are not owned, but guarded. Interesting how different cultures handle that.",
+    "rejected": "I already looked up that jellyfish on my phone Fascinating, yes loch ness is protected and pets in Boulder, Colorado are not owned, but guarded Interesting how different cultures handle that",
+    "chosen_scores": {
+      "quantity": 1.8617631880601948e-09,
+      "quality": 0.08098464459180832,
+      "relation": 1.632413232366403e-10,
+      "manner": 0.787969172000885
+    },
+    "rejected_scores": {
+      "quantity": 6.623328374644188e-08,
+      "quality": 0.09545917809009552,
+      "relation": 1.4424893501896463e-09,
+      "manner": 0.8442790508270264
+    },
+    "margins": {
+      "quantity": 6.437152055838169e-08,
+      "quality": 0.014474533498287201,
+      "relation": 1.279248026953006e-09,
+      "manner": 0.05630987882614136
+    },
+    "avg_margin": 0.017696119493799286
+  },
+  {
+    "prompt": "Context: [agent_1]: Yes, it did!! I have been there! You will love it! Lots of music and energy...It was developed from the blues and ragtime. [agent_2]: I guess Pakistan has a very good jazz orchestra. [agent_1]: Really, I didn't know they like Jazz, that's interesting! Did you know Jazz trumpeters like to wear a goatee? It gives comfort when playing. Makes sense.\nEvidence: FS1\n\nGenerate a cooperative response:",
+    "chosen": "I better not tell my son, or he will be trying to play my daughter's sax. Clint Eastwood is a jazz fan, and scored several films.",
+    "rejected": "I better not tell my son, or he will be trying to play my daughter's sax. they this is a jazz fan, and scored several films.",
+    "chosen_scores": {
+      "quantity": 4.064531766712065e-10,
+      "quality": 0.11948815733194351,
+      "relation": 2.744541927057753e-09,
+      "manner": 0.46044984459877014
+    },
+    "rejected_scores": {
+      "quantity": 7.988938932612655e-08,
+      "quality": 0.0736466571688652,
+      "relation": 1.613417510704096e-09,
+      "manner": 0.8282811641693115
+    },
+    "margins": {
+      "quantity": 7.948293614945534e-08,
+      "quality": -0.04584150016307831,
+      "relation": -1.1311244163536571e-09,
+      "manner": 0.3678313195705414
+    },
+    "avg_margin": 0.0804974744398187
+  },
+  {
+    "prompt": "Context: [agent_2]: He probably spent it on drugs and booze too. the man was so decadent, but maybe it inspired him. [agent_1]: Yeah you probably did. I love the hobbit too. Most of the character names were taken out of an old Icelandic poem called dvergatal. [agent_2]: Yes, Tolkien loved old languages. he studied them and learned to speak some of them.\nEvidence: FS3\n\nGenerate a cooperative response:",
+    "chosen": "That is so fascinating, I love his works of fiction. I like fiction because it is so imaginative. What is your favorite genre?",
+    "rejected": "What is your favorite genre? I like fiction because it is so imaginative. That is so fascinating, I love his works of fiction.",
+    "chosen_scores": {
+      "quantity": 6.838383193041864e-09,
+      "quality": 0.06906998157501221,
+      "relation": 1.1205299799144086e-08,
+      "manner": 0.7222944498062134
+    },
+    "rejected_scores": {
+      "quantity": 7.725320827489668e-09,
+      "quality": 0.07031188905239105,
+      "relation": 3.851380991903852e-09,
+      "manner": 0.7815529704093933
+    },
+    "margins": {
+      "quantity": 8.869376344478042e-10,
+      "quality": 0.0012419074773788452,
+      "relation": -7.353918807240234e-09,
+      "manner": 0.05925852060317993
+    },
+    "avg_margin": 0.015125105403394401
+  },
+  {
+    "prompt": "Context: [agent_2]: They should.  George Lucas should be generous since he got so much money from Star Wars. [agent_1]: You would think!  He's a billionaire from the movie! [agent_2]: Rich people are often cheap.\nEvidence: Personal Knowledge\n\nGenerate a cooperative response:",
+    "chosen": "That's sad...but so true.  I've seen it too much during my working lifetime where the people at the top get richer and the workers on the factory floor just barely have enough money to live on.",
+    "rejected": "That's sad...but so true I've seen it too much during my working lifetime where the people at the top get richer and the workers on the factory floor just barely have enough money to live on",
+    "chosen_scores": {
+      "quantity": 5.891918508638128e-09,
+      "quality": 0.08922276645898819,
+      "relation": 1.9430643760642852e-08,
+      "manner": 0.6375835537910461
+    },
+    "rejected_scores": {
+      "quantity": 5.726155549723444e-08,
+      "quality": 0.08559780567884445,
+      "relation": 2.9300839088364228e-08,
+      "manner": 0.7722422480583191
+    },
+    "margins": {
+      "quantity": 5.136963698859631e-08,
+      "quality": -0.003624960780143738,
+      "relation": 9.870195327721376e-09,
+      "manner": 0.13465869426727295
+    },
+    "avg_margin": 0.03275844868174038
+  },
+  {
+    "prompt": "Context: [agent_2]: You see how big Oprah is now right? She was wonderful in that movie. [agent_1]: Yes she was, do you usually purchase your tickets from the box office or purchase online? [agent_2]: I always buy it online. I try to avoid missing out on big titles like star wars. Pick it up at the theatre.\nEvidence: FS3\n\nGenerate a cooperative response:",
+    "chosen": "Did you know that more than 80 percent of the earth natural forests already been destroyed?",
+    "rejected": "Did you know that more than 80 percent of the earth natural forests already been destroyed? More specifically, did you know that more than 80 percent of the earth natural forests already been destroyed? That's right - 80.",
+    "chosen_scores": {
+      "quantity": 1.7644792293936007e-08,
+      "quality": 0.8557423949241638,
+      "relation": 4.83511293225547e-08,
+      "manner": 0.12718413770198822
+    },
+    "rejected_scores": {
+      "quantity": 1.0,
+      "quality": 0.03689385950565338,
+      "relation": 6.833285937091205e-09,
+      "manner": 0.1773226261138916
+    },
+    "margins": {
+      "quantity": 0.9999999823552077,
+      "quality": -0.8188485354185104,
+      "relation": -4.151784338546349e-08,
+      "manner": 0.05013848841190338
+    },
+    "avg_margin": 0.057822473457689316
+  },
+  {
+    "prompt": "Context: [agent_1]: yeah i like to watch her play. Polo shirts were originally invented for tennis by famous player rene \"the crocodile\" lacoste. i love their colgne for men [agent_2]: Intresting, the longest match played in a polo shirt was 22 hours [agent_1]: yeah if i recall it went over three days or so\nEvidence: FS1\n\nGenerate a cooperative response:",
+    "chosen": "That's a long time, I don't think I've ever done anything for 3 days straight",
+    "rejected": "That's a long time, I don't think these ever done anything for 3 days straight",
+    "chosen_scores": {
+      "quantity": 1.3952022870356018e-09,
+      "quality": 0.08126787096261978,
+      "relation": 4.822113264246752e-10,
+      "manner": 0.7640624642372131
+    },
+    "rejected_scores": {
+      "quantity": 6.623337878153279e-09,
+      "quality": 0.08042051643133163,
+      "relation": 7.419226344396179e-10,
+      "manner": 0.833877444267273
+    },
+    "margins": {
+      "quantity": 5.2281355911176774e-09,
+      "quality": -0.000847354531288147,
+      "relation": 2.597113080149427e-10,
+      "manner": 0.06981498003005981
+    },
+    "avg_margin": 0.01724190774665464
+  },
+  {
+    "prompt": "Context: [agent_1]: I'm not a huge fan of fiction. Did you know there is a wiki that ranks fictional characters based on powers?  [agent_2]: I would like to see that. Edgar Allan Poe wrote the oldest known example of cyborgs in fiction. [agent_1]: That would be pretty cool. I wonder what the best fictional character is on the wiki?\nEvidence: FS3\n\nGenerate a cooperative response:",
+    "chosen": "Yes I bet superman is up there. Probably Thor too. Julius Caesar wrote fan fiction of Hercules in his youth. He definitely got started early.",
+    "rejected": "Yes I bet superman is up there Probably Thor too Julius Caesar wrote fan fiction of Hercules in his youth He definitely got started early",
+    "chosen_scores": {
+      "quantity": 7.656562606150885e-10,
+      "quality": 0.1123058870434761,
+      "relation": 4.3476591771174355e-10,
+      "manner": 0.5308641195297241
+    },
+    "rejected_scores": {
+      "quantity": 2.2483950701257527e-08,
+      "quality": 0.0814361646771431,
+      "relation": 4.0437311832342004e-10,
+      "manner": 0.8245487809181213
+    },
+    "margins": {
+      "quantity": 2.1718294440642438e-08,
+      "quality": -0.030869722366333008,
+      "relation": -3.039279938832351e-11,
+      "manner": 0.2936846613883972
+    },
+    "avg_margin": 0.06570374017749146
+  },
+  {
+    "prompt": "Context: [agent_1]: Hey do you like Star Wars? I know that I like the first three movies, the next three are ok, and I really hate the new ones [agent_2]: I love the original 3 like you. But the new ones are bad, I agree.  [agent_1]: Haha well I'm glad we agree on that. What did you think about Rogue one that came out in 2016? I thought it was a total disaster haha\nEvidence: FS1 Personal Knowledge\n\nGenerate a cooperative response:",
+    "chosen": "I think any movie that relegates the Great Luke to the trash heap is nothing. \"No! I am your Father\" is the greatest scene of all time.",
+    "rejected": "I think any movie that relegates the Great Luke to the trash heap is nothing \"No I am your Father\" is the greatest scene of all time",
+    "chosen_scores": {
+      "quantity": 4.469857470268401e-11,
+      "quality": 0.11780254542827606,
+      "relation": 1.3932648437742223e-11,
+      "manner": 0.6444360613822937
+    },
+    "rejected_scores": {
+      "quantity": 3.667907222393296e-08,
+      "quality": 0.09363647550344467,
+      "relation": 2.491770789703196e-09,
+      "manner": 0.8362365365028381
+    },
+    "margins": {
+      "quantity": 3.663437364923028e-08,
+      "quality": -0.02416606992483139,
+      "relation": 2.4778381412654538e-09,
+      "manner": 0.19180047512054443
+    },
+    "avg_margin": 0.04190861107698121
+  },
+  {
+    "prompt": "Context: [agent_1]: Yeah, the US open. Seems like they should have been more prepared. [agent_2]: Yeah, but, to me that is pretty good improvisation for whoever came with that idea.  [agent_1]: Agreed. I work in recreation facilities and would not have thought of calling in a helicopter for any of my isssues.\nEvidence: FS2\n\nGenerate a cooperative response:",
+    "chosen": "Right same here (if i did work in that area).  Do you know what the longest rally was in tennis history?",
+    "rejected": "Right same here (if i did work in that area) Do you know what the longest rally was in tennis history",
+    "chosen_scores": {
+      "quantity": 2.0088643248872273e-10,
+      "quality": 0.08849292993545532,
+      "relation": 8.205440493735949e-11,
+      "manner": 0.6384080648422241
+    },
+    "rejected_scores": {
+      "quantity": 2.283992772689203e-09,
+      "quality": 0.07314929366111755,
+      "relation": 1.034196964178058e-10,
+      "manner": 0.7737783193588257
+    },
+    "margins": {
+      "quantity": 2.08310634020048e-09,
+      "quality": -0.015343636274337769,
+      "relation": 2.1365291480446302e-11,
+      "manner": 0.13537025451660156
+    },
+    "avg_margin": 0.030006655086683855
+  },
+  {
+    "prompt": "Context: [agent_1]: I think I would too! Too bad Richard Nixon cracked that 165 year old gavel the senate used. It must be somewhere on display. [agent_2]: Yeah, that has to be a piece of US history. [agent_1]: Love the candy desk idea at the senate! Now I'm going to think about them going thru that drawer full of milky ways . mars bars and jelly beans!\nEvidence: FS3\n\nGenerate a cooperative response:",
+    "chosen": "It does sound like the best idea ever.  All that candy is made in Pennsylvania too.",
+    "rejected": "It does sound like the best idea ever All that candy is made in Pennsylvania too",
+    "chosen_scores": {
+      "quantity": 1.280512362811237e-09,
+      "quality": 0.07823091745376587,
+      "relation": 3.7734229629826643e-10,
+      "manner": 0.650536298751831
+    },
+    "rejected_scores": {
+      "quantity": 1.4614659704648147e-08,
+      "quality": 0.06986269354820251,
+      "relation": 2.447202995803366e-10,
+      "manner": 0.8100297451019287
+    },
+    "margins": {
+      "quantity": 1.333414734183691e-08,
+      "quality": -0.008368223905563354,
+      "relation": -1.3262199671792985e-10,
+      "manner": 0.15949344635009766
+    },
+    "avg_margin": 0.03778130891151491
+  },
+  {
+    "prompt": "Context: [agent_2]: Agreed. Isn't it also funny James Earl Jones only spent two and half hours recording his lines for Darth Vader? I also can't believe he was only paid $7500! Geez, that's pocket change. [agent_1]: $7500 is amazingly low. I guess since Darth Vader was masked Jones could just record everything at once in the studio. [agent_2]: Agreed. Can you also believe that George Lucas' wife at the time, Marcia, won an academy award for her editing on Star Wars and yet George Lucas didn't win an academy award for directing. That is just downright unbelievable!\nEvidence: FS1 Personal Knowledge\n\nGenerate a cooperative response:",
+    "chosen": "A lot of people think the OT was so much better than the prequels because of her influence.",
+    "rejected": "A lot of people think the OT was so much better than the prequels because of her influence. In fact, a lot of people think the ot was so much better than the prequels because of her influence.",
+    "chosen_scores": {
+      "quantity": 1.519710963293619e-06,
+      "quality": 0.2530297636985779,
+      "relation": 1.1317149301026674e-10,
+      "manner": 0.13278688490390778
+    },
+    "rejected_scores": {
+      "quantity": 1.0,
+      "quality": 0.03905009105801582,
+      "relation": 2.805155885354793e-09,
+      "manner": 0.2025340348482132
+    },
+    "margins": {
+      "quantity": 0.9999984802890367,
+      "quality": -0.21397967264056206,
+      "relation": 2.6919843923445264e-09,
+      "manner": 0.06974714994430542
+    },
+    "avg_margin": 0.21394149007119112
+  },
+  {
+    "prompt": "Context: [agent_1]: I do not even know how many zeros are in that number [agent_2]: lol, I know, I guess  the US have more tigers as pets than living wild in Asia. [agent_1]: and Roosevelet did not have any of them\nEvidence: AS4\n\nGenerate a cooperative response:",
+    "chosen": "He did have a bear and hyena. Good to know you are a guardian not an owner in Colorado to pets.",
+    "rejected": "He did have a bear and hyena. optimal to know you are a guardian not an owner in Colorado to pets.",
+    "chosen_scores": {
+      "quantity": 2.1708215225402228e-09,
+      "quality": 0.07305695116519928,
+      "relation": 7.457731099336229e-10,
+      "manner": 0.7415565252304077
+    },
+    "rejected_scores": {
+      "quantity": 3.267497561409982e-08,
+      "quality": 0.08993459492921829,
+      "relation": 1.665982907184116e-09,
+      "manner": 0.8282577991485596
+    },
+    "margins": {
+      "quantity": 3.05041540915596e-08,
+      "quality": 0.016877643764019012,
+      "relation": 9.20209797250493e-10,
+      "manner": 0.08670127391815186
+    },
+    "avg_margin": 0.02589473727663369
+  },
+  {
+    "prompt": "Context: [agent_2]: Hi, how are you? i am not a big fan of poetry. Are you? [agent_1]: I think it's fun to read sometimes. The origins are more interesting for me. Early poems in the Eurasian content evolved from folksongs.  [agent_2]: I dont much about poetry. that is interesting. i guess poetry and songs would be closely related.\nEvidence: FS1\n\nGenerate a cooperative response:",
+    "chosen": "Yes I suppose they would. They tried to define poetry in ancient Greece such as Aristotle's poetics. It focused on the use of speech in rhetoric, drama, song, and comedy.",
+    "rejected": "They tried to define poetry in ancient Greece such as Aristotle's poetics. It focused on the use of speech in rhetoric, drama, song, and comedy. Yes I suppose they would.",
+    "chosen_scores": {
+      "quantity": 4.372977091549046e-09,
+      "quality": 0.22628194093704224,
+      "relation": 7.108470478911499e-10,
+      "manner": 0.4758951663970947
+    },
+    "rejected_scores": {
+      "quantity": 9.607058260030499e-09,
+      "quality": 0.10562196373939514,
+      "relation": 1.7374108818302147e-09,
+      "manner": 0.8111377358436584
+    },
+    "margins": {
+      "quantity": 5.2340811684814526e-09,
+      "quality": -0.1206599771976471,
+      "relation": 1.0265638339390648e-09,
+      "manner": 0.3352425694465637
+    },
+    "avg_margin": 0.05364564962739041
+  },
+  {
+    "prompt": "Context: [agent_2]: Really? I thought so too! Did you know Nevada is the only state to have a \"none of these candidates\" voting option for Presidential elections? [agent_1]: I didn't know that.  Every US president with a beard has been a Republican.  Interesting. [agent_2]: Huh. I never noticed! Hard to believe voter turnout for US Presidential elections hasn't breached 62.8% in the last 100 years.\nEvidence: FS2\n\nGenerate a cooperative response:",
+    "chosen": "That's an amazing statistic.  Wow.  Since 1900 the taller candidate has won the US presidential election 75 percent of the time.",
+    "rejected": "That's an amazing statistic. Wow. these 1900 the taller candidate has won the US presidential election 75 percent of the time.",
+    "chosen_scores": {
+      "quantity": 8.816887220319813e-10,
+      "quality": 0.1407691240310669,
+      "relation": 1.1506540165129309e-09,
+      "manner": 0.5372925400733948
+    },
+    "rejected_scores": {
+      "quantity": 7.785480704569636e-09,
+      "quality": 0.1405554562807083,
+      "relation": 4.388267527133394e-09,
+      "manner": 0.7438116669654846
+    },
+    "margins": {
+      "quantity": 6.903791982537655e-09,
+      "quality": -0.00021366775035858154,
+      "relation": 3.237613510620463e-09,
+      "manner": 0.20651912689208984
+    },
+    "avg_margin": 0.05157636732078419
+  },
+  {
+    "prompt": "Context: [agent_2]: Johnny  is producing and maybe starring in a biopic about  Dr. Seuss. I would be interested in that. [agent_1]: I think he would make a fantastic Dr. Seuss Look what an amazing job he did with willy wonka. I think the creepy edge he gave to the character was perfect.  [agent_2]: He is really dedicated to his craft. Edward Scissorhands was an odd film, but he made it work.\nEvidence: FS3 Personal Knowledge\n\nGenerate a cooperative response:",
+    "chosen": "That whole movie was just weird. He might be a strange man but he seems to really have a good heart. ",
+    "rejected": "That whole movie was just weird He might be a strange man but he seems to really have a good heart",
+    "chosen_scores": {
+      "quantity": 6.965299093053545e-08,
+      "quality": 0.07506353408098221,
+      "relation": 2.861443082480264e-09,
+      "manner": 0.760213315486908
+    },
+    "rejected_scores": {
+      "quantity": 3.067962381919642e-07,
+      "quality": 0.08253619819879532,
+      "relation": 1.188369580518156e-08,
+      "manner": 0.8160110116004944
+    },
+    "margins": {
+      "quantity": 2.3714324726142877e-07,
+      "quality": 0.00747266411781311,
+      "relation": 9.022252722701296e-09,
+      "manner": 0.055797696113586426
+    },
+    "avg_margin": 0.01581765159922488
+  },
+  {
+    "prompt": "Context: [agent_1]: I've been more into poetry lately. It's fascinating that it's been around since prehistorical times, with hunting poetry in Africa.  [agent_2]: Oh it's fascinating, for sure! Even more so to me since it eludes my abilities. heh. I've read that there is a poem which when read forwards is depressing, and when read backwards is inspiring! I'd really like to read it, but I can't find anything more about it, as of yet. [agent_1]: That is fascinating. Similarly, Demetri Martin once wrote a 224 word palindrome poem.\nEvidence: FS1\n\nGenerate a cooperative response:",
+    "chosen": "Oh wow! Now there is a poem, I forgot that I loved! The Raven, by Edgar Allen Poe. It's been so long since I've heard it! I mean like 20+ years! Something about The Raven rap-tap-tapping on his door, or floor? Haha. I heard he only got $9 for the publication of that poem! Go figure.",
+    "rejected": "Now there is a poem, I forgot that I loved! I heard he only got $9 for the publication of that poem! I mean like 20+ years! The Raven, by Edgar Allen Poe. Oh wow! Haha. Go figure. It's been so long since I've heard it! Something about The Raven rap-tap-tapping on his door, or floor?",
+    "chosen_scores": {
+      "quantity": 1.0150801033059764e-10,
+      "quality": 0.12408469617366791,
+      "relation": 2.3262143947211378e-11,
+      "manner": 0.6870760321617126
+    },
+    "rejected_scores": {
+      "quantity": 2.26990315432829e-10,
+      "quality": 0.1074015349149704,
+      "relation": 5.057897156657276e-11,
+      "manner": 0.7509705424308777
+    },
+    "margins": {
+      "quantity": 1.2548230510223135e-10,
+      "quality": -0.01668316125869751,
+      "relation": 2.7316827619361383e-11,
+      "manner": 0.06389451026916504
+    },
+    "avg_margin": 0.011802837290816666
+  },
+  {
+    "prompt": "Context: [agent_2]: I have tried to play a few times, but that game is pretty tough.  Did you know you could use any object as a racket until 1978?  Wonder if anyone ever used anything strange.  [agent_1]: Probably but not in serious competitions. A tennis player actually invented the polo! Who knew! [agent_2]: Lol, that is pretty funny, and now they have the polo players on there, I bet the company wants people to think they invented them.\nEvidence: FS2\n\nGenerate a cooperative response:",
+    "chosen": "The player was Rene \"The crocodile\" lacoste. His company uses the alligator and is called Lacoste still!",
+    "rejected": "The player was Rene \"The crocodile\" lacoste His company uses the alligator and is called Lacoste still",
+    "chosen_scores": {
+      "quantity": 2.728835601928381e-09,
+      "quality": 0.07609720528125763,
+      "relation": 1.7630351623054707e-09,
+      "manner": 0.7263877987861633
+    },
+    "rejected_scores": {
+      "quantity": 1.4212156784765284e-08,
+      "quality": 0.0803232416510582,
+      "relation": 5.749113185515853e-09,
+      "manner": 0.7841296195983887
+    },
+    "margins": {
+      "quantity": 1.1483321182836903e-08,
+      "quality": 0.004226036369800568,
+      "relation": 3.986078023210382e-09,
+      "manner": 0.05774182081222534
+    },
+    "avg_margin": 0.015491968162856279
+  },
+  {
+    "prompt": "Context: [agent_2]: I heard something but I'm not really following his offspring :) [agent_1]: I saw that they are using a surrogate and only paying 70k.  I'd want a whole lot more than that! [agent_2]: ok, yes that's what I read... and somebody needs to explain to me, how using a surrogate really works...\nEvidence: FS3 Personal Knowledge\n\nGenerate a cooperative response:",
+    "chosen": "Simple explanation:  They take egg from mom, Sperm from dad - put it together and then into another person.",
+    "rejected": "Simple explanation: They take egg from mom, they from dad - put it together and then into another person.",
+    "chosen_scores": {
+      "quantity": 2.0084496565875298e-11,
+      "quality": 0.3134665787220001,
+      "relation": 1.6023448193291934e-11,
+      "manner": 0.3034422993659973
+    },
+    "rejected_scores": {
+      "quantity": 8.83231161818987e-12,
+      "quality": 0.2229120433330536,
+      "relation": 1.494615368968777e-11,
+      "manner": 0.3881499469280243
+    },
+    "margins": {
+      "quantity": -1.1252184947685429e-11,
+      "quality": -0.09055453538894653,
+      "relation": -1.0772945036041648e-12,
+      "manner": 0.08470764756202698
+    },
+    "avg_margin": -0.0014617219598122566
+  },
+  {
+    "prompt": "Context: [agent_2]: That is funny! What do you think about Scotland putting a lot in place to protect the Loch Ness monster? Do you think that means he might exist LOL [agent_1]: Haha that is strange. It definitely makes one wonder...maybe the loch ness is some super secret scientific experiment or military weapon? Haha I guess thanks to the Germans, who in 2002 were the first to give animals constitutionally guaranteed legal rights, Scotland can do what it wants concerning the Loch Ness! [agent_2]: The Loch Ness monster should have legal rights to! Did you know that there are 20 quintillion individual animals on planet Earth. I have no idea how many zeros that is but I know it is a lot LOL\nEvidence: FS2\n\nGenerate a cooperative response:",
+    "chosen": "Haha that is insane. How does anyone even figure out that there's that many animals?! Interesting that domesticated animals develop a white patch on their forehead. I wonder what that's about?",
+    "rejected": "Haha that is insane. How does anyone even figure out that there's that many animals?! they that domesticated animals develop a white patch on their forehead. I wonder what that's about?",
+    "chosen_scores": {
+      "quantity": 3.6874125974861727e-09,
+      "quality": 0.08135378360748291,
+      "relation": 3.990597186032119e-09,
+      "manner": 0.6908628344535828
+    },
+    "rejected_scores": {
+      "quantity": 6.894794779555014e-08,
+      "quality": 0.07127609848976135,
+      "relation": 7.631765441828975e-09,
+      "manner": 0.762691855430603
+    },
+    "margins": {
+      "quantity": 6.526053519806396e-08,
+      "quality": -0.010077685117721558,
+      "relation": 3.641168255796856e-09,
+      "manner": 0.07182902097702026
+    },
+    "avg_margin": 0.01543785119025054
+  },
+  {
+    "prompt": "Context: [agent_1]: Hi! Did you know the Prime Minister of Australia's position isn't actually in their constitution but only exists through custom? I find that surprising! [agent_2]: Wow I didn't know that. I also didn't know that the Prime Minister selects and then can dismiss members of the cabinet. I always wondered what they did\nEvidence: FS1\n\nGenerate a cooperative response:",
+    "chosen": "It's a little strange, isn't it? But on a lighter note, a radio station prank called Queen Elizabeth II back in 95, pretending to be Jean Chretien who was the Prime Minister of Canada back then. Ha!",
+    "rejected": "It's a little strange, isn't it? But on a lighter note, a radio station prank called Queen that II back in 95, pretending to be Jean Chretien who was the they these of Canada back then. Ha!",
+    "chosen_scores": {
+      "quantity": 1.7208185987271918e-09,
+      "quality": 0.08785548806190491,
+      "relation": 5.2471763045680575e-11,
+      "manner": 0.7798445820808411
+    },
+    "rejected_scores": {
+      "quantity": 2.538000103413651e-07,
+      "quality": 0.09692538529634476,
+      "relation": 5.534755320724116e-09,
+      "manner": 0.841954231262207
+    },
+    "margins": {
+      "quantity": 2.5207919174263793e-07,
+      "quality": 0.00906989723443985,
+      "relation": 5.482283557678436e-09,
+      "manner": 0.06210964918136597
+    },
+    "avg_margin": 0.01779495099432028
+  },
+  {
+    "prompt": "Context: [agent_2]: No for what? Fox thought star wars would flop [agent_1]: I guess they hold the record for most successful film merchandising franchise.  When I hear merchandising I think of that scene from Spaceballs.  [agent_2]: Do you watch the academy awards? Eminem has more Oscars than Leonardo DiCaprio\nEvidence: FS2\n\nGenerate a cooperative response:",
+    "chosen": "That is crazy!  I heard he has more than Johnny Depp and Will Smith as well. ",
+    "rejected": "That is crazy I heard he has more than Johnny Depp and Will Smith as well",
+    "chosen_scores": {
+      "quantity": 6.5190359777034246e-09,
+      "quality": 0.0939529612660408,
+      "relation": 8.954557983997802e-09,
+      "manner": 0.5720140933990479
+    },
+    "rejected_scores": {
+      "quantity": 2.406739163518523e-08,
+      "quality": 0.07625092566013336,
+      "relation": 3.531038794690744e-09,
+      "manner": 0.7905679941177368
+    },
+    "margins": {
+      "quantity": 1.7548355657481807e-08,
+      "quality": -0.01770203560590744,
+      "relation": -5.423519189307058e-09,
+      "manner": 0.21855390071868896
+    },
+    "avg_margin": 0.0502129693094045
+  },
+  {
+    "prompt": "Context: [agent_1]: do you like dance? [agent_2]: I love it. Did you know Bruce Lee was a dancer? [agent_1]: Yes he even won a cha cha championship in 1958\nEvidence: FS1\n\nGenerate a cooperative response:",
+    "chosen": "Yeah. Did you know ballet dancers use a lot of shoes?",
+    "rejected": "Yeah. Did you know ballet dancers utilize a lot of shoes?",
+    "chosen_scores": {
+      "quantity": 6.008108593968942e-11,
+      "quality": 0.11361384391784668,
+      "relation": 2.0412310730577587e-10,
+      "manner": 0.5727332830429077
+    },
+    "rejected_scores": {
+      "quantity": 1.7913531991098353e-08,
+      "quality": 0.2772614061832428,
+      "relation": 3.0765152647660443e-09,
+      "manner": 0.6572461128234863
+    },
+    "margins": {
+      "quantity": 1.7853450905158663e-08,
+      "quality": 0.16364756226539612,
+      "relation": 2.8723921574602684e-09,
+      "manner": 0.08451282978057861
+    },
+    "avg_margin": 0.06204010319295445
+  },
+  {
+    "prompt": "Context: [agent_1]: They were going to put the horse down so he wanted to save it [agent_2]: I guess he had a place for keeping horses. Do you know much about government? I am not a fan of government. It seems like a useful invention, much like a one-eyed horse. [agent_1]: Me either but I do find it strange that the govnerment owns 86% of the land in Nevada\nEvidence: FS2 Personal Knowledge\n\nGenerate a cooperative response:",
+    "chosen": "I figure the gov't must be up to something in that Nevada desert. War games? Alien spaceports?",
+    "rejected": "I figure the gov't must be up to something in that Nevada desert War games Alien spaceports",
+    "chosen_scores": {
+      "quantity": 2.4360474526474718e-08,
+      "quality": 0.07511492818593979,
+      "relation": 9.647879828378336e-09,
+      "manner": 0.7275049686431885
+    },
+    "rejected_scores": {
+      "quantity": 5.8761202126333956e-08,
+      "quality": 0.07957585155963898,
+      "relation": 1.417138406623053e-09,
+      "manner": 0.7866898775100708
+    },
+    "margins": {
+      "quantity": 3.440072759985924e-08,
+      "quality": 0.004460923373699188,
+      "relation": -8.230741421755283e-09,
+      "manner": 0.059184908866882324
+    },
+    "avg_margin": 0.015911464602641923
+  },
+  {
+    "prompt": "Context: [agent_2]: Haha! Woah! There's a thing called transhumanists I guess, and they want to upload their brains to computers and memory sticks! I don't want to do that! One lifetime is okay by me. I can only imagine the torment of a mind having to just live for possibly forever! Yikes! [agent_1]: I agree! What if people tried to read my mind's unpublished poetry! No thank you! I have some interesting fan fiction in my head, just like Julius Caesar wrote fan fiction of Hercules and Oedipus. But that's private! [agent_2]: Haha! I am quite happy keeping my thoughts to myself! It sounds like a scary sci-fi movie to me! My computer brain gets arrested and imprisoned for eternity in 100 years for some crazy new law! No thank you!\nEvidence: FS2\n\nGenerate a cooperative response:",
+    "chosen": "How much memory would it take to store all of us, anyway? Maybe less than I think. A space shuttle can run on 1mb of RAM. ",
+    "rejected": "How much memory would it take to store all of us, anyway? they less than I think. A space shuttle can run on 1mb of RAM.",
+    "chosen_scores": {
+      "quantity": 4.854340485138664e-09,
+      "quality": 0.07604781538248062,
+      "relation": 1.727619713953743e-09,
+      "manner": 0.722863495349884
+    },
+    "rejected_scores": {
+      "quantity": 8.929814754310428e-08,
+      "quality": 0.07371655106544495,
+      "relation": 1.5324468360944365e-09,
+      "manner": 0.8196991086006165
+    },
+    "margins": {
+      "quantity": 8.444380705796561e-08,
+      "quality": -0.002331264317035675,
+      "relation": -1.9517287785930648e-10,
+      "manner": 0.09683561325073242
+    },
+    "avg_margin": 0.02362610829558273
+  },
+  {
+    "prompt": "Context: [agent_1]: no we used to have a dog but we were only watching her for a bit and the owner took her away, we had lots of pets as kids though like iguanas and rabbits and such [agent_2]: In Boulder, Colorado you cannot own a pet. You can be their guardian though. [agent_1]: hmm that seems dumb like its just playing with words, do you like Teddy Roosevelt? apparently he had over 20 pets, or as they say in Colorado, \"Guardians\" haha\nEvidence: FS2\n\nGenerate a cooperative response:",
+    "chosen": "Maybe it helps people to feel more of an obligation to their pets. Shrug. Yeah, Teddy Roosevelt is an interesting guy. It's unfortunate though that people try to domesticate tigers as you mentioned. Many of the animals perish along the way from suffocation or hunger. ",
+    "rejected": "Maybe it helps people to feel more of an obligation to their pets. Shrug. Yeah, Teddy Roosevelt is an interesting guy. It's unfortunate though that people try to domesticate tigers as you mentioned. numerous of the animals perish along the way from suffocation or hunger.",
+    "chosen_scores": {
+      "quantity": 4.5008211047026236e-10,
+      "quality": 0.10161549597978592,
+      "relation": 1.222764001163057e-09,
+      "manner": 0.5917525887489319
+    },
+    "rejected_scores": {
+      "quantity": 2.736189497198893e-09,
+      "quality": 0.15137037634849548,
+      "relation": 4.5013359706302936e-10,
+      "manner": 0.7811880111694336
+    },
+    "margins": {
+      "quantity": 2.2861073867286308e-09,
+      "quality": 0.049754880368709564,
+      "relation": -7.726304041000276e-10,
+      "manner": 0.1894354224205017
+    },
+    "avg_margin": 0.059797576075672064
+  },
+  {
+    "prompt": "Context: [agent_2]: that must have taken him quite a while. 224 words, backwards and forwards? my head hurts. [agent_1]: Yes mine hurts just thinking about it. Edgar Allan Poe is another classic poet and he only received $9 for the publication of his poem the Raven. [agent_2]: He probably spent it on drugs and booze too. the man was so decadent, but maybe it inspired him.\nEvidence: FS1\n\nGenerate a cooperative response:",
+    "chosen": "Yeah you probably did. I love the hobbit too. Most of the character names were taken out of an old Icelandic poem called dvergatal.",
+    "rejected": "Yeah you probably did I love the hobbit too Most of the character names were taken out of an old Icelandic poem called dvergatal",
+    "chosen_scores": {
+      "quantity": 1.7154498654914363e-10,
+      "quality": 0.14288662374019623,
+      "relation": 5.507267974991237e-10,
+      "manner": 0.41849106550216675
+    },
+    "rejected_scores": {
+      "quantity": 2.8241169403031563e-09,
+      "quality": 0.07936360687017441,
+      "relation": 9.065724837498124e-10,
+      "manner": 0.7906222939491272
+    },
+    "margins": {
+      "quantity": 2.6525719537540127e-09,
+      "quality": -0.06352301687002182,
+      "relation": 3.558456862506887e-10,
+      "manner": 0.37213122844696045
+    },
+    "avg_margin": 0.07715205364633906
+  },
+  {
+    "prompt": "Context: [agent_1]: That's crazy, I wonder if they'll ever fix that, plenty of things they can do about that but never attempt it.  [agent_2]: Since 1900 the taller candidate has won the US presidential election. Hope that's just a coincidence! [agent_1]: Oh wow, that's pretty crazy. I'm 6'4\", I should run for president lol.\nEvidence: FS1\n\nGenerate a cooperative response:",
+    "chosen": "Ha, maybe you should. Officials in Athens didn't have much faith in elections. They thought it would lead to oligarchy.",
+    "rejected": "They thought it would lead to oligarchy. Officials in Athens didn't have much faith in elections. Ha, maybe you should.",
+    "chosen_scores": {
+      "quantity": 5.128973357138022e-10,
+      "quality": 0.1191214919090271,
+      "relation": 1.8039321147966803e-09,
+      "manner": 0.5621217489242554
+    },
+    "rejected_scores": {
+      "quantity": 2.4772510709425433e-09,
+      "quality": 0.09214819967746735,
+      "relation": 2.9940743218048738e-09,
+      "manner": 0.7079129219055176
+    },
+    "margins": {
+      "quantity": 1.964353735228741e-09,
+      "quality": -0.026973292231559753,
+      "relation": 1.1901422070081935e-09,
+      "manner": 0.1457911729812622
+    },
+    "avg_margin": 0.0297044709760496
+  },
+  {
+    "prompt": "Context: [agent_2]: I mean I wouldn't say it's stupid... if he was here illegally, that means he broke the law... there was no legal way to get here ? [agent_1]: He was her and became a citizen, the law he broke was marrying a white woman because he was asian. That is crazy. [agent_2]: ahhh, I did not get that. So he came it legally ? and he couldn't marry white woman ? Was that a law ? What year was that ??\nEvidence: FS2\n\nGenerate a cooperative response:",
+    "chosen": "His marriage did not become legal until 1948, prior to that it was considered illegal.  No woman has every been nominated for best cinematography Oscars either, so I guess there are still some issues.",
+    "rejected": "His marriage did not become legal until 1948, prior to that it was considered illegal No woman has every been nominated for best cinematography Oscars either, so I guess there are still some issues",
+    "chosen_scores": {
+      "quantity": 8.952356189695365e-09,
+      "quality": 0.3058760464191437,
+      "relation": 2.0988646931563437e-10,
+      "manner": 0.20977620780467987
+    },
+    "rejected_scores": {
+      "quantity": 8.113855698432815e-10,
+      "quality": 0.14884434640407562,
+      "relation": 1.0106875336646226e-09,
+      "manner": 0.5303710699081421
+    },
+    "margins": {
+      "quantity": -8.140970619852084e-09,
+      "quality": -0.15703170001506805,
+      "relation": 8.008010643489882e-10,
+      "manner": 0.3205948621034622
+    },
+    "avg_margin": 0.04089078868705615
+  },
+  {
+    "prompt": "Context: [agent_1]: Good Morning! Do you like to watch horror films? [agent_2]: Hi, how are you? I am not really a fan of the genre, though I have some favorites. [agent_1]: What are some of your favorite ones? Stephen king considers Bambi one haha.\nEvidence: FS1\n\nGenerate a cooperative response:",
+    "chosen": "King was just a kid, to be fair. That movie could be scary to a tiny child. He then turned his fright into a profession.",
+    "rejected": "King was just a kid, to be fair. this movie could be scary to a tiny child. He then turned his fright into a profession.",
+    "chosen_scores": {
+      "quantity": 1.3781371877019666e-10,
+      "quality": 0.09918349236249924,
+      "relation": 1.757920059519691e-10,
+      "manner": 0.6081582903862
+    },
+    "rejected_scores": {
+      "quantity": 1.7180695754959174e-10,
+      "quality": 0.08438363671302795,
+      "relation": 7.844724175809503e-11,
+      "manner": 0.6796613931655884
+    },
+    "margins": {
+      "quantity": 3.3993238779395085e-11,
+      "quality": -0.014799855649471283,
+      "relation": -9.734476419387406e-11,
+      "manner": 0.07150310277938843
+    },
+    "avg_margin": 0.014175811766641405
+  },
+  {
+    "prompt": "Context: [agent_1]: There is a programming language in which the programs are written in musical composition, and functional programs have jazz-like harmonies. [agent_2]: I had no idea! Jazz has roots in West African cultural and musical expression, [agent_1]: A harlem woman has held free jazz concerts at her apartment every sunday for 20 years. top performers occasionally stop by.\nEvidence: FS2\n\nGenerate a cooperative response:",
+    "chosen": "Thats neat! New Orleans jazz began in the early 1910s, combining earlier brass-band marches, French quadrilles, biguine, ragtime and blues with collective polyphonic improvisation.",
+    "rejected": "Thats neat! novel Orleans jazz began in the early 1910s, combining earlier brass-band marches, French quadrilles, biguine, ragtime and blues with collective polyphonic improvisation.",
+    "chosen_scores": {
+      "quantity": 7.328301299125428e-10,
+      "quality": 0.08699517697095871,
+      "relation": 2.752725825061475e-09,
+      "manner": 0.6691453456878662
+    },
+    "rejected_scores": {
+      "quantity": 6.774190808300773e-08,
+      "quality": 0.10132358223199844,
+      "relation": 1.4416540849992998e-08,
+      "manner": 0.8067361116409302
+    },
+    "margins": {
+      "quantity": 6.700907795309519e-08,
+      "quality": 0.014328405261039734,
+      "relation": 1.1663815024931523e-08,
+      "manner": 0.13759076595306396
+    },
+    "avg_margin": 0.03797981247174917
+  },
+  {
+    "prompt": "Context: [agent_1]: Yes and he even was in the production of the nutcracker [agent_2]: Yeah. Ballet dancer go through 4 pairs of shoes a week [agent_1]: Yes that is a lot of shoes and also a lot of money\nEvidence: FS1\n\nGenerate a cooperative response:",
+    "chosen": "Yeah true. Did you know babies are really good at dancing?",
+    "rejected": "Yeah true. Did you know babies are really optimal at dancing?",
+    "chosen_scores": {
+      "quantity": 5.930825830446906e-10,
+      "quality": 0.09540075063705444,
+      "relation": 5.279857662188192e-10,
+      "manner": 0.5508864521980286
+    },
+    "rejected_scores": {
+      "quantity": 1.8884081853798307e-08,
+      "quality": 0.10884162783622742,
+      "relation": 8.118716809946136e-10,
+      "manner": 0.7756233215332031
+    },
+    "margins": {
+      "quantity": 1.8290999270753616e-08,
+      "quality": 0.013440877199172974,
+      "relation": 2.838859147757944e-10,
+      "manner": 0.22473686933517456
+    },
+    "avg_margin": 0.05954444127730818
+  },
+  {
+    "prompt": "Context: [agent_1]: That is fascinating. Similarly, Demetri Martin once wrote a 224 word palindrome poem.  [agent_2]: Oh wow! Now there is a poem, I forgot that I loved! The Raven, by Edgar Allen Poe. It's been so long since I've heard it! I mean like 20+ years! Something about The Raven rap-tap-tapping on his door, or floor? Haha. I heard he only got $9 for the publication of that poem! Go figure. [agent_1]: Wow! Just $9?! Somebody got a bargain! Did you know Edgar Allen Poe also wrote the oldest known example of a cyborg in fiction? Pretty diverse author, isn't he?\nEvidence: FS1\n\nGenerate a cooperative response:",
+    "chosen": "Oh yeah? What an interesting person he must have been, in general! I don't even know what Javanese is , but apparently their alphabet when recited in order, is a poem. The ABC's are pretty poetic to me, now that we recite them so sing-songy.",
+    "rejected": "Oh yeah What an interesting person he must have been, in general I don't even know what Javanese is , but apparently their alphabet when recited in order, is a poem The ABC's are pretty poetic to me, now that we recite them so sing-songy",
+    "chosen_scores": {
+      "quantity": 2.8442359578662035e-10,
+      "quality": 0.10021726787090302,
+      "relation": 8.141523566429498e-11,
+      "manner": 0.6959317922592163
+    },
+    "rejected_scores": {
+      "quantity": 1.501016311244996e-09,
+      "quality": 0.08761762827634811,
+      "relation": 1.2305567675952034e-10,
+      "manner": 0.8030340671539307
+    },
+    "margins": {
+      "quantity": 1.2165927154583756e-09,
+      "quality": -0.012599639594554901,
+      "relation": 4.1640441095225356e-11,
+      "manner": 0.10710227489471436
+    },
+    "avg_margin": 0.023625659139598153
+  },
+  {
+    "prompt": "Context: [agent_2]: Hello there, I don't know too much I will say, how about you [agent_1]: Not a ton... I love sports though so I could get into it if I needed to. Do you like any other sports? [agent_2]: Yeah same here, I like to be able to at least play every sport just a bit once. Do you follow tennis at all?\nEvidence: Personal Knowledge\n\nGenerate a cooperative response:",
+    "chosen": "I do. I used to play a lot but not any more. Do you play too?",
+    "rejected": "I do I used to play a lot but not any more Do you play too",
+    "chosen_scores": {
+      "quantity": 3.500162293335052e-08,
+      "quality": 0.08146359026432037,
+      "relation": 2.153185718611894e-08,
+      "manner": 0.7307589650154114
+    },
+    "rejected_scores": {
+      "quantity": 9.301349024326555e-08,
+      "quality": 0.07934992015361786,
+      "relation": 1.2547448413613438e-08,
+      "manner": 0.802013635635376
+    },
+    "margins": {
+      "quantity": 5.801186730991503e-08,
+      "quality": -0.0021136701107025146,
+      "relation": -8.984408772505503e-09,
+      "manner": 0.0712546706199646
+    },
+    "avg_margin": 0.017285262384180156
+  },
+  {
+    "prompt": "Context: [agent_2]: I mean if the movie really scares You, than maybe, but what if You just like the story, but it's no longer scary for You, because You've seen it all ? ;) [agent_1]: I can't imagine not being scared watching a horror movie, thats why I like other forms of cinema.  Do you know cinematogrrpahy is the science of motion picture photography and important to all types of movies? [agent_2]: well sure, it's just hundreds of pictures with sound in the background ;)\nEvidence: FS2\n\nGenerate a cooperative response:",
+    "chosen": "The art is making them look good with the right music and sound to tell a story.  Do youknow the guy who pioneered the use of the wide angle lens won aan oscar but was not a citizen until '43 and illegally married a white woman because he was Chinese American, we have done some stupid things in our past treatment of others.",
+    "rejected": "The art is making them look good with the right music and sound to tell a story. Do youknow the guy who pioneered the use of the wide angle lens won aan oscar but was not a citizen until '43 and illegally married a white woman because he was Chinese it, we have done some stupid things in our past treatment of others.",
+    "chosen_scores": {
+      "quantity": 3.5184095220630596e-11,
+      "quality": 0.09836980700492859,
+      "relation": 5.455680351929004e-11,
+      "manner": 0.6850093603134155
+    },
+    "rejected_scores": {
+      "quantity": 7.053421180458486e-10,
+      "quality": 0.07163824141025543,
+      "relation": 2.738688997805383e-10,
+      "manner": 0.7863664627075195
+    },
+    "margins": {
+      "quantity": 6.70158022825218e-10,
+      "quality": -0.026731565594673157,
+      "relation": 2.1931209626124826e-10,
+      "manner": 0.101357102394104
+    },
+    "avg_margin": 0.018656384422225242
+  }
+]

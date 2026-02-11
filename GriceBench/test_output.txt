@@ -1,0 +1,124 @@
+﻿
+============================================================
+GRICEBENCH VIOLATION INJECTOR TESTS
+============================================================
+============================================================
+TESTING INDIVIDUAL VIOLATION INJECTORS
+============================================================
+
+Original response (18 words):
+.\grice_env\Scripts\python.exe : Traceback 
+(most recent call last):
+At line:1 char:1
++ .\grice_env\Scripts\python.exe 
+scripts\test_injectors.py 2>&1 | Out-F ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (T 
+   raceback (most recent call last)::String)   
+  [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandErr 
+   or
+ 
+  File 
+"C:\Users\pushk\OneDrive\Documents\Research 
+Model\GriceBench\scripts\test_injectors.py", 
+line 140, in <module>
+  "Mount Everest is 29,032 feet tall and was first summited in 1953 by Edmund Hillary and Tenzing Norgay."
+
+--- QUANTITY INJECTOR ---
+  quantity_under: (5 words)
+    "Yes, mount is quite something...."
+  quantity_over: (45 words)
+    "Mount Everest is 29,032 feet tall and was first summited in 1953 by Edmund Hillary and Tenzing Norga..."
+  Generated 2 violations
+
+--- QUALITY INJECTOR ---
+  quality_unsupported:
+    "Mount Everest is 29,032 feet tall and was first summited in 1953 by Edmund Hillary and Tenzing Norga..."
+  quality_contradiction:
+    "Mount Everest is 26,129 feet tall and was first summited in 1953 by Edmund Hillary and Tenzing Norga..."
+  Generated 2 violations
+
+--- RELATION INJECTOR ---
+  relation_off_topic:
+    "The Mediterranean diet emphasizes olive oil, fish, and vegetables, and has been associated with nume..."
+  relation_drift:
+    "This topic has been extensively studied by researchers over the years...."
+  Generated 2 violations
+
+--- MANNER INJECTOR ---
+  manner_ambiguous:
+    "Mount Everest is 29,032 feet tall and was first summited in 1953 by that this and Tenzing Norgay...."
+  Generated 1 violations
+
+============================================================
+Total violations from single example: 7
+
+============================================================
+TESTING FULL PIPELINE (small sample)
+============================================================
+
+Loading examples from C:\Users\pushk\OneDrive\Documents\Research Model\GriceBench\data_processed\train_examples.json...
+Testing on 50 examples...
+Generating GriceBench dataset from 50 source examples...
+Target size: 200
+  Processing example 0/50...
+  Generated 241 raw examples
+  Final dataset size: 141
+
+  Violation Type Distribution:
+    manner_ambiguous: 5 (3.5%)
+    manner_jargon: 15 (10.6%)
+    manner_runon: 16 (11.3%)
+    manner_shuffled: 3 (2.1%)
+    multi_quality_quantity: 2 (1.4%)
+    none: 16 (11.3%)
+    quality_contradiction: 4 (2.8%)
+    quality_unsupported: 16 (11.3%)
+    quantity_over: 16 (11.3%)
+    quantity_under: 16 (11.3%)
+    relation_drift: 16 (11.3%)
+    relation_off_topic: 16 (11.3%)
+
+  Maxim Distribution:
+    manner: 39 (27.7%)
+    multiple: 2 (1.4%)
+    none: 16 (11.3%)
+    quality: 20 (14.2%)
+    quantity: 32 (22.7%)
+    relation: 32 (22.7%)
+
+Generated 141 examples from 50 source examples
+
+Violation type distribution:
+  manner_ambiguous: 5
+  manner_jargon: 15
+  manner_runon: 16
+  manner_shuffled: 3
+  multi_quality_quantity: 2
+  none: 16
+  quality_contradiction: 4
+  quality_unsupported: 16
+  quantity_over: 16
+  quantity_under: 16
+  relation_drift: 16
+  relation_off_topic: 16
+
+============================================================
+TEST RESULTS
+============================================================
+  Individual injectors: PASSED
+  Pipeline test: PASSED
+    exit(main())
+  File 
+"C:\Users\pushk\OneDrive\Documents\Research 
+Model\GriceBench\scripts\test_injectors.py", 
+line 132, in main
+    print("\n\u2713 All tests passed! Ready to 
+generate full dataset.")
+  File "encodings\cp1252.py", line 19, in 
+encode
+UnicodeEncodeError: 'charmap' codec can't 
+encode character '\u2713' in position 2: 
+character maps to <undefined>

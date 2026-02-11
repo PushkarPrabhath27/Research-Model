@@ -1,0 +1,160 @@
+{
+  "detector_calibration": {
+    "baseline": {
+      "quantity": {
+        "mean": 0.5897786796092988,
+        "std": 0.042726574876013806,
+        "range": 0.12029331922531128
+      },
+      "quality": {
+        "mean": 0.5400208398699761,
+        "std": 0.037759772912431766,
+        "range": 0.12526845932006836
+      },
+      "relation": {
+        "mean": 0.5386380150914192,
+        "std": 0.06428078264640878,
+        "range": 0.18877243995666504
+      },
+      "manner": {
+        "mean": 0.5660374134778976,
+        "std": 0.030806049674450955,
+        "range": 0.09762722253799438
+      }
+    },
+    "dpo": {
+      "quantity": {
+        "mean": 0.5329026445746422,
+        "improvement": 0.05687603503465655,
+        "improvement_pct": 9.643623447414935
+      },
+      "quality": {
+        "mean": 0.5650785773992538,
+        "improvement": -0.025057737529277757,
+        "improvement_pct": -4.640142690661911
+      },
+      "relation": {
+        "mean": 0.47245718687772753,
+        "improvement": 0.06618082821369164,
+        "improvement_pct": 12.286698368747562
+      },
+      "manner": {
+        "mean": 0.5882540822029114,
+        "improvement": -0.02221666872501382,
+        "improvement_pct": -3.9249470434309606
+      }
+    },
+    "thresholds": {
+      "0.45": {
+        "baseline_violations": {
+          "quantity": 1.0,
+          "quality": 1.0,
+          "relation": 0.85,
+          "manner": 1.0
+        },
+        "dpo_violations": {
+          "quantity": 1.0,
+          "quality": 1.0,
+          "relation": 0.9,
+          "manner": 1.0
+        },
+        "baseline_coop": 0.0,
+        "dpo_coop": 0.0
+      },
+      "0.5": {
+        "baseline_violations": {
+          "quantity": 1.0,
+          "quality": 0.8,
+          "relation": 0.7,
+          "manner": 1.0
+        },
+        "dpo_violations": {
+          "quantity": 0.95,
+          "quality": 1.0,
+          "relation": 0.05,
+          "manner": 1.0
+        },
+        "baseline_coop": 0.0,
+        "dpo_coop": 0.0
+      },
+      "0.55": {
+        "baseline_violations": {
+          "quantity": 0.75,
+          "quality": 0.4,
+          "relation": 0.5,
+          "manner": 0.55
+        },
+        "dpo_violations": {
+          "quantity": 0.15,
+          "quality": 0.75,
+          "relation": 0.0,
+          "manner": 0.9
+        },
+        "baseline_coop": 0.0,
+        "dpo_coop": 0.0
+      },
+      "0.6": {
+        "baseline_violations": {
+          "quantity": 0.5,
+          "quality": 0.05,
+          "relation": 0.25,
+          "manner": 0.2
+        },
+        "dpo_violations": {
+          "quantity": 0.0,
+          "quality": 0.0,
+          "relation": 0.0,
+          "manner": 0.5
+        },
+        "baseline_coop": 0.25,
+        "dpo_coop": 0.5
+      },
+      "0.65": {
+        "baseline_violations": {
+          "quantity": 0.0,
+          "quality": 0.0,
+          "relation": 0.0,
+          "manner": 0.0
+        },
+        "dpo_violations": {
+          "quantity": 0.0,
+          "quality": 0.0,
+          "relation": 0.0,
+          "manner": 0.0
+        },
+        "baseline_coop": 1.0,
+        "dpo_coop": 1.0
+      },
+      "0.7": {
+        "baseline_violations": {
+          "quantity": 0.0,
+          "quality": 0.0,
+          "relation": 0.0,
+          "manner": 0.0
+        },
+        "dpo_violations": {
+          "quantity": 0.0,
+          "quality": 0.0,
+          "relation": 0.0,
+          "manner": 0.0
+        },
+        "baseline_coop": 1.0,
+        "dpo_coop": 1.0
+      }
+    }
+  },
+  "baseline_quality": {
+    "artifact_counts": {
+      "FS1": 2,
+      "Evidence:": 4,
+      "Generate a cooperative response": 6,
+      "[agent_": 4,
+      "FS2": 2,
+      "FS3": 2,
+      "FS4": 1,
+      "FS5": 1
+    },
+    "repetition_pct": 65.0,
+    "total_responses": 20
+  }
+}

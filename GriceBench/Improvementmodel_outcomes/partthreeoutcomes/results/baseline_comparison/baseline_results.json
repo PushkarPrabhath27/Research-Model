@@ -1,0 +1,24 @@
+{
+  "summary": {
+    "mistral_7b": {
+      "n": 150,
+      "relevance": 0.7994615423679352,
+      "quantity": 1.0,
+      "clarity": 0.9056283079354666,
+      "overall": 0.8914731093278139
+    },
+    "qwen2.5_7b": {
+      "n": 150,
+      "relevance": 0.6486968818306923,
+      "quantity": 1.0,
+      "clarity": 0.9419212184547935,
+      "overall": 0.8420551182687148
+    }
+  },
+  "config": {
+    "num_samples": 150,
+    "max_new_tokens": 200,
+    "temperature": 0.7,
+    "output_dir": "/kaggle/working/baseline_comparison"
+  }
+}
