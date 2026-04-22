@@ -1,14 +1,13 @@
 #!/usr/bin/env python3
 """
-Phase 6 Detector V2 — Verified Natural Violations Training
-===========================================================
-Key improvements over ROBUST:
-  1. MANDATORY data source assertions — hard-fail if Phase 4 data missing
-  2. Source distribution logged in results JSON — proof of data composition
-  3. Held-out test set — 500 examples never seen in training
-  4. Per-generation-method evaluation — F1 by injector/mined/adversarial
-  5. Error analysis — worst 20 misclassifications with text excerpts
-  6. Leakage verification — zero overlap between train/val/test
+Phase 6 Detector V2 — Research-Grade Notebook Generator
+========================================================
+Integrates ALL critical fixes from the analysis:
+  Fix #1: pos_weight in BCEWithLogitsLoss (prevents model collapse)
+  Fix #2: Real-time training health checks (catches problems early)
+  Fix #3: True held-out test set (20% reserved before training)
+  Fix #4: Prediction distribution / calibration analysis
+  Fix #5: Full results JSON with holdout + generalization gap
 """
 
 import json
@@ -36,18 +35,19 @@ def create_notebook():
     # =========================================================================
     # CELL 0: Markdown Header
     # =========================================================================
-    add_md("""# Phase 6: Detector V2 — Verified Natural Violations Training
+    add_md("""# Phase 6: Detector V2 — Research-Grade Training
 
-**Goal:** Train a Gricean maxim violation detector on **real** Phase 4 natural violations (not synthetic).
+**Model:** DeBERTa-v3-small (multi-label: Quantity, Quality, Relation, Manner)
 
-**Key Features:**
-- Hard assertions on data sources (will crash if Phase 4 data missing)
-- Source distribution proof logged in results
-- Held-out test set (500 examples never in training)  
-- Per-generation-method breakdown (injector / mined / adversarial)
-- Error analysis on worst misclassifications
-
-**Model:** DeBERTa-v3-small (multi-label: Quantity, Quality, Relation, Manner)""")
+**Critical Fixes Applied:**
+1. ✅ `pos_weight` in loss function (prevents model collapse to F1=0.0)
+2. ✅ Real-time health checks (catches collapse/overfitting during training)
+3. ✅ True held-out test set (20% reserved before any training)
+4. ✅ Prediction distribution analysis (calibration diagnostics)
+5. ✅ Mandatory data assertions (crashes if Phase 4 data missing)
+6. ✅ Data leakage check (zero overlap between splits)
+7. ✅ Per-generation-method evaluation (injector / mined / adversarial)
+8. ✅ Error analysis on worst misclassifications""")
 
     # =========================================================================
     # CELL 1: Environment Setup
@@ -97,7 +97,7 @@ if torch.cuda.is_available():
     gpu_mem = torch.cuda.get_device_properties(0).total_memory / 1e9
     logger.info(f"GPU: {gpu_name} ({gpu_mem:.1f} GB)")
 else:
-    raise RuntimeError("GPU required")
+    raise RuntimeError("GPU required for training")
 
 # Progress tracker
 class Tracker:
@@ -138,13 +138,13 @@ class Config:
     warmup_ratio: float = 0.1
     weight_decay: float = 0.01
     
-    # Splits
-    train_ratio: float = 0.70
-    val_ratio: float = 0.15
-    test_ratio: float = 0.15
+    # Splits (applied AFTER held-out removal)
+    train_ratio: float = 0.80
+    val_ratio: float = 0.20
+    holdout_ratio: float = 0.20  # Reserved BEFORE splitting
     
-    # Verification
-    min_phase4_violations: int = 1000  # HARD MINIMUM
+    # Verification thresholds
+    min_phase4_violations: int = 1000
     
     seed: int = 42
 
@@ -153,6 +153,7 @@ os.makedirs(CONFIG.output_dir, exist_ok=True)
 
 logger.info(f"Model: {CONFIG.model_name}")
 logger.info(f"Data: {CONFIG.data_dir}")
+logger.info(f"Holdout ratio: {CONFIG.holdout_ratio}")
 logger.info(f"Min Phase 4 violations: {CONFIG.min_phase4_violations}")
 
 tracker.mark('Configuration', 'PASS')
@@ -192,21 +193,20 @@ tracker.mark('Data Structures', 'PASS')
 """)
 
     # =========================================================================
-    # CELL 4: Load & VERIFY Phase 4 Data (CRITICAL)
+    # CELL 4: Load & VERIFY Phase 4 Data
     # =========================================================================
     add_code("""# ============================================================================
-# CELL 4: LOAD & VERIFY PHASE 4 DATA (CRITICAL)
+# CELL 4: LOAD & VERIFY PHASE 4 DATA
 # ============================================================================
 logger.info("=" * 60)
-logger.info("🔴 CRITICAL: LOADING & VERIFYING PHASE 4 DATA")
+logger.info("LOADING & VERIFYING PHASE 4 DATA")
 logger.info("=" * 60)
 
-# ---- Find the data file ----
+# ---- Find data file ----
 possible_paths = [
     f"{CONFIG.data_dir}/natural_violations.json",
     '/kaggle/input/gricebench-phase4/natural_violations.json',
     '/kaggle/input/datasets/pushkarprabhath/gricebench-scientific-fix/natural_violations.json',
-    '/kaggle/input/gricebench-scientific-fix/natural_violations.json',
 ]
 
 phase4_path = None
@@ -216,9 +216,8 @@ for path in possible_paths:
         break
 
 if phase4_path is None:
-    # List what's actually available
-    logger.error("❌ CRITICAL: natural_violations.json NOT FOUND!")
-    logger.error("Available files in /kaggle/input:")
+    logger.error("CRITICAL: natural_violations.json NOT FOUND!")
+    logger.error("Available files:")
     for root, dirs, files in os.walk('/kaggle/input'):
         for fn in files:
             logger.error(f"  {os.path.join(root, fn)}")
@@ -227,7 +226,7 @@ if phase4_path is None:
         "Upload Phase 4 output to your Kaggle dataset."
     )
 
-logger.info(f"✅ Found data: {phase4_path}")
+logger.info(f"Found: {phase4_path}")
 file_size = os.path.getsize(phase4_path) / 1024
 logger.info(f"File size: {file_size:.1f} KB")
 
@@ -242,7 +241,6 @@ logger.info(f"Sample keys: {list(raw_data[0].keys())}")
 violations = []
 clean_examples = []
 errors = []
-
 generation_method_counts = Counter()
 violation_type_counts = Counter()
 
@@ -277,13 +275,10 @@ for idx, item in enumerate(raw_data):
             
             if sum(labels) > 0 and len(text) > 50:
                 violations.append(Example(
-                    text=text,
-                    labels=labels,
-                    source='phase4_violation',
+                    text=text, labels=labels, source='phase4_violation',
                     example_id=str(item.get('id', f'v_{idx}')),
                     generation_method=gen_method,
-                    violation_type=viol_type,
-                    maxim=maxim,
+                    violation_type=viol_type, maxim=maxim,
                 ))
                 generation_method_counts[gen_method] += 1
                 violation_type_counts[viol_type] += 1
@@ -294,68 +289,45 @@ for idx, item in enumerate(raw_data):
             text = f"{context} [SEP] {original_response}" if context else original_response
             if len(text) > 50:
                 clean_examples.append(Example(
-                    text=text,
-                    labels=[0, 0, 0, 0],
-                    source='phase4_clean',
+                    text=text, labels=[0, 0, 0, 0], source='phase4_clean',
                     example_id=f"{item.get('id', idx)}_clean",
-                    generation_method='clean',
-                    violation_type='none',
-                    maxim='none',
+                    generation_method='clean', violation_type='none', maxim='none',
                 ))
     except Exception as e:
         errors.append(f"Item {idx}: {str(e)}")
 
 # ---- MANDATORY ASSERTIONS ----
 print("\\n" + "=" * 60)
-print("🔴 MANDATORY DATA VERIFICATION")
+print("MANDATORY DATA VERIFICATION")
 print("=" * 60)
 
-print(f"\\n📊 Data Loaded:")
-print(f"  Phase 4 violations: {len(violations)}")
+print(f"\\n  Phase 4 violations: {len(violations)}")
 print(f"  Phase 4 clean:      {len(clean_examples)}")
-print(f"  Errors:             {len(errors)}")
+print(f"  Parse errors:       {len(errors)}")
 
-# ASSERTION 1: Must have enough violations
 assert len(violations) >= CONFIG.min_phase4_violations, \\
-    f"❌ CRITICAL FAILURE: Only {len(violations)} violations loaded " \\
-    f"(need >= {CONFIG.min_phase4_violations}). " \\
-    f"Phase 4 data NOT loaded correctly!"
+    f"CRITICAL: Only {len(violations)} violations (need >= {CONFIG.min_phase4_violations}). Phase 4 data NOT loaded!"
 
-print(f"\\n✅ ASSERTION 1 PASSED: {len(violations)} violations >= {CONFIG.min_phase4_violations} minimum")
-
-# ASSERTION 2: Must have all 4 maxims represented
 maxim_counts = Counter()
 for ex in violations:
     for i, name in enumerate(MAXIM_NAMES):
         if ex.labels[i] == 1:
             maxim_counts[name] += 1
 
-print(f"\\n📊 Maxim Distribution:")
+print(f"\\n  Maxim Distribution:")
 for name in MAXIM_NAMES:
     count = maxim_counts.get(name, 0)
-    print(f"  {name}: {count}")
-    assert count >= 100, f"❌ CRITICAL: {name} has only {count} violations (need >= 100)"
+    print(f"    {name}: {count}")
+    assert count >= 100, f"CRITICAL: {name} has only {count} violations (need >= 100)"
 
-print(f"\\n✅ ASSERTION 2 PASSED: All maxims have >= 100 violations")
-
-# ASSERTION 3: Must have natural generation methods
-print(f"\\n📊 Generation Methods:")
+print(f"\\n  Generation Methods:")
 for method, count in generation_method_counts.most_common():
-    print(f"  {method}: {count} ({100*count/len(violations):.1f}%)")
+    print(f"    {method}: {count} ({100*count/len(violations):.1f}%)")
 
-print(f"\\n📊 Violation Types (top 10):")
-for vtype, count in violation_type_counts.most_common(10):
-    print(f"  {vtype}: {count}")
-
-# ASSERTION 4: Must have clean examples
 assert len(clean_examples) >= 500, \\
-    f"❌ CRITICAL: Only {len(clean_examples)} clean examples (need >= 500)"
+    f"CRITICAL: Only {len(clean_examples)} clean examples (need >= 500)"
 
-print(f"\\n✅ ASSERTION 3 PASSED: {len(clean_examples)} clean examples >= 500")
-
-print("\\n" + "=" * 60)
-print("✅ ALL DATA ASSERTIONS PASSED — Phase 4 data confirmed!")
-print("=" * 60)
+print(f"\\n✅ ALL ASSERTIONS PASSED — Phase 4 data confirmed!")
 
 tracker.mark('Data Verification', 'PASS', {
     'violations': len(violations),
@@ -366,22 +338,95 @@ tracker.mark('Data Verification', 'PASS', {
 """)
 
     # =========================================================================
-    # CELL 5: Stratified Split with Leakage Check
+    # CELL 5: Create TRUE Held-Out Test Set (FIX #3)
     # =========================================================================
     add_code("""# ============================================================================
-# CELL 5: STRATIFIED SPLIT WITH LEAKAGE CHECK
+# CELL 5: CREATE TRUE HELD-OUT TEST SET (NEVER IN TRAINING)
 # ============================================================================
 logger.info("=" * 60)
-logger.info("CREATING STRATIFIED SPLITS")
+logger.info("CREATING HELD-OUT TEST SET (COMPLETELY UNSEEN)")
 logger.info("=" * 60)
 
-# Combine all data
+# Use different seed for independence from training
+random.seed(999)
+
+# Stratify by generation method for diverse test set
+holdout_violations = []
+method_groups = defaultdict(list)
+
+for ex in violations:
+    method_groups[ex.generation_method].append(ex)
+
+# Take holdout_ratio from each method
+for method, examples in method_groups.items():
+    n_holdout = max(1, int(len(examples) * CONFIG.holdout_ratio))
+    random.shuffle(examples)
+    holdout_violations.extend(examples[:n_holdout])
+    logger.info(f"  {method}: {n_holdout} held out of {len(examples)}")
+
+# Take holdout_ratio of clean examples
+random.shuffle(clean_examples)
+n_clean_holdout = int(len(clean_examples) * CONFIG.holdout_ratio)
+holdout_clean = clean_examples[:n_clean_holdout]
+
+# Create holdout set
+holdout_test_data = holdout_violations + holdout_clean
+
+# Remove from training pool using TEXT (not ID) to handle duplicate texts
+# Phase 4 data has ~33 entries with identical text across different IDs
+holdout_texts = {ex.text for ex in holdout_test_data}
+
+violations_for_training = [ex for ex in violations if ex.text not in holdout_texts]
+clean_for_training = [ex for ex in clean_examples if ex.text not in holdout_texts]
+
+# Verify zero overlap by text
+training_texts = {ex.text for ex in violations_for_training + clean_for_training}
+overlap = holdout_texts & training_texts
+
+assert len(overlap) == 0, \\
+    f"DATA LEAKAGE: {len(overlap)} examples in both holdout and training!"
+
+n_removed_extra = (len(violations) - len(holdout_violations) - len(violations_for_training)) + \\
+                  (len(clean_examples) - len(holdout_clean) - len(clean_for_training))
+if n_removed_extra > 0:
+    logger.info(f"  Removed {n_removed_extra} extra duplicates from training pool")
+
+print(f"\\n  Held-out test: {len(holdout_test_data)} ({len(holdout_violations)} viol + {len(holdout_clean)} clean)")
+print(f"  Training pool: {len(violations_for_training) + len(clean_for_training)}")
+print(f"  Overlap check: 0 (PASS)")
+
+# Update main variables
+violations = violations_for_training
+clean_examples = clean_for_training
+
+# Reset seed for consistent training
+random.seed(SEED)
+np.random.seed(SEED)
+torch.manual_seed(SEED)
+
+tracker.mark('Held-Out Creation', 'PASS', {
+    'holdout_size': len(holdout_test_data),
+    'training_pool': len(violations) + len(clean_examples),
+})
+""")
+
+    # =========================================================================
+    # CELL 6: Train/Val Split
+    # =========================================================================
+    add_code("""# ============================================================================
+# CELL 6: TRAIN / VALIDATION SPLIT (from training pool only)
+# ============================================================================
+logger.info("=" * 60)
+logger.info("CREATING TRAIN / VALIDATION SPLIT")
+logger.info("=" * 60)
+
+# Combine training pool (held-out already removed!)
 all_data = violations + clean_examples
+logger.info(f"Training pool (excluding held-out): {len(all_data)}")
+
 random.shuffle(all_data)
 
-logger.info(f"Total examples: {len(all_data)}")
-
-# Stratified split by (source, maxim) to ensure representation
+# Stratified split by (source, maxim)
 groups = defaultdict(list)
 for ex in all_data:
     key = (ex.source, ex.maxim)
@@ -389,86 +434,61 @@ for ex in all_data:
 
 logger.info(f"Unique (source, maxim) groups: {len(groups)}")
 
-train_data, val_data, test_data = [], [], []
+train_data, val_data = [], []
 
 for key, examples in groups.items():
     random.shuffle(examples)
     n = len(examples)
     n_train = max(1, int(n * CONFIG.train_ratio))
-    n_val = max(1, int(n * CONFIG.val_ratio))
-    n_test = n - n_train - n_val
-    
-    if n_test < 1:
-        n_test = 1
-        n_train = n - n_val - n_test
     
     train_data.extend(examples[:n_train])
-    val_data.extend(examples[n_train:n_train + n_val])
-    test_data.extend(examples[n_train + n_val:])
+    val_data.extend(examples[n_train:])
 
 random.shuffle(train_data)
 random.shuffle(val_data)
-random.shuffle(test_data)
 
-logger.info(f"\\nSplit sizes:")
-logger.info(f"  Train: {len(train_data)}")
-logger.info(f"  Val:   {len(val_data)}")
-logger.info(f"  Test:  {len(test_data)}")
-
-# ---- Source distribution per split ----
+# Source distribution per split
 def source_dist(data):
-    counts = Counter(ex.source for ex in data)
-    return dict(counts)
+    return dict(Counter(ex.source for ex in data))
 
 train_sources = source_dist(train_data)
 val_sources = source_dist(val_data)
-test_sources = source_dist(test_data)
+holdout_sources = source_dist(holdout_test_data)
 
-print("\\n📊 Source Distribution:")
-print(f"  Train: {train_sources}")
-print(f"  Val:   {val_sources}")
-print(f"  Test:  {test_sources}")
+print(f"\\n  Split Sizes:")
+print(f"    Train:   {len(train_data)}  {train_sources}")
+print(f"    Val:     {len(val_data)}  {val_sources}")
+print(f"    Holdout: {len(holdout_test_data)}  {holdout_sources}")
 
-# ---- LEAKAGE CHECK ----
+# Leakage check
 train_texts = {ex.text for ex in train_data}
 val_texts = {ex.text for ex in val_data}
-test_texts = {ex.text for ex in test_data}
 
-train_val_overlap = len(train_texts & val_texts)
-train_test_overlap = len(train_texts & test_texts)
-val_test_overlap = len(val_texts & test_texts)
+tv_overlap = len(train_texts & val_texts)
+th_overlap = len(train_texts & holdout_texts)
 
-print(f"\\n🔍 Leakage Check:")
-print(f"  Train-Val overlap:  {train_val_overlap}")
-print(f"  Train-Test overlap: {train_test_overlap}")
-print(f"  Val-Test overlap:   {val_test_overlap}")
+print(f"\\n  Leakage Check:")
+print(f"    Train-Val overlap:     {tv_overlap}")
+print(f"    Train-Holdout overlap: {th_overlap}")
 
-assert train_test_overlap == 0, f"❌ DATA LEAKAGE: {train_test_overlap} examples in both train and test!"
-assert train_val_overlap == 0, f"❌ DATA LEAKAGE: {train_val_overlap} examples in both train and val!"
+assert tv_overlap == 0, f"DATA LEAKAGE: {tv_overlap} train-val overlap!"
+assert th_overlap == 0, f"DATA LEAKAGE: {th_overlap} train-holdout overlap!"
 
-print("✅ No data leakage detected!")
-
-# ---- Generation method distribution in test set ----
-test_gen_methods = Counter(ex.generation_method for ex in test_data if ex.source == 'phase4_violation')
-print(f"\\nTest set generation methods:")
-for method, count in test_gen_methods.most_common():
-    print(f"  {method}: {count}")
+print(f"  ✅ No data leakage!")
 
 tracker.mark('Data Split', 'PASS', {
     'train': len(train_data),
     'val': len(val_data),
-    'test': len(test_data),
+    'holdout': len(holdout_test_data),
     'train_sources': train_sources,
-    'test_sources': test_sources,
-    'leakage': {'train_test': train_test_overlap, 'train_val': train_val_overlap},
 })
 """)
 
     # =========================================================================
-    # CELL 6: Dataset & Model
+    # CELL 7: Dataset & Model (with pos_weight)
     # =========================================================================
     add_code("""# ============================================================================
-# CELL 6: DATASET & MODEL
+# CELL 7: DATASET & MODEL (with pos_weight)
 # ============================================================================
 logger.info("=" * 60)
 logger.info("CREATING DATASET & LOADING MODEL")
@@ -477,7 +497,6 @@ logger.info("=" * 60)
 from transformers import AutoTokenizer, AutoModel
 from torch.utils.data import Dataset, DataLoader
 
-# Tokenizer
 tokenizer = AutoTokenizer.from_pretrained(CONFIG.model_name)
 
 class GriceDataset(Dataset):
@@ -504,22 +523,21 @@ class GriceDataset(Dataset):
             'labels': torch.tensor(ex.labels, dtype=torch.float),
         }
 
-# Create datasets
 train_dataset = GriceDataset(train_data, tokenizer, CONFIG.max_length)
 val_dataset = GriceDataset(val_data, tokenizer, CONFIG.max_length)
-test_dataset = GriceDataset(test_data, tokenizer, CONFIG.max_length)
 
-train_loader = DataLoader(train_dataset, batch_size=CONFIG.batch_size, shuffle=True, num_workers=2, pin_memory=True)
-val_loader = DataLoader(val_dataset, batch_size=CONFIG.batch_size * 2, shuffle=False, num_workers=2, pin_memory=True)
-test_loader = DataLoader(test_dataset, batch_size=CONFIG.batch_size * 2, shuffle=False, num_workers=2, pin_memory=True)
+train_loader = DataLoader(train_dataset, batch_size=CONFIG.batch_size, shuffle=True,
+                          num_workers=2, pin_memory=True)
+val_loader = DataLoader(val_dataset, batch_size=CONFIG.batch_size * 2, shuffle=False,
+                        num_workers=2, pin_memory=True)
 
 logger.info(f"Train batches: {len(train_loader)}")
 logger.info(f"Val batches:   {len(val_loader)}")
-logger.info(f"Test batches:  {len(test_loader)}")
 
-# ---- Model ----
+# ---- Model with pos_weight stored as buffer ----
 class GriceDetector(nn.Module):
-    def __init__(self, model_name, num_labels):
+    \"\"\"Multi-label violation detector with stored pos_weight\"\"\"
+    def __init__(self, model_name, num_labels, pos_weight=None):
         super().__init__()
         self.encoder = AutoModel.from_pretrained(model_name)
         hidden_size = self.encoder.config.hidden_size
@@ -530,28 +548,54 @@ class GriceDetector(nn.Module):
             nn.Dropout(0.1),
             nn.Linear(hidden_size // 2, num_labels),
         )
+        # CRITICAL: Store pos_weight as buffer (persists with model)
+        if pos_weight is None:
+            pos_weight = torch.ones(num_labels)
+        self.register_buffer('pos_weight', pos_weight)
     
     def forward(self, input_ids, attention_mask):
         outputs = self.encoder(input_ids=input_ids, attention_mask=attention_mask)
-        cls_output = outputs.last_hidden_state[:, 0, :]  # [CLS] token
+        cls_output = outputs.last_hidden_state[:, 0, :]
         cls_output = self.dropout(cls_output)
         logits = self.classifier(cls_output)
         return {'logits': logits}
 
-model = GriceDetector(CONFIG.model_name, CONFIG.num_labels).to(device)
+# ---- FIX #1: Calculate pos_weight from training data ----
+logger.info("\\nCalculating pos_weight from training data:")
+train_labels_array = np.array([ex.labels for ex in train_data])
+pos_counts = train_labels_array.sum(axis=0)
+neg_counts = len(train_labels_array) - pos_counts
+pos_weight_values = neg_counts / (pos_counts + 1e-6)
+
+# Cap extreme weights
+pos_weight_values = np.clip(pos_weight_values, 1.0, 10.0)
+
+pos_weight_tensor = torch.tensor(pos_weight_values, dtype=torch.float32)
+
+for i, name in enumerate(MAXIM_NAMES):
+    logger.info(f"  {name}: weight={pos_weight_values[i]:.2f} "
+                f"(pos={int(pos_counts[i])}, neg={int(neg_counts[i])})")
+
+model = GriceDetector(CONFIG.model_name, CONFIG.num_labels, pos_weight_tensor).to(device)
+
+# Verify pos_weight
+logger.info(f"\\nModel pos_weight: {model.pos_weight.tolist()}")
 
 total_params = sum(p.numel() for p in model.parameters())
 trainable_params = sum(p.numel() for p in model.parameters() if p.requires_grad)
 logger.info(f"Parameters: {trainable_params:,} / {total_params:,}")
 
-tracker.mark('Model & Data', 'PASS', {'params': trainable_params})
+tracker.mark('Model & Data', 'PASS', {
+    'params': trainable_params,
+    'pos_weight': pos_weight_values.tolist(),
+})
 """)
 
     # =========================================================================
-    # CELL 7: Training Loop
+    # CELL 8: Training Loop (with health checks)
     # =========================================================================
     add_code("""# ============================================================================
-# CELL 7: TRAINING LOOP
+# CELL 8: TRAINING LOOP (with real-time health checks)
 # ============================================================================
 logger.info("=" * 60)
 logger.info("TRAINING")
@@ -561,17 +605,18 @@ from torch.optim import AdamW
 from torch.optim.lr_scheduler import CosineAnnealingLR
 from sklearn.metrics import f1_score, precision_score, recall_score
 
-# Optimizer
 optimizer = AdamW(model.parameters(), lr=CONFIG.learning_rate, weight_decay=CONFIG.weight_decay)
 scheduler = CosineAnnealingLR(optimizer, T_max=CONFIG.num_epochs * len(train_loader))
-criterion = nn.BCEWithLogitsLoss()
+
+# CRITICAL: Use pos_weight from model buffer
+criterion = nn.BCEWithLogitsLoss(pos_weight=model.pos_weight)
+logger.info(f"Loss: BCEWithLogitsLoss(pos_weight={model.pos_weight.tolist()})")
 
 # ---- Evaluation function ----
 def evaluate(model, loader, device, thresholds=None):
     model.eval()
-    all_preds = []
-    all_labels = []
     all_probs = []
+    all_labels = []
     total_loss = 0
     n_batches = 0
     
@@ -593,13 +638,11 @@ def evaluate(model, loader, device, thresholds=None):
     all_probs = np.concatenate(all_probs)
     all_labels = np.concatenate(all_labels)
     
-    # Use thresholds or default 0.5
     if thresholds is None:
         thresholds = [0.5] * CONFIG.num_labels
     
     all_preds = (all_probs >= np.array(thresholds)).astype(int)
     
-    # Per-class metrics
     per_class = {}
     for i, name in enumerate(MAXIM_NAMES):
         if all_labels[:, i].sum() > 0:
@@ -636,6 +679,7 @@ best_val_f1 = 0
 best_epoch = 0
 patience = 0
 max_patience = 2
+health_alerts = []
 
 train_start = datetime.now()
 
@@ -668,9 +712,49 @@ for epoch in range(1, CONFIG.num_epochs + 1):
     # Validate
     val_f1, val_per_class, val_loss, val_probs, val_labels = evaluate(model, val_loader, device)
     
-    # Optimize thresholds on validation set
+    # Optimize thresholds
     optimal_thresholds = optimize_thresholds(val_probs, val_labels)
     val_f1_opt, val_per_class_opt, _, _, _ = evaluate(model, val_loader, device, optimal_thresholds)
+    
+    # ================================================================
+    # FIX #2: REAL-TIME HEALTH CHECKS
+    # ================================================================
+    if epoch >= 2:
+        # Check 1: Model collapse
+        pred_variance = val_probs.var()
+        if pred_variance < 0.01:
+            alert = f"COLLAPSE ALERT: Pred variance={pred_variance:.4f}"
+            logger.warning(f"  ⚠️ {alert}")
+            health_alerts.append(f"Epoch {epoch}: {alert}")
+        
+        # Check 2: Predictions stuck near threshold
+        near_threshold = np.sum((val_probs > 0.4) & (val_probs < 0.6)) / val_probs.size
+        if near_threshold > 0.7:
+            alert = f"THRESHOLD ALERT: {near_threshold:.1%} predictions near 0.5"
+            logger.warning(f"  ⚠️ {alert}")
+            health_alerts.append(f"Epoch {epoch}: {alert}")
+        
+        # Check 3: Overfitting
+        if len(training_history) >= 1:
+            prev_val_loss = training_history[-1]['val_loss']
+            if val_loss > prev_val_loss + 0.05:
+                alert = f"OVERFITTING: Val loss {prev_val_loss:.3f} -> {val_loss:.3f}"
+                logger.warning(f"  ⚠️ {alert}")
+                health_alerts.append(f"Epoch {epoch}: {alert}")
+        
+        # Check 4: Suspiciously high F1 early
+        if epoch <= 3 and val_f1_opt > 0.90:
+            alert = f"SUSPICIOUS: F1={val_f1_opt:.3f} at epoch {epoch} (too high too early)"
+            logger.warning(f"  ⚠️ {alert}")
+            health_alerts.append(f"Epoch {epoch}: {alert}")
+        
+        # Check 5: Per-class collapse
+        class_variances = val_probs.var(axis=0)
+        collapsed = [MAXIM_NAMES[i] for i in range(4) if class_variances[i] < 0.01]
+        if collapsed:
+            alert = f"CLASS COLLAPSE: {', '.join(collapsed)} have low variance"
+            logger.warning(f"  ⚠️ {alert}")
+            health_alerts.append(f"Epoch {epoch}: {alert}")
     
     epoch_result = {
         'epoch': epoch,
@@ -696,77 +780,130 @@ for epoch in range(1, CONFIG.num_epochs + 1):
         best_val_f1 = val_f1_opt
         best_epoch = epoch
         best_thresholds = optimal_thresholds
-        torch.save(model.state_dict(), os.path.join(CONFIG.output_dir, 'best_model.pt'))
+        torch.save({
+            'model_state_dict': model.state_dict(),
+            'pos_weight': model.pos_weight,
+            'thresholds': best_thresholds,
+            'epoch': epoch,
+            'val_f1': val_f1_opt,
+        }, os.path.join(CONFIG.output_dir, 'best_model.pt'))
         logger.info(f"  ⭐ New best model! F1={val_f1_opt:.4f}")
         patience = 0
     else:
         patience += 1
         logger.info(f"  No improvement ({patience}/{max_patience})")
     
-    # Early stopping
     if patience >= max_patience and epoch >= 3:
         logger.info(f"\\nEarly stopping at epoch {epoch}")
         break
 
 train_time = (datetime.now() - train_start).total_seconds()
-logger.info(f"\\nTraining complete: {train_time:.0f}s ({train_time/60:.1f} min)")
-logger.info(f"Best epoch: {best_epoch} with F1={best_val_f1:.4f}")
+logger.info(f"\\nTraining: {train_time:.0f}s ({train_time/60:.1f} min)")
+logger.info(f"Best epoch: {best_epoch}, F1={best_val_f1:.4f}")
 
-# Load best model
-model.load_state_dict(torch.load(os.path.join(CONFIG.output_dir, 'best_model.pt'), weights_only=True))
+if health_alerts:
+    logger.warning(f"\\n⚠️ Health alerts during training:")
+    for alert in health_alerts:
+        logger.warning(f"  {alert}")
+
+# Load best checkpoint
+checkpoint = torch.load(os.path.join(CONFIG.output_dir, 'best_model.pt'), weights_only=False)
+model.load_state_dict(checkpoint['model_state_dict'])
 logger.info("Loaded best model checkpoint")
 
 tracker.mark('Training', 'PASS', {
     'best_epoch': best_epoch,
     'best_f1': best_val_f1,
     'time_seconds': train_time,
+    'health_alerts': len(health_alerts),
 })
 """)
 
     # =========================================================================
-    # CELL 8: Test Evaluation (Held-Out)
+    # CELL 9: In-Distribution Test (from val split)
     # =========================================================================
     add_code("""# ============================================================================
-# CELL 8: TEST EVALUATION (HELD-OUT — NEVER SEEN IN TRAINING)
+# CELL 9: VALIDATION SET FINAL EVALUATION
 # ============================================================================
 logger.info("=" * 60)
-logger.info("🎯 TEST SET EVALUATION (HELD-OUT)")
+logger.info("VALIDATION SET FINAL EVALUATION")
 logger.info("=" * 60)
 
-# Overall test metrics
-test_f1, test_per_class, test_loss, test_probs, test_labels = evaluate(
-    model, test_loader, device, best_thresholds
+val_f1, val_per_class, val_loss, val_probs, val_labels = evaluate(
+    model, val_loader, device, best_thresholds
 )
 
 print(f"\\n{'='*60}")
-print(f"📊 HELD-OUT TEST RESULTS")
+print(f"VALIDATION RESULTS (used for threshold optimization)")
 print(f"{'='*60}")
-print(f"\\nMacro F1: {test_f1:.4f}")
-print(f"Test Loss: {test_loss:.4f}")
+print(f"\\nMacro F1: {val_f1:.4f}")
+print(f"\\nPer-Maxim:")
+for name in MAXIM_NAMES:
+    sc = val_per_class[name]
+    print(f"  {name}: F1={sc['f1']:.3f}, P={sc['precision']:.3f}, R={sc['recall']:.3f}")
+
+tracker.mark('Val Evaluation', 'PASS', {'val_f1': val_f1})
+""")
+
+    # =========================================================================
+    # CELL 10: Held-Out Test (FIX #3B - the REAL test)
+    # =========================================================================
+    add_code("""# ============================================================================
+# CELL 10: HELD-OUT TEST (COMPLETELY UNSEEN - THE REAL TEST)
+# ============================================================================
+logger.info("=" * 60)
+logger.info("HELD-OUT TEST (COMPLETELY UNSEEN DATA)")
+logger.info("=" * 60)
+
+holdout_dataset = GriceDataset(holdout_test_data, tokenizer, CONFIG.max_length)
+holdout_loader = DataLoader(holdout_dataset, batch_size=CONFIG.batch_size * 2,
+                            shuffle=False, num_workers=2, pin_memory=True)
+
+holdout_f1, holdout_per_class, holdout_loss, holdout_probs, holdout_labels = evaluate(
+    model, holdout_loader, device, best_thresholds
+)
+
+print(f"\\n{'='*60}")
+print(f"HELD-OUT TEST RESULTS (NEVER SEEN IN TRAINING)")
+print(f"{'='*60}")
+print(f"\\nMacro F1: {holdout_f1:.4f}")
+print(f"Loss: {holdout_loss:.4f}")
 print(f"\\nPer-Maxim Performance:")
 for name in MAXIM_NAMES:
-    sc = test_per_class[name]
-    # Flag suspicious scores
-    flag = " ⚠️ SUSPICIOUS" if sc['f1'] > 0.95 else ""
+    sc = holdout_per_class[name]
+    flag = " SUSPICIOUS" if sc['f1'] > 0.95 else ""
     print(f"  {name}: F1={sc['f1']:.3f}, P={sc['precision']:.3f}, R={sc['recall']:.3f}{flag}")
 
-print(f"\\nThresholds used: {dict(zip(MAXIM_NAMES, best_thresholds))}")
-
-# ---- Per-generation-method evaluation ----
+# ---- Generalization gap analysis ----
 print(f"\\n{'='*60}")
-print(f"📊 PER-GENERATION-METHOD BREAKDOWN")
+print(f"GENERALIZATION ANALYSIS")
+print(f"{'='*60}")
+print(f"\\n  Validation F1: {val_f1:.4f}")
+print(f"  Held-out F1:   {holdout_f1:.4f}")
+
+gen_gap = abs(val_f1 - holdout_f1)
+print(f"  Gap:           {gen_gap:.4f}")
+
+if gen_gap > 0.10:
+    print(f"\\n  ⚠️ LARGE GAP (>0.10): Significant overfitting!")
+elif gen_gap > 0.05:
+    print(f"\\n  ⚠️ MODERATE GAP (>0.05): Some overfitting")
+else:
+    print(f"\\n  ✅ SMALL GAP (<0.05): Excellent generalization!")
+
+# ---- Per-generation-method eval on holdout ----
+print(f"\\n{'='*60}")
+print(f"PER-GENERATION-METHOD BREAKDOWN (HOLDOUT)")
 print(f"{'='*60}")
 
-# Group test examples by generation method
+holdout_preds = (holdout_probs >= np.array(best_thresholds)).astype(int)
 method_examples = defaultdict(list)
-test_preds = (test_probs >= np.array(best_thresholds)).astype(int)
 
-for i, ex in enumerate(test_data):
-    if i < len(test_preds):
+for i, ex in enumerate(holdout_test_data):
+    if i < len(holdout_preds):
         method_examples[ex.generation_method].append({
-            'true': test_labels[i] if i < len(test_labels) else ex.labels,
-            'pred': test_preds[i],
-            'probs': test_probs[i] if i < len(test_probs) else None,
+            'true': holdout_labels[i] if i < len(holdout_labels) else np.array(ex.labels),
+            'pred': holdout_preds[i],
         })
 
 method_results = {}
@@ -777,62 +914,63 @@ for method, items in method_examples.items():
     method_f1s = {}
     for j, name in enumerate(MAXIM_NAMES):
         if true_arr[:, j].sum() > 0:
-            f1 = f1_score(true_arr[:, j], pred_arr[:, j], zero_division=0)
-            method_f1s[name] = f1
+            method_f1s[name] = f1_score(true_arr[:, j], pred_arr[:, j], zero_division=0)
     
     macro = np.mean(list(method_f1s.values())) if method_f1s else 0
     method_results[method] = {'macro_f1': macro, 'per_class': method_f1s, 'count': len(items)}
     
-    print(f"\\n  {method} ({len(items)} examples):")
-    print(f"    Macro F1: {macro:.3f}")
+    print(f"\\n  {method} ({len(items)} examples): Macro F1={macro:.3f}")
     for name, f1 in method_f1s.items():
-        print(f"      {name}: {f1:.3f}")
+        print(f"    {name}: {f1:.3f}")
 
-# ---- Health check ----
+# ---- Health assessment ----
 print(f"\\n{'='*60}")
-print(f"✅ HEALTH CHECKS")
+print(f"FINAL HEALTH ASSESSMENT")
 print(f"{'='*60}")
 
-if test_f1 > 0.95:
-    print(f"  ⚠️ WARNING: F1={test_f1:.3f} is suspiciously high (>0.95)")
-    print(f"     This may indicate overfitting to synthetic patterns")
-elif test_f1 > 0.80:
-    print(f"  ✅ EXCELLENT: F1={test_f1:.3f} is in the excellent range (0.80-0.95)")
-elif test_f1 > 0.65:
-    print(f"  ✅ GOOD: F1={test_f1:.3f} is in the good range (0.65-0.80)")
+if holdout_f1 > 0.95:
+    print(f"\\n  CRITICAL: Held-out F1={holdout_f1:.3f} is suspiciously high!")
+    print(f"    Possible causes: data leakage, Phase 4 patterns too easy")
+    print(f"    DO NOT DEPLOY — investigate first")
+elif holdout_f1 > 0.85:
+    print(f"\\n  EXCELLENT: Held-out F1={holdout_f1:.3f}")
+    print(f"    Ready for Phase 7 evaluation")
+elif holdout_f1 > 0.70:
+    print(f"\\n  GOOD: Held-out F1={holdout_f1:.3f}")
+    print(f"    Acceptable for deployment, consider tuning")
+elif holdout_f1 > 0.55:
+    print(f"\\n  MODERATE: Held-out F1={holdout_f1:.3f}")
+    print(f"    Needs improvement before Phase 7")
 else:
-    print(f"  ⚠️ LOW: F1={test_f1:.3f} — model may need more data or tuning")
+    print(f"\\n  LOW: Held-out F1={holdout_f1:.3f}")
+    print(f"    Check model health, data quality, hyperparameters")
 
-tracker.mark('Test Evaluation', 'PASS', {
-    'test_f1': test_f1,
-    'test_loss': test_loss,
-    'per_class': {k: v['f1'] for k, v in test_per_class.items()},
-    'per_method': {k: v['macro_f1'] for k, v in method_results.items()},
+tracker.mark('Held-Out Evaluation', 'PASS', {
+    'holdout_f1': holdout_f1,
+    'generalization_gap': gen_gap,
 })
 """)
 
     # =========================================================================
-    # CELL 9: Error Analysis
+    # CELL 11: Error Analysis
     # =========================================================================
     add_code("""# ============================================================================
-# CELL 9: ERROR ANALYSIS
+# CELL 11: ERROR ANALYSIS (on held-out set)
 # ============================================================================
 logger.info("=" * 60)
 logger.info("ERROR ANALYSIS")
 logger.info("=" * 60)
 
-# Find misclassified examples
-errors = []
-
-for i in range(min(len(test_data), len(test_preds))):
-    ex = test_data[i]
-    pred = test_preds[i]
+errors_list = []
+for i in range(min(len(holdout_test_data), len(holdout_preds))):
+    ex = holdout_test_data[i]
+    pred = holdout_preds[i]
     true = np.array(ex.labels)
-    prob = test_probs[i]
+    prob = holdout_probs[i]
     
-    error_count = np.sum(pred != true)
+    error_count = int(np.sum(pred != true))
     if error_count > 0:
-        errors.append({
+        errors_list.append({
             'idx': i,
             'text': ex.text[:300],
             'true_labels': true.tolist(),
@@ -845,109 +983,164 @@ for i in range(min(len(test_data), len(test_preds))):
             'error_count': error_count,
         })
 
-errors.sort(key=lambda x: x['error_count'], reverse=True)
+errors_list.sort(key=lambda x: x['error_count'], reverse=True)
 
-print(f"\\n❌ Total misclassified: {len(errors)} / {len(test_data)} ({100*len(errors)/len(test_data):.1f}%)")
-print(f"✅ Correctly classified: {len(test_data) - len(errors)} ({100*(len(test_data)-len(errors))/len(test_data):.1f}%)")
+print(f"\\n  Total misclassified: {len(errors_list)} / {len(holdout_test_data)} ({100*len(errors_list)/max(len(holdout_test_data),1):.1f}%)")
+print(f"  Correctly classified: {len(holdout_test_data) - len(errors_list)}")
 
 # Error type breakdown
-print(f"\\n📊 Error Type Breakdown:")
 error_by_maxim = defaultdict(lambda: {'false_pos': 0, 'false_neg': 0})
-for err in errors:
+for err in errors_list:
     for j, name in enumerate(MAXIM_NAMES):
         if err['true_labels'][j] == 1 and err['pred_labels'][j] == 0:
             error_by_maxim[name]['false_neg'] += 1
         elif err['true_labels'][j] == 0 and err['pred_labels'][j] == 1:
             error_by_maxim[name]['false_pos'] += 1
 
+print(f"\\n  Error Type Breakdown:")
 for name in MAXIM_NAMES:
     fp = error_by_maxim[name]['false_pos']
     fn = error_by_maxim[name]['false_neg']
-    print(f"  {name}: {fp} false positives, {fn} false negatives")
+    print(f"    {name}: {fp} FP, {fn} FN")
 
 # Error by generation method
-print(f"\\n📊 Errors by Generation Method:")
-error_by_method = Counter(err['generation_method'] for err in errors)
+error_by_method = Counter(err['generation_method'] for err in errors_list)
+print(f"\\n  Errors by Generation Method:")
 for method, count in error_by_method.most_common():
-    total_method = sum(1 for ex in test_data if ex.generation_method == method)
-    print(f"  {method}: {count}/{total_method} errors ({100*count/max(total_method,1):.1f}%)")
+    total = sum(1 for ex in holdout_test_data if ex.generation_method == method)
+    print(f"    {method}: {count}/{total} ({100*count/max(total,1):.1f}%)")
 
 # Top 10 worst errors
-print(f"\\n📋 Top 10 Worst Misclassifications:")
-for rank, err in enumerate(errors[:10], 1):
-    print(f"\\n  #{rank} ({err['generation_method']}, {err['violation_type']})")
-    print(f"    Text: {err['text'][:150]}...")
-    print(f"    True: {err['true_labels']} ({', '.join(MAXIM_NAMES[j] for j in range(4) if err['true_labels'][j]==1) or 'Clean'})")
-    print(f"    Pred: {err['pred_labels']} ({', '.join(MAXIM_NAMES[j] for j in range(4) if err['pred_labels'][j]==1) or 'Clean'})")
-    print(f"    Probs: [{', '.join(f'{p:.2f}' for p in err['probs'])}]")
+print(f"\\n  Top 10 Worst Misclassifications:")
+for rank, err in enumerate(errors_list[:10], 1):
+    true_maxims = ', '.join(MAXIM_NAMES[j] for j in range(4) if err['true_labels'][j]==1) or 'Clean'
+    pred_maxims = ', '.join(MAXIM_NAMES[j] for j in range(4) if err['pred_labels'][j]==1) or 'Clean'
+    print(f"\\n    #{rank} [{err['generation_method']}] {err['violation_type']}")
+    print(f"      Text: {err['text'][:120]}...")
+    print(f"      True: {true_maxims}")
+    print(f"      Pred: {pred_maxims}")
+    print(f"      Probs: [{', '.join(f'{p:.2f}' for p in err['probs'])}]")
 
-tracker.mark('Error Analysis', 'PASS', {
-    'total_errors': len(errors),
-    'error_rate': f"{100*len(errors)/len(test_data):.1f}%",
-    'error_by_maxim': {k: dict(v) for k, v in error_by_maxim.items()},
-})
+tracker.mark('Error Analysis', 'PASS', {'total_errors': len(errors_list)})
 """)
 
     # =========================================================================
-    # CELL 10: Save Results
+    # CELL 12: Prediction Distribution Analysis (FIX #4)
     # =========================================================================
     add_code("""# ============================================================================
-# CELL 10: SAVE RESULTS
+# CELL 12: PREDICTION DISTRIBUTION ANALYSIS (CALIBRATION)
+# ============================================================================
+logger.info("=" * 60)
+logger.info("CALIBRATION ANALYSIS")
+logger.info("=" * 60)
+
+print(f"\\n{'='*60}")
+print(f"MODEL CALIBRATION ANALYSIS")
+print(f"{'='*60}")
+
+for i, name in enumerate(MAXIM_NAMES):
+    probs_class = holdout_probs[:, i]
+    
+    print(f"\\n  {name}:")
+    print(f"    Mean: {probs_class.mean():.3f}  Std: {probs_class.std():.3f}")
+    print(f"    Min:  {probs_class.min():.3f}  Max: {probs_class.max():.3f}")
+    
+    bins = np.histogram(probs_class, bins=[0, 0.1, 0.3, 0.5, 0.7, 0.9, 1.0])[0]
+    total = len(probs_class)
+    
+    print(f"    Distribution:")
+    ranges = ['[0.0-0.1)', '[0.1-0.3)', '[0.3-0.5)', '[0.5-0.7)', '[0.7-0.9)', '[0.9-1.0]']
+    for r, b in zip(ranges, bins):
+        bar = '#' * int(40 * b / max(total, 1))
+        print(f"      {r}: {b:4d} ({100*b/total:5.1f}%) {bar}")
+    
+    if probs_class.std() < 0.10:
+        print(f"    ⚠️ LOW VARIANCE — model not confident separating this class")
+    
+    middle = (bins[2] + bins[3]) / total
+    if middle > 0.70:
+        print(f"    ⚠️ CLUSTERED — {middle:.1%} predictions around 0.5")
+
+# Overall calibration
+all_flat = holdout_probs.flatten()
+print(f"\\n  Overall: mean={all_flat.mean():.3f}, std={all_flat.std():.3f}")
+
+if all_flat.std() < 0.15:
+    print(f"  ⚠️ Very low overall variance — may be collapsed")
+elif all_flat.std() > 0.35:
+    print(f"  ⚠️ Very high variance — may be overconfident")
+else:
+    print(f"  ✅ Healthy variance — good calibration")
+
+tracker.mark('Calibration Analysis', 'PASS')
+""")
+
+    # =========================================================================
+    # CELL 13: Save Results (FIX #5 — includes holdout)
+    # =========================================================================
+    add_code("""# ============================================================================
+# CELL 13: SAVE COMPREHENSIVE RESULTS
 # ============================================================================
 logger.info("=" * 60)
 logger.info("SAVING RESULTS")
 logger.info("=" * 60)
 
-# Compile results
 results = {
-    'phase': 'Phase 6 - Detector V2 (Verified Natural Violations)',
+    'phase': 'Phase 6 - Detector V2 (Research-Grade, Verified)',
     'timestamp': datetime.now().isoformat(),
     'model': CONFIG.model_name,
     'best_epoch': best_epoch,
     'thresholds': dict(zip(MAXIM_NAMES, best_thresholds)),
+    'pos_weight': model.pos_weight.tolist(),
+    
     'data_verification': {
-        'total_violations': len(violations),
-        'total_clean': len(clean_examples),
+        'total_violations_loaded': len(violations) + len(holdout_violations),
+        'total_clean_loaded': len(clean_examples) + len(holdout_clean),
         'generation_methods': dict(generation_method_counts),
         'maxim_counts': dict(maxim_counts),
         'source_file': phase4_path,
         'assertions_passed': True,
     },
+    
     'splits': {
         'train': len(train_data),
         'val': len(val_data),
-        'test': len(test_data),
+        'holdout_test': len(holdout_test_data),
         'train_sources': train_sources,
         'val_sources': val_sources,
-        'test_sources': test_sources,
-        'leakage_check': {
-            'train_val': train_val_overlap,
-            'train_test': train_test_overlap,
-            'val_test': val_test_overlap,
-        },
+        'holdout_sources': holdout_sources,
+        'leakage_check': 'PASSED',
     },
+    
     'validation': {
-        'macro_f1': best_val_f1,
-        'per_class': {name: training_history[best_epoch-1]['per_class'][name] for name in MAXIM_NAMES},
+        'macro_f1': val_f1,
+        'per_class': {name: val_per_class[name] for name in MAXIM_NAMES},
     },
-    'test': {
-        'macro_f1': test_f1,
-        'loss': test_loss,
-        'per_class': {name: test_per_class[name] for name in MAXIM_NAMES},
+    
+    'holdout_test': {
+        'macro_f1': holdout_f1,
+        'loss': holdout_loss,
+        'per_class': {name: holdout_per_class[name] for name in MAXIM_NAMES},
+        'generalization_gap': gen_gap,
     },
-    'test_per_method': {method: {
+    
+    'holdout_per_method': {method: {
         'macro_f1': info['macro_f1'],
         'count': info['count'],
         'per_class': info['per_class'],
     } for method, info in method_results.items()},
+    
     'error_analysis': {
-        'total_errors': len(errors),
-        'error_rate': round(100 * len(errors) / len(test_data), 2),
+        'total_errors': len(errors_list),
+        'error_rate': round(100 * len(errors_list) / max(len(holdout_test_data),1), 2),
         'error_by_maxim': {k: dict(v) for k, v in error_by_maxim.items()},
         'error_by_method': dict(error_by_method),
-        'top_10_errors': errors[:10],
+        'top_10_errors': errors_list[:10],
     },
+    
     'training_history': training_history,
+    'health_alerts': health_alerts,
+    
     'gpu': {
         'name': torch.cuda.get_device_name(0) if torch.cuda.is_available() else 'N/A',
         'peak_vram_gb': float(torch.cuda.max_memory_allocated(0) / 1e9) if torch.cuda.is_available() else 0,
@@ -959,18 +1152,19 @@ results = {
 results_path = os.path.join(CONFIG.output_dir, 'detector_v2_results.json')
 with open(results_path, 'w') as f:
     json.dump(results, f, indent=2, default=str)
-logger.info(f"Results saved: {results_path}")
+logger.info(f"Results: {results_path}")
 
 # Save thresholds
 thresholds_path = os.path.join(CONFIG.output_dir, 'optimal_thresholds.json')
 with open(thresholds_path, 'w') as f:
     json.dump({
         'thresholds': dict(zip(MAXIM_NAMES, best_thresholds)),
-        'macro_f1': best_val_f1,
+        'macro_f1': holdout_f1,
+        'generalization_gap': gen_gap,
     }, f, indent=2)
-logger.info(f"Thresholds saved: {thresholds_path}")
+logger.info(f"Thresholds: {thresholds_path}")
 
-# Copy to /kaggle/working for download
+# Copy to /kaggle/working for easy download
 import shutil
 for fname in ['detector_v2_results.json', 'optimal_thresholds.json', 'best_model.pt']:
     src = os.path.join(CONFIG.output_dir, fname)
@@ -983,55 +1177,53 @@ tracker.mark('Save Results', 'PASS')
 """)
 
     # =========================================================================
-    # CELL 11: Final Summary
+    # CELL 14: Final Summary
     # =========================================================================
     add_code("""# ============================================================================
-# CELL 11: FINAL SUMMARY
+# CELL 14: FINAL SUMMARY
 # ============================================================================
 print("\\n" + "=" * 60)
-print("🏁 PHASE 6 DETECTOR V2 — FINAL SUMMARY")
+print("PHASE 6 DETECTOR V2 — FINAL SUMMARY")
 print("=" * 60)
 
-print(f"\\n📦 Model: {CONFIG.model_name}")
-print(f"📊 Data: {len(violations)} violations + {len(clean_examples)} clean from Phase 4")
-print(f"🔬 Generation methods: {dict(generation_method_counts)}")
+print(f"\\n  Model: {CONFIG.model_name}")
+print(f"  Data: {len(violations) + len(holdout_violations)} violations + "
+      f"{len(clean_examples) + len(holdout_clean)} clean from Phase 4")
+print(f"  pos_weight: {model.pos_weight.tolist()}")
 
-print(f"\\n📈 Training:")
-print(f"  Best epoch: {best_epoch}")
-print(f"  Val F1: {best_val_f1:.4f}")
-print(f"  Time: {train_time:.0f}s ({train_time/60:.1f} min)")
+print(f"\\n  Training:")
+print(f"    Best epoch: {best_epoch}")
+print(f"    Val F1: {best_val_f1:.4f}")
+print(f"    Time: {train_time:.0f}s ({train_time/60:.1f} min)")
 
-print(f"\\n🎯 TEST SET RESULTS (held-out, never in training):")
-print(f"  Macro F1: {test_f1:.4f}")
+print(f"\\n  HELD-OUT TEST (ultimate metric):")
+print(f"    Macro F1: {holdout_f1:.4f}")
 for name in MAXIM_NAMES:
-    sc = test_per_class[name]
-    print(f"    {name}: F1={sc['f1']:.3f}")
+    sc = holdout_per_class[name]
+    print(f"      {name}: F1={sc['f1']:.3f}")
 
-print(f"\\n🔍 Per-Method Performance:")
+print(f"\\n  Generalization gap: {gen_gap:.4f}")
+
+print(f"\\n  Per-Method (holdout):")
 for method, info in sorted(method_results.items(), key=lambda x: -x[1]['macro_f1']):
-    print(f"  {method}: F1={info['macro_f1']:.3f} ({info['count']} examples)")
+    print(f"    {method}: F1={info['macro_f1']:.3f} ({info['count']} examples)")
 
-print(f"\\n❌ Errors: {len(errors)}/{len(test_data)} ({100*len(errors)/len(test_data):.1f}%)")
+print(f"\\n  Errors: {len(errors_list)}/{len(holdout_test_data)} ({100*len(errors_list)/max(len(holdout_test_data),1):.1f}%)")
 
-print(f"\\n✅ DATA VERIFIED:")
-print(f"  Phase 4 violations loaded: {len(violations)}")
-print(f"  No data leakage: ✅")
-print(f"  All maxims represented: ✅")
-
-print(f"\\n📁 Output Files:")
-print(f"  /kaggle/working/detector_v2_results.json")
-print(f"  /kaggle/working/optimal_thresholds.json")
-print(f"  /kaggle/working/best_model.pt")
-
-if test_f1 > 0.95:
-    print(f"\\n⚠️  F1={test_f1:.3f} is very high — review error analysis for overfitting signs")
-elif test_f1 > 0.70:
-    print(f"\\n✅ Results look realistic and healthy")
+if health_alerts:
+    print(f"\\n  ⚠️ Health alerts: {len(health_alerts)}")
+    for a in health_alerts:
+        print(f"    • {a}")
 else:
-    print(f"\\n⚠️  F1={test_f1:.3f} is below target — may need more data or training")
+    print(f"\\n  ✅ No health alerts during training")
+
+print(f"\\n  Output Files:")
+print(f"    /kaggle/working/detector_v2_results.json")
+print(f"    /kaggle/working/optimal_thresholds.json")
+print(f"    /kaggle/working/best_model.pt")
 
 print(f"\\n{'='*60}")
-print(f"PHASE 6 V2 COMPLETE — Download detector_v2_results.json")
+print(f"PHASE 6 V2 COMPLETE")
 print(f"{'='*60}")
 
 gc.collect()
@@ -1039,6 +1231,7 @@ if torch.cuda.is_available():
     torch.cuda.empty_cache()
 
 tracker.mark('Complete', 'PASS')
+print("\\nExecution log:")
 for step in tracker.steps:
     print(f"  {step['status']}: {step['name']} ({step['elapsed']:.0f}s)")
 """)
