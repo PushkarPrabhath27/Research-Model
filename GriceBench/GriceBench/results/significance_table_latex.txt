@@ -1,0 +1,7 @@
+% === TABLE 1: MAIN RESULTS ===
+Baseline (GPT-2) & 84.0\% & [76.0\%, 91.0\%] \\
+Mistral-7B-Instruct & 88.0\% & [81.0\%, 94.0\%] \\
+Qwen2.5-7B-Instruct & 83.0\% & [75.0\%, 90.0\%] \\
+DPO Only & 83.0\% & [75.0\%, 90.0\%] \\
+Detect + Repair & 93.0\% & [88.0\%, 98.0\%] \\
+Full System (Ours) & \textbf{93.0\%}$^{**}$ & [88.0\%, 97.0\%] \\
