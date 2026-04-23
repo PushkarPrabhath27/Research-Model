@@ -1,185 +1,283 @@
-# Model Card: GriceBench Violation Detector
+---
+language:
+  - en
+license: apache-2.0
+library_name: transformers
+tags:
+  - text-classification
+  - multi-label-classification
+  - dialogue
+  - conversational-ai
+  - gricean-maxims
+  - cooperative-communication
+  - deberta
+  - nlp
+  - pragmatics
+datasets:
+  - topical_chat
+metrics:
+  - f1
+  - precision
+  - recall
+  - roc_auc
+pipeline_tag: text-classification
+base_model: microsoft/deberta-v3-base
+model-index:
+  - name: GriceBench-Detector
+    results:
+      - task:
+          type: text-classification
+          name: Multi-Label Gricean Maxim Violation Detection
+        dataset:
+          name: Topical-Chat (GriceBench held-out split)
+          type: custom
+          split: test
+        metrics:
+          - type: f1
+            value: 0.955
+            name: Macro F1
+          - type: f1
+            value: 1.000
+            name: Quantity F1
+          - type: f1
+            value: 0.928
+            name: Quality F1
+          - type: f1
+            value: 1.000
+            name: Relation F1
+          - type: f1
+            value: 0.891
+            name: Manner F1
+---
 
-## Model Description
+<div align="center">
 
-**Model Name:** GriceBench-Detector  
-**Model Type:** Multi-label Text Classification  
-**Base Architecture:** DeBERTa-v3-base  
-**Parameters:** 184M  
-**Languages:** English  
-**License:** MIT
+# 🗣️ GriceBench-Detector
 
-## Intended Use
+**Detects cooperative communication failures in AI dialogue — one maxim at a time.**
 
-The GriceBench Detector is a multi-label classifier designed to identify violations of Gricean Maxims in conversational responses:
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+[![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
+[![Transformers](https://img.shields.io/badge/🤗-Transformers-yellow)](https://huggingface.co/docs/transformers)
 
-- **Quantity**: Too much or too little information
-- **Quality**: Factual inaccuracies or lack of evidence
-- **Relation**: Off-topic or irrelevant responses
-- **Manner**: Unclear, ambiguous, or disorganized responses
+Part of the **GriceBench** system — [GitHub](https://github.com/PushkarPrabhath27/Research-Model) | 
+[🔧 Repair Model](https://huggingface.co/Pushkar27/GriceBench-Repair) | 
+[⚡ DPO Generator](https://huggingface.co/Pushkar27/GriceBench-DPO)
 
-### Primary Use Cases
-
-1. Dialogue system evaluation
-2. Conversational AI quality assurance
-3. Human-AI interaction analysis
-4. Training data filtering for conversational models
-
-### Out-of-Scope Uses
-
-- Single-turn classification (requires context)
-- Non-English text
-- Non-conversational text (e.g., formal documents)
-- Real-time classification (<10ms latency requirement)
-
-## Training Data
-
-### Source Datasets
-
-- **Wizard of Wikipedia**: 1,320 examples
-- **TopicalChat**: 1,890 examples  
-- **LIGHT**: 1,302 examples
-- **Total**: 4,512 examples (4,012 train, 500 validation)
-
-### Data Augmentation
-
-Synthetic violations injected via rule-based methods:
-- Quantity: Verbosity/under-informativeness injection
-- Quality: Fact contradiction/unsupported claims
-- Relation: Topic drift/off-topic generation
-- Manner: Sentence shuffling/jargon injection
-
-### Annotation
-
-- **Method**: Weak supervision + manual gold annotation
-- **Annotators**: 2 trained annotators
-- **Inter-annotator Agreement**: Cohen's κ = 0.82 (substantial agreement)
-- **Label Distribution**:
-  - Quantity: 25.6%
-  - Quality: 14.0%
-  - Relation: 21.3%
-  - Manner: 31.6%
-
-## Training Procedure
-
-### Hyperparameters
-
-```python
-{
-    "model": "microsoft/deberta-v3-base",
-    "max_length": 512,
-    "batch_size": 16,
-    "learning_rate": 2e-5,
-    "epochs": 10,
-    "warmup_steps": 500,
-    "weight_decay": 0.01,
-    "dropout": 0.1,
-    "optimizer": "AdamW",
-    "scheduler": "linear_with_warmup",
-    "loss": "BCEWithLogitsLoss"
-}
-```
-
-### Training Infrastructure
-
-- **Hardware**: NVIDIA V100 (16GB)
-- **Training Time**: 2 hours
-- **Framework**: PyTorch 2.1.0, Transformers 4.35.2
-
-### Input Format
-
-```
-[CONTEXT] <dialogue_history> [RESPONSE] <response_to_evaluate>
-```
-
-Example:
-```
-[CONTEXT] [agent_1]: I love Star Wars! [agent_2]: Me too! Which movie is your favorite? [RESPONSE] The original trilogy is the best, especially Empire Strikes Back.
-```
-
-## Performance
-
-### Validation Set (500 examples)
-
-| Maxim | Precision | Recall | F1 Score |
-|-------|-----------|--------|----------|
-| Quantity | 100.0% | 100.0% | 1.000 |
-| Quality | 91.7% | 94.3% | 0.930 |
-| Relation | 100.0% | 100.0% | 1.000 |
-| Manner | 94.9% | 93.1% | 0.940 |
-| **Macro Avg** | **96.7%** | **96.9%** | **0.968** |
-
-### Error Analysis
-
-- **False Positives**: Primarily on borderline subjective cases (Quality, Manner)
-- **False Negatives**: Subtle violations (Quality contradictions, Manner shuffling)
-- **Exact Match Accuracy**: 94.2% (all 4 maxims correct simultaneously)
-
-## Limitations
-
-1. **English-only**: Not tested on other languages
-2. **Conversational domain**: Performance may degrade on formal text
-3. **Context dependency**: Requires dialogue history for accurate classification
-4. **Manner subjectivity**: Lower F1 on subjective style violations
-5. **Dataset bias**: Trained on Wizard/TopicalChat/LIGHT; may not generalize to all domains
-
-## Bias and Fairness
-
-- **Known Biases**: Dataset skewed toward informational dialogues (Wikipedia, topics)
-- **Demographic Bias**: Not evaluated for demographic fairness
-- **Recommendation**: Do not use for high-stakes decisions without human review
-
-## Usage
-
-### Installation
-
-```bash
-pip install transformers==4.35.2 torch==2.1.0
-```
-
-### Inference
-
-```python
-import torch
-from transformers import AutoTokenizer, AutoModel
-
-# Load model (you'll need to define ViolationDetector class)
-tokenizer = AutoTokenizer.from_pretrained("microsoft/deberta-v3-base")
-detector = ViolationDetector("microsoft/deberta-v3-base")
-detector.load_state_dict(torch.load("best_model.pt")["model_state_dict"])
-detector.eval()
-
-# Predict
-text = "[CONTEXT] What is AI? [RESPONSE] Artificial Intelligence is the simulation of human intelligence."
-inputs = tokenizer(text, return_tensors="pt", truncation=True, max_length=512)
-
-with torch.no_grad():
-    outputs = detector(inputs["input_ids"], inputs["attention_mask"])
-    probs = outputs["probs"][0]  # [quantity, quality, relation, manner]
-
-print(f"Quantity: {probs[0]:.3f}")
-print(f"Quality: {probs[1]:.3f}")
-print(f"Relation: {probs[2]:.3f}")
-print(f"Manner: {probs[3]:.3f}")
-```
-
-## Citation
-
-```bibtex
-@inproceedings{gricebench2024,
-  title={GriceBench: Operationalizing Gricean Maxims for Cooperative Dialogue Systems},
-  author={Your Name},
-  booktitle={Proceedings of the Conference},
-  year={2024}
-}
-```
-
-## Contact
-
-- GitHub: https://github.com/yourusername/GriceBench
-- Email: your.email@university.edu
+</div>
 
 ---
 
-**Version:** 1.0  
-**Last Updated:** 2026-01-23
+## What This Model Does
+
+GriceBench-Detector identifies which of Paul Grice's four conversational maxims
+a dialogue response violates. It returns four independent violation probabilities —
+one per maxim — enabling targeted, explainable repair.
+
+| Maxim | What It Measures | Example Violation |
+|-------|-----------------|-------------------|
+| **Quantity** | Response informativeness | "Yes." in response to a detailed question |
+| **Quality** | Factual consistency with evidence | Stating an incorrect fact contradicted by the knowledge source |
+| **Relation** | Topical relevance | Responding to "Tell me about jazz" with information about classical music |
+| **Manner** | Clarity and organization | Pronoun ambiguity, jargon, disorganized sentences |
+
+---
+
+## Quick Start
+
+```python
+from transformers import AutoTokenizer, AutoModel
+import torch
+import torch.nn as nn
+import json
+
+# ── Load calibration temperatures ──────────────────────────────────────────
+# Download temperatures.json from the model repo
+with open("temperatures.json") as f:
+    temperatures = json.load(f)  # {"quantity": 0.9, "quality": 0.55, ...}
+
+# ── Define model architecture (must match training) ────────────────────────
+class MaximDetector(nn.Module):
+    def __init__(self, model_name="microsoft/deberta-v3-base", num_maxims=4):
+        super().__init__()
+        self.encoder = AutoModel.from_pretrained(model_name)
+        hidden = self.encoder.config.hidden_size  # 768
+        self.classifiers = nn.ModuleList([
+            nn.Sequential(
+                nn.Dropout(0.15),
+                nn.Linear(hidden, hidden // 2), nn.GELU(),
+                nn.Dropout(0.15),
+                nn.Linear(hidden // 2, hidden // 4), nn.GELU(),
+                nn.Dropout(0.15),
+                nn.Linear(hidden // 4, 1)
+            ) for _ in range(num_maxims)
+        ])
+
+    def forward(self, input_ids, attention_mask):
+        outputs = self.encoder(input_ids=input_ids, attention_mask=attention_mask)
+        cls = outputs.last_hidden_state[:, 0, :]
+        return torch.cat([head(cls) for head in self.classifiers], dim=1)
+
+# ── Load model ─────────────────────────────────────────────────────────────
+tokenizer = AutoTokenizer.from_pretrained("microsoft/deberta-v3-base")
+model = MaximDetector()
+
+# Load weights (download pytorch_model.pt from this repo)
+state_dict = torch.load("pytorch_model.pt", map_location="cpu")
+model.load_state_dict(state_dict)
+model.eval()
+
+# ── Run detection ──────────────────────────────────────────────────────────
+def detect_violations(context: str, response: str, evidence: str = "") -> dict:
+    input_text = f"Context: {context}\nEvidence: {evidence}\nResponse: {response}"
+    inputs = tokenizer(
+        input_text, return_tensors="pt", max_length=512,
+        truncation=True, padding=True
+    )
+    
+    maxim_names = ["quantity", "quality", "relation", "manner"]
+    temp_values = [
+        temperatures.get("quantity", 0.9),
+        temperatures.get("quality", 0.55),
+        temperatures.get("relation", 0.75),
+        temperatures.get("manner", 0.45),
+    ]
+    
+    with torch.no_grad():
+        logits = model(**inputs)  # Shape: [1, 4]
+    
+    # Apply temperature scaling and sigmoid
+    probs = {}
+    violations = {}
+    for i, (maxim, temp) in enumerate(zip(maxim_names, temp_values)):
+        prob = torch.sigmoid(logits[0, i] / temp).item()
+        probs[maxim] = round(prob, 4)
+        violations[maxim] = prob > 0.5
+    
+    return {
+        "violations": violations,
+        "probabilities": probs,
+        "is_cooperative": not any(violations.values())
+    }
+
+# ── Example ────────────────────────────────────────────────────────────────
+result = detect_violations(
+    context="What do you think about the latest developments in AI?",
+    response="Yes.",  # Too short — Quantity violation
+    evidence="AI has seen rapid advancement in large language models during 2024-2025."
+)
+print(result)
+# {'violations': {'quantity': True, 'quality': False, 'relation': False, 'manner': False},
+#  'probabilities': {'quantity': 0.97, 'quality': 0.02, 'relation': 0.03, 'manner': 0.11},
+#  'is_cooperative': False}
+```
+
+---
+
+## Model Performance
+
+Evaluated on **1,000 held-out Topical-Chat dialogue turns** (500 violation-injected, 500 clean).
+
+| Maxim | F1 | Precision | Recall | AUC-ROC |
+|-------|-----|-----------|--------|---------|
++| Quantity | **1.000** | 1.000 | 1.000 | 1.000 |
++| Quality | 0.928 | 0.866 | 1.000 | 0.999 |
++| Relation | **1.000** | 1.000 | 1.000 | 1.000 |
++| Manner | 0.891 | 0.864 | 0.919 | 0.979 |
++| **Macro Avg** | **0.955** | — | — | — |
+
+**System-level result:** When used in the full GriceBench pipeline (Detect → Repair → Generate),
+the system achieves a **95.0% cooperative rate** — outperforming Mistral-7B (89.1%) and
+Qwen2.5-7B (84.2%) despite using a far smaller generator.
+
+---
+
+## Architecture
+
+**Base model:** `microsoft/deberta-v3-base` (184M parameters)
+
+**Key design choices:**
+- **Four independent binary heads** (not a shared linear layer): each maxim head specializes
+  independently, since Quantity violations (length) and Relation violations (semantic relevance)
+  are completely different feature distributions.
+- **Focal Loss** (α=0.25, γ=2.0): down-weights easy negatives to focus training on hard,
+  ambiguous boundary cases — critical for minority-class violation detection.
+- **Temperature scaling**: post-hoc calibration (one scalar per maxim) ensures output
+  probabilities match true violation frequencies on the validation set.
+
+**Calibrated temperatures:**
+
+| Maxim | Temperature | Effect |
+|-------|-------------|--------|
+| Quantity | 0.90 | Slightly sharper predictions |
+| Quality | 0.55 | More conservative (fewer false positives) |
+| Relation | 0.75 | Balanced |
+| Manner | 0.45 | Most conservative (Manner is inherently ambiguous) |
+
+---
+
+## Training Details
+
+| Hyperparameter | Value |
++|----------------|-------|
++| Base model | microsoft/deberta-v3-base |
++| Learning rate | 2e-5 |
++| Batch size | 16 (effective, with grad accumulation ×2) |
++| Epochs | 5 |
++| Loss | Focal Loss (α=0.25, γ=2.0) |
++| Optimizer | AdamW + weight decay 0.01 |
++| Scheduler | OneCycleLR |
++| Hardware | Kaggle T4 ×2 |
++| Training time | ~2-3 hours |
++| Training examples | 4,012 (weak supervision + ~1,000 gold labels) |
+
+**Two-stage labeling:** Weak supervision (50,000+ heuristic-labeled examples) for pre-training,
+followed by gold fine-tuning on ~1,000 human-annotated examples (inter-annotator agreement
+measured via Krippendorff's α).
+
+---
+
+## Input Format
+
+```
+Context: [multi-turn conversation history]
+Evidence: [knowledge snippet from reading set — required for Quality detection]
+Response: [the response being evaluated]
+```
+
+Maximum token length: 512 (response is never truncated — context is truncated if needed).
+
+---
+
+## Files in This Repository
+
+| File | Description |
+|------|-------------|
+| `pytorch_model.pt` | Trained model weights (2.22 GB) |
+| `temperatures.json` | Per-maxim calibration temperatures |
+
+---
+
+## Citation
+
+If you use this model, please cite:
+
+```bibtex
+@article{prabhath2026gricebench,
+  title={GriceBench: Operationalizing Gricean Maxims for Cooperative Dialogue Evaluation and Generation},
+  author={Prabhath, Pushkar},
+  year={2026}
+}
+```
+
+---
+
+## Related Models
+
+| Model | Role | Link |
+|-------|------|------|
+| GriceBench-Detector | Detects violations (this model) | You are here |
+| GriceBench-Repair | Repairs detected violations | [🔧 Repair Model](https://huggingface.co/Pushkar27/GriceBench-Repair) |
+| GriceBench-DPO | Generates cooperative responses | [⚡ DPO Generator](https://huggingface.co/Pushkar27/GriceBench-DPO) |
+
+**GitHub:** https://github.com/PushkarPrabhath27/Research-Model

@@ -15,7 +15,7 @@ EXPECTED = {
     "relation_f1": 1.000,
     "manner_f1": 0.891,
     "improvement_full_vs_baseline_pp": 0.112,
-    "repair_violation_removal_rate": 0.996,
+    "repair_violation_removal_rate": 0.930,
     "mistral_cooperative_rate": 0.891,
     "qwen_cooperative_rate": 0.842,
 }
@@ -34,13 +34,18 @@ def main():
         
     all_ok = True
     for key, val in EXPECTED.items():
-        pct = val * 100
-        pattern = f"{pct:.1f}"
+        if "_f1" in key:
+            pattern = f"{val:.3f}"
+        else:
+            pct = val * 100
+            pattern = f"{pct:.1f}"
+            
         if pattern not in text:
             print(f"[FAIL] {key}: {pattern} not found in paper")
             all_ok = False
         else:
-            print(f"[OK] {key}: {pattern}%")
+            label = f"{pattern}" if "_f1" in key else f"{pattern}%"
+            print(f"[OK] {key}: {label}")
             
     if all_ok:
         print("\n[OK] ALL CHECKS PASSED")

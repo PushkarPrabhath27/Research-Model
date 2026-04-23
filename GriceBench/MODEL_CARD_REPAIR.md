@@ -1,176 +1,242 @@
-# Model Card: GriceBench Repair Model
+---
+language:
+  - en
+license: apache-2.0
+library_name: transformers
+tags:
+  - text2text-generation
+  - dialogue
+  - gricean-maxims
+  - cooperative-communication
+  - t5
+  - text-repair
+  - nlp
+  - seq2seq
+datasets:
+  - topical_chat
+metrics:
+  - bleu
+pipeline_tag: text2text-generation
+base_model: google-t5/t5-base
+---
 
-## Model Description
+<div align="center">
 
-**Model Name:** GriceBench-Repair  
-**Model Type:** Seq2Seq Text-to-Text Transformation  
-**Base Architecture:** T5-base  
-**Parameters:** 220M  
-**Languages:** English  
-**License:** MIT
+# 🔧 GriceBench-Repair
 
-## Intended Use
+**Rewrites cooperative communication failures into compliant dialogue — surgically, not generally.**
 
-The GriceBench Repair Model is a sequence-to-sequence model that corrects violations of Gricean Maxims in conversational responses (excluding Relation violations, which require regeneration).
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+[![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 
-### Supported Repairs
+Part of the **GriceBench** system — [GitHub](https://github.com/PushkarPrabhath27/Research-Model) |
+[🔍 Detector](https://huggingface.co/Pushkar27/GriceBench-Detector) |
+[⚡ DPO Generator](https://huggingface.co/Pushkar27/GriceBench-DPO)
 
-- **Quantity**: Condense verbose responses or expand under-informative ones
-- **Quality**: Fix factual inaccuracies given evidence  
-- **Manner**: Improve clarity, remove jargon, reorder shuffled sentences
+</div>
 
-### Out-of-Scope
+---
 
-- **Relation repairs**: Use retrieval + regeneration instead
-- **Multi-violation repair**: Currently handles one primary violation type at a time
-- **Real-time streaming**: Model requires full response for editing
+## What This Model Does
 
-## Training Data
+GriceBench-Repair is a seq2seq model that takes a dialogue response flagged
+for Gricean maxim violations and rewrites it to be cooperative. Unlike generic
+paraphrasing or self-refinement, it is **violation-type-aware**: it uses
+different generation strategies depending on which maxim was violated.
 
-### Source
+| Violation | Strategy | Why |
+|-----------|----------|-----|
++| **Quantity** | Beam search (n=4) + length constraints | Needs precise length control |
++| **Quality** | Beam search (n=4) + repetition penalty | Needs factual precision |
++| **Manner** | Nucleus sampling (T=0.85, p=0.92) | Needs diverse creative rewrites |
++| **Relation** | ❌ Not handled here | Relation requires full regeneration — route to FAISS retrieval |
 
-- **Total**: 3,611 repair pairs (3,210 train, 401 validation)
-- **Derived from**: Wizard of Wikipedia, TopicalChat, LIGHT
+---
 
-### Violation Type Distribution
-
-| Type | Count | Percentage |
-|------|-------|------------|
-| Quantity | 920 | 28.7% |
-| Quality | 780 | 24.3% |
-| Manner | 1,510 | 47.0% |
-
-### Input Format
-
-```
-repair violation: <VIOLATION_TYPE> context: <context> response: <faulty_response>
-```
-
-Example:
-```
-repair violation: MANNER context: What is quantum computing? response: Quantum comp. uses q-bits for parallel proc. via superpos. and entang.
-```
-
-### Output Format
-
-The corrected response:
-```
-Quantum computing uses quantum bits (qubits) for parallel processing through superposition and entanglement.
-```
-
-## Training Procedure
-
-### Hyperparameters
-
-```python
-{
-    "model": "t5-base",
-    "max_input_length": 512,
-    "max_target_length": 256,
-    "batch_size": 8,
-    "learning_rate": 3e-5,
-    "epochs": 5,
-    "warmup_steps": 300,
-    "weight_decay": 0.01,
-    "optimizer": "AdamW",
-    "label_smoothing": 0.1
-}
-```
-
-### Training Infrastructure
-
-- **Hardware**: NVIDIA V100 (16GB)
-- **Training Time**: 3 hours
-- **Framework**: PyTorch 2.1.0, Transformers 4.35.2
-
-## Performance
-
-### Validation Set (401 examples)
-
-| Violation Type | BLEU | ROUGE-L | Edit Distance | Success Rate |
-|----------------|------|---------|---------------|--------------|
-| Quantity | 45.2 | 62.8 | 8.3 tokens | 91.2% |
-| Quality | 38.7 | 58.1 | 12.1 tokens | 87.5% |
-| Manner | 52.1 | 68.4 | 6.7 tokens | 93.8% |
-| **Overall** | **46.8** | **64.2** | **8.9** | **91.3%** |
-
-**Success Rate:** Percentage of repaired responses re-classified as cooperative by the detector.
-
-### Qualitative Examples
-
-**Quantity (Verbose → Concise):**
-- **Input**: "Sharks are fascinating creatures that live in the ocean and have been around for millions of years evolving into apex predators with incredible hunting abilities using electroreception and acute senses..."
-- **Output**: "Sharks are apex predators that have evolved for millions of years with electroreception and acute senses."
-
-**Manner (Jargon → Clear):**
-- **Input**: "NLP utilizes ML algos for text proc."
-- **Output**: "Natural Language Processing uses machine learning algorithms for text processing."
-
-## Limitations
-
-1. **Relation violations**: Cannot repair off-topic responses (requires regeneration)
-2. **Context dependence**: Quality repairs may fail without sufficient context/evidence
-3. **Over-correction**: Sometimes removes stylistic variation in Manner repairs
-4. **Multi-violation**: Performance degrades when multiple maxims violated simultaneously
-5. **Domain shift**: Trained on informational dialogues; may not generalize to all domains
-
-## Bias and Fairness
-
-- **Known Biases**: Training data skewed toward informational/factual corrections
-- **Not evaluated for**: Demographic fairness, cultural sensitivity
-- **Recommendation**: Human review for public-facing applications
-
-## Usage
-
-### Installation
-
-```bash
-pip install transformers==4.35.2 torch==2.1.0
-```
-
-### Inference
+## Quick Start
 
 ```python
 from transformers import T5ForConditionalGeneration, T5Tokenizer
+import torch
 
 # Load model
-tokenizer = T5Tokenizer.from_pretrained("models/repair")
-model = T5ForConditionalGeneration.from_pretrained("models/repair")
+model_name = "Pushkar27/GriceBench-Repair"
+tokenizer = T5Tokenizer.from_pretrained(model_name)
+model = T5ForConditionalGeneration.from_pretrained(model_name)
 model.eval()
 
-# Prepare input
-context = "What is quantum computing?"
-response = "Quantum comp. uses q-bits for parallel proc."
-violation = "MANNER"
+def repair_violation(
+    context: str,
+    response: str,
+    violation_type: str,  # "quantity", "quality", or "manner"
+) -> str:
+    """
+    Repair a Gricean maxim violation.
+    
+    Args:
+        context: Conversation history
+        response: The violating response to fix
+        violation_type: Which maxim was violated
+    
+    Returns:
+        Rewritten cooperative response
+    
+    Note: Relation violations should use FAISS retrieval, not this model.
+    """
+    assert violation_type in ["quantity", "quality", "manner"], \
+        "Relation violations must use the FAISS retrieval system."
+    
+    input_text = f"fix {violation_type}: [CONTEXT] {context} [RESPONSE] {response}"
+    inputs = tokenizer(
+        input_text, return_tensors="pt",
+        max_length=256, truncation=True
+    )
+    
+    with torch.no_grad():
+        if violation_type == "manner":
+            # Nucleus sampling for diverse rewrites
+            output_ids = model.generate(
+                **inputs,
+                do_sample=True,
+                temperature=0.85,
+                top_p=0.92,
+                max_length=128,
+                min_length=8,
+                repetition_penalty=1.5,
+                no_repeat_ngram_size=3,
+            )
+        else:
+            # Beam search for precision
+            output_ids = model.generate(
+                **inputs,
+                num_beams=4,
+                max_length=128,
+                min_length=8,
+                repetition_penalty=1.5,
+                no_repeat_ngram_size=3,
+            )
+    
+    return tokenizer.decode(output_ids[0], skip_special_tokens=True)
 
-input_text = f"repair violation: {violation} context: {context} response: {response}"
-inputs = tokenizer(input_text, return_tensors="pt", max_length=512, truncation=True)
 
-# Generate repair
-outputs = model.generate(**inputs, max_new_tokens=150, num_beams=4)
-repaired = tokenizer.decode(outputs[0], skip_special_tokens=True)
+# ── Examples ────────────────────────────────────────────────────────────────
 
-print(repaired)
-# Output: "Quantum computing uses quantum bits (qubits) for parallel processing."
+# Example 1: Quantity violation (too short)
+repaired = repair_violation(
+    context="What do you think about the development of commercial space travel?",
+    response="It's fine.",  # Under-informative
+    violation_type="quantity"
+)
+print(f"Repaired: {repaired}")
+# Repaired: "Commercial space travel has advanced remarkably, with companies like SpaceX
+#            making orbital flight more accessible, though high costs remain a barrier."
+
+# Example 2: Manner violation (ambiguous pronouns)
+repaired = repair_violation(
+    context="Alice told Bob that she would handle the project.",
+    response="She said she would do it before she left.",  # Ambiguous pronouns
+    violation_type="manner"
+)
+print(f"Repaired: {repaired}")
+# Repaired: "Alice confirmed she would complete the project before leaving the office."
 ```
+
+---
+
+## Performance
+
+**Violation removal rate: 93.0%** (corrected, post-fix evaluation on 200 samples)
+
+Per-maxim BLEU scores on the repair validation set:
+
+| Violation Type | BLEU Score | Notes |
+|----------------|-----------|-------|
++| Quality | **97.8%** | Near-perfect factual correction |
++| Manner | **92.5%** | Excellent clarity improvements |
++| Quantity | **61.8%** | Requires insertion/deletion — harder task |
++| Relation | 9.3% | ⚠️ Intentionally routed to FAISS retrieval instead |
+
+**Degeneracy fix results** (before/after applying violation-type-aware decoding):
+
+| Maxim | Before Fix | After Fix | Improvement |
+|-------|-----------|-----------|-------------|
++| Quantity | 30.1% degenerate | 2.1% degenerate | **+28.0pp** |
++| Manner | 93.3% degenerate | 4.5% degenerate | **+88.8pp** |
++| Overall | 64.4% degenerate | 5.2% degenerate | **+59.2pp** |
+
+**Key lesson:** Using beam search for Manner repairs causes mode collapse (the model
+inserts `!` punctuation as a proxy for "clarity"). Nucleus sampling eliminates this.
+
+---
+
+## Architecture
+
+**Base model:** `google-t5/t5-base` (220M parameters)
+
+**Input format:**
+```
+fix {violation_type}: [CONTEXT] {conversation_context} [RESPONSE] {response_to_fix}
+```
+
+Where `{violation_type}` ∈ `{quantity, quality, manner}`.
+
+**Three-layer degeneracy prevention:**
+1. **Generation routing** — violation-type-aware decoding strategy (see above)
+2. **Post-generation validation** — multi-signal degeneracy filter (punctuation bursts,
+   trigram repetition, exclamation density, character-level repetition)
+3. **Graceful fallback** — if all repair attempts produce degenerate output, returns
+   the original response with a `is_fallback: True` flag
+
+---
+
+## Training Details
+
+| Hyperparameter | Value |
++|----------------|-------|
++| Base model | google-t5/t5-base |
++| Training pairs | 3,210 seq2seq (violation → cooperative) pairs |
++| Validation pairs | 401 pairs |
++| Epochs | 5 |
++| Decoding (Qty/Ql) | Beam search, beam=4 |
++| Decoding (Manner) | Nucleus sampling, T=0.85, top-p=0.92 |
++| Label smoothing | 0.1 |
++| Hardware | Kaggle T4 |
+
+---
+
+## Important: Relation Violations
+
+Relation violations (off-topic responses) **cannot be addressed by editing** — they
+require generating entirely new, topically relevant content. This model's seq2seq
+framing asks it to "fix" the existing response by editing, but there is nothing
+to fix by editing when the entire response is off-topic.
+
+For Relation violations, use the **FAISS retrieval system** included in the
+GriceBench repository:
+- 50,000 Topical-Chat responses indexed with FAISS
+- MRR > 0.70, Top-1 accuracy > 60%
+- See `data_processed/relation_repair/` in the GitHub repo
+
+---
 
 ## Citation
 
 ```bibtex
-@inproceedings{gricebench2024,
-  title={GriceBench: Operationalizing Gricean Maxims for Cooperative Dialogue Systems},
-  author={Your Name},
-  booktitle={Proceedings of the Conference},
-  year={2024}
+@article{prabhath2026gricebench,
+  title={GriceBench: Operationalizing Gricean Maxims for Cooperative Dialogue Evaluation and Generation},
+  author={Prabhath, Pushkar},
+  year={2026}
 }
 ```
 
-## Contact
-
-- GitHub: https://github.com/yourusername/GriceBench
-- Email: your.email@university.edu
-
 ---
 
-**Version:** 1.0  
-**Last Updated:** 2026-01-23
+## Related Models
+
+| Model | Role | Link |
+|-------|------|------|
+| GriceBench-Detector | Detects which maxim is violated | [🔍 Detector](https://huggingface.co/Pushkar27/GriceBench-Detector) |
+| GriceBench-Repair | Repairs violations (this model) | You are here |
+| GriceBench-DPO | Generates cooperative responses | [⚡ DPO Generator](https://huggingface.co/Pushkar27/GriceBench-DPO) |
+
+**GitHub:** https://github.com/PushkarPrabhath27/Research-Model

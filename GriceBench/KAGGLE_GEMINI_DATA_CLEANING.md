@@ -76,7 +76,7 @@ Complete copy-paste notebook for Kaggle. Uses FREE Gemini API to fix Manner viol
 2. Click **"Secrets"** tab
 3. Click **"Add a new secret"**
 4. **Label:** `GEMINI_API_KEY`
-5. **Value:** `AIzaSyAo43_zWip7VjOskAISJGrchRR7gGgf6LE`
+5. **Value:** `[YOUR_GEMINI_API_KEY_HERE]`
 6. Click **"Add"**
 
 ---

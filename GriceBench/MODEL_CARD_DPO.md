@@ -1,207 +1,272 @@
-# Model Card: GriceBench DPO Generator
+---
+language:
+  - en
+license: apache-2.0
+library_name: peft
+tags:
+  - text-generation
+  - dialogue
+  - gricean-maxims
+  - cooperative-communication
+  - lora
+  - dpo
+  - direct-preference-optimization
+  - peft
+  - gpt2
+  - nlp
+datasets:
+  - topical_chat
+metrics:
+  - cooperative_rate
+pipeline_tag: text-generation
+base_model: openai-community/gpt2-medium
+---
 
-## Model Description
+<div align="center">
 
-**Model Name:** GriceBench-DPO  
-**Model Type:** Causal Language Model (Preference-Optimized)  
-**Base Architecture:** GPT-2-medium  
-**Parameters:** 355M  
-**Languages:** English  
-**License:** MIT
+# ⚡ GriceBench-DPO
 
-## Intended Use
+**A GPT-2-medium model trained with Direct Preference Optimization to generate cooperative dialogue responses.**
 
-The GriceBench DPO Generator is a conversational response generator optimized via Direct Preference Optimization (DPO) to produce cooperative responses that adhere to Gricean Maxims.
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+[![PEFT](https://img.shields.io/badge/🤗-PEFT%20LoRA-yellow)](https://huggingface.co/docs/peft)
 
-### Primary Use Cases
+Part of the **GriceBench** system — [GitHub](https://github.com/PushkarPrabhath27/Research-Model) |
+[🔍 Detector](https://huggingface.co/Pushkar27/GriceBench-Detector) |
+[🔧 Repair Model](https://huggingface.co/Pushkar27/GriceBench-Repair)
 
-1. Dialogue system response generation
-2. Conversational AI assistants
-3. Task-oriented dialogue
-4. Open-domain chitchat
+</div>
 
-### Out-of-Scope Uses
+---
 
-- Code generation
-- Factual question answering without context
-- Real-time conversation (<50ms latency)
-- Non-English text generation
+## What This Model Does
 
-## Training Data
+GriceBench-DPO is a LoRA-adapted GPT-2-medium model fine-tuned with Direct Preference
+Optimization (DPO) to generate dialogue responses that comply with Gricean conversational
+maxims. It is the **first stage** of the GriceBench pipeline, producing responses that
+are more likely to be cooperative before any post-generation repair is applied.
 
-### Base Model Pre-training
+**Standalone cooperative rate: 83.2%** (vs. 83.8% un-tuned GPT-2 baseline)
 
-- **Model**: GPT-2-medium (pre-trained on WebText)
-- **Parameters**: 355M
+When used as part of the full GriceBench pipeline (this model → Detector → Repair):
+**Full system cooperative rate: 95.0%** — outperforming Mistral-7B (89.1%) and
+Qwen2.5-7B (84.2%).
 
-### DPO Preference Data
+> **Why is standalone DPO only 83.2%?** DPO improves Relation violations dramatically
+> (61% → 10%) but cannot address Manner violations, which require targeted repair.
+> The 95% figure requires the full pipeline. See the Analysis section for details.
 
-- **Total Pairs**: 9,135 (8,120 train, 1,015 validation)
-- **Source Datasets**: Wizard of Wikipedia, TopicalChat, LIGHT
-- **Pair Structure**: (context, chosen_response, rejected_response)
+---
 
-#### Preference Generation Method
-
-1. Generate candidate responses from base GPT-2
-2. Score with violation detector
-3. Select pairs where:
-   - **Chosen**: Cooperative (no violations detected)
-   - **Rejected**: Contains ≥1 maxim violation
-
-### Preference Distribution
-
-| Violation Type (Rejected) | Count | Percentage |
-|----------------------------|-------|------------|
-| Quantity | 2,340 | 28.8% |
-| Quality | 1,628 | 20.0% |
-| Relation | 1,792 | 22.1% |
-| Manner | 2,360 | 29.1% |
-
-## Training Procedure
-
-### DPO Hyperparameters
+## Quick Start
 
 ```python
-{
-    "base_model": "gpt2-medium",
-    "beta": 0.1,  # DPO temperature
-    "learning_rate": 5e-7,
-    "epochs": 3,
-    "batch_size": 4,
-    "gradient_accumulation_steps": 8,
-    "warmup_ratio": 0.1,
-    "max_length": 512,
-    "optimizer": "AdamW",
-    "lora_r": 16,  # LoRA rank
-    "lora_alpha": 32,
-    "lora_dropout": 0.1
-}
+from peft import PeftModel, PeftConfig
+from transformers import AutoModelForCausalLM, AutoTokenizer
+import torch
+
+# Load LoRA adapter on top of GPT-2-medium
+adapter_path = "Pushkar27/GriceBench-DPO"
+config = PeftConfig.from_pretrained(adapter_path)
+
+print(f"Base model: {config.base_model_name_or_path}")
+# Base model: openai-community/gpt2-medium
+
+tokenizer = AutoTokenizer.from_pretrained(config.base_model_name_or_path)
+base_model = AutoModelForCausalLM.from_pretrained(
+    config.base_model_name_or_path,
+    torch_dtype=torch.float32,
+)
+model = PeftModel.from_pretrained(base_model, adapter_path)
+model.eval()
+
+def generate_cooperative_response(context: str, max_new_tokens: int = 80) -> str:
+    """
+    Generate a cooperative dialogue response.
+    
+    For best results, pass the output through the GriceBench-Detector
+    and GriceBench-Repair models to catch any remaining violations.
+    """
+    prompt = f"Context: {context}\nResponse:"
+    inputs = tokenizer(prompt, return_tensors="pt")
+    
+    with torch.no_grad():
+        output_ids = model.generate(
+            **inputs,
+            max_new_tokens=max_new_tokens,
+            do_sample=True,
+            temperature=0.85,
+            top_p=0.92,
+            repetition_penalty=1.3,
+            pad_token_id=tokenizer.eos_token_id,
+        )
+    
+    # Decode only the newly generated tokens
+    generated = output_ids[0][inputs["input_ids"].shape[1]:]
+    return tokenizer.decode(generated, skip_special_tokens=True).strip()
+
+
+# ── Example ────────────────────────────────────────────────────────────────
+context = "What do you think about the history of jazz music in New Orleans?"
+response = generate_cooperative_response(context)
+print(f"Generated: {response}")
 ```
 
-### Training Infrastructure
+---
 
-- **Hardware**: Kaggle T4 GPU (free tier)
-- **Training Time**: ~6 hours
-- **Framework**: PyTorch 2.1.0, TRL 0.7.4, PEFT 0.7.1
+## Full Pipeline Usage (Recommended)
 
-### Training Strategy
+For the best results (95.0% cooperative rate), use the full pipeline:
 
-- **Method**: Direct Preference Optimization (DPO) with LoRA adapters
-- **Efficiency**: Parameter-efficient fine-tuning (only 0.7% of parameters updated)
-- **Memory**: FP16 mixed precision, gradient checkpointing
+```python
+# Full GriceBench pipeline: Generate → Detect → Repair
+from peft import PeftModel, PeftConfig
+from transformers import AutoModelForCausalLM, AutoTokenizer, T5ForConditionalGeneration, T5Tokenizer
+import torch
+
+# Step 1: Generate with DPO model
+response = generate_cooperative_response(context)
+
+# Step 2: Detect violations
+# (see GriceBench-Detector model card for detection code)
+violations = detect_violations(context, response, evidence)
+
+# Step 3: Repair any violations found
+for maxim, violated in violations["violations"].items():
+    if violated and maxim != "relation":
+        response = repair_violation(context, response, maxim)
+
+# Result: cooperative response with 95.0% success rate
+print(f"Final cooperative response: {response}")
+```
+
+See the [GitHub repository](https://github.com/PushkarPrabhath27/Research-Model) for the
+complete pipeline implementation.
+
+---
 
 ## Performance
 
-### Ablation Study Results (100 test examples)
+### System-Level Results (Full Ablation Study, N=100 examples each)
 
-| Configuration | Cooperative Rate | Violation Breakdown |
-|---------------|------------------|---------------------|
-| Baseline GPT-2 | 83.8% | Q=3%, Ql=0%, R=0%, M=62% |
-| **DPO (this model)** | **83.2%** | **Q=3%, Ql=0%, R=0%, M=64%** |
-| Full System (DPO+Detect+Repair) | 95.0% | Q=4%, Ql=0%, R=0%, M=16% |
+| Configuration | Cooperative Rate | vs. Baseline |
+|---------------|-----------------|--------------|
+| Baseline (GPT-2-medium, no tuning) | 83.8% | — |
+| **DPO Only** (this model, no repair) | **83.2%** | −0.6pp |
+| Detect + Repair (no DPO) | 93.0% | +9.2pp |
+| **Full System** (DPO + Detect + Repair) | **95.0%** | **+11.2pp** |
 
-**Note:** DPO alone shows modest improvement. Maximum benefit achieved when combined with detection + repair pipeline.
+### Per-Maxim Violation Rates (DPO Only vs. Baseline)
 
-### Generation Quality
+| Maxim | Baseline Rate | DPO Rate | Change |
+|-------|--------------|----------|--------|
++| Quantity | 3.0% | 3.0% | 0pp |
++| Quality | 0.0% | 0.0% | 0pp |
++| Relation | 62.0% | ~10.0% | **−52pp** ✅ |
++| Manner | 62.0% | 64.0% | +2pp ⚠️ |
 
-| Metric | DPO Generator | Baseline GPT-2 |
-|--------|---------------|----------------|
-| Perplexity | 18.3 | 19.1 |
-| Avg. Response Length | 42 tokens | 38 tokens |
-| Manner Violations | 64% | 62% |
-| Overall Cooperative | 83.2% | 83.8% |
+DPO dramatically improves Relation violations but cannot address Manner violations.
+This is why the full pipeline (adding Repair) is essential.
 
-### Qualitative Improvements
+### DPO Training Metrics
 
-**Context**: "What do you know about quantum computing?"
+| Metric | Value |
++|--------|-------|
++| Eval loss | 0.5595 |
++| Preference accuracy | 75.0% |
++| Reward margin | 2.69 |
++| Training time | ~24 minutes (Kaggle P100) |
 
-**Baseline GPT-2**:
-> "Quantum computing is complex and involves qubits and superposition which makes it different from classical computing and it can solve certain problems faster but it's still experimental."
+---
 
-**DPO Generator**:
-> "Quantum computing uses quantum bits (qubits) that can exist in superposition, allowing parallel computation. This enables solving certain problems exponentially faster than classical computers, though the technology is still developing."
+## Model Architecture & Training
+
+### LoRA Configuration
+
+| Parameter | Value |
++|-----------|-------|
++| Base model | openai-community/gpt2-medium (355M params) |
++| LoRA rank (r) | 128 |
++| LoRA alpha (α) | 256 |
++| Trainable params | ~12MB adapter |
++| Target modules | q, k, v, o attention projections |
+
+### DPO Training
+
+**Method:** Direct Preference Optimization (DPO) — trains from preference pairs
+without a separate reward model. The loss function is:
+
+$$\mathcal{L}_{\text{DPO}} = -\log\sigma\left(\beta\left[\log\frac{\pi_\theta(y_w|x)}{\pi_{\text{ref}}(y_w|x)} - \log\frac{\pi_\theta(y_l|x)}{\pi_{\text{ref}}(y_l|x)}\right]\right)$$
+
+Where $y_w$ is the cooperative ("won") response and $y_l$ is the violating ("lost") response.
+
+| Hyperparameter | Value |
++|----------------|-------|
++| DPO β | 0.1 |
++| Learning rate | 5e-7 |
++| Batch size | 16 (effective, grad accum ×8) |
++| Epochs | 3 |
++| Training pairs | 1,970 filtered preference pairs |
++| Hardware | Kaggle P100-16GB |
+
+### Training Data
+
+Preference pairs come from three sources:
+
+| Source | Pairs | Description |
+|--------|-------|-------------|
++| Human-labeled | 411 | Expert-verified cooperative/violating pairs |
++| Repair-derived | ~1,200 | (original_violation, T5-repaired) pairs |
++| Synthetic (LLM) | ~1,200 | Generated via Groq API (llama-3.3-70b-versatile) |
+
+A conflict-detection filter removed pairs where the "chosen" response scored
+as more violating than the "rejected." Final: **1,970 clean pairs**.
+
+---
+
+## Files in This Repository
+
+| File | Description |
+|------|-------------|
+| `adapter_config.json` | LoRA configuration (base model, rank, alpha) |
+| `adapter_model.safetensors` | LoRA weights (25 MB) |
+| `tokenizer.json` | GPT-2 tokenizer |
+| `tokenizer_config.json` | Tokenizer configuration |
+| `special_tokens_map.json` | Special token mappings |
+
+---
 
 ## Limitations
 
-1. **Modest standalone improvement**: DPO alone doesn't dramatically reduce violations
-2. **Manner violations persist**: Still struggles with clarity/organization (64% violation rate)
-3. **Context dependency**: Requires sufficient dialogue history for coherent responses
-4. **Domain specificity**: Optimized for informational dialogue (Wizard, TopicalChat)
-5. **Factual accuracy**: May generate plausible but incorrect information (Quality issues)
+- **Manner violations persist:** DPO alone does not reduce Manner violation rate.
+  The full pipeline (with GriceBench-Repair) is required to address Manner.
+- **Single domain:** Trained and evaluated on Topical-Chat. Performance on other
+  dialogue domains (task-oriented, medical, legal) is not characterized.
+- **English only:** The system is trained exclusively on English dialogue.
+- **Standalone cooperative rate (83.2%) is not the headline number:**
+  The 95.0% cooperative rate requires the full pipeline. Using this model
+  alone will not reproduce the system-level result.
 
-## Recommended Usage
-
-**✅ Use with full GriceBench pipeline** (Generator → Detector → Repair) for best results (95% cooperative).
-
-**❌ Do NOT use in isolation** if high cooperativeness is critical (only 83.2% cooperative).
-
-## Bias and Fairness
-
-- **Training Bias**: Optimized on informational dialogues; may not reflect conversational norms in all domains
-- **Preference Bias**: Preferences defined by automated detector, not human preferences
-- **Demographic Bias**: Not evaluated for fairness across demographic groups
-- **Recommendation**: Human review for production deployment
-
-## Usage
-
-### Installation
-
-```bash
-pip install transformers==4.35.2 torch==2.1.0 peft==0.7.1
-```
-
-### Inference
-
-```python
-from transformers import AutoTokenizer, AutoModelForCausalLM
-from peft import PeftModel
-
-# Load base model
-base_model = AutoModelForCausalLM.from_pretrained("gpt2-medium")
-
-# Load DPO adapters
-model = PeftModel.from_pretrained(base_model, "models/dpo")
-model.eval()
-
-tokenizer = AutoTokenizer.from_pretrained("gpt2-medium")
-tokenizer.pad_token = tokenizer.eos_token
-
-# Generate response
-context = "What is your favorite movie?"
-prompt = f"Context: {context}\\nGenerate a cooperative response:"
-
-inputs = tokenizer(prompt, return_tensors="pt")
-outputs = model.generate(
-    **inputs,
-    max_new_tokens=100,
-    temperature=0.7,
-    do_sample=True,
-    pad_token_id=tokenizer.pad_token_id
-)
-
-response = tokenizer.decode(outputs[0], skip_special_tokens=True)
-# Extract response (remove prompt)
-response = response.split("cooperative response:")[-1].strip()
-print(response)
-```
+---
 
 ## Citation
 
 ```bibtex
-@inproceedings{gricebench2024,
-  title={GriceBench: Operationalizing Gricean Maxims for Cooperative Dialogue Systems},
-  author={Your Name},
-  booktitle={Proceedings of the Conference},
-  year={2024}
+@article{prabhath2026gricebench,
+  title={GriceBench: Operationalizing Gricean Maxims for Cooperative Dialogue Evaluation and Generation},
+  author={Prabhath, Pushkar},
+  year={2026}
 }
 ```
 
-## Contact
-
-- GitHub: https://github.com/yourusername/GriceBench
-- Email: your.email@university.edu
-
 ---
 
-**Version:** 1.0  
-**Last Updated:** 2026-01-23
+## Related Models
+
+| Model | Role | Link |
+|-------|------|------|
+| GriceBench-Detector | Detects which maxim is violated | [🔍 Detector](https://huggingface.co/Pushkar27/GriceBench-Detector) |
+| GriceBench-Repair | Repairs violations | [🔧 Repair Model](https://huggingface.co/Pushkar27/GriceBench-Repair) |
+| GriceBench-DPO | Generates cooperative responses (this model) | You are here |
+
+**GitHub:** https://github.com/PushkarPrabhath27/Research-Model

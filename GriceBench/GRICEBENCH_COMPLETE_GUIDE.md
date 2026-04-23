@@ -536,11 +536,11 @@ Model: "The movie starts at 7:30 PM."
 
 ## 7.6 The Architecture
 
-We use a model called **SmolLM2-360M-Instruct** with **LoRA** fine-tuning:
+We use a model called **GPT-2-medium** with **LoRA** fine-tuning:
 
 ```
 ┌─────────────────────────────────────────────────────┐
-│            BASE MODEL: SmolLM2-360M                 │
+│            BASE MODEL: GPT-2-medium                 │
 │            (Pre-trained language model)             │
 └──────────────────────┬──────────────────────────────┘
                        │
@@ -589,10 +589,10 @@ This is like teaching someone new skills without changing their core personality
 
 ## 7.8 Key Numbers
 
-- **Base Model**: SmolLM2-360M-Instruct (360 million parameters)
-- **LoRA Adapter**: 12MB (only trained part)
-- **Training Data**: 2,815 preference pairs
-- **Final Accuracy**: 98.7% preference alignment
+- **Base Model**: GPT-2-medium (355 million parameters)
+- **LoRA Adapter**: 25MB (only trained part)
+- **Training Data**: 1,970 preference pairs
+- **Final Accuracy**: 75.0% preference accuracy
 
 ---
 
@@ -841,14 +841,14 @@ Accuracy = Number Correct / Total Pairs
 
 ## 10.2 Our Results
 
-### Detector Results
+### Detector Results (Macro F1: 0.955)
 
 | Maxim | F1 Score |
 |-------|----------|
-| Quantity | ~0.75 |
-| Quality | ~0.80 |
-| Relation | ~0.70 |
-| Manner | ~0.72 |
+| Quantity | 1.000 |
+| Quality | 0.928 |
+| Relation | 1.000 |
+| Manner | 0.891 |
 
 ### Repair Model Results
 
@@ -920,8 +920,8 @@ Accuracy = Number Correct / Total Pairs
 │     • 92.5% BLEU on Manner fixes                               │
 │                                                                 │
 │  🚀 GENERATOR                                                  │
-│     • DPO-aligned SmolLM2-360M                                 │
-│     • 98.7% preference accuracy                                │
+│     • DPO-aligned GPT-2-medium                                 │
+│     • 75.0% preference accuracy                                │
 │     • Learns to avoid violations entirely                      │
 │                                                                 │
 └─────────────────────────────────────────────────────────────────┘
@@ -1137,7 +1137,7 @@ Total: About 8-15 hours of GPU time.
 **A:** The principles apply to any language model. The specific implementation uses:
 - DeBERTa (for detection)
 - T5 (for repair)
-- SmolLM2 (for generation)
+- GPT-2-medium (for generation)
 
 But these could be swapped for other models.
 
