@@ -1,0 +1,126 @@
+{
+    "annotations": {
+        "list": []
+    },
+    "editable": true,
+    "gnetId": null,
+    "graphTooltip": 0,
+    "id": null,
+    "links": [],
+    "panels": [
+        {
+            "datasource": "Prometheus",
+            "fieldConfig": {
+                "defaults": {
+                    "color": {
+                        "mode": "palette-classic"
+                    },
+                    "custom": {},
+                    "mappings": [],
+                    "thresholds": {
+                        "mode": "absolute",
+                        "steps": [
+                            {
+                                "color": "green",
+                                "value": null
+                            }
+                        ]
+                    }
+                }
+            },
+            "gridPos": {
+                "h": 8,
+                "w": 12,
+                "x": 0,
+                "y": 0
+            },
+            "id": 1,
+            "options": {
+                "legend": {
+                    "displayMode": "list",
+                    "placement": "bottom"
+                }
+            },
+            "targets": [
+                {
+                    "expr": "rate(gricebench_requests_total[5m])",
+                    "legendFormat": "{{endpoint}} - {{status}}",
+                    "refId": "A"
+                }
+            ],
+            "title": "Request Rate",
+            "type": "timeseries"
+        },
+        {
+            "datasource": "Prometheus",
+            "fieldConfig": {
+                "defaults": {
+                    "color": {
+                        "mode": "thresholds"
+                    },
+                    "mappings": [],
+                    "thresholds": {
+                        "mode": "absolute",
+                        "steps": [
+                            {
+                                "color": "green",
+                                "value": null
+                            },
+                            {
+                                "color": "yellow",
+                                "value": 50
+                            },
+                            {
+                                "color": "red",
+                                "value": 100
+                            }
+                        ]
+                    }
+                }
+            },
+            "gridPos": {
+                "h": 8,
+                "w": 12,
+                "x": 12,
+                "y": 0
+            },
+            "id": 2,
+            "options": {
+                "reduceOptions": {
+                    "calcs": [
+                        "lastNotNull"
+                    ],
+                    "fields": "",
+                    "values": false
+                }
+            },
+            "targets": [
+                {
+                    "expr": "histogram_quantile(0.95, rate(gricebench_request_duration_seconds_bucket[5m]))",
+                    "legendFormat": "P95 Latency - {{endpoint}}",
+                    "refId": "A"
+                }
+            ],
+            "title": "P95 Latency",
+            "type": "gauge"
+        }
+    ],
+    "refresh": "10s",
+    "schemaVersion": 27,
+    "style": "dark",
+    "tags": [
+        "gricebench"
+    ],
+    "templating": {
+        "list": []
+    },
+    "time": {
+        "from": "now-1h",
+        "to": "now"
+    },
+    "timepicker": {},
+    "timezone": "",
+    "title": "GriceBench API Dashboard",
+    "uid": "gricebench",
+    "version": 1
+}

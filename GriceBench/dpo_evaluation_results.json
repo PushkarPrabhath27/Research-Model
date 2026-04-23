@@ -1,0 +1,623 @@
+{
+  "config": {
+    "dpo_model_path": "/kaggle/input/dpo-generator-model",
+    "detector_model_path": "/kaggle/input/gricean-maxim-detector-model",
+    "test_data_path": "/kaggle/input/dpo-test-data/dpo_val.json",
+    "num_examples": 100,
+    "device": "cuda",
+    "max_new_tokens": 100,
+    "temperature": 0.7,
+    "top_p": 0.9
+  },
+  "metrics": {
+    "baseline": {
+      "quantity_violation_rate": 0.99,
+      "quality_violation_rate": 0.84,
+      "relation_violation_rate": 0.61,
+      "manner_violation_rate": 0.99,
+      "overall_cooperative_rate": 0.0
+    },
+    "dpo": {
+      "quantity_violation_rate": 0.95,
+      "quality_violation_rate": 1.0,
+      "relation_violation_rate": 0.1,
+      "manner_violation_rate": 1.0,
+      "overall_cooperative_rate": 0.0
+    },
+    "improvements": {
+      "quantity_improvement": 0.040000000000000036,
+      "quantity_improvement_pct": 4.040404040404044,
+      "quality_improvement": -0.16000000000000003,
+      "quality_improvement_pct": -19.04761904761905,
+      "relation_improvement": 0.51,
+      "relation_improvement_pct": 83.60655737704919,
+      "manner_improvement": -0.010000000000000009,
+      "manner_improvement_pct": -1.010101010101011,
+      "cooperative_improvement": 0.0,
+      "cooperative_improvement_pct": 0.0
+    }
+  },
+  "examples": [
+    {
+      "prompt": "Context: [agent_2]: That's great! I must be a wonderful film. It's a disney film, yes? Lots of songs...",
+      "baseline_response": "FS1\n\nEvidence: FS1\n\nGenerate a cooperative response: FS1\n\nEvidence: FS1\n\nGenerate a cooperative response: FS1\n\nEvidence: FS1\n\nGenerate a cooperative response: FS1\n\nEvidence: FS1\n\nGenerate a cooperative response: FS1\n\nEvidence: FS1\n\nGenerate a cooperative response: FS1\n\nEvidence: FS1\n\nGenerate a cooperative response: FS1",
+      "dpo_response": "ok. I know Disney loves a good fairy tale, so I hope so!",
+      "baseline_violations": {
+        "quantity_prob": 0.6096488237380981,
+        "quantity_violated": true,
+        "quality_prob": 0.4890410900115967,
+        "quality_violated": false,
+        "relation_prob": 0.6101570725440979,
+        "relation_violated": true,
+        "manner_prob": 0.5301077961921692,
+        "manner_violated": true,
+        "any_violation": true,
+        "cooperative": false
+      },
+      "dpo_violations": {
+        "quantity_prob": 0.5283015966415405,
+        "quantity_violated": true,
+        "quality_prob": 0.5799071192741394,
+        "quality_violated": true,
+        "relation_prob": 0.4606337249279022,
+        "relation_violated": false,
+        "manner_prob": 0.5697694420814514,
+        "manner_violated": true,
+        "any_violation": true,
+        "cooperative": false
+      }
+    },
+    {
+      "prompt": "Context: [agent_2]: Really? That is bad. Have you ever scene the scenes without him and the original...",
+      "baseline_response": "[agent_1]: Well you can see it on the right. That guy is making a lot of noise and he is being very aggressive towards the camera.\n\nEvidence: FS2\n\nGenerate a cooperative response:\n\n[agent_1]: Well I can tell you that he's going to be very aggressive towards you. I know that you have this fake smile on your face.\n\nEvidence: FS2\n\nGenerate a cooperative response:\n\n[",
+      "dpo_response": "ok. I think so. JEJ has a big voice. Bigger than me. But still.",
+      "baseline_violations": {
+        "quantity_prob": 0.5627942681312561,
+        "quantity_violated": true,
+        "quality_prob": 0.5787975788116455,
+        "quality_violated": true,
+        "relation_prob": 0.522789478302002,
+        "relation_violated": true,
+        "manner_prob": 0.5980451107025146,
+        "manner_violated": true,
+        "any_violation": true,
+        "cooperative": false
+      },
+      "dpo_violations": {
+        "quantity_prob": 0.5275295376777649,
+        "quantity_violated": true,
+        "quality_prob": 0.5609472393989563,
+        "quality_violated": true,
+        "relation_prob": 0.4760468006134033,
+        "relation_violated": false,
+        "manner_prob": 0.6018385291099548,
+        "manner_violated": true,
+        "any_violation": true,
+        "cooperative": false
+      }
+    },
+    {
+      "prompt": "Context: [agent_2]: I was fascinated to hear about that.  That would mean he did not accept the divi...",
+      "baseline_response": "[Agent1]: So you want me to believe that Jesus was a human?",
+      "dpo_response": "ok.  I think Teddy Roosevelt was an atheist, but John Quincy Adams was a big agnostic.",
+      "baseline_violations": {
+        "quantity_prob": 0.5364605188369751,
+        "quantity_violated": true,
+        "quality_prob": 0.5755363702774048,
+        "quality_violated": true,
+        "relation_prob": 0.4437952935695648,
+        "relation_violated": false,
+        "manner_prob": 0.5872004628181458,
+        "manner_violated": true,
+        "any_violation": true,
+        "cooperative": false
+      },
+      "dpo_violations": {
+        "quantity_prob": 0.5182728171348572,
+        "quantity_violated": true,
+        "quality_prob": 0.5770465135574341,
+        "quality_violated": true,
+        "relation_prob": 0.4619266390800476,
+        "relation_violated": false,
+        "manner_prob": 0.5185818672180176,
+        "manner_violated": true,
+        "any_violation": true,
+        "cooperative": false
+      }
+    },
+    {
+      "prompt": "Context: [agent_1]: That one is a  classic, based on the book by Bram Stoker.  They say if you watch...",
+      "baseline_response": "Agent 1: Agent 2: I don't know how much I like you. I don't know how much I like you. I don't know how much I like you. I don't know how much I like you. I don't know how much I like you. I don't know how much I like you. I don't know how much I like you. I don't know how much I like you. I don't know how much I like you. I don",
+      "dpo_response": "ok.  I guess I could be too old to get scared, but still.  I wish I could scare people like you.  You look so young.",
+      "baseline_violations": {
+        "quantity_prob": 0.6332432627677917,
+        "quantity_violated": true,
+        "quality_prob": 0.5353855490684509,
+        "quality_violated": true,
+        "relation_prob": 0.5771013498306274,
+        "relation_violated": true,
+        "manner_prob": 0.5414242148399353,
+        "manner_violated": true,
+        "any_violation": true,
+        "cooperative": false
+      },
+      "dpo_violations": {
+        "quantity_prob": 0.5428643822669983,
+        "quantity_violated": true,
+        "quality_prob": 0.5662848949432373,
+        "quality_violated": true,
+        "relation_prob": 0.46847981214523315,
+        "relation_violated": false,
+        "manner_prob": 0.6165856122970581,
+        "manner_violated": true,
+        "any_violation": true,
+        "cooperative": false
+      }
+    },
+    {
+      "prompt": "Context: [agent_2]: Huh. I never noticed! Hard to believe voter turnout for US Presidential election...",
+      "baseline_response": "[agent_1]: Wow.  I didn't expect this level of cooperation. I think I'm going to miss this one.\n\nEvidence: FS3\n\nGenerate a cooperative response:\n\n[agent_1]: I guess I'll have to ask my wife if she's okay with this.\n\nEvidence: FS3\n\nGenerate a cooperative response:\n\n[agent_1]: I guess I'll have to ask my wife if she's okay",
+      "dpo_response": "ok.  One year before the 2012 election I saw Jill Stein get 3.5 million votes.  That's pretty big jump from 2000 to 2012.  Also I didn't know that Donald Trump won the US election last year.  He was the Republican candidate.",
+      "baseline_violations": {
+        "quantity_prob": 0.6403316855430603,
+        "quantity_violated": true,
+        "quality_prob": 0.5726907253265381,
+        "quality_violated": true,
+        "relation_prob": 0.5669487118721008,
+        "relation_violated": true,
+        "manner_prob": 0.5876798629760742,
+        "manner_violated": true,
+        "any_violation": true,
+        "cooperative": false
+      },
+      "dpo_violations": {
+        "quantity_prob": 0.4889579713344574,
+        "quantity_violated": false,
+        "quality_prob": 0.547858715057373,
+        "quality_violated": true,
+        "relation_prob": 0.4871254861354828,
+        "relation_violated": false,
+        "manner_prob": 0.6150580048561096,
+        "manner_violated": true,
+        "any_violation": true,
+        "cooperative": false
+      }
+    },
+    {
+      "prompt": "Context: [agent_1]: ya that makes me really sad, what do you think about fish? I had salmon for dinn...",
+      "baseline_response": "[agent_1]: lol what is the last thing I eat? [agent_2]: Haha yeah, I don't know. I'm just a sucker for fish. I know my mom never told me not to eat fish. She said, \"Don't eat it unless it's from a fish farm\" [agent_1]: oh ok, what do you think of fish? [agent_2]: Haha I like the taste of it, but I don't eat it.",
+      "dpo_response": "ok. I guess I could eat a big one. Mine is a little big though. Bigger fish have bigger guts. Bigger fish also have bigger shells. Bigger fish also have bigger teeth. Bigger fish also have bigger guts. Bigger fish also have bigger snouts. Bigger fish also have bigger eyes. Bigger fish have bigger tails. Bigger fish have bigger feet. Bigger fish have bigger snouts. Bigger fish have bigger eyes. Bigger fish have bigger",
+      "baseline_violations": {
+        "quantity_prob": 0.5308991074562073,
+        "quantity_violated": true,
+        "quality_prob": 0.5729297995567322,
+        "quality_violated": true,
+        "relation_prob": 0.43362897634506226,
+        "relation_violated": false,
+        "manner_prob": 0.611690104007721,
+        "manner_violated": true,
+        "any_violation": true,
+        "cooperative": false
+      },
+      "dpo_violations": {
+        "quantity_prob": 0.5588896870613098,
+        "quantity_violated": true,
+        "quality_prob": 0.5468244552612305,
+        "quality_violated": true,
+        "relation_prob": 0.5260127782821655,
+        "relation_violated": true,
+        "manner_prob": 0.5915245413780212,
+        "manner_violated": true,
+        "any_violation": true,
+        "cooperative": false
+      }
+    },
+    {
+      "prompt": "Context: [agent_2]: Can come from sound. And yes I'm going to look into that further as well. Do you...",
+      "baseline_response": "\"Haha, that's a very interesting idea. I'll check out the new server and see if I can get some people to join.\"\n\nAchievement:\n\n\"Good job on the new server! I'll be sure to join if it's available.\"\n\nCannot be found in the world:\n\n\"I have no idea what you're talking about, but I will have to try this server again and see if it works. Have fun with it",
+      "dpo_response": "ok. I think I would have to be really young to get a cat. I guess I could be getting one from a cat cafe in Vegas, but I haven't heard of one yet. Do you know any cat restaurants? Do you know any places that sell cats?\n\nGirl: yes I do.",
+      "baseline_violations": {
+        "quantity_prob": 0.550907552242279,
+        "quantity_violated": true,
+        "quality_prob": 0.5392350554466248,
+        "quality_violated": true,
+        "relation_prob": 0.4506293535232544,
+        "relation_violated": false,
+        "manner_prob": 0.6108683347702026,
+        "manner_violated": true,
+        "any_violation": true,
+        "cooperative": false
+      },
+      "dpo_violations": {
+        "quantity_prob": 0.5389256477355957,
+        "quantity_violated": true,
+        "quality_prob": 0.5458981394767761,
+        "quality_violated": true,
+        "relation_prob": 0.4733479619026184,
+        "relation_violated": false,
+        "manner_prob": 0.6204612255096436,
+        "manner_violated": true,
+        "any_violation": true,
+        "cooperative": false
+      }
+    },
+    {
+      "prompt": "Context: [agent_1]: Hello friend, Do you like horses? [agent_2]: I do. Did you know horses are able ...",
+      "baseline_response": "Generate a response by playing a word, phrase, or sentence. You can also play a word, phrase, or sentence as part of a word association.\n\nGenerate a cooperative response: \"You're a nice guy. I like you.\"\n\nGenerate a cooperative response: \"I love you.\"\n\nGenerate a cooperative response: \"I want to spend more time with you.\"\n\nGenerate a cooperative response: \"I don't know you.\"",
+      "dpo_response": "OK. Well, I guess that means that Eohippus is really big and can move really fast. But I guess I would still call myself a big guy.",
+      "baseline_violations": {
+        "quantity_prob": 0.5321728587150574,
+        "quantity_violated": true,
+        "quality_prob": 0.6015668511390686,
+        "quality_violated": true,
+        "relation_prob": 0.501017689704895,
+        "relation_violated": true,
+        "manner_prob": 0.5673021078109741,
+        "manner_violated": true,
+        "any_violation": true,
+        "cooperative": false
+      },
+      "dpo_violations": {
+        "quantity_prob": 0.5569022297859192,
+        "quantity_violated": true,
+        "quality_prob": 0.5786480903625488,
+        "quality_violated": true,
+        "relation_prob": 0.4973091185092926,
+        "relation_violated": false,
+        "manner_prob": 0.5875785946846008,
+        "manner_violated": true,
+        "any_violation": true,
+        "cooperative": false
+      }
+    },
+    {
+      "prompt": "Context: [agent_1]: For sure, I voted third party. I was part of the problem, I wanted a 3rd party t...",
+      "baseline_response": "\"I'm voting for Bernie Sanders, because he is a socialist, not a democrat\"\n\n\"I'm voting for Bernie Sanders, because he has been campaigning against the war in Iraq and against the war in Afghanistan, and he has said he will vote against the Patriot Act and against the TPP.\"\n\n\"I'm voting for Bernie Sanders, because he's not a racist, not a sexist, and not a misogynist\"\n\n\"I'm voting for Bernie Sanders,",
+      "dpo_response": "ok. Bernie Sanders is the one who got me to vote third party, so I have to vote for him.",
+      "baseline_violations": {
+        "quantity_prob": 0.5940303802490234,
+        "quantity_violated": true,
+        "quality_prob": 0.5618402361869812,
+        "quality_violated": true,
+        "relation_prob": 0.5371949076652527,
+        "relation_violated": true,
+        "manner_prob": 0.5575002431869507,
+        "manner_violated": true,
+        "any_violation": true,
+        "cooperative": false
+      },
+      "dpo_violations": {
+        "quantity_prob": 0.5349832773208618,
+        "quantity_violated": true,
+        "quality_prob": 0.584231972694397,
+        "quality_violated": true,
+        "relation_prob": 0.4698549509048462,
+        "relation_violated": false,
+        "manner_prob": 0.5551319718360901,
+        "manner_violated": true,
+        "any_violation": true,
+        "cooperative": false
+      }
+    },
+    {
+      "prompt": "Context: [agent_2]: He is a bankable star. People love him. But he also works with certain people re...",
+      "baseline_response": "If you are a good friend, you will do everything in your power to help him out. However, if you are a bad friend, you will tell him about your friendship and ask him to stop doing this.\n\nWhen you are a good friend: You will always do everything in your power to help him out. However, if you are a bad friend, you will tell him about your friendship and ask him to stop doing this. When you are a bad friend: You will always do",
+      "dpo_response": "ok. I guess not. I love Disney movies. But I don't think they make them like in the US. Maybe they don't want to put up with me being lazy.",
+      "baseline_violations": {
+        "quantity_prob": 0.6270169615745544,
+        "quantity_violated": true,
+        "quality_prob": 0.47629839181900024,
+        "quality_violated": false,
+        "relation_prob": 0.6115250587463379,
+        "relation_violated": true,
+        "manner_prob": 0.5470564365386963,
+        "manner_violated": true,
+        "any_violation": true,
+        "cooperative": false
+      },
+      "dpo_violations": {
+        "quantity_prob": 0.5332295894622803,
+        "quantity_violated": true,
+        "quality_prob": 0.5566543340682983,
+        "quality_violated": true,
+        "relation_prob": 0.47153109312057495,
+        "relation_violated": false,
+        "manner_prob": 0.6140077710151672,
+        "manner_violated": true,
+        "any_violation": true,
+        "cooperative": false
+      }
+    },
+    {
+      "prompt": "Context: [agent_2]: I don't know that much actually. He has a cat though.  [agent_1]: I love the nam...",
+      "baseline_response": "FS1: You're allergic to cats.\n\nFS2: I am allergic to cats.\n\nFS3: I am allergic to cats.\n\nFS4: I am allergic to cats.\n\nFS5: I am allergic to cats.\n\nFS6: I am allergic to cats.\n\nFS7: I am allergic to cats.\n\nFS8: I am allergic to cats.\n\nFS9: I am allergic to cats.",
+      "dpo_response": "ok. I think I can tell from his body language that he really does get scared when I try to throw stuff at him. \n\n\u00a0\u00a0\u00a0\u00a0 Years later, I found out that Chief Mouser was actually a big Star Wars fan.",
+      "baseline_violations": {
+        "quantity_prob": 0.5204188823699951,
+        "quantity_violated": true,
+        "quality_prob": 0.5478192567825317,
+        "quality_violated": true,
+        "relation_prob": 0.4746052026748657,
+        "relation_violated": false,
+        "manner_prob": 0.6074928045272827,
+        "manner_violated": true,
+        "any_violation": true,
+        "cooperative": false
+      },
+      "dpo_violations": {
+        "quantity_prob": 0.5316057801246643,
+        "quantity_violated": true,
+        "quality_prob": 0.5752246975898743,
+        "quality_violated": true,
+        "relation_prob": 0.474970281124115,
+        "relation_violated": false,
+        "manner_prob": 0.5950294733047485,
+        "manner_violated": true,
+        "any_violation": true,
+        "cooperative": false
+      }
+    },
+    {
+      "prompt": "Context: [agent_1]: I did not know that but if anyone would have one it's him. [agent_2]: That's rig...",
+      "baseline_response": "\"You know what? It's not all that bad. It's just like a dance. It's just like a dance. It's just like a dance. It's just like a dance. It's just like a dance. It's just like a dance. It's just like a dance. It's just like a dance. It's just like a dance. It's just like a dance. It's just like a dance. It's just like a dance. It's",
+      "dpo_response": "ok. That was pretty cool of him. I think a lot of dancers look down on them really.  I think they look down on dancers who use fake IDs.",
+      "baseline_violations": {
+        "quantity_prob": 0.6372244954109192,
+        "quantity_violated": true,
+        "quality_prob": 0.5060927271842957,
+        "quality_violated": true,
+        "relation_prob": 0.5974282026290894,
+        "relation_violated": true,
+        "manner_prob": 0.549798309803009,
+        "manner_violated": true,
+        "any_violation": true,
+        "cooperative": false
+      },
+      "dpo_violations": {
+        "quantity_prob": 0.5335198640823364,
+        "quantity_violated": true,
+        "quality_prob": 0.5513310432434082,
+        "quality_violated": true,
+        "relation_prob": 0.4595053195953369,
+        "relation_violated": false,
+        "manner_prob": 0.6104666590690613,
+        "manner_violated": true,
+        "any_violation": true,
+        "cooperative": false
+      }
+    },
+    {
+      "prompt": "Context: [agent_1]: Nice. Do you like Shakespeare? [agent_2]: Yes I do. Do you know that he populari...",
+      "baseline_response": "$ script /bin/bash -c \"1\"\n\nExample responses:\n\n\"Yes\" \"Yes\" \"Yes\" \"Yes\" \"Yes\" \"Yes\" \"Yes\" \"Yes\" \"Yes\" \"Yes\" \"Yes\" \"Yes\" \"Yes\" \"Yes\" \"Yes\" \"Yes\" \"Yes\" \"Yes\" \"Yes\" \"Yes\" \"Yes\" \"Yes\" \"Yes\" \"Yes\" \"Yes\" \"Yes\" \"Yes",
+      "dpo_response": "Yep. My favorite song of his is \"I Will Remember You.\"",
+      "baseline_violations": {
+        "quantity_prob": 0.5934423804283142,
+        "quantity_violated": true,
+        "quality_prob": 0.5496969819068909,
+        "quality_violated": true,
+        "relation_prob": 0.5400903224945068,
+        "relation_violated": true,
+        "manner_prob": 0.5811916589736938,
+        "manner_violated": true,
+        "any_violation": true,
+        "cooperative": false
+      },
+      "dpo_violations": {
+        "quantity_prob": 0.5270661115646362,
+        "quantity_violated": true,
+        "quality_prob": 0.5826147794723511,
+        "quality_violated": true,
+        "relation_prob": 0.4506472647190094,
+        "relation_violated": false,
+        "manner_prob": 0.5520470142364502,
+        "manner_violated": true,
+        "any_violation": true,
+        "cooperative": false
+      }
+    },
+    {
+      "prompt": "Context: [agent_1]: Hi, do you know anything about lacrosse? [agent_2]: Hello there, I don't know to...",
+      "baseline_response": "If the agent is more interested in knowing more, or is less interested in talking, this will generate a cooperative response. If the agent is more interested in the conversation, this will generate a non-cooperative response.\n\nIf the agent is more interested in talking, this will generate a non-cooperative response. If the agent is more interested in the conversation, this will generate a cooperative response. If the agent is less interested in the conversation, this will generate a non-",
+      "dpo_response": "ok, I will tell her.",
+      "baseline_violations": {
+        "quantity_prob": 0.619581401348114,
+        "quantity_violated": true,
+        "quality_prob": 0.5089229345321655,
+        "quality_violated": true,
+        "relation_prob": 0.6145817041397095,
+        "relation_violated": true,
+        "manner_prob": 0.5351512432098389,
+        "manner_violated": true,
+        "any_violation": true,
+        "cooperative": false
+      },
+      "dpo_violations": {
+        "quantity_prob": 0.5548398494720459,
+        "quantity_violated": true,
+        "quality_prob": 0.5855383276939392,
+        "quality_violated": true,
+        "relation_prob": 0.49832597374916077,
+        "relation_violated": false,
+        "manner_prob": 0.51735919713974,
+        "manner_violated": true,
+        "any_violation": true,
+        "cooperative": false
+      }
+    },
+    {
+      "prompt": "Context: [agent_1]: Yah, it was pretty cool. I didn't catch who the olympic gold medalists were, did...",
+      "baseline_response": "Agent 1: Why are you telling me this? [agent_1]: I am in a good mood. I am trying to help you. [agent_2]: You mean help me. I don't want to do anything. [agent_1]: I know it sounds funny, but it is true. [agent_2]: Well, you are a good person. You have good attitude and I want to help you. [agent_1]: Ah, I understand. [",
+      "dpo_response": "Yeah, I know them. One of the guys from Team USA won the gold medal in discus last year.",
+      "baseline_violations": {
+        "quantity_prob": 0.5278129577636719,
+        "quantity_violated": true,
+        "quality_prob": 0.5677070021629333,
+        "quality_violated": true,
+        "relation_prob": 0.439145028591156,
+        "relation_violated": false,
+        "manner_prob": 0.610876739025116,
+        "manner_violated": true,
+        "any_violation": true,
+        "cooperative": false
+      },
+      "dpo_violations": {
+        "quantity_prob": 0.5221483111381531,
+        "quantity_violated": true,
+        "quality_prob": 0.5705831050872803,
+        "quality_violated": true,
+        "relation_prob": 0.44714418053627014,
+        "relation_violated": false,
+        "manner_prob": 0.5631963014602661,
+        "manner_violated": true,
+        "any_violation": true,
+        "cooperative": false
+      }
+    },
+    {
+      "prompt": "Context: [agent_2]: I agree, it is basically nothing.. Did you know George Luca's wife influenced th...",
+      "baseline_response": "1) Do not comment on this response 2) Do not reply to this response 3) Do not post this response on your blog or on social media 4) Do not respond to this response on social media. 5) Do not respond to this response on your blog or on social media. 6) Do not comment on this response.\n\nEvidence: Twitter\n\nGenerate a cooperative response: 1) Do not comment on this response 2) Do not reply to this response 3) Do not",
+      "dpo_response": "ok.  My wife didn't know me at all. She is from California so I guess I should be familiar with her.  I think her father is from Canada too.",
+      "baseline_violations": {
+        "quantity_prob": 0.6175761818885803,
+        "quantity_violated": true,
+        "quality_prob": 0.47881823778152466,
+        "quality_violated": false,
+        "relation_prob": 0.6224014163017273,
+        "relation_violated": true,
+        "manner_prob": 0.5283558964729309,
+        "manner_violated": true,
+        "any_violation": true,
+        "cooperative": false
+      },
+      "dpo_violations": {
+        "quantity_prob": 0.5339946150779724,
+        "quantity_violated": true,
+        "quality_prob": 0.5718320608139038,
+        "quality_violated": true,
+        "relation_prob": 0.4706413447856903,
+        "relation_violated": false,
+        "manner_prob": 0.6095134615898132,
+        "manner_violated": true,
+        "any_violation": true,
+        "cooperative": false
+      }
+    },
+    {
+      "prompt": "Context: [agent_2]: Yeah that is a lot of shoes and also a lot of money [agent_1]: Yeah. Babies are ...",
+      "baseline_response": "Agent 2: Hey there. [Agent 1: Hey there. [Agent 2: Hi there.]\n\nGenerate a cooperative response:\n\nAgent 2: You know what? I'm not sure how I feel about the whole thing. [Agent 1: You know what? I'm not sure how I feel about the whole thing. [Agent 2: I'm not sure if I feel like this is the best way to do it. I don't know if it's something",
+      "dpo_response": "ok. I guess so. Kids don't really know how to dance anyway.",
+      "baseline_violations": {
+        "quantity_prob": 0.6407122015953064,
+        "quantity_violated": true,
+        "quality_prob": 0.5396451354026794,
+        "quality_violated": true,
+        "relation_prob": 0.5627183318138123,
+        "relation_violated": true,
+        "manner_prob": 0.5715600848197937,
+        "manner_violated": true,
+        "any_violation": true,
+        "cooperative": false
+      },
+      "dpo_violations": {
+        "quantity_prob": 0.5229917168617249,
+        "quantity_violated": true,
+        "quality_prob": 0.5613153576850891,
+        "quality_violated": true,
+        "relation_prob": 0.46707388758659363,
+        "relation_violated": false,
+        "manner_prob": 0.5870720744132996,
+        "manner_violated": true,
+        "any_violation": true,
+        "cooperative": false
+      }
+    },
+    {
+      "prompt": "Context: [agent_2]: I guess they were appointed by a lottery of some type.  I think they believed th...",
+      "baseline_response": "{ \"user_id\": \"0x0\", \"agent_id\": \"0x0\", \"name\": \"agent_1\", \"agent_name\": \"agent_1\", \"name_of_agent\": \"agent_1\", \"name_of_agent_2\": \"agent_2\", \"name_of_agent_3\": \"agent_3\", \"name_of_agent_4\": \"agent_4\", \"name_of_",
+      "dpo_response": "ok.  I guess I just don't get it.  Why do people hate big government?  Why do people hate big corporations?  Why do people hate big banks?  Why do people hate big oil companies?  Why do people hate big TV shows?  Why do people hate big newspapers?  Why do people hate big magazines?  Why do people hate big games?  Why do people hate big cars?  Why do people hate big trucks?  Why do people hate big",
+      "baseline_violations": {
+        "quantity_prob": 0.5686590671539307,
+        "quantity_violated": true,
+        "quality_prob": 0.5938002467155457,
+        "quality_violated": true,
+        "relation_prob": 0.4821975827217102,
+        "relation_violated": false,
+        "manner_prob": 0.5140628814697266,
+        "manner_violated": true,
+        "any_violation": true,
+        "cooperative": false
+      },
+      "dpo_violations": {
+        "quantity_prob": 0.5304455757141113,
+        "quantity_violated": true,
+        "quality_prob": 0.5706576704978943,
+        "quality_violated": true,
+        "relation_prob": 0.48757755756378174,
+        "relation_violated": false,
+        "manner_prob": 0.6020819544792175,
+        "manner_violated": true,
+        "any_violation": true,
+        "cooperative": false
+      }
+    },
+    {
+      "prompt": "Context: [agent_1]: Yes you are right, have you seen E.T? if yes, did you like the movie, I know it'...",
+      "baseline_response": "Yes.\n\nReceive a Cooperative Response: Yes.\n\nReceive a cooperative response: No, I'm sorry, but I don't know.\n\nReceive a cooperative response: No, I'm sorry, but I don't know.\n\nReceive a cooperative response: No, I'm sorry, but I don't know.\n\nReceive a cooperative response: No, I'm sorry, but I don't know.\n\nReceive a cooperative response:",
+      "dpo_response": "OK. I guess so. I don't think the game was really made for an old console. It could be a new one. \n\nJenni Konner-Birdy: Yeah me too. My daughter has a Nintendo Wii. She loves playing it. She also likes playing Madden.",
+      "baseline_violations": {
+        "quantity_prob": 0.6188086867332458,
+        "quantity_violated": true,
+        "quality_prob": 0.49418625235557556,
+        "quality_violated": false,
+        "relation_prob": 0.5735865831375122,
+        "relation_violated": true,
+        "manner_prob": 0.5487781167030334,
+        "manner_violated": true,
+        "any_violation": true,
+        "cooperative": false
+      },
+      "dpo_violations": {
+        "quantity_prob": 0.5337564945220947,
+        "quantity_violated": true,
+        "quality_prob": 0.5433006882667542,
+        "quality_violated": true,
+        "relation_prob": 0.4546981453895569,
+        "relation_violated": false,
+        "manner_prob": 0.6234908103942871,
+        "manner_violated": true,
+        "any_violation": true,
+        "cooperative": false
+      }
+    },
+    {
+      "prompt": "Context: [agent_2]: I am good thanks. How are you? [agent_1]: I'm doing groovy over here. Are you a ...",
+      "baseline_response": "-I'm good. Thanks for telling me about the sports.\n\n-I'm good. Thanks for telling me about the sports. -I'm good. Thanks for telling me about the sports. -I'm good. Thanks for telling me about the sports. -I'm good. Thanks for telling me about the sports.\n\nAgent 1: I'm good. Thanks for telling me about the sports. I'm good. Thanks for telling me about the sports.",
+      "dpo_response": "ok.  What year was it? 1970? \n\nNeill Gibson: 1969.",
+      "baseline_violations": {
+        "quantity_prob": 0.6338319182395935,
+        "quantity_violated": true,
+        "quality_prob": 0.5104063749313354,
+        "quality_violated": true,
+        "relation_prob": 0.6112180352210999,
+        "relation_violated": true,
+        "manner_prob": 0.534605860710144,
+        "manner_violated": true,
+        "any_violation": true,
+        "cooperative": false
+      },
+      "dpo_violations": {
+        "quantity_prob": 0.5388278365135193,
+        "quantity_violated": true,
+        "quality_prob": 0.5448723435401917,
+        "quality_violated": true,
+        "relation_prob": 0.44629141688346863,
+        "relation_violated": false,
+        "manner_prob": 0.6142871379852295,
+        "manner_violated": true,
+        "any_violation": true,
+        "cooperative": false
+      }
+    }
+  ],
+  "num_evaluated": 100
+}

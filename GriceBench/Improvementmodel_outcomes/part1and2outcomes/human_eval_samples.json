@@ -1,0 +1,1802 @@
+[
+  {
+    "id": 0,
+    "context": "That sounds awesome!",
+    "evidence": "",
+    "response": "Wow. That's amazing. I read where lasagne originated in Italy during the Middle Ages."
+  },
+  {
+    "id": 1,
+    "context": "sometimes, yes. My dog and cat are also fun to watch. My dog is smaller than my cat lol",
+    "evidence": "",
+    "response": "Wow. That's amazing. I read where lasagne originated in Italy during the Middle Ages."
+  },
+  {
+    "id": 2,
+    "context": "Probably not for a while. I just bought a new jaguar and I try to get out and just drive around and show it off as much as possible.",
+    "evidence": "",
+    "response": "Well I like tattoos and piercings, I am working on my next one right now."
+  },
+  {
+    "id": 3,
+    "context": "I do actually I love watching all the sorting robots we have, I'm super into robotics, what do you do?",
+    "evidence": "",
+    "response": "I don't have a particular favorite style, but I've always thought tap was the odd one, even though you see it all the time on Broadway."
+  },
+  {
+    "id": 4,
+    "context": "i run a lot to stay healthy",
+    "evidence": "",
+    "response": "I did not know windex could be used on glasses"
+  },
+  {
+    "id": 5,
+    "context": "I am so sorry to hear that you are in the same boat as me. We really need insurance.",
+    "evidence": "",
+    "response": "im saving up to buy a new camera to take pictures of people who lost their licenses actually"
+  },
+  {
+    "id": 6,
+    "context": "Yeah. I know that feeling., although I had to buy my own.",
+    "evidence": "",
+    "response": "The vehicle was exactly what I wanted, a newer model sports car."
+  },
+  {
+    "id": 7,
+    "context": "Yeah man I'm sure I would love to be in Florida and go on some beaches and enjoy",
+    "evidence": "",
+    "response": "After I am done with school I plan to have a family."
+  },
+  {
+    "id": 8,
+    "context": "What do you do for a living?",
+    "evidence": "",
+    "response": "Well, I think it's important to learn about human nature in all forms, don't you? It's how we evolve."
+  },
+  {
+    "id": 9,
+    "context": "Oh, yes, they can live very long, although they are a species of small fishes!",
+    "evidence": "",
+    "response": "I would have been too! Do you always take it to work?"
+  },
+  {
+    "id": 10,
+    "context": "california love is my absolute favorite song !",
+    "evidence": "",
+    "response": "No I haven't, I don't watch movies very often. Im usually out at clubs people watching."
+  },
+  {
+    "id": 11,
+    "context": "i wish i was there",
+    "evidence": "",
+    "response": "Well I like tattoos and piercings, I am working on my next one right now."
+  },
+  {
+    "id": 12,
+    "context": "That's interesting. I like makeup a lot.",
+    "evidence": "",
+    "response": "im saving up to buy a new camera to take pictures of people who lost their licenses actually"
+  },
+  {
+    "id": 13,
+    "context": "Roommate just walked in on me while I was... trying to... \"feel good\" if you know what I mean. So awkward. My door doesn't have a lock, either. I told him to not come in, and he just kept coming in!",
+    "evidence": "",
+    "response": "Well I like tattoos and piercings, I am working on my next one right now."
+  },
+  {
+    "id": 14,
+    "context": "Oh really!? That is interesting. I am actually italian myself.",
+    "evidence": "",
+    "response": "Wow. That's amazing. I read where lasagne originated in Italy during the Middle Ages."
+  },
+  {
+    "id": 15,
+    "context": "I recently got a $50 gift card that I'm really looking forward to using.",
+    "evidence": "",
+    "response": "Yeah. I know that feeling., although I had to buy my own."
+  },
+  {
+    "id": 16,
+    "context": "how would the principal feel about you going behind his back?",
+    "evidence": "",
+    "response": "I like acting, I hope to be an actor, what about you?"
+  },
+  {
+    "id": 17,
+    "context": "sometimes, yes. My dog and cat are also fun to watch. My dog is smaller than my cat lol",
+    "evidence": "",
+    "response": "Thats the worst, is it a big dog or little dog?"
+  },
+  {
+    "id": 18,
+    "context": "My boss earns way more money than me for less work.",
+    "evidence": "",
+    "response": "Well I like tattoos and piercings, I am working on my next one right now."
+  },
+  {
+    "id": 19,
+    "context": "Oh war for sure. I love wars. They're so cinematic!",
+    "evidence": "",
+    "response": "After I am done with school I plan to have a family."
+  },
+  {
+    "id": 20,
+    "context": "Mmm That sounds delicious right now.",
+    "evidence": "",
+    "response": "Well I like tattoos and piercings, I am working on my next one right now."
+  },
+  {
+    "id": 21,
+    "context": "Have you given them names? If not, maybe we can come up with some.",
+    "evidence": "",
+    "response": "I like acting, I hope to be an actor, what about you?"
+  },
+  {
+    "id": 22,
+    "context": "Hopefully it is just a sprain. Might not need to receive medical attention.",
+    "evidence": "",
+    "response": "Well I like tattoos and piercings, I am working on my next one right now."
+  },
+  {
+    "id": 23,
+    "context": "just grading a quiz from yesterday . i'm a teacher .",
+    "evidence": "",
+    "response": "Good for you. Is it truly your first time flying on a plane?"
+  },
+  {
+    "id": 24,
+    "context": "Are you famous? I'm kind of famous in my own town.",
+    "evidence": "",
+    "response": "I would imagine. I am sure they a great kids."
+  },
+  {
+    "id": 25,
+    "context": "Me neither, but that might be because I like to drink...a lot.",
+    "evidence": "",
+    "response": "I like acting, I hope to be an actor, what about you?"
+  },
+  {
+    "id": 26,
+    "context": "I would imagine. I am sure they a great kids.",
+    "evidence": "",
+    "response": "After I am done with school I plan to have a family."
+  },
+  {
+    "id": 27,
+    "context": "Same here, sometimes I play mario kart.",
+    "evidence": "",
+    "response": "The vehicle was exactly what I wanted, a newer model sports car."
+  },
+  {
+    "id": 28,
+    "context": "that's so cool , i love biking",
+    "evidence": "",
+    "response": "I did not know windex could be used on glasses"
+  },
+  {
+    "id": 29,
+    "context": "I'd like to introduce that dog to my pet snakes. I think they'd eat him though!",
+    "evidence": "",
+    "response": "I would imagine. I am sure they a great kids."
+  },
+  {
+    "id": 30,
+    "context": "It's a little dog. Why is it the little ones always bark the most?",
+    "evidence": "",
+    "response": "I would imagine. I am sure they a great kids."
+  },
+  {
+    "id": 31,
+    "context": "I got really joyful when my dad got me my first vehicle. It was just a happy feeling",
+    "evidence": "",
+    "response": "Well I like tattoos and piercings, I am working on my next one right now."
+  },
+  {
+    "id": 32,
+    "context": "When the Eagles finally won the superbowl, I was so so happy, I cried even",
+    "evidence": "",
+    "response": "I would have been too! Do you always take it to work?"
+  },
+  {
+    "id": 33,
+    "context": "My snakes are both pythons. I feed them mice. Do you have any pets?",
+    "evidence": "",
+    "response": "Good for you. Is it truly your first time flying on a plane?"
+  },
+  {
+    "id": 34,
+    "context": "I used to live in a blue house. But it got destroyed by a tornado.",
+    "evidence": "",
+    "response": "The vehicle was exactly what I wanted, a newer model sports car."
+  },
+  {
+    "id": 35,
+    "context": "swim swim swim little fish to the sea don't look back",
+    "evidence": "",
+    "response": "No I haven't, I don't watch movies very often. Im usually out at clubs people watching."
+  },
+  {
+    "id": 36,
+    "context": "how did you lose it?",
+    "evidence": "",
+    "response": "im saving up to buy a new camera to take pictures of people who lost their licenses actually"
+  },
+  {
+    "id": 37,
+    "context": "Is that the animated movie?",
+    "evidence": "",
+    "response": "I would imagine. I am sure they a great kids."
+  },
+  {
+    "id": 38,
+    "context": "i am watching football on tv today . do you like to watch sports too ?",
+    "evidence": "",
+    "response": "Thats the worst, is it a big dog or little dog?"
+  },
+  {
+    "id": 39,
+    "context": "Oh, I'm sorry to hear that. Sometimes when you \"give up\", someone good comes along",
+    "evidence": "",
+    "response": "Yeah. I know that feeling., although I had to buy my own."
+  },
+  {
+    "id": 40,
+    "context": "For sure! I am going on vacation there in a few weeks at the beach, and I can't wait!",
+    "evidence": "",
+    "response": "Wow. That's amazing. I read where lasagne originated in Italy during the Middle Ages."
+  },
+  {
+    "id": 41,
+    "context": "Ok well, I had a vision last night that aliens would attack my plane and we would crash.",
+    "evidence": "",
+    "response": "Thats the worst, is it a big dog or little dog?"
+  },
+  {
+    "id": 42,
+    "context": "for sure. sometimes i get some old furniture too and take it apart",
+    "evidence": "",
+    "response": "I don't have a particular favorite style, but I've always thought tap was the odd one, even though you see it all the time on Broadway."
+  },
+  {
+    "id": 43,
+    "context": "Woah that sounds like it'd be awesome. Any particular reason why?",
+    "evidence": "",
+    "response": "Wow. That's amazing. I read where lasagne originated in Italy during the Middle Ages."
+  },
+  {
+    "id": 44,
+    "context": "I'd like to introduce that dog to my pet snakes. I think they'd eat him though!",
+    "evidence": "",
+    "response": "I would have been too! Do you always take it to work?"
+  },
+  {
+    "id": 45,
+    "context": "Me too, serial killers are dark but fascinating people.",
+    "evidence": "",
+    "response": "Well, I think it's important to learn about human nature in all forms, don't you? It's how we evolve."
+  },
+  {
+    "id": 46,
+    "context": "i need to know about algorithms",
+    "evidence": "",
+    "response": "Wow. That's amazing. I read where lasagne originated in Italy during the Middle Ages."
+  },
+  {
+    "id": 47,
+    "context": "Wow. That's amazing. I read where lasagne originated in Italy during the Middle Ages.",
+    "evidence": "",
+    "response": "After I am done with school I plan to have a family."
+  },
+  {
+    "id": 48,
+    "context": "It is not healthy at all. Do you have any idea what I could use to clean my glasses? They are always dirty",
+    "evidence": "",
+    "response": "I would have been too! Do you always take it to work?"
+  },
+  {
+    "id": 49,
+    "context": "My snakes are both pythons. I feed them mice. Do you have any pets?",
+    "evidence": "",
+    "response": "Thats the worst, is it a big dog or little dog?"
+  },
+  {
+    "id": 50,
+    "context": "Aww, I'm sorry about your dog. What was your dog's name?",
+    "evidence": "",
+    "response": "No I haven't, I don't watch movies very often. Im usually out at clubs people watching."
+  },
+  {
+    "id": 51,
+    "context": "My favorite singer is Meatloaf, are you a fan of his?",
+    "evidence": "",
+    "response": "im saving up to buy a new camera to take pictures of people who lost their licenses actually"
+  },
+  {
+    "id": 52,
+    "context": "Yes, i play a lot. Probably too much.",
+    "evidence": "",
+    "response": "After I am done with school I plan to have a family."
+  },
+  {
+    "id": 53,
+    "context": "Thats the worst, is it a big dog or little dog?",
+    "evidence": "",
+    "response": "Well, I think it's important to learn about human nature in all forms, don't you? It's how we evolve."
+  },
+  {
+    "id": 54,
+    "context": "Yeah man I'm sure I would love to be in Florida and go on some beaches and enjoy",
+    "evidence": "",
+    "response": "Good for you. Is it truly your first time flying on a plane?"
+  },
+  {
+    "id": 55,
+    "context": "Yeah I got some headphones just yesterday to use while walking",
+    "evidence": "",
+    "response": "After I am done with school I plan to have a family."
+  },
+  {
+    "id": 56,
+    "context": "Sounds like I will have to hire some smart people.",
+    "evidence": "",
+    "response": "No I haven't, I don't watch movies very often. Im usually out at clubs people watching."
+  },
+  {
+    "id": 57,
+    "context": "My boss earns way more money than me for less work.",
+    "evidence": "",
+    "response": "The vehicle was exactly what I wanted, a newer model sports car."
+  },
+  {
+    "id": 58,
+    "context": "how did you lose it?",
+    "evidence": "",
+    "response": "Yeah. I know that feeling., although I had to buy my own."
+  },
+  {
+    "id": 59,
+    "context": "That's a shame, if that's the case then I agree.",
+    "evidence": "",
+    "response": "Well, I think it's important to learn about human nature in all forms, don't you? It's how we evolve."
+  },
+  {
+    "id": 60,
+    "context": "I do actually I love watching all the sorting robots we have, I'm super into robotics, what do you do?",
+    "evidence": "",
+    "response": "After I am done with school I plan to have a family."
+  },
+  {
+    "id": 61,
+    "context": "Sounds like I will have to hire some smart people.",
+    "evidence": "",
+    "response": "I don't have a particular favorite style, but I've always thought tap was the odd one, even though you see it all the time on Broadway."
+  },
+  {
+    "id": 62,
+    "context": "I enjoy dance a lot as well, my daughter does tap dancing. What kind of dancing do you like most?",
+    "evidence": "",
+    "response": "I don't have a particular favorite style, but I've always thought tap was the odd one, even though you see it all the time on Broadway."
+  },
+  {
+    "id": 63,
+    "context": "That's awesome. I'd be excited too. What are you going to get with it?",
+    "evidence": "",
+    "response": "Wow. That's amazing. I read where lasagne originated in Italy during the Middle Ages."
+  },
+  {
+    "id": 64,
+    "context": "Yes I love koontz as well, He was a big inspiration for me growing up",
+    "evidence": "",
+    "response": "The vehicle was exactly what I wanted, a newer model sports car."
+  },
+  {
+    "id": 65,
+    "context": "hahah that's funny. I believe in you though, you can overcome that.",
+    "evidence": "",
+    "response": "Wow. That's amazing. I read where lasagne originated in Italy during the Middle Ages."
+  },
+  {
+    "id": 66,
+    "context": "yes me too! on a course there are holes to hit the ball in which is 4.25 inches in diameter.",
+    "evidence": "",
+    "response": "Good for you. Is it truly your first time flying on a plane?"
+  },
+  {
+    "id": 67,
+    "context": "I see. Well good luck with that, I wouldn't know because I don't have kids yet.",
+    "evidence": "",
+    "response": "I would imagine. I am sure they a great kids."
+  },
+  {
+    "id": 68,
+    "context": "Not yet. What do you think I should buy with it?",
+    "evidence": "",
+    "response": "After I am done with school I plan to have a family."
+  },
+  {
+    "id": 69,
+    "context": "He's a good worker but not as reliable as I am. He is always calling in or not putting much effort into his work. I feel I should have gotten that position.",
+    "evidence": "",
+    "response": "Well I like tattoos and piercings, I am working on my next one right now."
+  },
+  {
+    "id": 70,
+    "context": "I do but Dirty Harry is my all time favorite",
+    "evidence": "",
+    "response": "Yeah. I know that feeling., although I had to buy my own."
+  },
+  {
+    "id": 71,
+    "context": "Ok, Im pretty confused as to what you mean, but that sounds like a lot.",
+    "evidence": "",
+    "response": "No I haven't, I don't watch movies very often. Im usually out at clubs people watching."
+  },
+  {
+    "id": 72,
+    "context": "WHat cartoons do you like? I love Bob's Burgers!",
+    "evidence": "",
+    "response": "Well I like tattoos and piercings, I am working on my next one right now."
+  },
+  {
+    "id": 73,
+    "context": "No I haven't, I don't watch movies very often. Im usually out at clubs people watching.",
+    "evidence": "",
+    "response": "Thats the worst, is it a big dog or little dog?"
+  },
+  {
+    "id": 74,
+    "context": "that's cool , are you married ? do you believe in love ? because i do not",
+    "evidence": "",
+    "response": "Wow. That's amazing. I read where lasagne originated in Italy during the Middle Ages."
+  },
+  {
+    "id": 75,
+    "context": "monotone, but its based on this book I read growing up",
+    "evidence": "",
+    "response": "The vehicle was exactly what I wanted, a newer model sports car."
+  },
+  {
+    "id": 76,
+    "context": "Some of the books are like you want to read and read again",
+    "evidence": "",
+    "response": "The vehicle was exactly what I wanted, a newer model sports car."
+  },
+  {
+    "id": 77,
+    "context": "Yea, but to be perfectly honest, I actually don't work hard either.",
+    "evidence": "",
+    "response": "Wow. That's amazing. I read where lasagne originated in Italy during the Middle Ages."
+  },
+  {
+    "id": 78,
+    "context": "It's a little dog. Why is it the little ones always bark the most?",
+    "evidence": "",
+    "response": "The vehicle was exactly what I wanted, a newer model sports car."
+  },
+  {
+    "id": 79,
+    "context": "that's good exercise . do you ride every day ?",
+    "evidence": "",
+    "response": "I did not know windex could be used on glasses"
+  },
+  {
+    "id": 80,
+    "context": "I don't have a particular favorite style, but I've always thought tap was the odd one, even though you see it all the time on Broadway.",
+    "evidence": "",
+    "response": "I did not know windex could be used on glasses"
+  },
+  {
+    "id": 81,
+    "context": "No, I am too busy with my ten year old son.",
+    "evidence": "",
+    "response": "No I haven't, I don't watch movies very often. Im usually out at clubs people watching."
+  },
+  {
+    "id": 82,
+    "context": "Was playing rough with my relatives, running around outside, doing touch football. I think I twisted my ankle or something. I'm dumb and don't have health insurance this year.. Worried how much money I'm gonna have to spend",
+    "evidence": "",
+    "response": "Yeah. I know that feeling., although I had to buy my own."
+  },
+  {
+    "id": 83,
+    "context": "You have mice running around your house? Yikes! I think I'd rather have the barking dogs than that.",
+    "evidence": "",
+    "response": "I like acting, I hope to be an actor, what about you?"
+  },
+  {
+    "id": 84,
+    "context": "Oh really!? That is interesting. I am actually italian myself.",
+    "evidence": "",
+    "response": "I would imagine. I am sure they a great kids."
+  },
+  {
+    "id": 85,
+    "context": "who do you ask? aren't teacher salaries decided by some sort of... thing, or whatever? i love my family.",
+    "evidence": "",
+    "response": "After I am done with school I plan to have a family."
+  },
+  {
+    "id": 86,
+    "context": "Not only is Meatloaf a great singer, but it's also a delicious food. Can't beat that combo.",
+    "evidence": "",
+    "response": "After I am done with school I plan to have a family."
+  },
+  {
+    "id": 87,
+    "context": "I have never been but I have heard the same. I love snow and the mountains.",
+    "evidence": "",
+    "response": "Wow. That's amazing. I read where lasagne originated in Italy during the Middle Ages."
+  },
+  {
+    "id": 88,
+    "context": "Yeah I got some headphones just yesterday to use while walking",
+    "evidence": "",
+    "response": "Yeah. I know that feeling., although I had to buy my own."
+  },
+  {
+    "id": 89,
+    "context": "Algorithms are basically ways to solve problems. So on computers, they're plugged in to do certain tasks.",
+    "evidence": "",
+    "response": "Yeah. I know that feeling., although I had to buy my own."
+  },
+  {
+    "id": 90,
+    "context": "I have two dogs. One named Bruno and the other named Mars, because I like Bruno Mars, lol.",
+    "evidence": "",
+    "response": "Thats the worst, is it a big dog or little dog?"
+  },
+  {
+    "id": 91,
+    "context": "Oh war for sure. I love wars. They're so cinematic!",
+    "evidence": "",
+    "response": "Wow. That's amazing. I read where lasagne originated in Italy during the Middle Ages."
+  },
+  {
+    "id": 92,
+    "context": "swim swim swim little fish to the sea don't look back",
+    "evidence": "",
+    "response": "I don't have a particular favorite style, but I've always thought tap was the odd one, even though you see it all the time on Broadway."
+  },
+  {
+    "id": 93,
+    "context": "yes! everyday i need meat. there are some that refrain from consuming animal products, not only meat but also eggs, diary products and other animal derived substances",
+    "evidence": "",
+    "response": "I would have been too! Do you always take it to work?"
+  },
+  {
+    "id": 94,
+    "context": "I would have been too! Do you always take it to work?",
+    "evidence": "",
+    "response": "Well I like tattoos and piercings, I am working on my next one right now."
+  },
+  {
+    "id": 95,
+    "context": "I wish I could join a soccer team. I'm to busy filling prescriptions all the time.",
+    "evidence": "",
+    "response": "After I am done with school I plan to have a family."
+  },
+  {
+    "id": 96,
+    "context": "That mix of dog breeds sounds cool. Was she tall like the greyhound or short like the poodle? You get all kinds of unique traits",
+    "evidence": "",
+    "response": "I don't have a particular favorite style, but I've always thought tap was the odd one, even though you see it all the time on Broadway."
+  },
+  {
+    "id": 97,
+    "context": "I work at a ski resort. I love it!",
+    "evidence": "",
+    "response": "Thats the worst, is it a big dog or little dog?"
+  },
+  {
+    "id": 98,
+    "context": "I don't have a particular favorite style, but I've always thought tap was the odd one, even though you see it all the time on Broadway.",
+    "evidence": "",
+    "response": "I don't have a particular favorite style, but I've always thought tap was the odd one, even though you see it all the time on Broadway."
+  },
+  {
+    "id": 99,
+    "context": "Probably not for a while. I just bought a new jaguar and I try to get out and just drive around and show it off as much as possible.",
+    "evidence": "",
+    "response": "I would imagine. I am sure they a great kids."
+  },
+  {
+    "id": 100,
+    "context": "Yes I love koontz as well, He was a big inspiration for me growing up",
+    "evidence": "",
+    "response": "I would imagine. I am sure they a great kids."
+  },
+  {
+    "id": 101,
+    "context": "Was playing rough with my relatives, running around outside, doing touch football. I think I twisted my ankle or something. I'm dumb and don't have health insurance this year.. Worried how much money I'm gonna have to spend",
+    "evidence": "",
+    "response": "I would have been too! Do you always take it to work?"
+  },
+  {
+    "id": 102,
+    "context": "Cool. Maybe I can make a video about them at your store?",
+    "evidence": "",
+    "response": "im saving up to buy a new camera to take pictures of people who lost their licenses actually"
+  },
+  {
+    "id": 103,
+    "context": "Me either, but I did a beautiful painting of Emila Clarke the other day.",
+    "evidence": "",
+    "response": "Well, I think it's important to learn about human nature in all forms, don't you? It's how we evolve."
+  },
+  {
+    "id": 104,
+    "context": "just grading a quiz from yesterday . i'm a teacher .",
+    "evidence": "",
+    "response": "Well, I think it's important to learn about human nature in all forms, don't you? It's how we evolve."
+  },
+  {
+    "id": 105,
+    "context": "i am unsure . . what do you do ?",
+    "evidence": "",
+    "response": "Thats the worst, is it a big dog or little dog?"
+  },
+  {
+    "id": 106,
+    "context": "I do too. Wat do you like?",
+    "evidence": "",
+    "response": "I like acting, I hope to be an actor, what about you?"
+  },
+  {
+    "id": 107,
+    "context": "i'm well i like budweiser , i'm a student but i'll be a nurse",
+    "evidence": "",
+    "response": "Well I like tattoos and piercings, I am working on my next one right now."
+  },
+  {
+    "id": 108,
+    "context": "i made a little mistake . i should know better as a poet",
+    "evidence": "",
+    "response": "No I haven't, I don't watch movies very often. Im usually out at clubs people watching."
+  },
+  {
+    "id": 109,
+    "context": "Thats the worst, is it a big dog or little dog?",
+    "evidence": "",
+    "response": "Thats the worst, is it a big dog or little dog?"
+  },
+  {
+    "id": 110,
+    "context": "i'm well i like budweiser , i'm a student but i'll be a nurse",
+    "evidence": "",
+    "response": "Well, I think it's important to learn about human nature in all forms, don't you? It's how we evolve."
+  },
+  {
+    "id": 111,
+    "context": "A lot of people come here for the beaches, they're always packed. The everglades is also an incredibly fun place that many people check out from around the world.",
+    "evidence": "",
+    "response": "I would have been too! Do you always take it to work?"
+  },
+  {
+    "id": 112,
+    "context": "When the Eagles finally won the superbowl, I was so so happy, I cried even",
+    "evidence": "",
+    "response": "I did not know windex could be used on glasses"
+  },
+  {
+    "id": 113,
+    "context": "activity that combines shopping skills with couponing in an attempt to save as much money.",
+    "evidence": "",
+    "response": "im saving up to buy a new camera to take pictures of people who lost their licenses actually"
+  },
+  {
+    "id": 114,
+    "context": "That's pretty lucky, did you spend it?",
+    "evidence": "",
+    "response": "im saving up to buy a new camera to take pictures of people who lost their licenses actually"
+  },
+  {
+    "id": 115,
+    "context": "i am watching football on tv today . do you like to watch sports too ?",
+    "evidence": "",
+    "response": "The vehicle was exactly what I wanted, a newer model sports car."
+  },
+  {
+    "id": 116,
+    "context": "Are you famous? I'm kind of famous in my own town.",
+    "evidence": "",
+    "response": "Yeah. I know that feeling., although I had to buy my own."
+  },
+  {
+    "id": 117,
+    "context": "Yea, but to be perfectly honest, I actually don't work hard either.",
+    "evidence": "",
+    "response": "Well I like tattoos and piercings, I am working on my next one right now."
+  },
+  {
+    "id": 118,
+    "context": "I see. Well good luck with that, I wouldn't know because I don't have kids yet.",
+    "evidence": "",
+    "response": "After I am done with school I plan to have a family."
+  },
+  {
+    "id": 119,
+    "context": "It is not healthy at all. Do you have any idea what I could use to clean my glasses? They are always dirty",
+    "evidence": "",
+    "response": "I did not know windex could be used on glasses"
+  },
+  {
+    "id": 120,
+    "context": "Oh thats really cool. Yea I love those movies a lot! Whats your favorite food?",
+    "evidence": "",
+    "response": "I would imagine. I am sure they a great kids."
+  },
+  {
+    "id": 121,
+    "context": "WHat cartoons do you like? I love Bob's Burgers!",
+    "evidence": "",
+    "response": "I don't have a particular favorite style, but I've always thought tap was the odd one, even though you see it all the time on Broadway."
+  },
+  {
+    "id": 122,
+    "context": "dogs would for sure love a big truck full of garbage. i thik i'm the top 20 or so best garbage men in the area",
+    "evidence": "",
+    "response": "Wow. That's amazing. I read where lasagne originated in Italy during the Middle Ages."
+  },
+  {
+    "id": 123,
+    "context": "Some of the books are like you want to read and read again",
+    "evidence": "",
+    "response": "Good for you. Is it truly your first time flying on a plane?"
+  },
+  {
+    "id": 124,
+    "context": "i need to know about algorithms",
+    "evidence": "",
+    "response": "Yeah. I know that feeling., although I had to buy my own."
+  },
+  {
+    "id": 125,
+    "context": "That sounds awesome!",
+    "evidence": "",
+    "response": "Well, I think it's important to learn about human nature in all forms, don't you? It's how we evolve."
+  },
+  {
+    "id": 126,
+    "context": "No why would you be on my flight a couple weeks from now? They are from another planet, most likely Jupiter.",
+    "evidence": "",
+    "response": "Good for you. Is it truly your first time flying on a plane?"
+  },
+  {
+    "id": 127,
+    "context": "Yea, well keep it up, maybe one day you'll be on broadway.",
+    "evidence": "",
+    "response": "I like acting, I hope to be an actor, what about you?"
+  },
+  {
+    "id": 128,
+    "context": "i am studying to become a fashion designer in ny",
+    "evidence": "",
+    "response": "Well, I think it's important to learn about human nature in all forms, don't you? It's how we evolve."
+  },
+  {
+    "id": 129,
+    "context": "Well, I don't have one yet, but it will be a programming company",
+    "evidence": "",
+    "response": "I don't have a particular favorite style, but I've always thought tap was the odd one, even though you see it all the time on Broadway."
+  },
+  {
+    "id": 130,
+    "context": "Well My mate proposed to me yesterday, I am so happy",
+    "evidence": "",
+    "response": "Yeah. I know that feeling., although I had to buy my own."
+  },
+  {
+    "id": 131,
+    "context": "No, but someday.",
+    "evidence": "",
+    "response": "After I am done with school I plan to have a family."
+  },
+  {
+    "id": 132,
+    "context": "any team that ronaldo is on! .. the sport is played by 250 million players in over 200 countries and dependencies making it the world's most popular sport.",
+    "evidence": "",
+    "response": "Wow. That's amazing. I read where lasagne originated in Italy during the Middle Ages."
+  },
+  {
+    "id": 133,
+    "context": "She was ten when I started medical school, so that would make her sixteen now.",
+    "evidence": "",
+    "response": "Well, I think it's important to learn about human nature in all forms, don't you? It's how we evolve."
+  },
+  {
+    "id": 134,
+    "context": "It is always a bummer when you borrow something and it breaks right away. You feel responsible and have to replace it.",
+    "evidence": "",
+    "response": "Well I like tattoos and piercings, I am working on my next one right now."
+  },
+  {
+    "id": 135,
+    "context": "That's pretty lucky, did you spend it?",
+    "evidence": "",
+    "response": "The vehicle was exactly what I wanted, a newer model sports car."
+  },
+  {
+    "id": 136,
+    "context": "Wow! thats amazing, what kind of songs do you sing?",
+    "evidence": "",
+    "response": "I don't have a particular favorite style, but I've always thought tap was the odd one, even though you see it all the time on Broadway."
+  },
+  {
+    "id": 137,
+    "context": "I took the train to work the other day and it was so crowded. I was feeling really claustrophobic.",
+    "evidence": "",
+    "response": "I would have been too! Do you always take it to work?"
+  },
+  {
+    "id": 138,
+    "context": "Ok, Im pretty confused as to what you mean, but that sounds like a lot.",
+    "evidence": "",
+    "response": "After I am done with school I plan to have a family."
+  },
+  {
+    "id": 139,
+    "context": "It is always a bummer when you borrow something and it breaks right away. You feel responsible and have to replace it.",
+    "evidence": "",
+    "response": "im saving up to buy a new camera to take pictures of people who lost their licenses actually"
+  },
+  {
+    "id": 140,
+    "context": "Now that we have the internet and social media, we can spread the word much faster.",
+    "evidence": "",
+    "response": "Yeah. I know that feeling., although I had to buy my own."
+  },
+  {
+    "id": 141,
+    "context": "that's so cool , i love biking",
+    "evidence": "",
+    "response": "im saving up to buy a new camera to take pictures of people who lost their licenses actually"
+  },
+  {
+    "id": 142,
+    "context": "I have been happy married for 10 years.",
+    "evidence": "",
+    "response": "Well, I think it's important to learn about human nature in all forms, don't you? It's how we evolve."
+  },
+  {
+    "id": 143,
+    "context": "Not yet. What do you think I should buy with it?",
+    "evidence": "",
+    "response": "im saving up to buy a new camera to take pictures of people who lost their licenses actually"
+  },
+  {
+    "id": 144,
+    "context": "Now that we have the internet and social media, we can spread the word much faster.",
+    "evidence": "",
+    "response": "Well, I think it's important to learn about human nature in all forms, don't you? It's how we evolve."
+  },
+  {
+    "id": 145,
+    "context": "Wow. That's amazing. I read where lasagne originated in Italy during the Middle Ages.",
+    "evidence": "",
+    "response": "I like acting, I hope to be an actor, what about you?"
+  },
+  {
+    "id": 146,
+    "context": "i wish i was there",
+    "evidence": "",
+    "response": "I would imagine. I am sure they a great kids."
+  },
+  {
+    "id": 147,
+    "context": "What kind of training do you do? weights?",
+    "evidence": "",
+    "response": "I would have been too! Do you always take it to work?"
+  },
+  {
+    "id": 148,
+    "context": "Yes, i play a lot. Probably too much.",
+    "evidence": "",
+    "response": "The vehicle was exactly what I wanted, a newer model sports car."
+  },
+  {
+    "id": 149,
+    "context": "Well, I think it's important to learn about human nature in all forms, don't you? It's how we evolve.",
+    "evidence": "",
+    "response": "Well, I think it's important to learn about human nature in all forms, don't you? It's how we evolve."
+  },
+  {
+    "id": 150,
+    "context": "A Mustang GT, convertible",
+    "evidence": "",
+    "response": "I like acting, I hope to be an actor, what about you?"
+  },
+  {
+    "id": 151,
+    "context": "Oh, I'm sorry to hear that. Sometimes when you \"give up\", someone good comes along",
+    "evidence": "",
+    "response": "Well, I think it's important to learn about human nature in all forms, don't you? It's how we evolve."
+  },
+  {
+    "id": 152,
+    "context": "I understand but I really like to eat meat. Do you?",
+    "evidence": "",
+    "response": "I would have been too! Do you always take it to work?"
+  },
+  {
+    "id": 153,
+    "context": "Congratulations! How'd you do it?",
+    "evidence": "",
+    "response": "No I haven't, I don't watch movies very often. Im usually out at clubs people watching."
+  },
+  {
+    "id": 154,
+    "context": "For sure! I am going on vacation there in a few weeks at the beach, and I can't wait!",
+    "evidence": "",
+    "response": "Good for you. Is it truly your first time flying on a plane?"
+  },
+  {
+    "id": 155,
+    "context": "Cool. Maybe I can make a video about them at your store?",
+    "evidence": "",
+    "response": "Well, I think it's important to learn about human nature in all forms, don't you? It's how we evolve."
+  },
+  {
+    "id": 156,
+    "context": "I have two dogs. One named Bruno and the other named Mars, because I like Bruno Mars, lol.",
+    "evidence": "",
+    "response": "I did not know windex could be used on glasses"
+  },
+  {
+    "id": 157,
+    "context": "Oh, I love lasagne. I make my own noodles as well as the sauce.",
+    "evidence": "",
+    "response": "Wow. That's amazing. I read where lasagne originated in Italy during the Middle Ages."
+  },
+  {
+    "id": 158,
+    "context": "I am done looking for love. I keep getting rejected over and over again.",
+    "evidence": "",
+    "response": "No I haven't, I don't watch movies very often. Im usually out at clubs people watching."
+  },
+  {
+    "id": 159,
+    "context": "Haha well, passion is passion, money or not. I write horror and mystery novels mostly. Do you enjoy reading?",
+    "evidence": "",
+    "response": "The vehicle was exactly what I wanted, a newer model sports car."
+  },
+  {
+    "id": 160,
+    "context": "any team that ronaldo is on! .. the sport is played by 250 million players in over 200 countries and dependencies making it the world's most popular sport.",
+    "evidence": "",
+    "response": "After I am done with school I plan to have a family."
+  },
+  {
+    "id": 161,
+    "context": "Well, I don't have one yet, but it will be a programming company",
+    "evidence": "",
+    "response": "im saving up to buy a new camera to take pictures of people who lost their licenses actually"
+  },
+  {
+    "id": 162,
+    "context": "i was living in a storage locker for 2 month",
+    "evidence": "",
+    "response": "Wow. That's amazing. I read where lasagne originated in Italy during the Middle Ages."
+  },
+  {
+    "id": 163,
+    "context": "Mainly the flyers that come in the mail but I do print some out on websites also. Just depends on how much time I have",
+    "evidence": "",
+    "response": "Wow. That's amazing. I read where lasagne originated in Italy during the Middle Ages."
+  },
+  {
+    "id": 164,
+    "context": "Soccer players provide my sister and I with plenty of entertainment, so thank you too!",
+    "evidence": "",
+    "response": "im saving up to buy a new camera to take pictures of people who lost their licenses actually"
+  },
+  {
+    "id": 165,
+    "context": "Me either, but I did a beautiful painting of Emila Clarke the other day.",
+    "evidence": "",
+    "response": "I don't have a particular favorite style, but I've always thought tap was the odd one, even though you see it all the time on Broadway."
+  },
+  {
+    "id": 166,
+    "context": "I have had a dog that had curly hair. It was a mixed poodle and it was red. Really active animal she was.",
+    "evidence": "",
+    "response": "I don't have a particular favorite style, but I've always thought tap was the odd one, even though you see it all the time on Broadway."
+  },
+  {
+    "id": 167,
+    "context": "I am going on a flight for the first time in a couple weeks. I am really scared for some reason!",
+    "evidence": "",
+    "response": "The vehicle was exactly what I wanted, a newer model sports car."
+  },
+  {
+    "id": 168,
+    "context": "That's awesome. I'd be excited too. What are you going to get with it?",
+    "evidence": "",
+    "response": "I like acting, I hope to be an actor, what about you?"
+  },
+  {
+    "id": 169,
+    "context": "Not only is Meatloaf a great singer, but it's also a delicious food. Can't beat that combo.",
+    "evidence": "",
+    "response": "I would have been too! Do you always take it to work?"
+  },
+  {
+    "id": 170,
+    "context": "I am trying to do professional photography.",
+    "evidence": "",
+    "response": "I would have been too! Do you always take it to work?"
+  },
+  {
+    "id": 171,
+    "context": "that is good . i'm nursing a cold and vitamin c does nothing lol",
+    "evidence": "",
+    "response": "I would imagine. I am sure they a great kids."
+  },
+  {
+    "id": 172,
+    "context": "hahah that's funny. I believe in you though, you can overcome that.",
+    "evidence": "",
+    "response": "No I haven't, I don't watch movies very often. Im usually out at clubs people watching."
+  },
+  {
+    "id": 173,
+    "context": "Does your dad like the movies?I try to go when I can. What's his favorie?",
+    "evidence": "",
+    "response": "No I haven't, I don't watch movies very often. Im usually out at clubs people watching."
+  },
+  {
+    "id": 174,
+    "context": "Fair enough. I wish you could catch shrimp the way you can catch crabs. I love shrimp. Especially in BBQ sauce.",
+    "evidence": "",
+    "response": "I like acting, I hope to be an actor, what about you?"
+  },
+  {
+    "id": 175,
+    "context": "Algorithms are basically ways to solve problems. So on computers, they're plugged in to do certain tasks.",
+    "evidence": "",
+    "response": "I did not know windex could be used on glasses"
+  },
+  {
+    "id": 176,
+    "context": "Me too, serial killers are dark but fascinating people.",
+    "evidence": "",
+    "response": "Yeah. I know that feeling., although I had to buy my own."
+  },
+  {
+    "id": 177,
+    "context": "I work at a ski resort. I love it!",
+    "evidence": "",
+    "response": "Well I like tattoos and piercings, I am working on my next one right now."
+  },
+  {
+    "id": 178,
+    "context": "who do you ask? aren't teacher salaries decided by some sort of... thing, or whatever? i love my family.",
+    "evidence": "",
+    "response": "Well I like tattoos and piercings, I am working on my next one right now."
+  },
+  {
+    "id": 179,
+    "context": "That's a shame, if that's the case then I agree.",
+    "evidence": "",
+    "response": "Well I like tattoos and piercings, I am working on my next one right now."
+  },
+  {
+    "id": 180,
+    "context": "I didn't sleep there lol. All of my things were there. I slept in a motel some nights",
+    "evidence": "",
+    "response": "No I haven't, I don't watch movies very often. Im usually out at clubs people watching."
+  },
+  {
+    "id": 181,
+    "context": "I am going on a flight for the first time in a couple weeks. I am really scared for some reason!",
+    "evidence": "",
+    "response": "Good for you. Is it truly your first time flying on a plane?"
+  },
+  {
+    "id": 182,
+    "context": "Oh thats really cool. Yea I love those movies a lot! Whats your favorite food?",
+    "evidence": "",
+    "response": "I like acting, I hope to be an actor, what about you?"
+  },
+  {
+    "id": 183,
+    "context": "yeah, you're probably better off using an exercise bike or something anyway because you can do it inside and it doesn't put so much stress on your joints",
+    "evidence": "",
+    "response": "Well, I think it's important to learn about human nature in all forms, don't you? It's how we evolve."
+  },
+  {
+    "id": 184,
+    "context": "I wish I could join a soccer team. I'm to busy filling prescriptions all the time.",
+    "evidence": "",
+    "response": "Well, I think it's important to learn about human nature in all forms, don't you? It's how we evolve."
+  },
+  {
+    "id": 185,
+    "context": "He's a good worker but not as reliable as I am. He is always calling in or not putting much effort into his work. I feel I should have gotten that position.",
+    "evidence": "",
+    "response": "Good for you. Is it truly your first time flying on a plane?"
+  },
+  {
+    "id": 186,
+    "context": "What do you mean children?",
+    "evidence": "",
+    "response": "Yeah. I know that feeling., although I had to buy my own."
+  },
+  {
+    "id": 187,
+    "context": "how would the principal feel about you going behind his back?",
+    "evidence": "",
+    "response": "Well I like tattoos and piercings, I am working on my next one right now."
+  },
+  {
+    "id": 188,
+    "context": "Yea, well keep it up, maybe one day you'll be on broadway.",
+    "evidence": "",
+    "response": "Yeah. I know that feeling., although I had to buy my own."
+  },
+  {
+    "id": 189,
+    "context": "i am studying to become a fashion designer in ny",
+    "evidence": "",
+    "response": "I like acting, I hope to be an actor, what about you?"
+  },
+  {
+    "id": 190,
+    "context": "Oh, I love lasagne. I make my own noodles as well as the sauce.",
+    "evidence": "",
+    "response": "I would imagine. I am sure they a great kids."
+  },
+  {
+    "id": 191,
+    "context": "I do but Dirty Harry is my all time favorite",
+    "evidence": "",
+    "response": "No I haven't, I don't watch movies very often. Im usually out at clubs people watching."
+  },
+  {
+    "id": 192,
+    "context": "Mainly the flyers that come in the mail but I do print some out on websites also. Just depends on how much time I have",
+    "evidence": "",
+    "response": "im saving up to buy a new camera to take pictures of people who lost their licenses actually"
+  },
+  {
+    "id": 193,
+    "context": "Yeah I'm planning to head out after taking shower. I smell bad ate lots of french fries I think.",
+    "evidence": "",
+    "response": "Yeah. I know that feeling., although I had to buy my own."
+  },
+  {
+    "id": 194,
+    "context": "My neighbors dog won't stop barking at me. Ugh!",
+    "evidence": "",
+    "response": "Thats the worst, is it a big dog or little dog?"
+  },
+  {
+    "id": 195,
+    "context": "No i have not heard about that.Have you ever done extreme extreme couponing?I think it is an effective way to save money.",
+    "evidence": "",
+    "response": "Yeah. I know that feeling., although I had to buy my own."
+  },
+  {
+    "id": 196,
+    "context": "california love is my absolute favorite song !",
+    "evidence": "",
+    "response": "Good for you. Is it truly your first time flying on a plane?"
+  },
+  {
+    "id": 197,
+    "context": "Yeah I'm planning to head out after taking shower. I smell bad ate lots of french fries I think.",
+    "evidence": "",
+    "response": "I did not know windex could be used on glasses"
+  },
+  {
+    "id": 198,
+    "context": "definitely. she had some robot surgery on her foot!",
+    "evidence": "",
+    "response": "After I am done with school I plan to have a family."
+  },
+  {
+    "id": 199,
+    "context": "yeah, i think i will!",
+    "evidence": "",
+    "response": "im saving up to buy a new camera to take pictures of people who lost their licenses actually"
+  },
+  {
+    "id": 200,
+    "context": "I have never been but I have heard the same. I love snow and the mountains.",
+    "evidence": "",
+    "response": "The vehicle was exactly what I wanted, a newer model sports car."
+  },
+  {
+    "id": 201,
+    "context": "I did not know windex could be used on glasses",
+    "evidence": "",
+    "response": "The vehicle was exactly what I wanted, a newer model sports car."
+  },
+  {
+    "id": 202,
+    "context": "i'm a garbage man, although i'm a woman. my boss drives the truck, but i'm more qualified, really.",
+    "evidence": "",
+    "response": "Well I like tattoos and piercings, I am working on my next one right now."
+  },
+  {
+    "id": 203,
+    "context": "Is that the animated movie?",
+    "evidence": "",
+    "response": "I did not know windex could be used on glasses"
+  },
+  {
+    "id": 204,
+    "context": "Aww, I'm sorry about your dog. What was your dog's name?",
+    "evidence": "",
+    "response": "I like acting, I hope to be an actor, what about you?"
+  },
+  {
+    "id": 205,
+    "context": "I used to live in a blue house. But it got destroyed by a tornado.",
+    "evidence": "",
+    "response": "Good for you. Is it truly your first time flying on a plane?"
+  },
+  {
+    "id": 206,
+    "context": "It takes time to learn that I why I read so much",
+    "evidence": "",
+    "response": "After I am done with school I plan to have a family."
+  },
+  {
+    "id": 207,
+    "context": "Fair enough. I wish you could catch shrimp the way you can catch crabs. I love shrimp. Especially in BBQ sauce.",
+    "evidence": "",
+    "response": "I did not know windex could be used on glasses"
+  },
+  {
+    "id": 208,
+    "context": "activity that combines shopping skills with couponing in an attempt to save as much money.",
+    "evidence": "",
+    "response": "Yeah. I know that feeling., although I had to buy my own."
+  },
+  {
+    "id": 209,
+    "context": "Soccer players provide my sister and I with plenty of entertainment, so thank you too!",
+    "evidence": "",
+    "response": "After I am done with school I plan to have a family."
+  },
+  {
+    "id": 210,
+    "context": "I don't watch a lot of tv but do watch some. I prefer listening to music.",
+    "evidence": "",
+    "response": "No I haven't, I don't watch movies very often. Im usually out at clubs people watching."
+  },
+  {
+    "id": 211,
+    "context": "monotone, but its based on this book I read growing up",
+    "evidence": "",
+    "response": "No I haven't, I don't watch movies very often. Im usually out at clubs people watching."
+  },
+  {
+    "id": 212,
+    "context": "No, it is not due to a animal rights stance. She simply has never liked animal protein at all.",
+    "evidence": "",
+    "response": "I did not know windex could be used on glasses"
+  },
+  {
+    "id": 213,
+    "context": "I have been happy married for 10 years.",
+    "evidence": "",
+    "response": "I would have been too! Do you always take it to work?"
+  },
+  {
+    "id": 214,
+    "context": "Mmm That sounds delicious right now.",
+    "evidence": "",
+    "response": "I did not know windex could be used on glasses"
+  },
+  {
+    "id": 215,
+    "context": "for sure. sometimes i get some old furniture too and take it apart",
+    "evidence": "",
+    "response": "Yeah. I know that feeling., although I had to buy my own."
+  },
+  {
+    "id": 216,
+    "context": "A lot of people come here for the beaches, they're always packed. The everglades is also an incredibly fun place that many people check out from around the world.",
+    "evidence": "",
+    "response": "Good for you. Is it truly your first time flying on a plane?"
+  },
+  {
+    "id": 217,
+    "context": "My favorite singer is Meatloaf, are you a fan of his?",
+    "evidence": "",
+    "response": "I would imagine. I am sure they a great kids."
+  },
+  {
+    "id": 218,
+    "context": "I would have been too! Do you always take it to work?",
+    "evidence": "",
+    "response": "Thats the worst, is it a big dog or little dog?"
+  },
+  {
+    "id": 219,
+    "context": "You have mice running around your house? Yikes! I think I'd rather have the barking dogs than that.",
+    "evidence": "",
+    "response": "Thats the worst, is it a big dog or little dog?"
+  },
+  {
+    "id": 220,
+    "context": "What do you do for a living?",
+    "evidence": "",
+    "response": "Thats the worst, is it a big dog or little dog?"
+  },
+  {
+    "id": 221,
+    "context": "i'm a garbage man, although i'm a woman. my boss drives the truck, but i'm more qualified, really.",
+    "evidence": "",
+    "response": "After I am done with school I plan to have a family."
+  },
+  {
+    "id": 222,
+    "context": "well now its so media there that you can watch even movie on the beach",
+    "evidence": "",
+    "response": "Good for you. Is it truly your first time flying on a plane?"
+  },
+  {
+    "id": 223,
+    "context": "i was living in a storage locker for 2 month",
+    "evidence": "",
+    "response": "Well I like tattoos and piercings, I am working on my next one right now."
+  },
+  {
+    "id": 224,
+    "context": "Beautiful type of dog. We had one growing up as a kid. Hard to keep him contained",
+    "evidence": "",
+    "response": "Yeah. I know that feeling., although I had to buy my own."
+  },
+  {
+    "id": 225,
+    "context": "yeah, i think i will!",
+    "evidence": "",
+    "response": "After I am done with school I plan to have a family."
+  },
+  {
+    "id": 226,
+    "context": "i made a little mistake . i should know better as a poet",
+    "evidence": "",
+    "response": "Well, I think it's important to learn about human nature in all forms, don't you? It's how we evolve."
+  },
+  {
+    "id": 227,
+    "context": "I am done looking for love. I keep getting rejected over and over again.",
+    "evidence": "",
+    "response": "Wow. That's amazing. I read where lasagne originated in Italy during the Middle Ages."
+  },
+  {
+    "id": 228,
+    "context": "I got really joyful when my dad got me my first vehicle. It was just a happy feeling",
+    "evidence": "",
+    "response": "Yeah. I know that feeling., although I had to buy my own."
+  },
+  {
+    "id": 229,
+    "context": "A little in Highschool, it was always a good time",
+    "evidence": "",
+    "response": "After I am done with school I plan to have a family."
+  },
+  {
+    "id": 230,
+    "context": "yes! everyday i need meat. there are some that refrain from consuming animal products, not only meat but also eggs, diary products and other animal derived substances",
+    "evidence": "",
+    "response": "The vehicle was exactly what I wanted, a newer model sports car."
+  },
+  {
+    "id": 231,
+    "context": "It takes time to learn that I why I read so much",
+    "evidence": "",
+    "response": "No I haven't, I don't watch movies very often. Im usually out at clubs people watching."
+  },
+  {
+    "id": 232,
+    "context": "I enjoy dance a lot as well, my daughter does tap dancing. What kind of dancing do you like most?",
+    "evidence": "",
+    "response": "Wow. That's amazing. I read where lasagne originated in Italy during the Middle Ages."
+  },
+  {
+    "id": 233,
+    "context": "yeah, you're probably better off using an exercise bike or something anyway because you can do it inside and it doesn't put so much stress on your joints",
+    "evidence": "",
+    "response": "I did not know windex could be used on glasses"
+  },
+  {
+    "id": 234,
+    "context": "Well, I think it's important to learn about human nature in all forms, don't you? It's how we evolve.",
+    "evidence": "",
+    "response": "I would imagine. I am sure they a great kids."
+  },
+  {
+    "id": 235,
+    "context": "No why would you be on my flight a couple weeks from now? They are from another planet, most likely Jupiter.",
+    "evidence": "",
+    "response": "Yeah. I know that feeling., although I had to buy my own."
+  },
+  {
+    "id": 236,
+    "context": "Oh ok! So more due to personal preference or health related then. Does she have any favorite vegetarian dishes?",
+    "evidence": "",
+    "response": "Wow. That's amazing. I read where lasagne originated in Italy during the Middle Ages."
+  },
+  {
+    "id": 237,
+    "context": "Ikea is really fun, it's like a maze.",
+    "evidence": "",
+    "response": "im saving up to buy a new camera to take pictures of people who lost their licenses actually"
+  },
+  {
+    "id": 238,
+    "context": "that's good exercise . do you ride every day ?",
+    "evidence": "",
+    "response": "After I am done with school I plan to have a family."
+  },
+  {
+    "id": 239,
+    "context": "Yeah. I know that feeling., although I had to buy my own.",
+    "evidence": "",
+    "response": "I did not know windex could be used on glasses"
+  },
+  {
+    "id": 240,
+    "context": "I did not know windex could be used on glasses",
+    "evidence": "",
+    "response": "Good for you. Is it truly your first time flying on a plane?"
+  },
+  {
+    "id": 241,
+    "context": "What do you mean children?",
+    "evidence": "",
+    "response": "I like acting, I hope to be an actor, what about you?"
+  },
+  {
+    "id": 242,
+    "context": "Oh ok! So more due to personal preference or health related then. Does she have any favorite vegetarian dishes?",
+    "evidence": "",
+    "response": "I did not know windex could be used on glasses"
+  },
+  {
+    "id": 243,
+    "context": "A little in Highschool, it was always a good time",
+    "evidence": "",
+    "response": "Yeah. I know that feeling., although I had to buy my own."
+  },
+  {
+    "id": 244,
+    "context": "My neighbors dog won't stop barking at me. Ugh!",
+    "evidence": "",
+    "response": "I did not know windex could be used on glasses"
+  },
+  {
+    "id": 245,
+    "context": "That's interesting. I like makeup a lot.",
+    "evidence": "",
+    "response": "No I haven't, I don't watch movies very often. Im usually out at clubs people watching."
+  },
+  {
+    "id": 246,
+    "context": "I would imagine. I am sure they a great kids.",
+    "evidence": "",
+    "response": "I would imagine. I am sure they a great kids."
+  },
+  {
+    "id": 247,
+    "context": "I love pasta",
+    "evidence": "",
+    "response": "Well I like tattoos and piercings, I am working on my next one right now."
+  },
+  {
+    "id": 248,
+    "context": "definitely. she had some robot surgery on her foot!",
+    "evidence": "",
+    "response": "Yeah. I know that feeling., although I had to buy my own."
+  },
+  {
+    "id": 249,
+    "context": "that's cool , are you married ? do you believe in love ? because i do not",
+    "evidence": "",
+    "response": "The vehicle was exactly what I wanted, a newer model sports car."
+  },
+  {
+    "id": 250,
+    "context": "Hopefully it is just a sprain. Might not need to receive medical attention.",
+    "evidence": "",
+    "response": "I would have been too! Do you always take it to work?"
+  },
+  {
+    "id": 251,
+    "context": "Beautiful type of dog. We had one growing up as a kid. Hard to keep him contained",
+    "evidence": "",
+    "response": "The vehicle was exactly what I wanted, a newer model sports car."
+  },
+  {
+    "id": 252,
+    "context": "that is good . i'm nursing a cold and vitamin c does nothing lol",
+    "evidence": "",
+    "response": "I would have been too! Do you always take it to work?"
+  },
+  {
+    "id": 253,
+    "context": "No I haven't, I don't watch movies very often. Im usually out at clubs people watching.",
+    "evidence": "",
+    "response": "No I haven't, I don't watch movies very often. Im usually out at clubs people watching."
+  },
+  {
+    "id": 254,
+    "context": "I love pasta",
+    "evidence": "",
+    "response": "Wow. That's amazing. I read where lasagne originated in Italy during the Middle Ages."
+  },
+  {
+    "id": 255,
+    "context": "No, I am too busy with my ten year old son.",
+    "evidence": "",
+    "response": "Well, I think it's important to learn about human nature in all forms, don't you? It's how we evolve."
+  },
+  {
+    "id": 256,
+    "context": "I took the train to work the other day and it was so crowded. I was feeling really claustrophobic.",
+    "evidence": "",
+    "response": "I did not know windex could be used on glasses"
+  },
+  {
+    "id": 257,
+    "context": "I have had a dog that had curly hair. It was a mixed poodle and it was red. Really active animal she was.",
+    "evidence": "",
+    "response": "Thats the worst, is it a big dog or little dog?"
+  },
+  {
+    "id": 258,
+    "context": "oh sorry about that . taking lots of fluids ?",
+    "evidence": "",
+    "response": "I like acting, I hope to be an actor, what about you?"
+  },
+  {
+    "id": 259,
+    "context": "i do feel like that from time to time",
+    "evidence": "",
+    "response": "After I am done with school I plan to have a family."
+  },
+  {
+    "id": 260,
+    "context": "i do feel like that from time to time",
+    "evidence": "",
+    "response": "I would have been too! Do you always take it to work?"
+  },
+  {
+    "id": 261,
+    "context": "No, it is not due to a animal rights stance. She simply has never liked animal protein at all.",
+    "evidence": "",
+    "response": "I would imagine. I am sure they a great kids."
+  },
+  {
+    "id": 262,
+    "context": "I don't watch a lot of tv but do watch some. I prefer listening to music.",
+    "evidence": "",
+    "response": "Yeah. I know that feeling., although I had to buy my own."
+  },
+  {
+    "id": 263,
+    "context": "Oh, yes, they can live very long, although they are a species of small fishes!",
+    "evidence": "",
+    "response": "Thats the worst, is it a big dog or little dog?"
+  },
+  {
+    "id": 264,
+    "context": "well now its so media there that you can watch even movie on the beach",
+    "evidence": "",
+    "response": "Wow. That's amazing. I read where lasagne originated in Italy during the Middle Ages."
+  },
+  {
+    "id": 265,
+    "context": "I am so sorry to hear that you are in the same boat as me. We really need insurance.",
+    "evidence": "",
+    "response": "Yeah. I know that feeling., although I had to buy my own."
+  },
+  {
+    "id": 266,
+    "context": "Ikea is really fun, it's like a maze.",
+    "evidence": "",
+    "response": "I would have been too! Do you always take it to work?"
+  },
+  {
+    "id": 267,
+    "context": "Have you given them names? If not, maybe we can come up with some.",
+    "evidence": "",
+    "response": "Thats the worst, is it a big dog or little dog?"
+  },
+  {
+    "id": 268,
+    "context": "Me neither, but that might be because I like to drink...a lot.",
+    "evidence": "",
+    "response": "Well, I think it's important to learn about human nature in all forms, don't you? It's how we evolve."
+  },
+  {
+    "id": 269,
+    "context": "dogs would for sure love a big truck full of garbage. i thik i'm the top 20 or so best garbage men in the area",
+    "evidence": "",
+    "response": "Thats the worst, is it a big dog or little dog?"
+  },
+  {
+    "id": 270,
+    "context": "Woah that sounds like it'd be awesome. Any particular reason why?",
+    "evidence": "",
+    "response": "I don't have a particular favorite style, but I've always thought tap was the odd one, even though you see it all the time on Broadway."
+  },
+  {
+    "id": 271,
+    "context": "Tap is pretty odd compared to the others. My daughter loves ballet.",
+    "evidence": "",
+    "response": "Well I like tattoos and piercings, I am working on my next one right now."
+  },
+  {
+    "id": 272,
+    "context": "Haha well, passion is passion, money or not. I write horror and mystery novels mostly. Do you enjoy reading?",
+    "evidence": "",
+    "response": "I don't have a particular favorite style, but I've always thought tap was the odd one, even though you see it all the time on Broadway."
+  },
+  {
+    "id": 273,
+    "context": "A Mustang GT, convertible",
+    "evidence": "",
+    "response": "I don't have a particular favorite style, but I've always thought tap was the odd one, even though you see it all the time on Broadway."
+  },
+  {
+    "id": 274,
+    "context": "i run a lot to stay healthy",
+    "evidence": "",
+    "response": "After I am done with school I plan to have a family."
+  },
+  {
+    "id": 275,
+    "context": "Same here, sometimes I play mario kart.",
+    "evidence": "",
+    "response": "No I haven't, I don't watch movies very often. Im usually out at clubs people watching."
+  },
+  {
+    "id": 276,
+    "context": "What kind of training do you do? weights?",
+    "evidence": "",
+    "response": "Good for you. Is it truly your first time flying on a plane?"
+  },
+  {
+    "id": 277,
+    "context": "I hope so, how old are your kids?",
+    "evidence": "",
+    "response": "No I haven't, I don't watch movies very often. Im usually out at clubs people watching."
+  },
+  {
+    "id": 278,
+    "context": "No i have not heard about that.Have you ever done extreme extreme couponing?I think it is an effective way to save money.",
+    "evidence": "",
+    "response": "im saving up to buy a new camera to take pictures of people who lost their licenses actually"
+  },
+  {
+    "id": 279,
+    "context": "Roommate just walked in on me while I was... trying to... \"feel good\" if you know what I mean. So awkward. My door doesn't have a lock, either. I told him to not come in, and he just kept coming in!",
+    "evidence": "",
+    "response": "I like acting, I hope to be an actor, what about you?"
+  },
+  {
+    "id": 280,
+    "context": "Ok well, I had a vision last night that aliens would attack my plane and we would crash.",
+    "evidence": "",
+    "response": "Good for you. Is it truly your first time flying on a plane?"
+  },
+  {
+    "id": 281,
+    "context": "Well My mate proposed to me yesterday, I am so happy",
+    "evidence": "",
+    "response": "No I haven't, I don't watch movies very often. Im usually out at clubs people watching."
+  },
+  {
+    "id": 282,
+    "context": "No, but someday.",
+    "evidence": "",
+    "response": "Well I like tattoos and piercings, I am working on my next one right now."
+  },
+  {
+    "id": 283,
+    "context": "I am trying to do professional photography.",
+    "evidence": "",
+    "response": "Good for you. Is it truly your first time flying on a plane?"
+  },
+  {
+    "id": 284,
+    "context": "I didn't sleep there lol. All of my things were there. I slept in a motel some nights",
+    "evidence": "",
+    "response": "Wow. That's amazing. I read where lasagne originated in Italy during the Middle Ages."
+  },
+  {
+    "id": 285,
+    "context": "oh ok . that makes more sense now .",
+    "evidence": "",
+    "response": "The vehicle was exactly what I wanted, a newer model sports car."
+  },
+  {
+    "id": 286,
+    "context": "Tap is pretty odd compared to the others. My daughter loves ballet.",
+    "evidence": "",
+    "response": "Wow. That's amazing. I read where lasagne originated in Italy during the Middle Ages."
+  },
+  {
+    "id": 287,
+    "context": "I understand but I really like to eat meat. Do you?",
+    "evidence": "",
+    "response": "Good for you. Is it truly your first time flying on a plane?"
+  },
+  {
+    "id": 288,
+    "context": "Does your dad like the movies?I try to go when I can. What's his favorie?",
+    "evidence": "",
+    "response": "I did not know windex could be used on glasses"
+  },
+  {
+    "id": 289,
+    "context": "Congratulations! How'd you do it?",
+    "evidence": "",
+    "response": "Yeah. I know that feeling., although I had to buy my own."
+  },
+  {
+    "id": 290,
+    "context": "I hope so, how old are your kids?",
+    "evidence": "",
+    "response": "I would imagine. I am sure they a great kids."
+  },
+  {
+    "id": 291,
+    "context": "That mix of dog breeds sounds cool. Was she tall like the greyhound or short like the poodle? You get all kinds of unique traits",
+    "evidence": "",
+    "response": "The vehicle was exactly what I wanted, a newer model sports car."
+  },
+  {
+    "id": 292,
+    "context": "oh ok . that makes more sense now .",
+    "evidence": "",
+    "response": "After I am done with school I plan to have a family."
+  },
+  {
+    "id": 293,
+    "context": "oh sorry about that . taking lots of fluids ?",
+    "evidence": "",
+    "response": "Good for you. Is it truly your first time flying on a plane?"
+  },
+  {
+    "id": 294,
+    "context": "yes me too! on a course there are holes to hit the ball in which is 4.25 inches in diameter.",
+    "evidence": "",
+    "response": "I like acting, I hope to be an actor, what about you?"
+  },
+  {
+    "id": 295,
+    "context": "She was ten when I started medical school, so that would make her sixteen now.",
+    "evidence": "",
+    "response": "Yeah. I know that feeling., although I had to buy my own."
+  },
+  {
+    "id": 296,
+    "context": "I recently got a $50 gift card that I'm really looking forward to using.",
+    "evidence": "",
+    "response": "I like acting, I hope to be an actor, what about you?"
+  },
+  {
+    "id": 297,
+    "context": "I do too. Wat do you like?",
+    "evidence": "",
+    "response": "No I haven't, I don't watch movies very often. Im usually out at clubs people watching."
+  },
+  {
+    "id": 298,
+    "context": "i am unsure . . what do you do ?",
+    "evidence": "",
+    "response": "Well, I think it's important to learn about human nature in all forms, don't you? It's how we evolve."
+  },
+  {
+    "id": 299,
+    "context": "Wow! thats amazing, what kind of songs do you sing?",
+    "evidence": "",
+    "response": "I would have been too! Do you always take it to work?"
+  }
+]

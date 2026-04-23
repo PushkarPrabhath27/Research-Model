@@ -1,0 +1,10 @@
+{
+  "validation_1_preference_accuracy": {
+    "human_accuracy": 97.0,
+    "synthetic_accuracy": 99.5,
+    "overall_accuracy": 98.66666666666667,
+    "human_avg_margin": 0.13499437808990478,
+    "synth_avg_margin": 0.5893334710597992,
+    "passed": true
+  }
+}

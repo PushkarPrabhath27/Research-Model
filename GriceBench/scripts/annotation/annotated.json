@@ -1,0 +1,1002 @@
+[
+  {
+    "id": "tier1_0",
+    "context": "[agent_1]: Hello My friend! Do you enjoy reading? [agent_2]: Hello! Yes I do. I am not a fast reader though. The world record for speed reading is held by Anne Jones with 4700 words per minute! [agent_1]: Thats amazing! I wonder what people would think of her in the 18th century! Dis you know there ",
+    "response_A": "[agent_1]: Hello My friend! Do you enjoy reading? [agent_2]: Hello! Yes I do. I am not a fast reader though. The world record for speed reading is hel",
+    "response_B": "[agent_1]: Hello My friend! Do you enjoy reading? [agent_2]: Hello! Yes I do. I am not a fast reader though. The world record for speed reading is hel",
+    "preference": "equal",
+    "reason": "",
+    "tier": 1,
+    "annotated": true
+  },
+  {
+    "id": "tier1_1",
+    "context": "[agent_2]: That's a hilarious pun! What type of genre of music do you enjoy? I personally don't listen to rap but some people refer to it as MCing, rhyming, and even spitting! I do imagine that the microphones those rappers use are drowned in spit, yuck! [agent_1]: I don't listen to rap really. I th",
+    "response_A": "[agent_2]: That's a hilarious pun! What type of genre of music do you enjoy? I personally don't listen to rap but some people refer to it as MCing, rh",
+    "response_B": "[agent_2]: That's a hilarious pun! What type of genre of music do you enjoy? I personally don't listen to rap but some people refer to it as MCing, rh",
+    "preference": "equal",
+    "reason": "",
+    "tier": 1,
+    "annotated": true
+  },
+  {
+    "id": "tier1_2",
+    "context": "[agent_1]: HA! I do not wear ties. My employer is lucky if I wear pants! Just kidding. I am lucky that I get to wear a uniform, khakis and a employer issued polo. I do not have to think about what I wear int he mornings. [agent_2]: That sounds quite comfortable. What kind of shoes do you wear with t",
+    "response_A": "[agent_1]: HA! I do not wear ties. My employer is lucky if I wear pants! Just kidding. I am lucky that I get to wear a uniform, khakis and a employer ",
+    "response_B": "[agent_1]: HA! I do not wear ties. My employer is lucky if I wear pants! Just kidding. I am lucky that I get to wear a uniform, khakis and a employer ",
+    "preference": "equal",
+    "reason": "",
+    "tier": 1,
+    "annotated": true
+  },
+  {
+    "id": "tier1_3",
+    "context": "[agent_2]: lol, you're funny. In my case I was the little brother who used to get taken advantage off. Let's just say \"I am no Troy Aikman\" Do you have preference for a football team. I love Dallas Cowboys - well I went to school in Texas! [agent_1]: Uh oh, Eagles fan here!  But my aunt loved the co",
+    "response_A": "[agent_1]: lol, you're funny. In my case I was the little brother who used to get taken advantage off. Let's just say \"I am no Troy Aikman\" Do you hav",
+    "response_B": "[agent_1]: lol, you're funny. In my case I was the little brother who used to get taken advantage off. Let's just say \"I am no Troy Aikman\" Do you hav",
+    "preference": "equal",
+    "reason": "",
+    "tier": 1,
+    "annotated": true
+  },
+  {
+    "id": "tier1_4",
+    "context": "[agent_2]: Yes it was actually the director of the movie, Brad Bird [agent_1]: Yes. Do you know who voiced Violet Parr in the first one? [agent_2]: It was that political commentator Sarah Vowell right?",
+    "response_A": "[agent_2]: I",
+    "response_B": "[Agent_2]: I",
+    "preference": "equal",
+    "reason": "",
+    "tier": 1,
+    "annotated": true
+  },
+  {
+    "id": "tier1_5",
+    "context": "[agent_2]: No. I haven't heard of it. And I always thought Michael Jackson was the creater of the Moonwalk... Wrong!!! It was atap dancer named Bill Bailey who performed it first...back in 1955!! [agent_1]: Wow... I didn't know that either... but You know what :) to me it's always be associated with",
+    "response_A": "[agent_",
+    "response_B": "[agent_",
+    "preference": "equal",
+    "reason": "",
+    "tier": 1,
+    "annotated": true
+  },
+  {
+    "id": "tier1_6",
+    "context": "[agent_1]: haha that is true, I used to date a ballet dancer, her toes were always messed up from the dancing, like it looks very pretty when you watch but you don't think about their sore-toe aftermath! [agent_2]: Speaking of ballet, Tupac danced ballet in high school and was in the Nutcracker. I w",
+    "response_A": "[agent",
+    "response_B": "[agent",
+    "preference": "equal",
+    "reason": "",
+    "tier": 1,
+    "annotated": true
+  },
+  {
+    "id": "tier1_7",
+    "context": "[agent_2]: That's a hilarious pun! What type of genre of music do you enjoy? I personally don't listen to rap but some people refer to it as MCing, rhyming, and even spitting! I do imagine that the microphones those rappers use are drowned in spit, yuck! [agent_1]: I don't listen to rap really. I th",
+    "response_A": "[agent_2]: That's a hilarious pun! What type of genre of music do you enjoy? I personally don't listen to rap but some people refer to it as MCing, rh",
+    "response_B": "[agent_1]: I'm not sure what that means. [agent_2]: That's a hilarious pun! What type of genre of music do you enjoy? I personally don't listen to rap",
+    "preference": "B_much",
+    "reason": "",
+    "tier": 1,
+    "annotated": true
+  },
+  {
+    "id": "tier1_9",
+    "context": "[agent_2]: I had always thought that dogs were completely color blind, but apparently they can see color, just not as many colors as humans can. Wish I had a dog to cuddle :( [agent_1]: Do you have other pets? I didn't know they can see color! My dog certainly acts like he can't distinguish colors b",
+    "response_A": "[12/16/2014, 4:27:47 AM] Remy: I've always thought that dogs are completely color blind, but apparently they can see color, just not as many colors as",
+    "response_B": "[Client thread/INFO]: [agent_2]: I had always thought that dogs were completely color blind, but apparently they can see color, just not as many color",
+    "preference": "equal",
+    "reason": "",
+    "tier": 1,
+    "annotated": true
+  },
+  {
+    "id": "tier1_10",
+    "context": "[agent_2]: Ah well, the only one I have watched in that list is shining. I think that watching horror films is a lazy way to lose calories! [agent_1]: yes, it is. it is better to get out an exercise. maybe watch a horror movie at the same time? [agent_2]: Yeah, just throw one of those bikes in front",
+    "response_A": "[00:46:06] [Server thread/INFO]: [Agent2]: Ah well, the only one I have watched in that list is shining. I think that watching horror films is a lazy ",
+    "response_B": "[client_2]: Yeah, the only one I have watched in that list is shining. I think that watching horror films is a lazy way to lose calories! [client_1]: ",
+    "preference": "B_much",
+    "reason": "",
+    "tier": 1,
+    "annotated": true
+  },
+  {
+    "id": "tier1_11",
+    "context": "[agent_1]: hi. i love watching sports on tv , my absolute favorite to watch is the World Cup",
+    "response_A": "[agent_1]: hi. i love watching sports on tv , my absolute favorite to watch is the World Cup\n\nResponse",
+    "response_B": "[agent_1]: hi. i like watching sports on tv , my absolute favorite to watch is",
+    "preference": "A_much",
+    "reason": "",
+    "tier": 1,
+    "annotated": true
+  },
+  {
+    "id": "tier1_12",
+    "context": "[agent_2]: Yes I watch them from time to time. I have seen the show House on TV with Hugh Laurie, I can't believe how much he makes per episode it's insane! [agent_1]: I used to love that show! It was worth him making 700,000 an episode, he made the show so good! [agent_2]: Yes I agree! Jim Carrey a",
+    "response_A": "[agent_1]: I watched House on TV with Hugh Laurie, I can't believe how much he makes per episode it's insane! [agent_2]: Yes I",
+    "response_B": "\"I have watched House on TV with Hugh Laurie, I can't believe how much he makes per episode it's insane!\"\n\nFrom: [email protected]\n\nDate: Wed, 15 Oct ",
+    "preference": "B_much",
+    "reason": "",
+    "tier": 1,
+    "annotated": true
+  },
+  {
+    "id": "tier1_13",
+    "context": "[agent_2]: Yes, but he was very worldly. He was also a member of the NAACP and he charged $1 for his autograph. All of that collected money was donated to charities. [agent_1]: Well that doesn't sound too bad. This is strange though Albert einstein wrote a quote in 1938 and placed it in a time capsu",
+    "response_A": "[agent_1]: Yes, but he was very worldly. He was also a member of the NAACP and he charged $1 for his autograph. All of that collected money was donate",
+    "response_B": "[agent_2]: Well, that's not true. He wrote that quote in 1938, but he was not a member of the NAACP. He was also a member of the NAACP and he charged ",
+    "preference": "B_slight",
+    "reason": "",
+    "tier": 1,
+    "annotated": true
+  },
+  {
+    "id": "tier1_14",
+    "context": "[agent_2]: Well it was distributed by Paramount Pictures and DreamWorks. I think DreamWorks is the company that made Shrek. [agent_1]: I think they are as well. I love DreamWorks films. [agent_2]: I think they are a very good company also. Their animation keeps me pretty entertained.",
+    "response_A": "I think they are very good companies. Their animation keeps me pretty entertained. [agent_2]: I think they are a very good company. They do a lot of t",
+    "response_B": "[agent_1]: I think so. They are a very good company. They are a very good company. They are a very good company. They are a very good company. They ar",
+    "preference": "A_much",
+    "reason": "",
+    "tier": 1,
+    "annotated": true
+  },
+  {
+    "id": "tier1_15",
+    "context": "[agent_2]: I think they might still use those radios in the White House. The WH still uses floppy disks. WTH? [agent_1]: That's crazy! The have solar panels, but are still using floppy disks? Funny! [agent_2]: Solar panels were put on there by Carter. Reagan took them off. I would love to see the ol",
+    "response_A": "[agent_1]: It's a joke. The president and his minions still use floppy disks. WTH? [agent_1]: That's crazy! The have solar panels, but are still using",
+    "response_B": "[agent_1]: I think they might still use those radios in the White House. The WH still uses floppy disks. WTH? [agent_1]: That's crazy! The have solar ",
+    "preference": "equal",
+    "reason": "",
+    "tier": 1,
+    "annotated": true
+  },
+  {
+    "id": "tier1_16",
+    "context": "[agent_2]: I did not know that many! I must have watched that many as a kid, I loved that show! [agent_1]: Interesting, what about South Park, were you a fan of that show?  [agent_2]: Love that show, I heard the simpsons crew sent them flowers for their family guy episodes, it was a bold move! Do yo",
+    "response_A": "[agent_1]: I was a fan of that show. I loved that show, I loved the show. I was a fan of South Park, I loved that show, I loved the show. I was a fan ",
+    "response_B": "[agent_2]: No, I never saw that one, I loved it. I'm a big fan of the show.\n\n[agent_2]: So, the episode \"Mister and Miss\" was called, \"Fruit Tree,\" wh",
+    "preference": "B_much",
+    "reason": "",
+    "tier": 1,
+    "annotated": true
+  },
+  {
+    "id": "tier1_17",
+    "context": "[agent_1]: Whats more interesting about Tupac was he lived in a rich area of the bay area marin!  [agent_2]: Yeah, thats cool. I love watching movies about dance and that is how I learned that Tupac was in ballet in high school. He was in the Nutcracker.  [agent_1]: Its so hard to imagine him in the",
+    "response_A": "[agent_2]: Well, Tupac was in a ballet class in high school. He was in the Nutcracker.  [agent_1]: And he danced in a ballet class in high school.  [a",
+    "response_B": "[Agent_1]: I'm sure he could have been in the Nutcracker too.  [agent_2]: And I'm sure Tupac could have been in the Nutcracker too.\n\n[spoiler=Tupac]\n\n",
+    "preference": "A_much",
+    "reason": "",
+    "tier": 1,
+    "annotated": true
+  },
+  {
+    "id": "tier1_18",
+    "context": "[agent_2]: Hello there, I have seen it, I thought it was good, how about you? [agent_1]: I have not seen it yet. I figure they invest a lot in the scripts and casting because a lot has to go into the animation. [agent_2]: Yeah it sure does, did you hear the director wanted only ex-pixar people worki",
+    "response_A": "[agent_2]: [agent_1]: I think that's a good thing. I'm sure they can do more work on the script, but it's not as good as the original. [agent_2]: What",
+    "response_B": "I think this is something that was really important to me. I'm not really sure about the reasons, but I think it was a really good idea. I think it's ",
+    "preference": "B_much",
+    "reason": "",
+    "tier": 1,
+    "annotated": true
+  },
+  {
+    "id": "tier1_19",
+    "context": "[agent_2]: That makes sense. The red coloring looks ominous. Plus the Romans liked war.  [agent_1]: The red color is due to the prevalence of iron oxide [agent_2]: I did not know that. I guess colonists on Mars will have lots of iron available for building things. Plus their voices will sound higher",
+    "response_A": "That makes sense. The red coloring looks ominous. Plus the Romans liked war.  [agent_1]: The red color is due to the prevalence of iron oxide [agent_2",
+    "response_B": "[Agent_2]: The red color is due to the prevalence of iron oxide.  [agent_1]: I did not know that. I guess colonists on Mars will have lots of iron ava",
+    "preference": "A_much",
+    "reason": "",
+    "tier": 1,
+    "annotated": true
+  },
+  {
+    "id": "tier1_20",
+    "context": "[agent_2]: Can't say that I have. Do you watch SNL? Weekend update is their longest running skit appearing on their first episode [agent_1]: Really? I think thats the best part of the show!  [agent_2]: I'm a big simpsons fan, apparently Homer has had 188 jobs throughout the first 400 episodes, that'",
+    "response_A": "\"I'm not trying to be a jerk. I am a fan of the show. I'm a fan of the characters, the dialogue and the characters. I think the show is about a great ",
+    "response_B": "I don't watch SNL, I watch the show as much as I would like. I am a huge Simpsons fan and I want to be part of the history of this show and also of th",
+    "preference": "B_much",
+    "reason": "",
+    "tier": 1,
+    "annotated": true
+  },
+  {
+    "id": "tier1_21",
+    "context": "[agent_2]: I guess its a matter of perpective, do you like to drink coffee? [agent_1]: Nope, I hate it! I'm more of a tea person. Did you ever used to play Nintendo? I find it crazy that is was discontinued in 2003! I feel so old! [agent_2]: I  had a Nintendo system yeah, it only had 54 colors and a",
+    "response_A": "[agent_1]: I guess I like to drink coffee. [agent_2]: I am. I'm not sure if you're an old person or not. [agent_1]: I think I am. [agent_2]: I have a ",
+    "response_B": "I am a tea person. I'm more of a tea person. I'm more of a tea person. I'm more of a tea person. I don't like to drink coffee. I like to drink coffee.",
+    "preference": "B_much",
+    "reason": "",
+    "tier": 1,
+    "annotated": true
+  },
+  {
+    "id": "tier1_22",
+    "context": "[agent_2]: That is hard to wrap my head around. I can't fathom the size of that. There are many space facts that blow my mind. Like space is ever expanding but I don't understand into what. What is in the space beyond currently? Nothing?  [agent_1]: I don't either.  That is beyond my brain power.  I",
+    "response_A": "\"I can't fathom that. I can't fathom the size of that. There are many space facts that blow my mind. Like space is ever expanding but I don't understa",
+    "response_B": "[agent_1]: It is beyond my understanding.  I\n\nReply: [agent_1]: That is beyond my mind.  I\n\nReply: [agent_2]: There are no real space facts. \n\nReply: ",
+    "preference": "A_much",
+    "reason": "",
+    "tier": 1,
+    "annotated": true
+  },
+  {
+    "id": "tier1_23",
+    "context": "[agent_1]: That sound like quite a fun day! Do you think that artists should go into debt to go to college?  [agent_2]: I don't know too many people who didn't go into debt going to college. Having a full scholarship to one school may pay off better than taking out debt to a school like Cornell as J",
+    "response_A": "[agent_2]: I don't think so. I know that some of the kids who went into debt don't necessarily get into it because they don't have enough money to pay",
+    "response_B": "[2]\n\nI don't think it would be fair to say that artists should go into debt to go to college.  [2] It's hard for me to think of an artist who did not ",
+    "preference": "B_much",
+    "reason": "",
+    "tier": 1,
+    "annotated": true
+  },
+  {
+    "id": "tier1_24",
+    "context": "[agent_1]: Hi, do you like government? [agent_2]: I do like it, i believe it provides some control.  ",
+    "response_A": "[60]: [agent_1]: Hi, I like government. I do like it. I think it's a good tool. I believe it's a good tool. I think it's a good tool. I think it's a g",
+    "response_B": "[1044:33:33] [Client thread/INFO]: [Dense Nectar]: [agent_1]: Hi, I love the idea of government. I like it because it is a kind of government and it's",
+    "preference": "B_much",
+    "reason": "",
+    "tier": 1,
+    "annotated": true
+  },
+  {
+    "id": "tier1_25",
+    "context": "[agent_1]: oh wow that is a good idea! That would have been a lot of fun, I wonder who else has used that patent, I don't remember seeing other artists doing the lean, do you? [agent_2]: No, but maybe they couldn't afford it if they were ballet dancers considering they have to buy 4 pairs of pointe ",
+    "response_A": "[agent_1]: Yes, but I don't think it would be a good idea to do that. I am an artist who is looking for something that is unique and unique to me. I a",
+    "response_B": "[agent_1]: Oh wow that is a good idea! That would have been a lot of fun, I wonder who else has used that patent, I don't remember seeing other artist",
+    "preference": "B_much",
+    "reason": "",
+    "tier": 1,
+    "annotated": true
+  },
+  {
+    "id": "tier1_26",
+    "context": "[agent_2]: I did not, I wonder why he did that? Seems unnecessary [agent_1]: He was a staunch conservationist. I wonder if he would have allowed fake trees? I suppose we will never know. I think he would have been happy with what George W. Bush did! [agent_2]: What did bush do? ",
+    "response_A": "<referrer_id>\n\n<agent_2> That's an interesting question. I'm not sure what he did. I mean, he was not a conservationist. I was not a fan of fake trees",
+    "response_B": "\"I guess I should have known better\"\n\nA: \"Oh my god, that's so cool! I mean, I'm not sure he even knew what he was talking about.\"\n\nB: \"Oh no, but he ",
+    "preference": "A_much",
+    "reason": "",
+    "tier": 1,
+    "annotated": true
+  },
+  {
+    "id": "tier1_27",
+    "context": "[agent_1]: We definitely need gun control.  The mass shootings like in Thousand Oaks are out of control. [agent_2]: Ban assault rifles if you must, but don't touch my bazooka. That's my mode. In fact, I wrote a country song to that effect.",
+    "response_A": "\"I don't think it's a problem. It's a problem in the sense that I don't want to have to deal with it. I just want to be able to carry my firearm, and ",
+    "response_B": "[1]: I don't want to have to think about that. I'm going to just give you a few simple guidelines.\n\n2. It's okay to have guns.\n\n3. It's okay to have g",
+    "preference": "A_slight",
+    "reason": "",
+    "tier": 1,
+    "annotated": true
+  },
+  {
+    "id": "tier1_28",
+    "context": "[agent_2]: That is kind of screwy, but I guess the market demand for good coaches sets the salaries high. Our priorities have been set! [agent_1]: They are definitely the most important in the entire state for sure! LOL, what are your thoughts on the basketball court in the Supreme Court House? [age",
+    "response_A": "[1]\n\n\"The court is a great place for kids to learn, to go to and to play. I'm a big fan of the court. It's a great place for kids to learn, to go to a",
+    "response_B": "[age] I think they are pretty good, but they are just not very good. [age] The court is not a great place for a lot of reasons, but the court is a gre",
+    "preference": "B_slight",
+    "reason": "",
+    "tier": 1,
+    "annotated": true
+  },
+  {
+    "id": "tier1_29",
+    "context": "[agent_2]: No but maybe I'll check it out on Fifth Avenue next time I'm in NYC [agent_1]: I'm just wondering if it's worth going to. Probably is. The NBA TV studios is not too far away too but I think it's on the jersey side. [agent_2]: I'd really like to go check out a football game, out of the 32 ",
+    "response_A": "[Agent_2]: I'm not sure, but I think you're right.\n\n[agent_1]: I'll check it out. I'll also check out the NBA TV studios.\n\n[agent_2]: So, what's the d",
+    "response_B": "[agent_1]: No, but maybe I'll check it out on Fifth Avenue next time I'm in NYC [agent_2]: I'm just wondering if it's worth going to. Probably is. The",
+    "preference": "B_much",
+    "reason": "",
+    "tier": 1,
+    "annotated": true
+  },
+  {
+    "id": "tier1_30",
+    "context": "[agent_1]: Hello!  It's a rare sunny day here it seems.  Amazing what a little sun can do and how reliant we are for it.",
+    "response_A": "Hello, I'm a bot. \n\nStatus: Offline\n\nStatus: Offline\n\nStatus: Offline\n\nStatus: Offline\n\nStatus: Offline\n\nStatus: Offline\n\nStatus: Offline\n\nStatus: Off",
+    "response_B": "Hello, I'm a young lady from the countryside. \n\n\"I am a young lady from the countryside.  \"I am a young lady from the countryside.  \"I am a young lady",
+    "preference": "B_slight",
+    "reason": "",
+    "tier": 1,
+    "annotated": true
+  },
+  {
+    "id": "tier1_31",
+    "context": "[agent_1]: Hello, do you like cars? [agent_2]: I do not know much about cars but I do know that one of the first cars available to the masses was the Model T Ford in 1908.",
+    "response_A": "[agent_2]: I am not sure if it is the car that you like or the car that you don't like. I do know that the",
+    "response_B": "[agent_1]: I am not interested in cars but I do know that one of the first cars available to the masses",
+    "preference": "B_much",
+    "reason": "",
+    "tier": 1,
+    "annotated": true
+  },
+  {
+    "id": "tier1_32",
+    "context": "[agent_2]: Great! I was just doing a little shopping online. Browsing the Amazon internet jungle... You? [agent_1]: Amazon is trying to take over the world.  [agent_2]: It amazes me that the company is only 25 years old and is already valued as the most valuable retailer in the US. Ahead of Walmart!",
+    "response_A": "[agent_1]: It is a bit of a stretch to say that Amazon is not going to take over the world.  [agent_2]: The company is already in the US and has been ",
+    "response_B": "[Agent_2]: We do not have a lot of experience with Amazon.  [agent_1]: We have a long history of investing in companies that are already successful, a",
+    "preference": "A_much",
+    "reason": "",
+    "tier": 1,
+    "annotated": true
+  },
+  {
+    "id": "tier1_33",
+    "context": "[agent_2]: Yes, I do too. Speaking of the government, isn't  it interesting J.P Morgan bailed out the US in 1895! [agent_1]: I believe it! That man had so much money! The government has come a long way! I wish our country donated 1 billion dollars to help the amazon rainforest like Norway did. [agen",
+    "response_A": "[–] from [deleted] at 11:16 AM\n\nI believe we should all get along. I just want to point out that I'm not saying that the US government is a bad person",
+    "response_B": "I don't want to get into the weeds. The whole point of the auction is to get people thinking about the value of the property. I'm not going to be aski",
+    "preference": "equal",
+    "reason": "",
+    "tier": 1,
+    "annotated": true
+  },
+  {
+    "id": "tier1_34",
+    "context": "[agent_2]: That's okay. As I said I really want a Tesla, but for now I've got a cadillac. Cadillac is named after the founder of detroit. [agent_1]: Nice, it was nice to chat to you about cars, though being female I adore cars lol [agent_2]: talk to you later.",
+    "response_A": "<> \"I love cars. I love the car. I like the car. But I'm not a car guy. I like the car. I'm not a car guy. I like the car. I like the car. I'm not a c",
+    "response_B": "[agent_1]: What's your favorite car? [agent_2]: I'm a realist, I like a lot of things. [agent_1]: I'm not that big of a car, but I like a lot of thing",
+    "preference": "B_slight",
+    "reason": "",
+    "tier": 1,
+    "annotated": true
+  },
+  {
+    "id": "tier1_35",
+    "context": "[agent_1]: That is very true. DO you watch any shows on TV? [agent_2]: I watch a few, mainly reality competitions and cooking shows like Top Chef, and a few sci-fi or fantasy ones. What about you? [agent_1]: Nice, I like watching shows like the Simpsons, they are very funny",
+    "response_A": "[agent_1]: Yes, I do. I watch a lot of shows. But I don't watch the news. [agent_2]: Yes, I watch a lot of television, I like to watch shows like The ",
+    "response_B": "[5]\n\nDo you watch some shows on TV?\n\nAnswer: [1]\n\nI am a fan of the shows that I like\n\nDo you watch TV shows?\n\nAnswer: [1]\n\nI watch a few, mainly real",
+    "preference": "A_slight",
+    "reason": "",
+    "tier": 1,
+    "annotated": true
+  },
+  {
+    "id": "tier1_36",
+    "context": "[agent_2]: Interesting! And Norwegian government cares about land other than its own, they donated one billion to help save the Amazon rainforest. [agent_1]: That's better than the US Government. They passed a law in 2006 where government employees couldn't be prosecuted for violating the geneva con",
+    "response_A": "The state of Hawaii does not care about the Amazon rainforest and doesn't care about the natural resources it has to protect them. It's not just that ",
+    "response_B": "\"I'm aware of the fact that this is a private company which is trying to protect the Amazon rainforest. But I'm not aware of the fact that this compan",
+    "preference": "B_slight",
+    "reason": "",
+    "tier": 1,
+    "annotated": true
+  },
+  {
+    "id": "tier1_37",
+    "context": "[agent_2]: I did not know that many! I must have watched that many as a kid, I loved that show! [agent_1]: Interesting, what about South Park, were you a fan of that show?  [agent_2]: Love that show, I heard the simpsons crew sent them flowers for their family guy episodes, it was a bold move! Do yo",
+    "response_A": "[agent_1]: I was a fan of that show. I loved that show, I loved the show. I was a fan of South Park, I loved that show, I loved the show. I was a fan ",
+    "response_B": "[1]\n\nAgent 1: I have heard a lot of people say they like South Park. I have been a fan of the show for years and years, I have watched a lot of South ",
+    "preference": "B_much",
+    "reason": "",
+    "tier": 1,
+    "annotated": true
+  },
+  {
+    "id": "tier1_38",
+    "context": "[agent_2]: Yes they had three kids together. That's a good question maybe they are related haha. Did you know that back in Shakespeare's time people had a different era accent? That's what makes some of his Rhymes work and that they don't work now because you don't use the same accent [agent_1]: I  ",
+    "response_A": "[agent_1]: [agent_2]: I don't think so. I don't think that it's a coincidence that I'm the one who is the one who is the one who says it. I think that",
+    "response_B": "I don't know. The accent is an error. It's not an error because the spelling is wrong. It's an error because the spelling is wrong. I don't know. The ",
+    "preference": "B_much",
+    "reason": "",
+    "tier": 1,
+    "annotated": true
+  },
+  {
+    "id": "tier1_39",
+    "context": "[agent_2]: Ahh that's interesting, regardless I think reading lists are important. Although maybe the military should use \"reading bicycles\", they used them in an elementary school and test scores greatly improved. [agent_1]: I remember how angry I used to get at the idea of summer reading lists. I ",
+    "response_A": "[agent_1]: I'm not sure how I feel about this idea. I think they should make the list of books you don't read to be read in school. The list is not me",
+    "response_B": "[admin]: yes, I understand. But I think it would be good to have a list of the best books of the year. [agent_2]: I guess I would prefer a list of boo",
+    "preference": "B_much",
+    "reason": "",
+    "tier": 1,
+    "annotated": true
+  },
+  {
+    "id": "tier1_40",
+    "context": "[agent_2]: I have a 4 year old and 7 month old golden. They require a lot of attention but its totally worth it. Thankfully I am not allergic, but I do sometimes despise the hair lol. I have yet to have children. [agent_1]: HA! I remember my golden's hair floating by like tubleweed in the old south.",
+    "response_A": "[agent_1]: I have a golden. I have never had it before but I'm sure that it is in the same family as my golden. [agent_2]: HA! I remember my golden's ",
+    "response_B": "Hi Agent, I'm a new agent. It has been a while since I have tried to get a new one. I'm currently in the process of changing my name to Agent. I need ",
+    "preference": "A_slight",
+    "reason": "",
+    "tier": 1,
+    "annotated": true
+  },
+  {
+    "id": "tier1_41",
+    "context": "[agent_2]: Well, I don't think Trump was elected, because he's an intellectual.  I'm sure in his mind, he didn't really think anything of that.  He knows Jared as Ivanka's husband and the father of his grandkids, so he must be an ok guy? [agent_1]: This whole trump investigation has jaded my perspec",
+    "response_A": "[agent_1]: So I guess he's a little more honest and he's not really a big fan of the fact that he was elected? [agent_1]: I guess he's a little more h",
+    "response_B": "[agent_1]: I think Trump was elected, because he's an intellectual.  I'm sure in his mind, he didn't really think anything of that.  I'm sure in his m",
+    "preference": "A_slight",
+    "reason": "",
+    "tier": 1,
+    "annotated": true
+  },
+  {
+    "id": "tier1_42",
+    "context": "[agent_1]: It has remained relatively unchanged since the Persians tweaked the game a little bit [agent_2]: It has ventured through a myriad of different cultures. That is amazing. [agent_1]: You would think the President of World Chess would understand the history of the game a bit more rather than",
+    "response_A": "I believe you're right. The game is still a little bit of a mystery, and I have to say that I am very happy that you are able to tell me more about th",
+    "response_B": "[1]: Well, I think that is something we need to think about. [2]: I don't think we have a lot of time. I think it would be nice if you could ask the p",
+    "preference": "A_much",
+    "reason": "",
+    "tier": 1,
+    "annotated": true
+  },
+  {
+    "id": "tier1_43",
+    "context": "[agent_1]: It's about hate and not wanting to accept election results.  The article goes on claiming that Trump has failed to secure the border without naming why it's failing resistance from Dem's and certain GOPmembers.  I think they care more about money and their ability to hold office than they",
+    "response_A": "[agent_1]: It's about hate and not wanting to accept election results.  The article goes on claiming that Trump has failed to secure the border withou",
+    "response_B": "The article goes on to argue that Trump's supporters are not afraid of Trump:\n\n\"We have seen his supporters come up and say things like \"Trump was a g",
+    "preference": "A_slight",
+    "reason": "",
+    "tier": 1,
+    "annotated": true
+  },
+  {
+    "id": "tier1_44",
+    "context": "[agent_1]: Thats a lot of them, he died in Statford, three years after he retired [agent_2]: That's sad. He also married a girl named Anne Hathaway. It's funny that that is a current celebrity actress haha [agent_1]: I guess she was named after Shakespeare's wife, do you know if he had children? he ",
+    "response_A": "[agent_1]: No, he was just a regular guy, he was a regular guy. He was just a regular guy. He was just a regular guy. [agent_2]: No, he was just a reg",
+    "response_B": "[agent_1]: Yeah.\n\n[agent_2]: That's a great quote, but he was a bit of a freak in the early days of the show. He was a kind of a recluse. He was a ver",
+    "preference": "equal",
+    "reason": "",
+    "tier": 1,
+    "annotated": true
+  },
+  {
+    "id": "tier1_45",
+    "context": "[agent_2]: I did, I used to play Punch Out on it all the time. What about you?  [agent_1]: Haha I did too.  I remember when the original Nintendo came out.  We all thought it was the best thing.  It could only display 54 colors.  Now that's nothing compared to the games they have now. lol [agent_2]:",
+    "response_A": "I think I remember a few times when the original Nintendo was in production.  I was just working on a game with the original.  It was on the back burn",
+    "response_B": "I know, I can't remember the first time I ever played Punch Out 2. \n\nYou know, I was on a Nintendo DS and I remember saying, \"That's a bad thing.  You",
+    "preference": "B_much",
+    "reason": "",
+    "tier": 1,
+    "annotated": true
+  },
+  {
+    "id": "tier1_46",
+    "context": "[agent_1]: Are you a fan of superheroes? I am and wish I could follow all 300 registered superheroes in the US. Ha! [agent_2]: I am a fan and didnt know there were so many heroes only on the US!! Thats a lot of them, do you have a favorite superheroe? [agent_1]: Honestly, I like them all but if I ha",
+    "response_A": "[agent_1]: I am a fan of superheroes and wish I could follow all 300 registered superheroes in the US. Ha! [agent_2]: I am a fan and didnt know there ",
+    "response_B": "[agent_1]: I like them all. I can't stand all the other ones, but I love the Marvels and the DCs. I like the DCs too much for the US. [agent_2]: I lik",
+    "preference": "B_slight",
+    "reason": "",
+    "tier": 1,
+    "annotated": true
+  },
+  {
+    "id": "tier1_47",
+    "context": "[agent_2]: 100 women. [agent_1]: have you heard of the candy desk tradition in the us senate? [agent_2]: Yeah.",
+    "response_A": "[agent_1]: [agent_2]: [agent_2]: [agent_2]: [agent_2]: [agent_2]: [agent_2]: [agent_2]: [agent_2]: [agent_2]: [agent_2]: [agent_2]: [agent_2]: [agent_",
+    "response_B": "Cookie: [agent_2]: ^^^\n\nThe following is from the original post.\n\nCookie: [agent_1]: ^^^\n\nThe following is from the original post.\n\nCookie: [agent_1]:",
+    "preference": "equal",
+    "reason": "",
+    "tier": 1,
+    "annotated": true
+  },
+  {
+    "id": "tier1_48",
+    "context": "[agent_1]: he is sorely missed. he was a genius and made people laugh. it is a tragedy what happened to him. [agent_2]: It is a real tragedy depression can really play a trick on your mind, he was the actor who started the trend of voices in animated films so he really left a legacy behind [agent_1]",
+    "response_A": "\"You are right about that. The actor who started the trend of voices in animated films was a genius.\"\n\n[agent_1]: Well, no. [agent_2]: He was a genius",
+    "response_B": "If you don't like my character then you should not watch this video. I am the one who started the trend of voice in animated films so I am very sad th",
+    "preference": "B_slight",
+    "reason": "",
+    "tier": 1,
+    "annotated": true
+  },
+  {
+    "id": "tier1_49",
+    "context": "[agent_2]: I didn't know that, I will have to check it out. I mean there are over 540 million monthly visitors....they must be doing something right! [agent_1]: Yup the numbers speak for themselves. the first user in there was kn0thing and it talked about the downing street memo [agent_2]: Very inte",
+    "response_A": "From: \"Anna T. Rees-Mogg\" <rees-mogg@mail.gmail.com> Date: Sat, 17 Apr 2014 23:38:43 -0500 To: \"Anna T. Rees-Mogg\" <rees-mogg@mail.gmail.com> Subject:",
+    "response_B": "[100] From: \"bob_mccarthy@gmail.com\" <bob_mccarthy@gmail.com> To: \"bob_mccarthy@gmail.com\" <bob_mccarthy@gmail.com> Date: Sun, 19 Oct 2014 17:20:39 -0",
+    "preference": "equal",
+    "reason": "",
+    "tier": 1,
+    "annotated": true
+  },
+  {
+    "id": "tier1_50",
+    "context": "[agent_1]: I don't know if it was a widespread panic, I had heard there was a moral panic but I don't know how large it was. I mean, I could have been like 100 people getting together to complain loudly and it made it into the history books, you know. [agent_2]: This is true. It was a moral outcry. ",
+    "response_A": "I think it's a little surprising that they don't say it. They say it's a moral outrage, but I think it's a little surprising that they don't say it.",
+    "response_B": "It was a moral outrage. \n\nConclusion\n\nI think this is a very interesting discussion, and I think it's important to remember that there is no simple an",
+    "preference": "B_slight",
+    "reason": "",
+    "tier": 1,
+    "annotated": true
+  },
+  {
+    "id": "tier1_51",
+    "context": "[agent_1]: Must have paid him a good chuck of change maybe? lol  Did you ever watch that \"70s Show\"? [agent_2]: Yeah, he must have been hard up for money?  No, I never watched that show.  Were you a fan? [agent_1]: I thought it was funny.  They remade it verbatim in the UK and called it \"Days like T",
+    "response_A": "I can't believe you asked me that.\n\n[agent_2]: I was just curious. Did you watch any of the shows that had a similar format? [agent_1]: I don't rememb",
+    "response_B": "[client_1]: I thought it was funny.  Did you ever watch that \"70s Show\"?  No, I never watched that show.  Were you a fan?  I thought it was funny.  Di",
+    "preference": "B_much",
+    "reason": "",
+    "tier": 1,
+    "annotated": true
+  },
+  {
+    "id": "tier1_52",
+    "context": "[agent_2]: That is kind of screwy, but I guess the market demand for good coaches sets the salaries high. Our priorities have been set! [agent_1]: They are definitely the most important in the entire state for sure! LOL, what are your thoughts on the basketball court in the Supreme Court House? [age",
+    "response_A": "[1]\n\n\"The court is a great place for kids to learn, to go to and to play. I'm a big fan of the court. It's a great place for kids to learn, to go to a",
+    "response_B": "The NBA has been in a transition from being a team of two to a team of three since the first season of the NBA. This is a great change for the NBA, es",
+    "preference": "A_much",
+    "reason": "",
+    "tier": 1,
+    "annotated": true
+  },
+  {
+    "id": "tier1_53",
+    "context": "[agent_1]: Hello - how are you?",
+    "response_A": "{ \"name\": \"Agent\", \"email\": \"jdm@example.com\", \"password\": \"password\" }\n\nYou can view the full list of available agents in the Agent.js file.\n\nExample",
+    "response_B": "[client]: Hello\n\nThe server responds with:\n\n{ \"name\": \"Agent\", \"type\": \"agent\", \"description\": \"Agent\", \"description\": \"Agent\" }\n\nNow, we can get an i",
+    "preference": "equal",
+    "reason": "",
+    "tier": 1,
+    "annotated": true
+  },
+  {
+    "id": "tier1_54",
+    "context": "[agent_2]: That makes sense. The red coloring looks ominous. Plus the Romans liked war.  [agent_1]: The red color is due to the prevalence of iron oxide [agent_2]: I did not know that. I guess colonists on Mars will have lots of iron available for building things. Plus their voices will sound higher",
+    "response_A": "[Agent_1]: The red color is due to the prevalence of iron oxide.  [agent_2]: I did not",
+    "response_B": "[Agent_2]: The red color is due to the prevalence of iron oxide.  [agent_1]: I did not know that. I guess colonists on Mars will have lots of iron ava",
+    "preference": "A_slight",
+    "reason": "",
+    "tier": 1,
+    "annotated": true
+  },
+  {
+    "id": "tier1_55",
+    "context": "[agent_1]: But at the same time I think it's good they receive recognition! Like Benjarvus Green-Ellis went his career without fumbling a ball, he should have gotten an award for it. [agent_2]: It's hilarious that the top bowlers of the 60's made more than football players. [agent_1]: I wonder why t",
+    "response_A": "[agent_1]: I don't think it's good that they get recognition, but I think it's good that they're recognized. [agent_2]: I think it's good that they ge",
+    "response_B": "[Agent 1]: But at the same time I think it's good they receive recognition! Like Benjarvus Green-Ellis went his career without fumbling a ball, he sho",
+    "preference": "B_much",
+    "reason": "",
+    "tier": 1,
+    "annotated": true
+  },
+  {
+    "id": "tier1_56",
+    "context": "[agent_2]: even ikea is illegal! [agent_1]: Wow! Makes you wonder what isn't illegal. I wonder if Braniac is illegal? You know, that word was actually coined by Superman writers? It was named after the super villain Braniac. [agent_2]: i did not know that, and dracula was part of the series at one p",
+    "response_A": "On November 26, 2013, at 12:16:46 PM, Braniac wrote: > >> I think this is a good point. I think it would be more interesting to know what is illegal i",
+    "response_B": "<agent_1>: I think it would be hard to make it a full show if you didn't do it. I don't know if that was part of the idea or if it was just something ",
+    "preference": "B_slight",
+    "reason": "",
+    "tier": 1,
+    "annotated": true
+  },
+  {
+    "id": "tier1_57",
+    "context": "[agent_2]: Probably so, still it's horrible. Did you know there hasn't been a US President who wasn't a republican or democrat since 1853? I kinda wish we could follow suit with that.  [agent_1]: I wish more people voted third party. I think it would introduce some new much needed opinions into the ",
+    "response_A": "[Agent_2]: Well, I think it's important to try to be a little more inclusive.  [agent_1]: I think that's a very important issue for a lot of people.  ",
+    "response_B": "[agent_2]: Yeah. I thought it would be a great idea to be able to ask people to vote third party. And I think it would be a great idea to have a natio",
+    "preference": "B_slight",
+    "reason": "",
+    "tier": 1,
+    "annotated": true
+  },
+  {
+    "id": "tier1_58",
+    "context": "[agent_1]: Ahh.  I missed that one.  I guess I dont listen to as much radio as I used to. [agent_2]: Radio waves are received by a tuning antenna.  A radio converts  into a usable form.  Right now, the radio waves are all around us. [agent_1]: They are, I heard that you can even hear storms on Jupit",
+    "response_A": "{ \"data\": \"2.8.0.0\", \"status\": \"OK\", \"type\": \"radio\", \"channel\": \"UCE\", \"name\": \"Radio\", \"description\": \"Radio waves are received by a tuning antenna.",
+    "response_B": "{ \"type\": \"radio\", \"response\": { \"type\": \"radio\", \"response\": { \"type\": \"radio\", \"response\": \"{{#}}}\", \"error\": \"{{#}}}\", \"status\": \"success\", \"respon",
+    "preference": "equal",
+    "reason": "",
+    "tier": 1,
+    "annotated": true
+  },
+  {
+    "id": "tier1_59",
+    "context": "[agent_1]: I have and I am surprised to learn that Bil Murray thinks that it i the funniest movie of the modern age [agent_2]: Me too actually, it is good and all but I do not see it as such, there are other funnier movies out there [agent_1]: Agreed. Did you know green lantern was supposed to be a ",
+    "response_A": "[2]\n\nAgent_1: Yes, but it was not the funniest movie ever, and it was not the funniest movie ever.\n\nAgent_2: It was a movie that was funnier than most",
+    "response_B": "[agent_1]: Agreed, I see that that's a funny idea. I thought it was just for fun. [agent_2]: Agreed, I see that this movie is not funny. That was my t",
+    "preference": "B_slight",
+    "reason": "",
+    "tier": 1,
+    "annotated": true
+  },
+  {
+    "id": "tier1_60",
+    "context": "[agent_2]: Sounds like a fun time. Are you planning your trip now on what to see, like the Great Wall of China? [agent_1]: haven't done too much exact planning yet but yes I'd see that, I really want to just see how life is over there, it's going to potentially be a bit of a culture shock haha [agen",
+    "response_A": "I am not sure why you were so worried about the Great Wall of China, but I am sure that you are planning on going back to the U.S. for a short time to",
+    "response_B": "'I have no idea what you want to do with your life right now'\n\nAnagen: Well, I'm sorry but I'm not going to go on any further. I don't want to go on a",
+    "preference": "A_much",
+    "reason": "",
+    "tier": 1,
+    "annotated": true
+  },
+  {
+    "id": "tier1_61",
+    "context": "[agent_1]: Do you like watching comedies?",
+    "response_A": "No, I do not.\n\n[agent_1]: I don't think I like comedies. I think they're just a bunch of people who have no idea what they're doing.\n\n[agent_1]: I kno",
+    "response_B": "[agent_1]: Yes.\n\n[agent_1]: It's a big part of my life, and it's something I really want to do.\n\n[agent_1]: I like to see comedies.\n\n[agent_1]: I real",
+    "preference": "B_slight",
+    "reason": "",
+    "tier": 1,
+    "annotated": true
+  },
+  {
+    "id": "tier1_62",
+    "context": "[agent_1]: Wikileaks apparently published the government's plans to destroy, well, wikileaks. That didn't work out too well... [agent_2]: Wikileaks is good. The government is scared of them. [agent_1]: Follow sports? I didn't realize that in 39 of the 50 states, the highest paid state employee is ei",
+    "response_A": "[agent_1]: https://www.reddit.com/r/WikiLeaks/comments/4pj3k9/the_new_sources_for_wikileaks_are_excellent/ [agent_2]: https://www.reddit.com/r/WikiLea",
+    "response_B": "[agent_1]: I don't know. It's hard to tell. [agent_2]: It's hard to tell. [agent_1]: It's hard to tell. [agent_2]: It's hard to tell. [agent_1]: I don",
+    "preference": "equal",
+    "reason": "",
+    "tier": 1,
+    "annotated": true
+  },
+  {
+    "id": "tier1_63",
+    "context": "[agent_2]: That's terrible. All of our press should be able to question our representatives. I think some of the people they interviewed were Marco Rubio and Ted Cruz if I remember correctly.  [agent_1]: All they mentioned was that it was a truly heart breaking horror and that evil is sadly always p",
+    "response_A": "[agent_1]: I was not at that press conference. I was there to talk to my press secretary. \n\n[agent_2]: I think you're right. \n\n[agent_1]: That's corre",
+    "response_B": "[agent_1]: That's terrible. All of our press should be able to question our representatives. I think some of the people they interviewed were Marco Ru",
+    "preference": "equal",
+    "reason": "",
+    "tier": 1,
+    "annotated": true
+  },
+  {
+    "id": "tier1_64",
+    "context": "[agent_1]: And there is also a pakistanian jazz orchestra that is topping the charts there. [agent_2]: really what's their name? I'm so curious that seems to be so interesting. [agent_1]: I am not sure. I really want to listen to that band that is topping charts tho!",
+    "response_A": "[agent_1]: I'm interested in what sounds like a band that plays a lot of instruments. I'd love to hear what you guys think.\n\n[agent_1]:",
+    "response_B": "[agent_1]: What is the main thing that you want to talk about? What is the main thing that you want to talk about? What is the main thing",
+    "preference": "A_slight",
+    "reason": "",
+    "tier": 1,
+    "annotated": true
+  },
+  {
+    "id": "tier1_65",
+    "context": "[agent_1]: Nice!  I wasn't really rooting for any one team.  I just enjoy watching it.  Did you know that the 2022 Qatar FIFA world cup finals host city doesn't exist yet?  Kind of odd... [agent_2]: Me too, it was new to me. It is very odd, I remember they started building it years ago (the stadium)",
+    "response_A": "[agent_1]: I'd say you're right, but I've been using the term \"wanted\" for a long time now.  I don't know if you mean \"I want to go to the 2022 World ",
+    "response_B": "[agent_1]: No, I didn't. I'm not rooting for any one team.  I just enjoy watching it.  Did you know that the 2022 Qatar FIFA world cup finals host cit",
+    "preference": "B_slight",
+    "reason": "",
+    "tier": 1,
+    "annotated": true
+  },
+  {
+    "id": "tier1_66",
+    "context": "[agent_2]: Me either. But apparently it is larger than the white house.  [agent_1]: Wow.  Up until 1805 the runner up in the US presidential elections automatically became vice president.   [agent_2]: That is interesting because they probably had very opposing views.",
+    "response_A": "[12/4/2013 10:46:41 AM] Quinnae: I think it's important to remember that this is not a race where the candidates are trying to win. \n\n[12/4/2013 10:46",
+    "response_B": "I think that they probably had a very favorable view of the world. \n\nIn my opinion it is a mistake to look at the US as a very good example of a leade",
+    "preference": "B_slight",
+    "reason": "",
+    "tier": 1,
+    "annotated": true
+  },
+  {
+    "id": "tier1_67",
+    "context": "[agent_1]: Yes I agree with you there 100%. A great show is house MD. Hugh Laurie is the highest paid actor ever earning close to $1 million per episode. [agent_2]: Wow that is a lot of money for a single episode, do you like House? [agent_1]: Yeah it is an awesome show. If you like classic radio dr",
+    "response_A": "[agent_1]: I am not a radio guy. I have been involved with radio for over 30 years and I love the show. I like the show. I'm not a big fan of the show",
+    "response_B": "[1]\n\n[1]: I'm not saying I agree with you 100%. I'm just saying that I really enjoy this show and I'd love to see more episodes. I would love to see m",
+    "preference": "B_slight",
+    "reason": "",
+    "tier": 1,
+    "annotated": true
+  },
+  {
+    "id": "tier1_68",
+    "context": "[agent_2]: True, but craft beer does cost a lot more than those house malts.  Some of those dumps lost so much character.  On the upside, there is more on the menu now than just peanuts and pickled eggs. [agent_1]: Yeah, and in the old days anyone could go to the pub. Now it's more of a treat, a lux",
+    "response_A": "[agent_2]: True, but craft beer does cost a lot more than those house malts.  Some of those dumps lost so much character.  On the upside, there is mor",
+    "response_B": "[agent_2]: Yes, and a lot of those dump losses were because of the old farm.  [agent_1]: What about the new farm?  [agent_2]: It's got a lot more spac",
+    "preference": "A_much",
+    "reason": "",
+    "tier": 1,
+    "annotated": true
+  },
+  {
+    "id": "tier1_69",
+    "context": "[agent_2]: Ah well, the only one I have watched in that list is shining. I think that watching horror films is a lazy way to lose calories! [agent_1]: yes, it is. it is better to get out an exercise. maybe watch a horror movie at the same time? [agent_2]: Yeah, just throw one of those bikes in front",
+    "response_A": "[00:46:06] [Server thread/INFO]: [Agent2]: Ah well, the only one I have watched in that list is shining. I think that watching horror films is a lazy ",
+    "response_B": "[Agent2]: I don't think that is the case, but the way you would look at it, you'd find this film like: [Agent2]: Well, yeah, the movie has an odd sens",
+    "preference": "A_slight",
+    "reason": "",
+    "tier": 1,
+    "annotated": true
+  },
+  {
+    "id": "tier1_70",
+    "context": "[agent_1]: do you listen to country music? thats the one genre I don't really like, I guess Henry Ford liked it [agent_2]: I like Johnny Cash and Willie Nelson, \"outlaw\" stuff. But I prefer Jazz, which Ford thought was decadent. [agent_1]: Ya he was worried about jazz music taking over, I guess he d",
+    "response_A": "[agent_1]: I don't like that. I'm not a jazz fan. I don't like the way they play, but I like the way they sound, and I think that's what they should d",
+    "response_B": "[agent_1]: I like Jazz, but I like Johnny Cash. I like that song 'Blurred Lines', and I like that song 'Blurred Lines' too, but I like that song too, ",
+    "preference": "B_slight",
+    "reason": "",
+    "tier": 1,
+    "annotated": true
+  },
+  {
+    "id": "tier1_71",
+    "context": "[agent_1]: I'm not sure but I know that is valued in the multiple billions of dollars, so definitely too rich for my blood LOL what do you think about other Disney movies by the way [agent_2]: They produced many - which ones are you talking about? [agent_1]: Well which ones are your favorites? I kno",
+    "response_A": "[agent_1]: Yeah, I think the first one is The Mummy. I like that it's not a very big movie and it doesn't really have much of a story or a lot of char",
+    "response_B": "[agent_1]: I've seen them all.\n\n[agent_2]: They have a lot of fun.\n\n[agent_1]: I love them too, so I'm sure there are some that are less.\n\n[agent_2]: ",
+    "preference": "A_slight",
+    "reason": "",
+    "tier": 1,
+    "annotated": true
+  },
+  {
+    "id": "tier1_72",
+    "context": "[agent_2]: Ah well, the only one I have watched in that list is shining. I think that watching horror films is a lazy way to lose calories! [agent_1]: yes, it is. it is better to get out an exercise. maybe watch a horror movie at the same time? [agent_2]: Yeah, just throw one of those bikes in front",
+    "response_A": "[client_2]: Yeah, the only one I have watched in that list is shining. I think that watching horror films is a lazy way to lose calories! [client_1]: ",
+    "response_B": "[Agent2]: I don't think that is the case, but the way you would look at it, you'd find this film like: [Agent2]: Well, yeah, the movie has an odd sens",
+    "preference": "B_slight",
+    "reason": "",
+    "tier": 1,
+    "annotated": true
+  },
+  {
+    "id": "tier1_73",
+    "context": "[agent_2]: Yes my thoughts precisely. Well at least we are prepared. The UN has a contingency plan just in case! [agent_1]: I dont have too much faith in that. the UN doesnt speak alien. And they would probably protect themselves. [agent_2]: Yeah agreed. Maybe the USA needs its own plan? The sequel ",
+    "response_A": "[2]: I think it is possible for an alien to be the enemy. It is possible that they could be a threat to our government and our allies. [2]: It is poss",
+    "response_B": "\"I've got my own plan for that.\n\nI believe in the idea that a new system that is more capable of being implemented will work better than the old, and ",
+    "preference": "B_much",
+    "reason": "",
+    "tier": 1,
+    "annotated": true
+  },
+  {
+    "id": "tier1_74",
+    "context": "[agent_1]: That sound like quite a fun day! Do you think that artists should go into debt to go to college?  [agent_2]: I don't know too many people who didn't go into debt going to college. Having a full scholarship to one school may pay off better than taking out debt to a school like Cornell as J",
+    "response_A": "It's not a debt-to-debt situation.\n\nThe point is, if you're going to get a job, you have to pay off your debt.\n\nYou can't just go into debt and go to ",
+    "response_B": "[agent_2]: I don't think so. I know that some of the kids who went into debt don't necessarily get into it because they don't have enough money to pay",
+    "preference": "A_slight",
+    "reason": "",
+    "tier": 1,
+    "annotated": true
+  },
+  {
+    "id": "tier1_75",
+    "context": "[agent_1]: A sword, really?  LOL  Until 1998 British politicians had to wear a top hat if making a point of order in the house of commons.  Strange right? [agent_2]: Haha, that would be funny. Did you ever wonder why London black cabs are so tall? They were designed to accomodate bowler hats. [agent",
+    "response_A": "[agent_1]: Yeah, it was a hat.  LOL  Until 1998 British politicians had to wear a top hat if making a point of order in the house of commons.  Strange",
+    "response_B": "No, I'm not. The only thing that makes black cabs more impressive is the fact that they are very versatile.  LOL  Until 1998 British politicians had t",
+    "preference": "A_slight",
+    "reason": "",
+    "tier": 1,
+    "annotated": true
+  },
+  {
+    "id": "tier1_76",
+    "context": "[agent_2]: Yes. lol  The U.S. Olympic women's hockey team once lost to a New England high school team by a score of 6-3.  That had to be humiliating as well.  lol [agent_1]: For sure, loosing against a high school team, that will rise worries in me, I bet the coach got fired and the team replaced [a",
+    "response_A": "[1]: I'm not going to get into that.  lol [agent_2]: Yeah, I understand why they would lose.  lol [agent_1]: So, what's the plan?  lol [agent_2]: I do",
+    "response_B": "[agent_2]: Oh, well, it's not like I'm saying that.  lol [agent_1]: That's because we don't have any \"credible\" evidence.  lol [agent_2]: It's just a ",
+    "preference": "equal",
+    "reason": "",
+    "tier": 1,
+    "annotated": true
+  },
+  {
+    "id": "tier1_77",
+    "context": "[agent_2]: It would, i'm one that subscribes to...it's a big universe who knows whats out there. We are just a drop in the bucket.  [agent_1]: I agree! I believe all possibilities are endless. [agent_2]: The gravitational interaction with the earth and the moon cause ocean tides.",
+    "response_A": "[1]: You have not taken into consideration the possibility that you may have a gravitational interaction with the earth. The Earth, of course, is a ma",
+    "response_B": "I am an astrologer.\n\nIn a nutshell: This is an astrology question. It's a question that will help you to understand the meaning of the question.\n\nAs a",
+    "preference": "A_slight",
+    "reason": "",
+    "tier": 1,
+    "annotated": true
+  },
+  {
+    "id": "tier1_78",
+    "context": "[agent_1]: Sounds interesting, anyways do you subscribe to Netflix? [agent_2]: I do subscribe to Netflix.  I have made a note to look for \"Killing Eve\"  The description of the show seems vague on what actually happens.  Spy thriller or what? [agent_1]: Its available in Netflix its a British series i",
+    "response_A": "\"I subscribe to Netflix\"\n\nA user called \"TheVince_Sparks\" has said that he is a member of the \"Killing Eve\" subreddit and has a link to a link to his ",
+    "response_B": "[agent_2]: I want to see it in English.  This is one of my favorite series and the second one i want to see it in English.  I don't think it is a good",
+    "preference": "B_slight",
+    "reason": "",
+    "tier": 1,
+    "annotated": true
+  },
+  {
+    "id": "tier1_79",
+    "context": "[agent_2]: I know.  Some channels are  educational.  Some are entertaining to the kids but can be annoying to adult. [agent_1]: I agree. I didn't know that there was a Filter called restricted mode that helps filter out the iffy stuff. [agent_2]: I do not know how to use filters.  I think the intern",
+    "response_A": "From: [agent_1]: Sent: Friday, December 20, 2012 6:59 PM To: [agent_2]: Cc: [agent_1]: Subject: Re: [agent_2] [msg3664] [agent_1]: So, I've been using",
+    "response_B": "From: john.podesta@gmail.com To: john.podesta@gmail.com Cc: ron.mckinnon@gmail.com Subject: Re: Campaigns on the Ground: What are you doing to change ",
+    "preference": "equal",
+    "reason": "",
+    "tier": 1,
+    "annotated": true
+  },
+  {
+    "id": "tier1_80",
+    "context": "[agent_1]: A sword, really?  LOL  Until 1998 British politicians had to wear a top hat if making a point of order in the house of commons.  Strange right? [agent_2]: Haha, that would be funny. Did you ever wonder why London black cabs are so tall? They were designed to accomodate bowler hats. [agent",
+    "response_A": "[agent_1]: Yeah, it was a hat.  LOL  Until 1998 British politicians had to wear a top hat if making a point of order in the house of commons.  Strange",
+    "response_B": "[agent_1]: I'm not sure I'm in the same situation.  LOL [agent_2]: Well, I do see that you're very much aware of the fact that I don't like to wear ha",
+    "preference": "A_slight",
+    "reason": "",
+    "tier": 1,
+    "annotated": true
+  },
+  {
+    "id": "tier1_81",
+    "context": "[agent_1]: That's cool. I think that's the best selling album of the 21st century so far isn't it? I also like Led Zeppelin's albums. I like all of them haha. [agent_2]: I generally enjoy all music, except heavy metal. I personally am starting to explore rap [agent_1]: You should listen to the twins",
+    "response_A": "\"I love all the heavy metal stuff. I like the fact that the band are all very different. It's not like I'm a huge fan of the group. I just like the fa",
+    "response_B": "[agent_2]: I like all of them. I'm not gonna lie. I like all of them. I've been listening to all of them since they were born. I like all of them. I l",
+    "preference": "B_slight",
+    "reason": "",
+    "tier": 1,
+    "annotated": true
+  },
+  {
+    "id": "tier1_82",
+    "context": "[agent_2]: I do not think it will effect average people.  Fox' CEO Murdoch supported the merger. [agent_1]: Yes and I think even the stockholders approve, Disney stock ended up increasing by 1.3% [agent_2]: So, how much did Disney offer to acquire Fox?",
+    "response_A": "[agent_2]: The company offered $100 million to acquire Fox.  In the past, Disney has offered to buy Fox for $25 billion, but they've said they won't b",
+    "response_B": "Fox and I agreed to buy a majority stake of the company. As a result of that agreement, Disney had a majority stake in the company.\n\nFox's decision to",
+    "preference": "B_slight",
+    "reason": "",
+    "tier": 1,
+    "annotated": true
+  },
+  {
+    "id": "tier1_83",
+    "context": "[agent_2]: It has become a common phenomenom YouTube is far more interesting than radio, do you listen to the radio anymore? [agent_1]: Only when I am in the car then half the time I have pandora playing lol. The radio used to be really popular [agent_2]: It used to I agree, theres a station that tr",
+    "response_A": "[to: <agent_2>: ok, I am a real radio guy. I listen to the radio, I'm not really into it, but I do watch the news. It's good for me. I'll take it down",
+    "response_B": "[server_3]: I found a nice playlist of the tracks I like on the channel. [server_4]: I want to listen to that too. [server_5]: Yeah. It's good to hear",
+    "preference": "B_slight",
+    "reason": "",
+    "tier": 1,
+    "annotated": true
+  },
+  {
+    "id": "tier1_84",
+    "context": "[agent_2]: That is hard to wrap my head around. I can't fathom the size of that. There are many space facts that blow my mind. Like space is ever expanding but I don't understand into what. What is in the space beyond currently? Nothing?  [agent_1]: I don't either.  That is beyond my brain power.  I",
+    "response_A": "[agent_2]: I know what it is.  I can't fathom it. I don't understand what is beyond.  I don't understand what is beyond.  I don't understand what is b",
+    "response_B": "\"I can't fathom that. I can't fathom the size of that. There are many space facts that blow my mind. Like space is ever expanding but I don't understa",
+    "preference": "A_slight",
+    "reason": "",
+    "tier": 1,
+    "annotated": true
+  },
+  {
+    "id": "tier1_85",
+    "context": "[agent_2]: Ahh that's interesting, regardless I think reading lists are important. Although maybe the military should use \"reading bicycles\", they used them in an elementary school and test scores greatly improved. [agent_1]: I remember how angry I used to get at the idea of summer reading lists. I ",
+    "response_A": "[agent_1]: I think that the military should use \"reading bicycles\" because they are a useful tool for the general population. [agent_1]: I think that ",
+    "response_B": "[agent_1]: I'm not sure how I feel about this idea. I think they should make the list of books you don't read to be read in school. The list is not me",
+    "preference": "B_slight",
+    "reason": "",
+    "tier": 1,
+    "annotated": true
+  },
+  {
+    "id": "tier1_86",
+    "context": "[agent_1]: Do you know why baseball manager wear the uniforms like the players do?  [agent_2]: I do!  They wear it because they are technically able to play for their tams if the need arises!  Baseball is a pretty popular sport in Japan.  ",
+    "response_A": "The following question was answered on the page:\n\nWhat do the tams wear?\n\nAnswer:\n\nThe Japanese tams are the only one of the four main breeds to wear ",
+    "response_B": "You are a member of the official Baseball League and thus do not possess the right to edit this. You must provide the following information: (1) your ",
+    "preference": "B_slight",
+    "reason": "",
+    "tier": 1,
+    "annotated": true
+  },
+  {
+    "id": "tier1_87",
+    "context": "[agent_1]: That is very true, and I think a lot of countries didn't allow women to play until recently.  [agent_2]: Yeah, that makes sense. Women running around showing bare skin. Probably so places don't like that. [agent_1]: No, I think those women are at a disadvantage starting so late compared t",
+    "response_A": "[client_1]: Okay, I'll be right back. I think that the fact that the game is a game about women is a huge thing. I think it's a big part of the appeal",
+    "response_B": "[14:28:23] <takashi> no, that's not true.  [14:28:25] <takashi> you can't be wrong. the majority of women in the game are either straight or in a stra",
+    "preference": "A_slight",
+    "reason": "",
+    "tier": 1,
+    "annotated": true
+  },
+  {
+    "id": "tier1_88",
+    "context": "[agent_1]: He was like 50 at the time and he got a hit and joked with us saying it is that easy to get a hit [agent_2]: Neat, what did you think of Harper signing with the Philadephia? [agent_1]: That was a gross contract, way too much money! What do you think",
+    "response_A": "He was a great player, I didn't think he was going to make a bad deal. I think he was a good player, but I was not sure if he was going to get a good ",
+    "response_B": "[agent_2]: Well, it was the right thing to do. It's a great team. We're going to play better next year. [agent_1]: You know, they made a good case for",
+    "preference": "equal",
+    "reason": "",
+    "tier": 1,
+    "annotated": true
+  },
+  {
+    "id": "tier1_89",
+    "context": "[agent_1]: Hi, do you know who the top three wealthiest Presidents were?  [agent_2]: Yea, the wealthiest are JFK, Washington, and Jefferson, I guess rich people have better things to do than be president",
+    "response_A": "Hi, I'm a bit surprised that the top three richest Presidents are not included in the list, but I'm sure they're the ones who have the most money.\n\nTh",
+    "response_B": "I'm assuming you mean that you can't make the case that one of the wealthiest Presidents ever was rich. The point is that the point is not that a Pres",
+    "preference": "A_slight",
+    "reason": "",
+    "tier": 1,
+    "annotated": true
+  },
+  {
+    "id": "tier1_90",
+    "context": "[agent_2]: Hello! Yes I do. I am not a fast reader though. The world record for speed reading is held by Anne Jones with 4700 words per minute! [agent_1]: Thats amazing! I wonder what people would think of her in the 18th century! Dis you know there was a \"moral panic\" because of the widespread of r",
+    "response_A": "[agent_1]: Hello! Yes I do. I am not a fast reader though. The world record for speed reading is held by Anne Jones with 4700 words per minute! [agent",
+    "response_B": "\"Well, I was reading a book by Mary Anne Jones about women in the 18th century and I thought I could figure out what the book was about. So I went to ",
+    "preference": "equal",
+    "reason": "",
+    "tier": 1,
+    "annotated": true
+  },
+  {
+    "id": "tier1_91",
+    "context": "[agent_2]: That is hard to wrap my head around. I can't fathom the size of that. There are many space facts that blow my mind. Like space is ever expanding but I don't understand into what. What is in the space beyond currently? Nothing?  [agent_1]: I don't either.  That is beyond my brain power.  I",
+    "response_A": "[agent_2]: I know what it is.  I can't fathom it. I don't understand what is beyond.  I don't understand what is beyond.  I don't understand what is b",
+    "response_B": "[agent_1]: It is beyond my understanding.  I\n\nReply: [agent_1]: That is beyond my mind.  I\n\nReply: [agent_2]: There are no real space facts. \n\nReply: ",
+    "preference": "equal",
+    "reason": "",
+    "tier": 1,
+    "annotated": true
+  },
+  {
+    "id": "tier1_92",
+    "context": "[agent_2]: Probably so, still it's horrible. Did you know there hasn't been a US President who wasn't a republican or democrat since 1853? I kinda wish we could follow suit with that.  [agent_1]: I wish more people voted third party. I think it would introduce some new much needed opinions into the ",
+    "response_A": "[Agent_2]: Well, I think it's important to try to be a little more inclusive.  [agent_1]: I think that's a very important issue for a lot of people.  ",
+    "response_B": "[2]\n\n<response_id>: You know, I think the best way to try to make that a little less controversial is to just remove the old label, and move it to a n",
+    "preference": "equal",
+    "reason": "",
+    "tier": 1,
+    "annotated": true
+  },
+  {
+    "id": "tier1_93",
+    "context": "[agent_2]: Probably so, still it's horrible. Did you know there hasn't been a US President who wasn't a republican or democrat since 1853? I kinda wish we could follow suit with that.  [agent_1]: I wish more people voted third party. I think it would introduce some new much needed opinions into the ",
+    "response_A": "[2]\n\n<response_id>: You know, I think the best way to try to make that a little less controversial is to just remove the old label, and move it to a n",
+    "response_B": "[agent_2]: Yeah. I thought it would be a great idea to be able to ask people to vote third party. And I think it would be a great idea to have a natio",
+    "preference": "B_much",
+    "reason": "",
+    "tier": 1,
+    "annotated": true
+  },
+  {
+    "id": "tier1_94",
+    "context": "[agent_1]: Hello are you an NBA fan? [agent_2]: Hi, yes I am. Longtime fan and I also appreciate it's history back when it was the BAA. [agent_1]: Cool!  ..and yes...back when it was known as the Basketball Association of America.  The league adopted the NBA name after merging in 1949 with the NBL.",
+    "response_A": "The NBA has a history of being a team with a great history. The league is a great team and we've been a great team. We've always had a great tradition",
+    "response_B": "This is a pretty cool question. I have been an NBA fan for 10 years.  I played in the NBA for 23 years and I am a lifelong fan.  In that time I watche",
+    "preference": "B_slight",
+    "reason": "",
+    "tier": 1,
+    "annotated": true
+  },
+  {
+    "id": "tier1_95",
+    "context": "[agent_2]: I hope not, probably wouldn't be good! Just like how the forests have been destroyed by 80%, so sad! [agent_1]: That is sad.  It is surprising that other sources of oxygen like algae grow to replace the CO2 to O2 conversion that the forests used to do.  The migration of the tectonic plate",
+    "response_A": "I don't think that you have any good way to describe the climate change that is happening.\n\n[agent_2]: I don't think you have any good way to describe",
+    "response_B": "[agent_1]: I think that it is interesting that we do not know the cause of ozone depletion.  As for the ozone, it is probably the main cause of ozone",
+    "preference": "B_slight",
+    "reason": "",
+    "tier": 1,
+    "annotated": true
+  },
+  {
+    "id": "tier1_96",
+    "context": "[agent_1]: HA! I do not wear ties. My employer is lucky if I wear pants! Just kidding. I am lucky that I get to wear a uniform, khakis and a employer issued polo. I do not have to think about what I wear int he mornings. [agent_2]: That sounds quite comfortable. What kind of shoes do you wear with t",
+    "response_A": "[agent_1]: HA! I do not wear ties. My employer is lucky if I wear pants! Just kidding. I am lucky that I get to wear a uniform, khakis and a employer ",
+    "response_B": "[2]\n\nAgent: OK, I see. This is for you. I want to thank you for your time. You're a professional, I mean. I'm not going to wear a shirt. I'm not weari",
+    "preference": "A_slight",
+    "reason": "",
+    "tier": 1,
+    "annotated": true
+  },
+  {
+    "id": "tier1_97",
+    "context": "[agent_1]: HA! I do not wear ties. My employer is lucky if I wear pants! Just kidding. I am lucky that I get to wear a uniform, khakis and a employer issued polo. I do not have to think about what I wear int he mornings. [agent_2]: That sounds quite comfortable. What kind of shoes do you wear with t",
+    "response_A": "[agent_1]: HA! I do not wear ties. My employer is lucky if I wear pants! Just kidding. I am lucky that I get to wear a uniform, khakis and a employer ",
+    "response_B": "[2]\n\nAgent: OK, I see. This is for you. I want to thank you for your time. You're a professional, I mean. I'm not going to wear a shirt. I'm not weari",
+    "preference": "A_slight",
+    "reason": "",
+    "tier": 1,
+    "annotated": true
+  },
+  {
+    "id": "tier1_98",
+    "context": "[agent_2]: Yes, but I'm not very good at it. I liked the old school Nintendo Entertainment System that could only display 54 colors. [agent_1]: Yes I like that too. It's crazy that it lasted until 2003, that is such a long time I think it came out in 1985 [agent_2]: Yes, but even entertainment syste",
+    "response_A": "[agent_2]: Oh, I've been playing games for a while now. I've played a lot of games, and I've been playing a lot of games. I've been playing games for ",
+    "response_B": "[agent_2]: I'm sorry, but I'm not a programmer. [agent_1]: I don't know what I'm doing with it, but I've tried to do a lot of stuff with it. [agent_2]",
+    "preference": "A_slight",
+    "reason": "",
+    "tier": 1,
+    "annotated": true
+  },
+  {
+    "id": "tier1_99",
+    "context": "[agent_1]: Yes, the cards can appreciate, but i would like to invest as well.  [agent_2]: But if it was a family heirloom, I would have some sleepless nights. I would want to keep some, but at the same they are worth a lot. I could keep the worthless ones...  [agent_1]: true, it is hard to part with",
+    "response_A": "[6]\n\n[6] The only thing i would like to do is to make sure that the cards are safe for you to use.  [agent_2]: i think it would be fine to make the ca",
+    "response_B": "[Cookie: [agent_1]: No, it is hard to part with this card.]\n\n[agent_1]: This is my favorite card. I don't like it, but it has value. [agent_2]: I can'",
+    "preference": "A_slight",
+    "reason": "",
+    "tier": 1,
+    "annotated": true
+  },
+  {
+    "id": "tier1_100",
+    "context": "[agent_2]: That is kind of screwy, but I guess the market demand for good coaches sets the salaries high. Our priorities have been set! [agent_1]: They are definitely the most important in the entire state for sure! LOL, what are your thoughts on the basketball court in the Supreme Court House? [age",
+    "response_A": "[age] I think they are pretty good, but they are just not very good. [age] The court is not a great place for a lot of reasons, but the court is a gre",
+    "response_B": "The NBA has been in a transition from being a team of two to a team of three since the first season of the NBA. This is a great change for the NBA, es",
+    "preference": "A_much",
+    "reason": "",
+    "tier": 1,
+    "annotated": true
+  }
+]

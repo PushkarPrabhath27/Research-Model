@@ -1,0 +1,24 @@
+{
+  "control_tokens": {
+    "task": "[REPAIR]",
+    "context": "[CONTEXT]",
+    "evidence": "[EVIDENCE]",
+    "response": "[RESPONSE]"
+  },
+  "violation_tokens": {
+    "quantity": "[VIOLATION=QUANTITY]",
+    "quality": "[VIOLATION=QUALITY]",
+    "relation": "[VIOLATION=RELATION]",
+    "manner": "[VIOLATION=MANNER]"
+  },
+  "all_tokens": [
+    "[REPAIR]",
+    "[CONTEXT]",
+    "[EVIDENCE]",
+    "[RESPONSE]",
+    "[VIOLATION=QUANTITY]",
+    "[VIOLATION=QUALITY]",
+    "[VIOLATION=RELATION]",
+    "[VIOLATION=MANNER]"
+  ]
+}

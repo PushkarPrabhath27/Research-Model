@@ -1,0 +1,62 @@
+{
+  "recommended_threshold": 0.6,
+  "metrics": {
+    "threshold": 0.6,
+    "baseline": {
+      "quantity_violation_rate": 0.5,
+      "quality_violation_rate": 0.05,
+      "relation_violation_rate": 0.25,
+      "manner_violation_rate": 0.2,
+      "cooperative_rate": 0.25
+    },
+    "dpo": {
+      "quantity_violation_rate": 0.0,
+      "quality_violation_rate": 0.0,
+      "relation_violation_rate": 0.0,
+      "manner_violation_rate": 0.5,
+      "cooperative_rate": 0.5
+    },
+    "improvements": {
+      "quantity_improvement": 0.5,
+      "quantity_improvement_pct": 100.0,
+      "quality_improvement": 0.05,
+      "quality_improvement_pct": 100.0,
+      "relation_improvement": 0.25,
+      "relation_improvement_pct": 100.0,
+      "manner_improvement": -0.3,
+      "manner_improvement_pct": -149.99999999999997,
+      "cooperative_improvement": 0.25,
+      "cooperative_improvement_pct": 33.33333333333333
+    }
+  },
+  "original_threshold": 0.5,
+  "original_metrics": {
+    "threshold": 0.5,
+    "baseline": {
+      "quantity_violation_rate": 1.0,
+      "quality_violation_rate": 0.8,
+      "relation_violation_rate": 0.7,
+      "manner_violation_rate": 1.0,
+      "cooperative_rate": 0.0
+    },
+    "dpo": {
+      "quantity_violation_rate": 0.95,
+      "quality_violation_rate": 1.0,
+      "relation_violation_rate": 0.05,
+      "manner_violation_rate": 1.0,
+      "cooperative_rate": 0.0
+    },
+    "improvements": {
+      "quantity_improvement": 0.050000000000000044,
+      "quantity_improvement_pct": 5.000000000000004,
+      "quality_improvement": -0.19999999999999996,
+      "quality_improvement_pct": -24.999999999999993,
+      "relation_improvement": 0.6499999999999999,
+      "relation_improvement_pct": 92.85714285714285,
+      "manner_improvement": 0.0,
+      "manner_improvement_pct": 0.0,
+      "cooperative_improvement": 0.0,
+      "cooperative_improvement_pct": 0.0
+    }
+  }
+}
